@@ -10,7 +10,7 @@ exports.glyphs['j'] =
 	contours:
 		0:
 			skeleton: true
-			closed: false
+			closed: true
 			nodes:
 				0:
 					x: 0

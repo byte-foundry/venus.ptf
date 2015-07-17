@@ -10,7 +10,7 @@ exports.glyphs['slash'] =
 	contours:
 		0:
 			skeleton: true
-			closed: false
+			closed: true
 			nodes:
 				0:
 					x: 0

@@ -10,7 +10,7 @@ exports.glyphs['N_cap'] =
 	contours:
 		0:
 			skeleton: true
-			closed: false
+			closed: true
 			nodes:
 				1:
 					x: 0
