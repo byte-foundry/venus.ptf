@@ -8,7 +8,7 @@ exports.controls = [
 		min: 300
 		max: 900
 		step: 1
-		init: 500
+		init: 520
 		minAdvised: 300
 		maxAdvised: 800
 		disabled: false
@@ -18,7 +18,7 @@ exports.controls = [
 		min: 0
 		max: 400
 		step: 1
-		init: 250
+		init: 230
 		minAdvised: 0
 		maxAdvised: 350
 		disabled: false
@@ -28,7 +28,7 @@ exports.controls = [
 		min: 50
 		max: 500
 		step: 1
-		init: 250
+		init: 230
 		minAdvised: 50
 		maxAdvised: 500
 		disabled: false
@@ -93,7 +93,7 @@ exports.controls = [
 		min: 4
 		max: 180
 		step: 1
-		init: 85
+		init: 115
 		minAdvised: 60
 		maxAdvised: 130
 		disabled: false
@@ -143,9 +143,9 @@ exports.controls = [
 		min: 0
 		max: 1
 		step: 0.1
-		init: 0
-		minAdvised: 0
-		maxAdvised: 0.5
+		init: 1
+		minAdvised: 0.5
+		maxAdvised: 1
 		disabled: true
 	# ,
 	# 	name: 'term'

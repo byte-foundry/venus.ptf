@@ -1,15 +1,15 @@
 exports.presets =
 	'Old Style':
-		xHeight: 500
+		xHeight: 520
 		capDelta: 250
-		ascender: 250
+		ascender: 230
 		descender: -250
 		crossbar: 1
 		width: 1
 		roundness: 0.65
-		thickness: 85
+		thickness: 115
 		_contrast: -1
-		breakPath: 0
+		breakPath: 1
 		aperture: 1
 		axis: 0
 		serifMedian: 1
@@ -30,16 +30,16 @@ exports.presets =
 		serifBall: 1
 
 	'Modern':
-		xHeight: 500
+		xHeight: 520
 		capDelta: 250
-		ascender: 250
+		ascender: 230
 		descender: -250
 		crossbar: 1
 		width: 1
 		roundness: 0.65
-		thickness: 85
+		thickness: 115
 		_contrast: -1
-		breakPath: 0
+		breakPath: 1
 		aperture: 1
 		axis: 0
 		serifMedian: 1
@@ -60,16 +60,16 @@ exports.presets =
 		serifBall: 1
 
 	'Slab':
-		xHeight: 500
+		xHeight: 520
 		capDelta: 250
-		ascender: 250
+		ascender: 230
 		descender: -250
 		crossbar: 1
 		width: 1
 		roundness: 0.65
-		thickness: 85
+		thickness: 115
 		_contrast: -1
-		breakPath: 0
+		breakPath: 1
 		aperture: 1
 		axis: 0
 		serifMedian: 1
@@ -90,16 +90,16 @@ exports.presets =
 		serifBall: 1
 
 	'Sans-serif':
-		xHeight: 500
+		xHeight: 520
 		capDelta: 250
-		ascender: 250
+		ascender: 230
 		descender: -250
 		crossbar: 1
 		width: 1
 		roundness: 0.65
-		thickness: 85
+		thickness: 115
 		_contrast: -1
-		breakPath: 0
+		breakPath: 1
 		aperture: 1
 		axis: 0
 		serifMedian: 1
@@ -120,16 +120,16 @@ exports.presets =
 		serifBall: 1
 
 	'Blackletter':
-		xHeight: 500
+		xHeight: 520
 		capDelta: 250
-		ascender: 250
+		ascender: 230
 		descender: -250
 		crossbar: 1
 		width: 1
 		roundness: 0.65
-		thickness: 85
+		thickness: 115
 		_contrast: -1
-		breakPath: 0
+		breakPath: 1
 		aperture: 1
 		axis: 0
 		serifMedian: 1
