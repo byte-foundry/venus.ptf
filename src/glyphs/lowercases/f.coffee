@@ -16,7 +16,7 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: 110 + (29)
+					x: 110 * width + (29)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
@@ -49,7 +49,7 @@ exports.glyphs['f'] =
 						distr: 0
 					})
 				3:
-					x: contours[0].nodes[0].expandedTo[1].x + 110
+					x: contours[0].nodes[0].expandedTo[1].x + 110 * width
 					y: ascenderHeight
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'

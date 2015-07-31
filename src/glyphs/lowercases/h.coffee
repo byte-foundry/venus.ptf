@@ -87,7 +87,7 @@ exports.glyphs['h'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 185 + (172)
+					x: contours[0].nodes[0].expandedTo[1].x + 185 * width + (172)
 					y: xHeight - 205
 					dirOut: 0 + 'deg'
 					type: 'smooth'

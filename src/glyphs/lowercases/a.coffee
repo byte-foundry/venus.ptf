@@ -115,20 +115,24 @@ exports.glyphs['a'] =
 					x: 190 + (17)
 					y: 300 - (19)
 					type: 'smooth'
-					dirOut: 11 + 'deg'
+					dirOut: # 11 + 'deg'
+						Utils.lineAngle( contours[1].nodes[3].expandedTo[0].point, contours[1].nodes[4].expandedTo[0].point ) - Math.PI / 10
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 102 / 115 ) * thickness
+						width: ( 102 / 115 ) * thickness * contrast
 						angle: - 47 + 'deg'
 						distr: 0.25
 					})
 				4:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: contours[0].nodes[2].expandedTo[1].y * crossbar
+					y: Math.min(
+						contours[0].nodes[2].expandedTo[1].y * crossbar,
+						contours[0].nodes[0].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[1].y - contours[0].nodes[0].expandedTo[1].y ) / 2
+					)
 					dirIn: - 90 + 'deg'
 					tensionIn: 1.4
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * contrast
+						width: ( 100 / 115 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})

@@ -45,7 +45,7 @@ exports.glyphs['k'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: thickness + ( 25 / 115 ) * thickness * width
+						width: ( 140 / 115 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -55,7 +55,7 @@ exports.glyphs['k'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 108 / 115 ) * thickness
+						width: ( 108 / 115 ) * thickness * contrast
 						angle: 180 + 166 + 'deg'
 						distr: 0.75
 					})

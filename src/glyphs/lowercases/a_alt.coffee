@@ -1,5 +1,5 @@
-exports.glyphs['q'] =
-	unicode: 'q'
+exports.glyphs['a_alt'] =
+	unicode: 'a'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
@@ -61,7 +61,7 @@ exports.glyphs['q'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: ( 155 / 250 ) * descender
+					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
