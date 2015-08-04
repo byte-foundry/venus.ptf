@@ -36,9 +36,38 @@ exports.glyphs['s'] =
 				2:
 					x: 475 - (29)
 					y: 140
-					dirOut: 0 + 'deg'
+					dirIn: - 90 + 'deg'
+					dirOut: 90 + 'deg'
 					expand: Object({
 						width: thickness
 						angle: 180 + 5 + 'deg'
+						distr: 0.25
+					})
+				3:
+					x: contours[0].nodes[0].x + (33)
+					y: xHeight - 140
+					dirIn: - 90 + 'deg'
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: ( 110 / 115 ) * thickness
+						angle: 180 + 5 + 'deg'
+						distr: 0.75
+					})
+				4:
+					x: 245
+					y: xHeight + overshoot / 2
+					dirOut: 0 + 'deg'
+					expand: Object({
+						width: ( 85 / 115 ) * thickness
+						angle: 180 - 90 + 'deg'
+						distr: 1
+					})
+				5:
+					x: 367 + (24)
+					y: xHeight - 152 + (9)
+					dirIn: 118 + 'deg'
+					expand: Object({
+						width: ( 103 / 115 ) * thickness
+						angle: 24 + 'deg'
 						distr: 0.25
 					})

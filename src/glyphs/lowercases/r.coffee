@@ -76,7 +76,10 @@ exports.glyphs['r'] =
 							}
 						]
 				1:
-					x: 100 + 230 * width
+					x: 230 * width + Math.max(
+						( 100 / 115 ) * thickness,
+						100
+					)
 					y: xHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
