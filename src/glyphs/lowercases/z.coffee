@@ -1,7 +1,7 @@
 exports.glyphs['z'] =
 	unicode: 'z'
 	ot:
-		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[8].expandedTo[0].x + spacingRight
 	parameters:
 		spacingLeft: 30 * spacing
 		spacingRight: 20 * spacing
@@ -26,7 +26,7 @@ exports.glyphs['z'] =
 						distr: 0
 					})
 				1:
-					x: 300
+					x: contours[0].nodes[3].expandedTo[1].x + ( 15 / 115 ) * thickness
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -72,16 +72,36 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					expand: Object({
 						width: ( 70 / 115 ) * thickness
+						angle: 90 + 'deg'
+						distr: 0
+					})
+				6:
+					x: spacingLeft
+					y: 0
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 70 / 115 ) * thickness
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
-				# 6:
-				# 	x: 153 + 200
-				# 	y: 0
-				# 	dirOut: 0 + 'deg'
-				# 	typeOut: 'line'
-				# 	expand: Object({
-				# 		width: ( 90 / 115 ) * thickness
-				# 		angle: 90 + 'deg'
-				# 		distr: 0
-				# 	})
+				7:
+					x: contours[0].nodes[4].expandedTo[0].x - ( 10 / 115 ) * thickness
+					y: 0
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 90 / 115 ) * thickness
+						angle: 180 + 90 + 'deg'
+						distr: 1
+					})
+				8:
+					x: 440
+					y: 0
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 90 / 115 ) * thickness
+						angle: 180 + 90 + 'deg'
+						distr: 1
+					})

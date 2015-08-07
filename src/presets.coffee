@@ -1,7 +1,7 @@
 exports.presets =
 	'Old Style':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -31,7 +31,7 @@ exports.presets =
 
 	'Modern':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -61,7 +61,7 @@ exports.presets =
 
 	'Slab':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -91,7 +91,7 @@ exports.presets =
 
 	'Sans-serif':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -121,7 +121,7 @@ exports.presets =
 
 	'Blackletter':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1

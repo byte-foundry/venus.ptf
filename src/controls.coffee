@@ -55,7 +55,7 @@ exports.controls = [
 	,
 		name: 'width'
 		label: 'Width'
-		min: 0.75
+		min: 0.4
 		max: 2.8
 		step: 0.01
 		init: 1
@@ -130,13 +130,13 @@ exports.controls = [
 	,
 		name: 'opticThickness'
 		label: 'Optic thickness'
-		min: 0.8
-		max: 1.5
+		min: 0.7
+		max: 1.3
 		step: 0.01
 		init: 1
-		minAdvised: 1
-		maxAdvised: 1.2
-		disabled: true
+		minAdvised: 0.9
+		maxAdvised: 1.1
+		disabled: false
 	,
 		name: 'breakPath'
 		label: 'Break Path'
