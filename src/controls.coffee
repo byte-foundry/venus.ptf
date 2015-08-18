@@ -56,7 +56,7 @@ exports.controls = [
 		name: 'width'
 		label: 'Width'
 		min: 0.4
-		max: 2.8
+		max: 5
 		step: 0.01
 		init: 1
 		minAdvised: 0.85
@@ -65,8 +65,8 @@ exports.controls = [
 	,
 		name: 'slant'
 		label: 'Slant'
-		min: -5
-		max: 8
+		min: -15
+		max: 30
 		step: 0.2
 		init: 0
 		minAdvised: -5
