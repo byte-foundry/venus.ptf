@@ -55,8 +55,8 @@ exports.controls = [
 	,
 		name: 'width'
 		label: 'Width'
-		min: 0.75
-		max: 2.8
+		min: 0.4
+		max: 5
 		step: 0.01
 		init: 1
 		minAdvised: 0.85
@@ -65,8 +65,8 @@ exports.controls = [
 	,
 		name: 'slant'
 		label: 'Slant'
-		min: -5
-		max: 8
+		min: -15
+		max: 30
 		step: 0.2
 		init: 0
 		minAdvised: -5
@@ -130,13 +130,13 @@ exports.controls = [
 	,
 		name: 'opticThickness'
 		label: 'Optic thickness'
-		min: 0.8
-		max: 1.5
+		min: 0.7
+		max: 1.3
 		step: 0.01
 		init: 1
-		minAdvised: 1
-		maxAdvised: 1.2
-		disabled: true
+		minAdvised: 0.9
+		maxAdvised: 1.1
+		disabled: false
 	,
 		name: 'breakPath'
 		label: 'Break Path'
@@ -146,7 +146,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0.5
 		maxAdvised: 1
-		disabled: true
+		disabled: false
 	# ,
 	# 	name: 'term'
 	# 	label: 'Term'

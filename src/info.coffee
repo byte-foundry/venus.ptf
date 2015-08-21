@@ -4,7 +4,6 @@ exports.fontinfo =
 	description: 'The first parametric typeface'
 	tags: [
 		'all',
-		'component',
 		'latin',
 		'lowercase',
 		'uppercase',

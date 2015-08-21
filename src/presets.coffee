@@ -1,7 +1,37 @@
 exports.presets =
+	'Sans-serif':
+			xHeight: 520
+			capDelta: 230
+			ascender: 230
+			descender: -250
+			crossbar: 1
+			width: 1
+			roundness: 0.65
+			thickness: 115
+			_contrast: -1
+			breakPath: 1
+			aperture: 1
+			axis: 0
+			serifMedian: 1
+			serifWidth: 65
+			serifHeight: 20
+			serifCurve: 15
+			serifArc: 0
+			serifTerminal: 0
+			serifRotate: 1
+			serifRoundness : 1
+			midWidth: 1
+			serifTerminalCurve: 1
+			spurHeight: 1
+			overshoot: 10
+			slant: 0
+			curviness: 0.6
+			opticThickness: 1
+			serifBall: 1
+
 	'Old Style':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -31,7 +61,7 @@ exports.presets =
 
 	'Modern':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -61,37 +91,7 @@ exports.presets =
 
 	'Slab':
 		xHeight: 520
-		capDelta: 250
-		ascender: 230
-		descender: -250
-		crossbar: 1
-		width: 1
-		roundness: 0.65
-		thickness: 115
-		_contrast: -1
-		breakPath: 1
-		aperture: 1
-		axis: 0
-		serifMedian: 1
-		serifWidth: 65
-		serifHeight: 20
-		serifCurve: 15
-		serifArc: 0
-		serifTerminal: 0
-		serifRotate: 1
-		serifRoundness : 1
-		midWidth: 1
-		serifTerminalCurve: 1
-		spurHeight: 1
-		overshoot: 10
-		slant: 0
-		curviness: 0.6
-		opticThickness: 1
-		serifBall: 1
-
-	'Sans-serif':
-		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
@@ -121,7 +121,7 @@ exports.presets =
 
 	'Blackletter':
 		xHeight: 520
-		capDelta: 250
+		capDelta: 230
 		ascender: 230
 		descender: -250
 		crossbar: 1
