@@ -3,7 +3,7 @@ exports.glyphs['U_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 80 * spacing + (34)
+		spacingLeft: 80 * spacing + (75)
 		spacingRight: 80 * spacing
 	tags: [
 		'all',

@@ -146,7 +146,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0.5
 		maxAdvised: 1
-		disabled: true
+		disabled: false
 	# ,
 	# 	name: 'term'
 	# 	label: 'Term'

@@ -3,8 +3,8 @@ exports.glyphs['K_cap'] =
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 85 + (34)
-		spacingRight: 10
+		spacingLeft: 85 * spacing + (79)
+		spacingRight: 10 * spacing
 	tags: [
 		'all',
 		'latin',

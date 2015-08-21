@@ -3,8 +3,8 @@ exports.glyphs['two'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 40 + (35)
-		spacingRight: 50
+		spacingLeft: 40 * spacing + (63)
+		spacingRight: 50 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -46,7 +46,7 @@ exports.glyphs['two'] =
 					type: 'smooth'
 					tensionOut: 1.4
 					expand: Object({
-						width: ( 170 / 115 ) * thickness * opticThickness
+						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})

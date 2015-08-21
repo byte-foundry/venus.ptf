@@ -3,7 +3,7 @@ exports.glyphs['B_cap'] =
 	ot:
 		advanceWidth: contours[2].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 85 * spacing + (34)
+		spacingLeft: 85 * spacing + (79)
 		spacingRight: 35 * spacing
 	tags: [
 		'all',

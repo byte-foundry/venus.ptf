@@ -1,17 +1,79 @@
 exports.glyphs['question'] =
 	unicode: '?'
 	ot:
-		advanceWidth: 0
+		advanceWidth: spacingLeft + contours[0].nodes[2].expandedTo[0].x + spacingRight
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
+	parameters:
+		spacingLeft: 15 * spacing + (28)
+		spacingRight: 35 * spacing
 	contours:
 		0:
 			skeleton: true
-			closed: true
+			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
+					x: spacingLeft
+					y: ( 560 / 750 ) * capHeight - (5)
+					dirOut: 85 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 112 / 115 ) * thickness
+						angle: - 10 + 'deg'
+						distr: 0.25
+					})
+				1:
+					x: 260
+					y: capHeight + overshoot
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 90 / 115 ) * thickness
+						angle: - 90 + 'deg'
+						distr: 0
+					})
+				2:
+					x: 200 + 285 * width - (30)
+					y: contours[0].nodes[0].y
+					dirOut: - 90 + 'deg'
+					type: 'smooth'
+					tensionOut: 1.2
+					expand: Object({
+						width: ( 120 / 115 ) * thickness
+						angle: 180 + 'deg'
+						distr: 0.25
+					})
+				3:
+					x: 290 + (20)
+					y: ( 445 / 750 ) * capHeight - (19)
+					# TODO: it should depends of thickness
+					dirOut: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[2].expandedTo[0].point )
+					type: 'smooth'
+					tensionIn: 1.2
+					tensionOut: 1.4
+					expand: Object({
+						width: ( 110 / 115 ) * thickness
+						angle: 180 - 43 + 'deg'
+						distr: 0.75
+					})
+				4:
+					x: contours[0].nodes[1].x - ( 8 / 115 ) * thickness
+					y: minThickness + 170 - ( 85 / 115 ) * thickness
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					tensionIn: 1.4
+					expand: Object({
+						width: ( 110 / 115 ) * thickness
+						angle: 180 + 'deg'
+						distr: 0.5
+					})
+	components:
+		0:
+			base: 'dot'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].x - ( 8 / 115 ) * thickness
+					y: minThickness

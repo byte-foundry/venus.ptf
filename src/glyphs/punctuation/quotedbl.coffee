@@ -1,22 +1,26 @@
 exports.glyphs['quotedbl'] =
 	unicode: '"'
 	ot:
-		advanceWidth: 0
+		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
+	parameters:
+		spacingLeft: 45 * spacing + (30)
+		spacingRight: 45 * spacing
+		space: ( 70 / 115 ) * thickness + spacingLeft
 	components:
 		0:
 			base: '_quotesingle'
 			parentAnchors:
 				0:
-					x: 92 + (10)
+					x: spacingLeft + minThickness / 2
 					y: capHeight
 		1:
 			base: '_quotesingle'
 			parentAnchors:
 				0:
-					x: 212 + (10)
+					x: spacingLeft + minThickness + space
 					y: capHeight

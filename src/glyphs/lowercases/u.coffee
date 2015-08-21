@@ -3,8 +3,8 @@ exports.glyphs['u'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 65 + (29)
-		spacingRight: 70
+		spacingLeft: 65 * spacing + (63)
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',

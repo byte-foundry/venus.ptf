@@ -1,22 +1,25 @@
 exports.glyphs['semicolon'] =
-	unicode: 59
+	unicode: ';'
 	ot:
-		advanceWidth: 0
+		advanceWidth: spacingLeft + minThickness + spacingRight
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
+	parameters:
+		spacingLeft: 50 * spacing + (29)
+		spacingRight: 50 * spacing
 	components:
 		0:
 			base: 'comma'
 			parentAnchors:
 				0:
-					x: 125
-					y: - overshoot / 2
+					x: 0
+					y: 0
 		1:
 			base: 'dot'
 			parentAnchors:
 				0:
-					x: 125
-					y: xHeight + overshoot / 2 - 120
+					x: spacingLeft + minThickness / 2
+					y: xHeight

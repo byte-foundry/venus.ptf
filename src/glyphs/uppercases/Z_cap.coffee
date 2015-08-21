@@ -3,7 +3,7 @@ exports.glyphs['Z_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 45 * spacing
+		spacingLeft: 45 * spacing + (23)
 		spacingRight: 45 * spacing
 	tags: [
 		'all',
