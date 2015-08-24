@@ -16,7 +16,7 @@ exports.glyphs['Z_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 60
+					x: 400 + 210 * width
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -26,7 +26,7 @@ exports.glyphs['Z_cap'] =
 						distr: 0
 					})
 				1:
-					x: 400 + 210 * width
+					x: 60
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -50,7 +50,7 @@ exports.glyphs['Z_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[1].x
+					x: contours[0].nodes[0].x
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -64,13 +64,13 @@ exports.glyphs['Z_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 125 / 115 ) * thickness * opticThickness + ( 24 / 115 ) * thickness * opticThickness * width
-						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[1].point )
+						angle: Utils.lineAngle( contours[0].nodes[1].expandedTo[0].point, contours[0].nodes[0].expandedTo[1].point )
 						distr: 1
 					})
 				1:
