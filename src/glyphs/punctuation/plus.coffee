@@ -26,7 +26,7 @@ exports.glyphs['plus'] =
 						distr: 0.5
 					})
 				1:
-					x: 300 + 240 * width
+					x: xHeight
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

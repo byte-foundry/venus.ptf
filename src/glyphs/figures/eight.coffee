@@ -1,7 +1,7 @@
 exports.glyphs['eight'] =
 	unicode: '8'
 	ot:
-		advanceWidth: contours[0].nodes[0].x + spacingRight
+		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
 		spacingLeft: 55 * spacing + (63)
 		spacingRight: 55 * spacing
