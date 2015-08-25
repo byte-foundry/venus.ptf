@@ -8,7 +8,7 @@ exports.glyphs['ampersand'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 35 * spacing + (0)
+		spacingLeft: 35 * spacing + (50)
 		spacingRight: 25 * spacing
 	contours:
 		0:
@@ -89,10 +89,66 @@ exports.glyphs['ampersand'] =
 				7:
 					x: contours[0].nodes[3].expandedTo[1].x
 					y: contours[0].nodes[3].expandedTo[1].y
-					dirIn: Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[3].point ) - Math.PI / 12 + ( Math.PI / 2 / 115 ) * thickness
-					type: 'smooth'
+					# dirIn: Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[3].point ) - Math.PI / 12 + ( Math.PI / 2 / 115 ) * thickness
+					dirIn: 30 + 'deg'
+					typeOut: 'line'
 					expand: Object({
 						width: ( 83 / 115 ) * thickness
 						angle: Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[3].point )
 						distr: 0.9
+					})
+				8:
+					expandedTo:
+						[
+							{
+								x: contours[0].nodes[7].expandedTo[0].x
+								y: contours[0].nodes[7].expandedTo[0].y
+								typeOut: 'line'
+							}
+							{
+								x: contours[0].nodes[9].expandedTo[1].x
+								y: contours[0].nodes[9].expandedTo[1].y
+								typeOut: 'line'
+							}
+						]
+				9:
+					x: contours[0].nodes[3].expandedTo[0].x
+					y: contours[0].nodes[3].expandedTo[0].y
+					# dirOut: Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[3].point ) - Math.PI / 12 + ( Math.PI / 2 / 115 ) * thickness
+					dirOut: - 156 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 83 / 115 ) * thickness
+						angle: Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[3].point )
+						distr: 0.75
+					})
+				10:
+					x: spacingLeft
+					y: ( 180 / 750 ) * capHeight + (4)
+					dirOut: - 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 121 / 115 ) * thickness
+						angle: 180 + 7 + 'deg'
+						distr: 0.75
+					})
+				11:
+					x: 265
+					y: - overshoot - 10
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 114 / 115 ) * thickness
+						angle: 180 + 82 + 'deg'
+						distr: 1
+					})
+				12:
+					x: 565 - (26)
+					y: ( 345 / 750 ) * capHeight + (6)
+					dirIn: - 89 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 108 / 115 ) * thickness
+						angle: - 13 + 'deg'
+						distr: 0.75
 					})
