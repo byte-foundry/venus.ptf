@@ -10,6 +10,8 @@ exports.glyphs['A_cap'] =
 		'latin',
 		'uppercase'
 	]
+	# anchors:
+	# 	diacriticX: ( contours[0].nodes[3].expandedTo[0].x - spacingLeft ) / 2
 	contours:
 		0:
 			skeleton: true
@@ -66,7 +68,7 @@ exports.glyphs['A_cap'] =
 			nodes:
 				0:
 					x: Utils.onLine({
-						on: [ contours[0].nodes[2].point, contours[0].nodes[3].point ]
+						on: [ contours[0].nodes[2].expandedTo[1].point, contours[0].nodes[3].expandedTo[1].point ]
 						y: ( 260 / 750 ) * capHeight * crossbar
 						})
 					y: ( 260 / 750 ) * capHeight * crossbar
@@ -74,12 +76,12 @@ exports.glyphs['A_cap'] =
 					typeOut: 'line'
 					expand: Object({
 						width: ( 110 / 115 ) * thickness * contrast * opticThickness
-						angle: 90 + 'deg'
+						angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[1].point, contours[0].nodes[2].expandedTo[1].point )
 						distr: 1
 					})
 				1:
 					x: Utils.onLine({
-						on: [ contours[0].nodes[0].point, contours[0].nodes[1].point ]
+						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]
 						y: ( 260 / 750 ) * capHeight * crossbar
 						})
 					y: ( 260 / 750 ) * capHeight * crossbar
@@ -87,6 +89,6 @@ exports.glyphs['A_cap'] =
 					typeOut: 'line'
 					expand: Object({
 						width: ( 110 / 115 ) * thickness * contrast * opticThickness
-						angle: 90 + 'deg'
+						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point )
 						distr: 1
 					})
