@@ -3,7 +3,7 @@ exports.glyphs['p'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 70 * spacing + (69)
+		spacingLeft: 70 * spacing + (69) + serifWidth / 2
 		spacingRight: 50 * spacing
 	tags: [
 		'all',
@@ -17,7 +17,7 @@ exports.glyphs['p'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 155 / 250 ) * descender
+					y: ( 155 / 250 ) * descender + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['p'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight
+					y: xHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -87,3 +87,28 @@ exports.glyphs['p'] =
 						angle: 112 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: ( 155 / 250 ) * descender
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+				2:
+					anchorLine: xHeight
+					directionY: -1
+					right: false

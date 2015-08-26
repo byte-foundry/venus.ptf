@@ -3,8 +3,8 @@ exports.glyphs['n'] =
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 70 * spacing + (69)
-		spacingRight: 70 * spacing
+		spacingLeft: 70 * spacing + (69) + serifWidth / 2
+		spacingRight: 70 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -17,7 +17,7 @@ exports.glyphs['n'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['n'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight
+					y: xHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -97,10 +97,46 @@ exports.glyphs['n'] =
 					})
 				3:
 					x: contours[1].nodes[2].x
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: thickness
 						angle: 180 + 'deg'
 						distr: - 0.5
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: 0
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+				2:
+					anchorLine: xHeight
+					directionY: -1
+					right: false
+		2:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[3].expandedTo[0].x
+					y: contours[1].nodes[3].y
+				1:
+					x: contours[1].nodes[3].expandedTo[1].x
+					y: contours[1].nodes[3].y
+				2:
+					anchorLine: 0

@@ -3,7 +3,7 @@ exports.glyphs['r'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 70 * spacing + (69)
+		spacingLeft: 70 * spacing + (69) + serifWidth / 2
 		spacingRight: 20 * spacing
 	tags: [
 		'all',
@@ -17,7 +17,7 @@ exports.glyphs['r'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['r'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight
+					y: xHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -76,10 +76,10 @@ exports.glyphs['r'] =
 							}
 						]
 				1:
-					x: 230 * width + Math.max(
-						( 100 / 115 ) * thickness,
-						100
-					)
+					x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
+						( 150 / 115 ) * thickness * width - 50,
+						150 * width - 50
+					) - ( serifHeight + serifCurve ) / 2
 					y: xHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -94,7 +94,7 @@ exports.glyphs['r'] =
 					expandedTo:
 						[
 							{
-								x: contours[1].nodes[1].x + 20
+								x: contours[1].nodes[1].x + 20 + serifHeight + serifCurve
 								y: contours[1].nodes[1].expandedTo[0].y
 							}
 							{
@@ -102,3 +102,42 @@ exports.glyphs['r'] =
 								y: contours[1].nodes[1].expandedTo[1].y
 							}
 						]
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: 0
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+				2:
+					anchorLine: xHeight
+					directionY: -1
+					right: false
+		2:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[2].expandedTo[1].x - serifHeight - serifCurve
+					y: contours[1].nodes[2].expandedTo[0].y
+				1:
+					x: contours[1].nodes[2].expandedTo[0].x - serifHeight - serifCurve
+					y: contours[1].nodes[2].expandedTo[1].y
+				2:
+					anchorLine: contours[1].nodes[2].expandedTo[0].x
+					right: false
+					baseRight: contours[1].nodes[2].expandedTo[0].point
+					directionY: -1
