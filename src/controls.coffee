@@ -26,7 +26,7 @@ exports.controls = [
 		name: 'ascender'
 		label: 'Ascender'
 		min: 50
-		max: 500
+		max: 800
 		step: 1
 		init: 230
 		minAdvised: 50
@@ -35,7 +35,7 @@ exports.controls = [
 	,
 		name: 'descender'
 		label: 'Descender'
-		min: -450
+		min: -850
 		max: -50
 		step: 1
 		init: -250
@@ -178,7 +178,7 @@ exports.controls = [
 		min: 0.001 #temporary FIX (instead 0)
 		max: 200
 		step: 1
-		init: 65
+		init: 0
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
@@ -198,7 +198,7 @@ exports.controls = [
 		min: 0
 		max: 100
 		step: 1
-		init: 20
+		init: 0
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
@@ -218,7 +218,7 @@ exports.controls = [
 		min: 0
 		max: 100
 		step: 1
-		init: 15
+		init: 0
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false

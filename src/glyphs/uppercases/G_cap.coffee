@@ -16,7 +16,7 @@ exports.glyphs['G_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 380
+					x: contours[0].nodes[1].expandedTo[0].x - 230 * width
 					y: ( 325 / 750 ) * capHeight + (82)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

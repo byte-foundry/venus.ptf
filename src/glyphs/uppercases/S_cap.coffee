@@ -51,7 +51,10 @@ exports.glyphs['S_cap'] =
 				3:
 					x: contours[0].nodes[1].x + ( contours[0].nodes[5].x - contours[0].nodes[1].x ) * 0.46
 					y: ( 386 / 750 ) * capHeight
-					dirOut: Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[0].point ) + Math.PI / 6
+					dirOut: Math.min(
+						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[0].point ) + Math.PI / 6,
+						Math.PI + Math.PI / 60
+					)
 					tensionIn: 1.1
 					tensionOut: 1.1
 					type: 'smooth'

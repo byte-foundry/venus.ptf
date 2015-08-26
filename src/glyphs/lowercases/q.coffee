@@ -4,7 +4,7 @@ exports.glyphs['q'] =
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
 		spacingLeft: 50 * spacing + (59)
-		spacingRight: 70 * spacing
+		spacingRight: 70 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -61,7 +61,7 @@ exports.glyphs['q'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: ( 155 / 250 ) * descender
+					y: ( 155 / 250 ) * descender + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -71,7 +71,7 @@ exports.glyphs['q'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: xHeight
+					y: xHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -79,3 +79,28 @@ exports.glyphs['q'] =
 						angle: 0 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].y
+				1:
+					x: contours[1].nodes[0].expandedTo[0].x
+					y: contours[1].nodes[0].y
+				2:
+					anchorLine: ( 155 / 250 ) * descender
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[1].y
+				1:
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].y
+				2:
+					anchorLine: xHeight
+					directionY: -1
+					left: false
