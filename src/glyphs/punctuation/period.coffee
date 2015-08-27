@@ -8,7 +8,7 @@ exports.glyphs['period'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (29)
+		spacingLeft: 50 * spacing + (0)
 		spacingRight: 50 * spacing
 	components:
 		0:

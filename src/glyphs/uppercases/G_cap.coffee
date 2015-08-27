@@ -3,7 +3,7 @@ exports.glyphs['G_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 50 * spacing + (64)
+		spacingLeft: 50 * spacing + (36)
 		spacingRight: 45 * spacing
 	tags: [
 		'all',
