@@ -61,7 +61,7 @@ exports.glyphs['d'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -71,7 +71,7 @@ exports.glyphs['d'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: ascenderHeight
+					y: ascenderHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -79,3 +79,29 @@ exports.glyphs['d'] =
 						angle: 0 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].y
+				1:
+					x: contours[1].nodes[0].expandedTo[0].x
+					y: contours[1].nodes[0].y
+				2:
+					anchorLine: 0
+					left: false
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[1].y
+				1:
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].y
+				2:
+					anchorLine: ascenderHeight
+					directionY: -1
+					right: false

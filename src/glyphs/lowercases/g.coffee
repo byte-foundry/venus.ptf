@@ -110,7 +110,7 @@ exports.glyphs['g'] =
 					})
 				3:
 					x: contours[1].nodes[2].x
-					y: xHeight
+					y: xHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -118,3 +118,17 @@ exports.glyphs['g'] =
 						angle: 180 + 'deg'
 						distr: 1
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[3].expandedTo[0].x
+					y: contours[1].nodes[3].y
+				1:
+					x: contours[1].nodes[3].expandedTo[1].x
+					y: contours[1].nodes[3].y
+				2:
+					anchorLine: xHeight
+					directionY: -1
+					left: false

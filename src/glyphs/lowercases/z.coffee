@@ -16,7 +16,7 @@ exports.glyphs['z'] =
 			closed: false
 			nodes:
 				0:
-					x: 45
+					x: contours[0].nodes[4].x + 15
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -36,7 +36,7 @@ exports.glyphs['z'] =
 						distr: 0
 					})
 				2:
-					x: 424
+					x: contours[0].nodes[8].x - 16
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -96,7 +96,7 @@ exports.glyphs['z'] =
 						distr: 1
 					})
 				8:
-					x: 440
+					x: 200 + 240 * width
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -105,3 +105,31 @@ exports.glyphs['z'] =
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
+	components:
+		0:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[8].expandedTo[1].x - serifHeight - serifCurve
+					y: contours[0].nodes[8].expandedTo[0].y
+				1:
+					x: contours[0].nodes[8].expandedTo[0].x - serifHeight - serifCurve
+					y: contours[0].nodes[8].expandedTo[1].y
+				2:
+					anchorLine: contours[0].nodes[8].expandedTo[0].x
+					left: false
+					baseLeft: contours[0].nodes[8].expandedTo[1].point
+		1:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x + serifHeight + serifCurve
+					y: contours[0].nodes[0].expandedTo[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x + serifHeight + serifCurve
+					y: contours[0].nodes[0].expandedTo[1].y
+				2:
+					anchorLine: contours[0].nodes[0].expandedTo[0].x
+					right: false
+					baseRight: contours[0].nodes[0].expandedTo[0].point
+					directionX: -1
