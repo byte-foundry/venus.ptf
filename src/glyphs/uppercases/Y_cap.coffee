@@ -110,7 +110,7 @@ exports.glyphs['Y_cap'] =
 					})
 				1:
 					x: contours[2].nodes[0].x
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -118,3 +118,15 @@ exports.glyphs['Y_cap'] =
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[2].nodes[1].expandedTo[1].x
+					y: contours[2].nodes[1].y
+				1:
+					x: contours[2].nodes[1].expandedTo[0].x
+					y: contours[2].nodes[1].y
+				2:
+					anchorLine: 0

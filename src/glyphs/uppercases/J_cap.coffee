@@ -61,7 +61,7 @@ exports.glyphs['J_cap'] =
 					})
 				4:
 					x: 200 + 285 * width - (34)
-					y: capHeight
+					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -69,3 +69,17 @@ exports.glyphs['J_cap'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[4].expandedTo[0].x
+					y: contours[0].nodes[4].y
+				1:
+					x: contours[0].nodes[4].expandedTo[1].x
+					y: contours[0].nodes[4].y
+				2:
+					anchorLine: capHeight
+					directionY: -1
+					right: false

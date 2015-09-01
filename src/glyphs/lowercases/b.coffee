@@ -17,7 +17,7 @@ exports.glyphs['b'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['b'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight
+					y: ascenderHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({

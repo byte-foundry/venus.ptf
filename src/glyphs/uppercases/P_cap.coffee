@@ -3,7 +3,7 @@ exports.glyphs['P_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 85 * spacing + (34)
+		spacingLeft: 85 * spacing + (34) + serifWidth / 2
 		spacingRight: 35 * spacing
 	tags: [
 		'all',
@@ -17,7 +17,7 @@ exports.glyphs['P_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['P_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight
+					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -41,7 +41,7 @@ exports.glyphs['P_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
+					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -102,3 +102,28 @@ exports.glyphs['P_cap'] =
 								typeIn: 'line'
 							}
 						]
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: 0
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+				2:
+					anchorLine: capHeight
+					directionY: -1
+					right: false

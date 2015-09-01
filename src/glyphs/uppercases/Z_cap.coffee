@@ -83,3 +83,31 @@ exports.glyphs['Z_cap'] =
 						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[0].point )
 						distr: 0
 					})
+	components:
+		0:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve
+					y: contours[1].nodes[1].expandedTo[1].y
+				1:
+					x: contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve
+					y: contours[1].nodes[1].expandedTo[0].y
+				2:
+					anchorLine: contours[1].nodes[1].expandedTo[0].x
+					left: false
+					baseLeft: contours[1].nodes[1].expandedTo[0].point
+		1:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x + serifHeight + serifCurve
+					y: contours[0].nodes[1].expandedTo[0].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x + serifHeight + serifCurve
+					y: contours[0].nodes[1].expandedTo[1].y
+				2:
+					anchorLine: contours[0].nodes[1].expandedTo[0].x
+					right: false
+					baseRight: contours[0].nodes[1].expandedTo[0].point
+					directionX: -1

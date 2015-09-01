@@ -3,8 +3,8 @@ exports.glyphs['U_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 80 * spacing + (32)
-		spacingRight: 80 * spacing
+		spacingLeft: 80 * spacing + (32) + serifWidth / 2
+		spacingRight: 80 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -17,7 +17,7 @@ exports.glyphs['U_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: capHeight
+					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -60,10 +60,35 @@ exports.glyphs['U_cap'] =
 					})
 				4:
 					x: contours[0].nodes[3].x
-					y: capHeight
+					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: capHeight
+					directionY: -1
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[4].expandedTo[0].x
+					y: contours[0].nodes[4].y
+				1:
+					x: contours[0].nodes[4].expandedTo[1].x
+					y: contours[0].nodes[4].y
+				2:
+					anchorLine: capHeight
+					directionY: -1

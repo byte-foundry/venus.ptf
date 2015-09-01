@@ -3,8 +3,8 @@ exports.glyphs['L_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 85 * spacing + (34)
-		spacingRight: 30 * spacing
+		spacingLeft: 85 * spacing + (34) + serifWidth / 2
+		spacingRight: 30 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -17,7 +17,7 @@ exports.glyphs['L_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -27,7 +27,7 @@ exports.glyphs['L_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight
+					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -50,7 +50,7 @@ exports.glyphs['L_cap'] =
 						distr: 0
 					})
 				1:
-					x: 300 + 245 * width
+					x: contours[0].nodes[0].expandedTo[1].x + 100 + 225 * width
 					y: contours[1].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -59,3 +59,42 @@ exports.glyphs['L_cap'] =
 						angle: 90 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].y
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].y
+				2:
+					anchorLine: 0
+					right: false
+		1:
+			base: 'serif'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].y
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+				2:
+					anchorLine: capHeight
+					directionY: -1
+		2:
+			base: 'serif-v'
+			parentAnchors:
+				0:
+					x: contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve
+					y: contours[1].nodes[1].expandedTo[1].y
+				1:
+					x: contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve
+					y: contours[1].nodes[1].expandedTo[0].y
+				2:
+					anchorLine: contours[1].nodes[1].expandedTo[0].x
+					left: false
+					baseLeft: contours[1].nodes[1].expandedTo[0].point
+					directionX: 1
