@@ -44,6 +44,21 @@ exports.glyphs['s'] =
 						distr: 0.25
 					})
 				3:
+					x: contours[0].nodes[1].x + ( contours[0].nodes[5].x - contours[0].nodes[1].x ) * 0.46
+					y: ( 260 / 520 ) * xHeight
+					dirOut: Math.min(
+						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[0].point ) + Math.PI / 6,
+						Math.PI + Math.PI / 60
+					)
+					tensionIn: 1.1
+					tensionOut: 1.1
+					type: 'smooth'
+					expand: Object({
+						width: ( 106 / 115 ) * thickness 
+						angle: 180 + 75 + 'deg'
+						distr: 0.5
+					})
+				4:
 					x: contours[0].nodes[0].x + (33)
 					y: xHeight - 140
 					dirIn: - 90 + 'deg'
@@ -53,7 +68,7 @@ exports.glyphs['s'] =
 						angle: 180 + 5 + 'deg'
 						distr: 0.75
 					})
-				4:
+				5:
 					x: 245
 					y: xHeight + overshoot / 2
 					dirOut: 0 + 'deg'
@@ -62,7 +77,7 @@ exports.glyphs['s'] =
 						angle: 180 - 90 + 'deg'
 						distr: 1
 					})
-				5:
+				6:
 					x: 367 + (24)
 					y: xHeight - 152 + (9)
 					dirIn: 118 + 'deg'

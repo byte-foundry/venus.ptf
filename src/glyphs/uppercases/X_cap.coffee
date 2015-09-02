@@ -115,6 +115,8 @@ exports.glyphs['X_cap'] =
 					# rightWidth: 0.9
 					angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point )
 					directionY: -1
+					baseRight: contours[0].nodes[0].expandedTo[1].point
+					baseLeft: contours[0].nodes[0].expandedTo[0].point
 		1:
 			base: 'serif'
 			parentAnchors:
@@ -136,6 +138,8 @@ exports.glyphs['X_cap'] =
 					# rightWidth: 0.9
 					angle: Utils.lineAngle( contours[2].nodes[1].expandedTo[0].point, contours[2].nodes[0].expandedTo[0].point )
 					directionY: -1
+					baseRight: contours[2].nodes[0].expandedTo[1].point
+					baseLeft: contours[2].nodes[0].expandedTo[0].point
 		2:
 			base: 'serif'
 			parentAnchors:
@@ -156,8 +160,8 @@ exports.glyphs['X_cap'] =
 					# leftWidth: 70
 					# rightWidth: 30
 					# leftCurve: 1.2
-					# baseRight: contours[1].nodes[0].expandedTo[1].point
-					# baseLeft: contours[1].nodes[0].expandedTo[0].point
+					baseRight: contours[1].nodes[1].expandedTo[1].point
+					baseLeft: contours[1].nodes[1].expandedTo[0].point
 					# anchor_0: contours[1].nodes[0].expandedTo[1].x
 					# anchor_1: contours[1].nodes[0].expandedTo[0].x
 					angle: Utils.lineAngle( contours[1].nodes[0].point ,contours[1].nodes[1].point )
@@ -181,8 +185,8 @@ exports.glyphs['X_cap'] =
 					# leftWidth: 70
 					# rightWidth: 30
 					# leftCurve: 1.2
-					# baseRight: contours[0].nodes[0].expandedTo[1].point
-					# baseLeft: contours[0].nodes[0].expandedTo[0].point
+					baseRight: contours[0].nodes[1].expandedTo[1].point
+					baseLeft: contours[0].nodes[1].expandedTo[0].point
 					# anchor_0: contours[0].nodes[0].expandedTo[1].x
 					# anchor_1: contours[0].nodes[0].expandedTo[0].x
 					angle: Utils.lineAngle( contours[0].nodes[0].point ,contours[0].nodes[1].point )

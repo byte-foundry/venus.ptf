@@ -12,7 +12,7 @@ exports.glyphs['six'] =
 	]
 	anchors:
 		0:
-			junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], - ( 100 / 115 ) * thickness + 100, true, 10 )
+			# junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], - ( 100 / 115 ) * thickness, true, 10 )
 			junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 100 / 115 ) * thickness, true, 10 )
 	contours:
 		0:

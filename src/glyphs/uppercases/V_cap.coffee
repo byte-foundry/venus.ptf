@@ -81,6 +81,8 @@ exports.glyphs['V_cap'] =
 					anchorLine: capHeight
 					# leftWidth: 0.9
 					# rightWidth: 0.9
+					baseLeft: contours[0].nodes[0].expandedTo[0].point
+					baseRight: contours[0].nodes[0].expandedTo[1].point
 					angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point )
 					directionY: -1
 		1:
@@ -102,5 +104,7 @@ exports.glyphs['V_cap'] =
 					anchorLine: capHeight
 					# leftWidth: 0.9
 					# rightWidth: 0.9
+					baseLeft: contours[1].nodes[1].expandedTo[1].point
+					baseRight: contours[1].nodes[1].expandedTo[0].point
 					angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point )
 					directionY: -1

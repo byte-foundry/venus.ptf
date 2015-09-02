@@ -183,6 +183,6 @@ exports.glyphs['E_cap'] =
 					anchorLine: contours[3].nodes[1].expandedTo[1].x
 					# rightWidth: 60
 					left: false
-					baseLeft: contours[3].nodes[1].expandedTo[1].point
+					baseLeft: contours[3].nodes[1].expandedTo[0].point
 			# transformOrigin: Array( contours[3].nodes[0].expandedTo[0].x, contours[3].nodes[0].expandedTo[0].y )
 			# transforms: Array( [ 'skewX', serifRotate * (8) + 'deg' ] )
