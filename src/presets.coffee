@@ -13,8 +13,8 @@ exports.presets =
 			aperture: 1
 			axis: 0
 			serifMedian: 1
-			serifWidth: 65
-			serifHeight: 20
+			serifWidth: 0
+			serifHeight: 0
 			serifCurve: 15
 			serifArc: 0
 			serifTerminal: 0
@@ -43,8 +43,8 @@ exports.presets =
 		aperture: 1
 		axis: 0
 		serifMedian: 1
-		serifWidth: 65
-		serifHeight: 20
+		serifWidth: 0
+		serifHeight: 0
 		serifCurve: 15
 		serifArc: 0
 		serifTerminal: 0
@@ -73,8 +73,8 @@ exports.presets =
 		aperture: 1
 		axis: 0
 		serifMedian: 1
-		serifWidth: 65
-		serifHeight: 20
+		serifWidth: 0
+		serifHeight: 0
 		serifCurve: 15
 		serifArc: 0
 		serifTerminal: 0
@@ -103,8 +103,8 @@ exports.presets =
 		aperture: 1
 		axis: 0
 		serifMedian: 1
-		serifWidth: 65
-		serifHeight: 20
+		serifWidth: 0
+		serifHeight: 0
 		serifCurve: 15
 		serifArc: 0
 		serifTerminal: 0
@@ -133,8 +133,8 @@ exports.presets =
 		aperture: 1
 		axis: 0
 		serifMedian: 1
-		serifWidth: 65
-		serifHeight: 20
+		serifWidth: 0
+		serifHeight: 0
 		serifCurve: 15
 		serifArc: 0
 		serifTerminal: 0

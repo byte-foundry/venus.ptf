@@ -195,10 +195,10 @@ exports.controls = [
 	,
 		name: 'serifHeight'
 		label: 'Serif Height'
-		min: 0
+		min: 0.001
 		max: 100
 		step: 1
-		init: 0
+		init: 0.001
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
