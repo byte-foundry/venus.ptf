@@ -174,6 +174,6 @@ exports.glyphs['a'] =
 								# dirOut: Math.min( - 90, - 67 - ( 68 / 115 ) * thickness * width ) + 'deg'
 								dirOut: - 88 - ( 47 / 115 ) * thickness + 'deg',
 								tensionOut: 2 - ( 1.4 / 520 ) * xHeight
-								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1 
+								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1
 							}
 						]
