@@ -34,7 +34,7 @@ exports.glyphs['a'] =
 						distr: 0
 					})
 				2:
-					x: 360 + (86)
+					# x: 360 + (86)
 					x: contours[0].nodes[3].x
 					y: ( 380 / 520 ) * xHeight - (32) - ( 30 / 115 ) * thickness + 30
 					dirIn: 90 + 'deg'
@@ -93,10 +93,12 @@ exports.glyphs['a'] =
 					})
 				1:
 					x: 195
-					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22 + 5
+					# x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22 + 5
+					# x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / 115 ) * thickness, 65 )
 					y:  - overshoot
 					type: 'smooth'
 					dirIn: 0 + 'deg'
+					tensionOut: 1.2
 					expand: Object({
 						width: ( 87 / 115 ) * thickness * contrast
 						angle: 66 + 'deg'
@@ -104,7 +106,7 @@ exports.glyphs['a'] =
 					})
 				2:
 					x: 40 + (29)
-					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[0].y - contours[1].nodes[1].expandedTo[1].y ) * 0.2
+					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.3
 					type: 'smooth'
 					dirOut: 90 + 'deg'
 					tensionOut: 1.1
@@ -114,8 +116,8 @@ exports.glyphs['a'] =
 						distr: 0.25
 					})
 				3:
-					x: 190 + (17)
-					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22
+					# x: 190 + (17)
+					# x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22
 					x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / 115 ) * thickness, 65 )
 					# y: 300 - (19)
 					# y: contours[1].nodes[4].expandedTo[1].y + (5)
@@ -172,5 +174,6 @@ exports.glyphs['a'] =
 								# dirOut: Math.min( - 90, - 67 - ( 68 / 115 ) * thickness * width ) + 'deg'
 								dirOut: - 88 - ( 47 / 115 ) * thickness + 'deg',
 								tensionOut: 2 - ( 1.4 / 520 ) * xHeight
+								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1 
 							}
 						]
