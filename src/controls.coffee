@@ -106,7 +106,7 @@ exports.controls = [
 		init: -1
 		minAdvised: -1
 		maxAdvised: -0.3
-		disabled: false
+		disabled: true
 	,
 		name: 'aperture'
 		label: 'Aperture'
@@ -116,7 +116,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0.9
 		maxAdvised: 1.2
-		disabled: false
+		disabled: true
 	,
 		name: 'curviness'
 		label: 'Curviness'
@@ -146,7 +146,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0.5
 		maxAdvised: 1
-		disabled: false
+		disabled: true
 	# ,
 	# 	name: 'term'
 	# 	label: 'Term'
@@ -271,7 +271,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0
 		maxAdvised: 1.5
-		disabled: false
+		disabled: true
 	,
 		name: 'serifRotate'
 		label: 'Serif Rotation'
@@ -281,7 +281,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0.4
 		maxAdvised: 1.2
-		disabled: false
+		disabled: true
 	,
 		name: 'serifBall'
 		label: 'Terminal Ball'
@@ -291,6 +291,6 @@ exports.controls = [
 		init: 1
 		minAdvised: 0
 		maxAdvised: 1.1
-		disabled: false
+		disabled: true
 	]
 ]

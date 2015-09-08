@@ -104,7 +104,7 @@ exports.glyphs['a'] =
 					})
 				2:
 					x: 40 + (29)
-					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[3].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.4
+					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[0].y - contours[1].nodes[1].expandedTo[1].y ) * 0.2
 					type: 'smooth'
 					dirOut: 90 + 'deg'
 					tensionOut: 1.1
@@ -116,8 +116,10 @@ exports.glyphs['a'] =
 				3:
 					x: 190 + (17)
 					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22
+					x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / 115 ) * thickness, 65 )
 					# y: 300 - (19)
-					y: contours[1].nodes[4].expandedTo[1].y + (5)
+					# y: contours[1].nodes[4].expandedTo[1].y + (5)
+					y: contours[1].nodes[2].expandedTo[0].y + ( contours[1].nodes[4].expandedTo[0].y - contours[1].nodes[2].expandedTo[0].y ) * 0.58
 					type: 'smooth'
 					dirOut:
 						# 11 + 'deg'
@@ -167,7 +169,8 @@ exports.glyphs['a'] =
 								# 	- 88 - ( 47 / 115 ) * thickness + 'deg',
 								# 	- 65 - ( 70 / 115 ) * thickness * width + 'deg'
 								# )
-								dirOut: Math.min( - 90, - 67 - ( 68 / 115 ) * thickness * width ) + 'deg'
-								tensionOut: 1.4
+								# dirOut: Math.min( - 90, - 67 - ( 68 / 115 ) * thickness * width ) + 'deg'
+								dirOut: - 88 - ( 47 / 115 ) * thickness + 'deg',
+								tensionOut: 2 - ( 1.4 / 520 ) * xHeight
 							}
 						]
