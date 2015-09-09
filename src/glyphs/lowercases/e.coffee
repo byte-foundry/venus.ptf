@@ -25,6 +25,15 @@ exports.glyphs['e'] =
 						angle: - 21 + 'deg'
 						distr: 0.25
 					})
+				0:
+					x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
+					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture + 40 ) - (15) # 190 - (15)
+					dirOut: contours[0].nodes[0].expand.angle + Math.PI / 2
+					expand: Object({
+						width: ( 115 / 115) * thickness
+						angle: - Math.max( - 10, - 60 * aperture + 81 ) + 'deg' # 21 + 'deg'
+						distr: 0.25
+					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 						# Math.max(

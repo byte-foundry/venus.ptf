@@ -110,13 +110,13 @@ exports.controls = [
 	,
 		name: 'aperture'
 		label: 'Aperture'
-		min: 0.5
+		min: 0.3
 		max: 2
 		step: 0.01
 		init: 1
 		minAdvised: 0.9
 		maxAdvised: 1.2
-		disabled: true
+		disabled: false
 	,
 		name: 'curviness'
 		label: 'Curviness'

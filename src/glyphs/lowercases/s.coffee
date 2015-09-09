@@ -57,7 +57,7 @@ exports.glyphs['s'] =
 					tensionOut: 1.1
 					type: 'smooth'
 					expand: Object({
-						width: ( 106 / 115 ) * thickness + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
+						width: ( 106 / 115 ) * thickness # + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
 						angle: 180 + 75 + 'deg'
 						distr: 0.5
 					})
