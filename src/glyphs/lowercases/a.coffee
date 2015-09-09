@@ -16,13 +16,13 @@ exports.glyphs['a'] =
 			closed: false
 			nodes:
 				0:
-					x: 55
-					y: xHeight - ( 130 / 520 ) * xHeight
-					dirOut: 72 + 'deg'
+					x: 55 + (26)
+					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture ) - (8)
+					dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
 					expand: Object({
 						width: ( 110 / 115 ) * thickness
-						angle: - 18 + 'deg'
-						distr: 0
+						angle: - Math.max( - 10, - 60 * aperture + 78 ) + 'deg' # 18
+						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5

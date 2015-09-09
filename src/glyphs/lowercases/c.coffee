@@ -16,14 +16,14 @@ exports.glyphs['c'] =
 			closed: false
 			nodes:
 				0:
-					# x: contours[0].nodes[2].expandedTo[0].x + 245 + (25)
-					x: spacingLeft + ( 240 * width + 180 - 50 ) - (9)
-					y: 190 - (12)
-					dirOut: - 110 + 'deg'
+					x: spacingLeft + 200 + 270 * width - (56)
+					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture - 10 ) + (12) # 140
+					dirOut: contours[0].nodes[0].expand.angle + Math.PI / 2 + (Math.PI / 32)
 					expand: Object({
 						width: ( 112 / 115) * thickness
-						angle: - 26 + 'deg'
-						distr: 0.25
+						# angle: - 26 + 'deg'
+						angle: - Math.max( - 10, - 60 * aperture + 86 ) + 'deg' # 26 + 'deg'
+						distr: 0.75
 					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
@@ -64,12 +64,24 @@ exports.glyphs['c'] =
 						angle: 180 - 90 + 'deg'
 						distr: 1
 					})
+				# 4:
+				# 	x: contours[0].nodes[0].x
+				# 	y: xHeight - 190 + (12)
+				# 	dirIn: 110 + 'deg'
+				# 	expand: Object({
+				# 		width: ( 112 / 115) * thickness
+				# 		angle: 26 + 'deg'
+				# 		distr: 0.25
+				# 	})
 				4:
 					x: contours[0].nodes[0].x
-					y: xHeight - 190 + (12)
-					dirIn: 110 + 'deg'
+					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture + 10 ) - (12)
+					# should be:
+					# dirIn: contours[0].nodes[4].expand.angle + Math.PI / 2
+					# but there is an issue in dependencies tree
+					dirIn: Math.max( - 10, - 60 * aperture + 86 ) + 90 + 'deg'
 					expand: Object({
 						width: ( 112 / 115) * thickness
-						angle: 26 + 'deg'
-						distr: 0.25
+						angle: Math.max( - 10, - 60 * aperture + 86 ) + 'deg' # 26
+						distr: 0.75
 					})
