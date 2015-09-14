@@ -5,6 +5,7 @@ exports.glyphs['a'] =
 	parameters:
 		spacingLeft: 70 * spacing + (29)
 		spacingRight: 30 * spacing
+		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 78 ) # 18
 	tags: [
 		'all',
 		'latin',
@@ -17,11 +18,15 @@ exports.glyphs['a'] =
 			nodes:
 				0:
 					x: 55 + (26)
-					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture ) - (8)
+					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
 					dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
+					dirOut: Math.min(
+						- anglePenTop + 90 + correctWidthAperture,
+						90
+					) + 'deg'
 					expand: Object({
 						width: ( 110 / 115 ) * thickness
-						angle: - Math.max( - 10, - 60 * aperture + 78 ) + 'deg' # 18
+						angle: - anglePenTop + 'deg'
 						distr: 0.25
 					})
 				1:

@@ -54,7 +54,7 @@ exports.glyphs['two'] =
 					# x: 235 + (0)
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[0].expandedTo[0].x ) * 0.455
 					y: ( 310 / 750 ) * capHeight - (6)
-					dirOut: Utils.lineAngle( contours[1].nodes[1].expandedTo[0].point, contours[1].nodes[2].expandedTo[1].point ) - Math.PI / 80
+					dirOut: Utils.lineAngle( contours[1].nodes[1].expandedTo[0].point, contours[1].nodes[2].expandedTo[1].point ) - Math.PI / Math.max( 10, ( 80 / 115 ) * thickness )
 					type: 'smooth'
 					tensionIn: 1.2
 					expand: Object({

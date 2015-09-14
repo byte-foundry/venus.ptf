@@ -5,6 +5,8 @@ exports.glyphs['S_cap'] =
 	parameters:
 		spacingLeft: 35 * spacing + (29)
 		spacingRight: 35 * spacing
+		anglePenTop: Math.max( - 10, - 40 * aperture * apertureTop + 82 ) # 42
+		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 95 ) # 35
 	tags: [
 		'all',
 		'latin',
@@ -17,13 +19,16 @@ exports.glyphs['S_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 160 / 750 ) * capHeight + (20)
-					dirOut: - 65 + 'deg'
+					y: Math.min( contours[0].nodes[3].y - ( 60 / 750 ) * capHeight, 140 * aperture * apertureBottom + 20 ) + (20) # 160
+					dirOut: Math.max(
+						anglePenBottom + 90 - correctWidthAperture - (10),
+						90
+					) + 'deg'
 					type: 'smooth'
-					tensionOut: 1.1
+					tensionOut: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureBottom )
 					expand: Object({
 						width: ( 140 / 115 ) * thickness * opticThickness
-						angle: 35 + 'deg'
+						angle: anglePenBottom + 'deg'
 						distr: 0.25
 					})
 				1:
@@ -86,12 +91,15 @@ exports.glyphs['S_cap'] =
 					})
 				6:
 					x: contours[0].nodes[2].expandedTo[0].x - 47
-					y: ( 631 / 750 ) * capHeight - (23)
-					dirOut: 128 + 'deg'
+					y: Math.max( contours[0].nodes[3].y + ( 80 / 520 ) * capHeight, capHeight - 119 * aperture * apertureTop ) - (23)
+					dirIn: Math.max(
+						anglePenTop + 90 - correctWidthAperture,
+						90
+					) + 'deg'
 					type: 'smooth'
-					tensionIn: 1.1
+					tensionIn: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureTop )
 					expand: Object({
 						width: ( 129 / 115 ) * thickness * opticThickness
-						angle: 180 - 138 + 'deg'
+						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

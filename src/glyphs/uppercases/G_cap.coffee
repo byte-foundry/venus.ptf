@@ -5,6 +5,7 @@ exports.glyphs['G_cap'] =
 	parameters:
 		spacingLeft: 50 * spacing + (36)
 		spacingRight: 45 * spacing
+		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 100 ) # 40
 	tags: [
 		'all',
 		'latin',
@@ -49,7 +50,7 @@ exports.glyphs['G_cap'] =
 						distr: 0.75
 					})
 				3:
-					x: contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[4].expandedTo[0].x ) * 0.6
+					x: contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[6].expandedTo[0].x - contours[0].nodes[4].expandedTo[0].x ) * 0.55
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
@@ -80,11 +81,14 @@ exports.glyphs['G_cap'] =
 						distr: 1
 					})
 				6:
-					x: contours[0].nodes[2].expandedTo[0].x + (40)
-					y: capHeight - 235 + (21)
-					dirIn: 118 + 'deg'
+					x: contours[0].nodes[2].expandedTo[1].x - ( 11 / 115 ) * thickness - (21)
+					y: Math.max( contours[0].nodes[1].expandedTo[1].y + ( 10 / 750 ) * capHeight, capHeight - 170 * aperture * apertureTop - 65 ) + (62)
+					dirIn: Math.max(
+						anglePenTop + 90 - 10 - correctWidthAperture,
+						90
+					) + 'deg'
 					expand: Object({
 						width: ( 129 / 115) * thickness * opticThickness
-						angle: 40 + 'deg'
-						distr: 0.25
+						angle: anglePenTop + 'deg'
+						distr: 0.75
 					})

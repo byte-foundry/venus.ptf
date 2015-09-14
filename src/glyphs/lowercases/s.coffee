@@ -5,8 +5,8 @@ exports.glyphs['s'] =
 	parameters:
 		spacingLeft: 30 * spacing + (23)
 		spacingRight: 30 * spacing
-		anglePenTop: Math.max( - 10, - 60 * aperture + 84 ) # 24
-		anglePenBottom: Math.max( - 10, - 60 * aperture + 81 ) # 21
+		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 84 ) # 24
+		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 81 ) # 21
 	tags: [
 		'all',
 		'latin',
@@ -19,11 +19,12 @@ exports.glyphs['s'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: Math.min( contours[0].nodes[3].y - ( 30 / 520 ) * xHeight, 150 * aperture - 20 ) + (10) # 130
+					y: Math.min( contours[0].nodes[3].y - ( 40 / 520 ) * xHeight, 150 * aperture * apertureBottom - 20 ) + (10) # 130
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture,
 						90
 					) + 'deg'
+					tensionOut: Math.min( correctTensionAperture, aperture * apertureBottom )
 					expand: Object({
 						width: ( 112 / 115 ) * thickness
 						angle: anglePenBottom + 'deg'
@@ -84,11 +85,12 @@ exports.glyphs['s'] =
 					})
 				6:
 					x: 200 + 261 * width - (24)
-					y: Math.max( contours[0].nodes[3].y + ( 10 / 520 ) * xHeight, xHeight - 152 * aperture ) + (9)
+					y: Math.max( contours[0].nodes[3].y + ( 40 / 520 ) * xHeight, xHeight - 152 * aperture * apertureTop ) + (9)
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,
 						90
 					) + 'deg'
+					tensionIn: Math.min( correctTensionAperture, aperture * apertureTop )
 					expand: Object({
 						width: ( 103 / 115 ) * thickness
 						angle: anglePenTop + 'deg'

@@ -5,7 +5,8 @@ exports.glyphs['c'] =
 	parameters:
 		spacingLeft: 50 * spacing + (31)
 		spacingRight: 30 * spacing
-		anglePen: Math.max( - 10, - 60 * aperture + 86 ) # 26
+		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 86 ) # 26
+		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 86 ) # 26
 	tags: [
 		'all',
 		'latin',
@@ -18,14 +19,14 @@ exports.glyphs['c'] =
 			nodes:
 				0:
 					x: spacingLeft + 200 + 270 * width - (56)
-					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture - 10 ) + (12) # 140
+					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture * apertureBottom - 10 ) + (12) # 140
 					dirOut: Math.min(
-						- anglePen + 90 + 6 + correctWidthAperture,
+						- anglePenBottom + 90 + 6 + correctWidthAperture,
 						90
 					) + 'deg'
 					expand: Object({
 						width: ( 112 / 115) * thickness
-						angle: - anglePen + 'deg'
+						angle: - anglePenBottom + 'deg'
 						distr: 0.75
 					})
 				1:
@@ -69,13 +70,13 @@ exports.glyphs['c'] =
 					})
 				4:
 					x: contours[0].nodes[0].x
-					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture + 10 ) - (12)
+					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12)
 					dirIn: Math.max(
-						anglePen + 90 - correctWidthAperture,
+						anglePenTop + 90 - correctWidthAperture,
 						90
 					) + 'deg'
 					expand: Object({
 						width: ( 112 / 115) * thickness
-						angle: anglePen + 'deg'
+						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

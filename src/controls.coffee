@@ -118,6 +118,28 @@ exports.controls = [
 		maxAdvised: 1.2
 		disabled: false
 	,
+		name: 'apertureTop'
+		label: 'Top'
+		min: 0.3
+		max: 1.7
+		step: 0.01
+		init: 1
+		minAdvised: 0.1
+		maxAdvised: 1
+		disabled: false
+		child: true
+	,
+		name: 'apertureBottom'
+		label: 'Bottom'
+		min: 0.3
+		max: 1.7
+		step: 0.01
+		init: 1
+		minAdvised: 0.1
+		maxAdvised: 1
+		disabled: false
+		child: true
+	,
 		name: 'curviness'
 		label: 'Curviness'
 		min: 0.1

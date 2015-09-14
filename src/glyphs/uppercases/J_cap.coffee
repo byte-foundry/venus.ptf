@@ -5,6 +5,7 @@ exports.glyphs['J_cap'] =
 	parameters:
 		spacingLeft: 45 * spacing + (36)
 		spacingRight: 85 * spacing
+		# anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 76 ) # 16
 	tags: [
 		'all',
 		'latin',
@@ -17,8 +18,7 @@ exports.glyphs['J_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 295 / 750 ) * capHeight
-					y: 295
+					y: contours[0].nodes[1].y + 60 # 295
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -28,13 +28,18 @@ exports.glyphs['J_cap'] =
 					})
 				1:
 					x: spacingLeft
-					y: ( 225 / 750 ) * capHeight
 					y: 225
+					# y: 150 * aperture * apertureBottom + 75 # 235
 					dirOut: - 90 + 'deg'
+					# dirOut: Math.min(
+					# 	anglePenBottom + 90 + 16 * aperture + correctWidthAperture,
+					# 	90
+					# ) + 'deg'
 					tensionOut: 1.15
 					expand: Object({
 						width: ( 140 / 115 ) * thickness * opticThickness
 						angle: 16 + 'deg'
+						# angle: anglePenBottom + 'deg'
 						distr: 0.25
 					})
 				2:

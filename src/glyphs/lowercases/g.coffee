@@ -5,6 +5,7 @@ exports.glyphs['g'] =
 	parameters:
 		spacingLeft: 50 * spacing + (31)
 		spacingRight: 70 * spacing
+		anglePenBottom: Math.min( 10, 100 * aperture * apertureBottom - 100 )
 	tags: [
 		'all',
 		'latin',
@@ -69,17 +70,19 @@ exports.glyphs['g'] =
 				0:
 					x: contours[0].nodes[0].x
 					y: Math.min(
-						( ( 200 / 250 ) * descender + (45) + ( ( 95 / 115 ) * thickness * contrast ) * .5 ) + 60 + 140 * aperture - 140,
-						- overshoot + 15 * aperture - 15
+						( ( 200 / 250 ) * descender + (45) + ( ( 95 / 115 ) * thickness * contrast ) * .5 ) + 60 + 150 * aperture * apertureBottom - 150,
+						- overshoot + 15 * aperture * apertureBottom - 15
 					)
-					# should be:
-					# dirOut: contours[0].nodes[0].expand.angle - Math.PI / 2
-					# but there is an issue in dependencies tree
 					dirOut: - Math.min( 10, 60 * aperture - 60 ) - 90 + 'deg'
-					tensionOut: 1.2
+					# dirOut: Math.min(
+					# 	# anglePenBottom - 90 + 20 - correctWidthAperture,
+					# 	anglePenBottom + 60 * aperture * apertureBottom - 60,
+					# 	10
+					# ) + 'deg'
+					tensionOut: Math.min( correctTensionAperture, 1.2 * aperture * apertureBottom )
 					expand: Object({
-						width: ( 125 / 115 ) * thickness
-						angle: - Math.min( 10, 100 * aperture - 100 ) + 'deg' # 0
+						width: ( (105 + Math.min( 20, 20 * aperture * apertureBottom )) / 115 ) * thickness
+						angle: - anglePenBottom + 'deg' # 0
 						distr: 0.25
 					})
 				1:
