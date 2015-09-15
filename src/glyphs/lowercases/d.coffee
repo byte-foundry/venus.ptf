@@ -92,6 +92,8 @@ exports.glyphs['d'] =
 				2:
 					anchorLine: 0
 					left: false
+			transformOrigin: Array( contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[0].expandedTo[0].y )
+			transforms: Array( [ 'skewY', spurHeight * (10) + 'deg' ] )
 		1:
 			base: 'serif'
 			parentAnchors:
@@ -105,3 +107,5 @@ exports.glyphs['d'] =
 					anchorLine: ascenderHeight
 					directionY: -1
 					right: false
+			transformOrigin: Array( contours[1].nodes[1].expandedTo[1].x, contours[1].nodes[1].expandedTo[1].y )
+			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )

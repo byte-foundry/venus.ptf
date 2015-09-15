@@ -207,6 +207,8 @@ exports.glyphs['m'] =
 					anchorLine: xHeight
 					directionY: -1
 					right: false
+			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
+			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
 		2:
 			base: 'serif'
 			parentAnchors:
