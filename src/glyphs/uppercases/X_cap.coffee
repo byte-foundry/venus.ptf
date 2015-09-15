@@ -3,8 +3,8 @@ exports.glyphs['X_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 15 * spacing + (47)
-		spacingRight: 15 * spacing
+		spacingLeft: 15 * spacing + (47) + serifWidth / 2 
+		spacingRight: 15 * spacing + serifWidth / 2 
 	tags: [
 		'all',
 		'latin',
