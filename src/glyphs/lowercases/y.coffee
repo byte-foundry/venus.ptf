@@ -63,7 +63,7 @@ exports.glyphs['y'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft - serifWidth / 2
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

@@ -4,7 +4,7 @@ exports.glyphs['F_cap'] =
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
 		spacingLeft: 85 * spacing + (34) + serifWidth / 2
-		spacingRight: 30 * spacing
+		spacingRight: 30 * spacing + serifWidth / 2 * serifRotate
 	tags: [
 		'all',
 		'latin',
@@ -112,10 +112,10 @@ exports.glyphs['F_cap'] =
 			base: 'serif-v'
 			parentAnchors:
 				0:
-					x: Math.max(contours[2].nodes[0].expandedTo[1].x, contours[2].nodes[1].expandedTo[1].x - serifHeight - serifCurve * ( 100 / 15 ) )
+					x: Math.max(contours[2].nodes[0].expandedTo[1].x, contours[2].nodes[1].expandedTo[1].x - serifHeight - serifCurve )
 					y: contours[2].nodes[0].expandedTo[0].y
 				1:
-					x: Math.max(contours[2].nodes[0].expandedTo[1].x, contours[2].nodes[1].expandedTo[1].x - serifHeight - serifCurve * ( 100 / 15 ) )
+					x: Math.max(contours[2].nodes[0].expandedTo[1].x, contours[2].nodes[1].expandedTo[1].x - serifHeight - serifCurve )
 					y: contours[2].nodes[0].expandedTo[1].y
 				2:
 					anchorLine: contours[2].nodes[1].expandedTo[0].x
@@ -129,10 +129,10 @@ exports.glyphs['F_cap'] =
 			base: 'serif-v'
 			parentAnchors:
 				1:
-					x: Math.max(contours[1].nodes[0].expandedTo[1].x, contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve * ( 100 / 15 ) )
+					x: Math.max(contours[1].nodes[0].expandedTo[1].x, contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve )
 					y: contours[1].nodes[1].expandedTo[1].y
 				0:
-					x: Math.max(contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve * ( 100 / 15 ) )
+					x: Math.max(contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve )
 					y: contours[1].nodes[1].expandedTo[0].y
 				2:
 					anchorLine: contours[1].nodes[1].expandedTo[0].x
@@ -143,5 +143,5 @@ exports.glyphs['F_cap'] =
 			# parentParameters:
 			# 	serifMedian: serifMedian * 0.75
 			# 	midWidth: midWidth * 0.98
-			# transformOrigin: Array( contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[0].expandedTo[0].y )
-			# transforms: Array( [ 'skewX', serifRotate * (-4) + 'deg' ] )
+			transformOrigin: Array( contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[0].expandedTo[0].y )
+			transforms: Array( [ 'skewX', serifRotate * (-15) + 'deg' ] )

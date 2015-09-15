@@ -8,8 +8,8 @@ exports.glyphs['V_cap'] =
 		'uppercase'
 	]
 	parameters:
-		spacingLeft: 10 * spacing + (36)
-		spacingRight: 10 * spacing
+		spacingLeft: 10 * spacing + (36)  + serifWidth 
+		spacingRight: 10 * spacing  + serifWidth 
 	contours:
 		0:
 			skeleton: true

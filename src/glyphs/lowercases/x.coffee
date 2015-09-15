@@ -3,8 +3,8 @@ exports.glyphs['x'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 5 * spacing + (32)
-		spacingRight: 5 * spacing
+		spacingLeft: 5 * spacing + (32) + serifWidth / 2 
+		spacingRight: 5 * spacing + serifWidth / 2 
 	tags: [
 		'all',
 		'latin',
@@ -41,7 +41,7 @@ exports.glyphs['x'] =
 			nodes:
 				0:
 					###########################
-					# FIXME: thickness issues 
+					# FIXME: thickness issues
 					###########################
 					x: Utils.onLine({
 						on: [ contours[1].nodes[1].point, contours[2].nodes[0].point ]
@@ -82,7 +82,7 @@ exports.glyphs['x'] =
 					})
 				1:
 					###########################
-					# FIXME: thickness issues 
+					# FIXME: thickness issues
 					###########################
 					x: Utils.onLine({
 						on: [ contours[1].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[0].point ]

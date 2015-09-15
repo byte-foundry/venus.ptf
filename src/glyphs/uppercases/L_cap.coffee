@@ -97,4 +97,6 @@ exports.glyphs['L_cap'] =
 					anchorLine: contours[1].nodes[1].expandedTo[0].x
 					left: false
 					baseLeft: contours[1].nodes[1].expandedTo[0].point
-					directionX: 1
+					# directionX: 1
+			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
+			transforms: Array( [ 'skewX', serifRotate * (20) + 'deg' ] )

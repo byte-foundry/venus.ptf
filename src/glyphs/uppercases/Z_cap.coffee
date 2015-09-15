@@ -3,8 +3,8 @@ exports.glyphs['Z_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 45 * spacing
-		spacingRight: 45 * spacing
+		spacingLeft: 45 * spacing + serifWidth / 2 * serifRotate
+		spacingRight: 45 * spacing + serifWidth / 3 * serifRotate
 	tags: [
 		'all',
 		'latin',
@@ -97,6 +97,8 @@ exports.glyphs['Z_cap'] =
 					anchorLine: contours[1].nodes[1].expandedTo[0].x
 					left: false
 					baseLeft: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
+			transforms: Array( [ 'skewX', serifRotate * 5 + 'deg' ] )
 		1:
 			base: 'serif-v'
 			parentAnchors:
@@ -111,3 +113,5 @@ exports.glyphs['Z_cap'] =
 					right: false
 					baseRight: contours[0].nodes[1].expandedTo[0].point
 					directionX: -1
+			transformOrigin: Array( contours[0].nodes[1].expandedTo[0].x, contours[0].nodes[1].expandedTo[0].y )
+			transforms: Array( [ 'skewX', serifRotate * 10 + 'deg' ] )

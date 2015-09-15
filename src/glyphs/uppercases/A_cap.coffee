@@ -69,6 +69,7 @@ exports.glyphs['A_cap'] =
 				0:
 					x: Utils.onLine({
 						on: [ contours[0].nodes[2].expandedTo[1].point, contours[0].nodes[3].expandedTo[1].point ]
+						# on: [ contours[0].nodes[2].point, contours[0].nodes[3].point ]
 						y: ( 260 / 750 ) * capHeight * crossbar
 						})
 					y: ( 260 / 750 ) * capHeight * crossbar
@@ -77,11 +78,13 @@ exports.glyphs['A_cap'] =
 					expand: Object({
 						width: ( 110 / 115 ) * thickness * contrast * opticThickness
 						angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[1].point, contours[0].nodes[2].expandedTo[1].point )
+						# angle: 90 + 'deg'
 						distr: 1
 					})
 				1:
 					x: Utils.onLine({
 						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]
+						# on: [ contours[0].nodes[0].point, contours[0].nodes[1].point ]
 						y: ( 260 / 750 ) * capHeight * crossbar
 						})
 					y: ( 260 / 750 ) * capHeight * crossbar
@@ -90,8 +93,10 @@ exports.glyphs['A_cap'] =
 					expand: Object({
 						width: ( 110 / 115 ) * thickness * contrast * opticThickness
 						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point )
+						# angle: 90 + 'deg'
 						distr: 1
 					})
+					transforms: Array( [ 'translateX', 10 ] )
 	components:
 		0:
 			base: 'serif'

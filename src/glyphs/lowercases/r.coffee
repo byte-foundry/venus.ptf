@@ -76,10 +76,15 @@ exports.glyphs['r'] =
 							}
 						]
 				1:
+					# x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
+					# 	( 150 / 115 ) * thickness * width - 50,
+					# 	150 * width - 50
+					# ) - ( serifHeight + serifCurve ) / 2
 					x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
 						( 150 / 115 ) * thickness * width - 50,
 						150 * width - 50
-					) - ( serifHeight + serifCurve ) / 2
+					)
+					# The vertical serif is not yet enough convincing to be implemented
 					y: xHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -94,7 +99,8 @@ exports.glyphs['r'] =
 					expandedTo:
 						[
 							{
-								x: contours[1].nodes[1].x + 20 + serifHeight + serifCurve
+								# x: contours[1].nodes[1].x + 20 + serifHeight + serifCurve
+								x: contours[1].nodes[1].x + 20
 								y: contours[1].nodes[1].expandedTo[0].y
 							}
 							{
@@ -127,17 +133,22 @@ exports.glyphs['r'] =
 					anchorLine: xHeight
 					directionY: -1
 					right: false
-		2:
-			base: 'serif-v'
-			parentAnchors:
-				0:
-					x: contours[1].nodes[2].expandedTo[1].x - serifHeight - serifCurve
-					y: contours[1].nodes[2].expandedTo[0].y
-				1:
-					x: contours[1].nodes[2].expandedTo[0].x - serifHeight - serifCurve
-					y: contours[1].nodes[2].expandedTo[1].y
-				2:
-					anchorLine: contours[1].nodes[2].expandedTo[0].x
-					right: false
-					baseRight: contours[1].nodes[2].expandedTo[0].point
-					directionY: -1
+			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
+			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+		#
+		# The vertical serif is not yet enough convincing to be implemented
+		#
+		# 2:
+		# 	base: 'serif-v'
+		# 	parentAnchors:
+		# 		0:
+		# 			x: contours[1].nodes[2].expandedTo[1].x - serifHeight - serifCurve
+		# 			y: contours[1].nodes[2].expandedTo[0].y
+		# 		1:
+		# 			x: contours[1].nodes[2].expandedTo[0].x - serifHeight - serifCurve
+		# 			y: contours[1].nodes[2].expandedTo[1].y
+		# 		2:
+		# 			anchorLine: contours[1].nodes[2].expandedTo[0].x
+		# 			right: false
+		# 			baseRight: contours[1].nodes[2].expandedTo[0].point
+		# 			directionY: -1

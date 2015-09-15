@@ -289,21 +289,21 @@ exports.controls = [
 		label: 'Spur Height'
 		min: 0
 		max: 3
-		step: 0.1
-		init: 1
+		step: 1
+		init: 0
 		minAdvised: 0
-		maxAdvised: 1.5
-		disabled: true
+		maxAdvised: 1
+		disabled: false
 	,
 		name: 'serifRotate'
 		label: 'Serif Rotation'
 		min: 0
-		max: 2.5
+		max: 2
 		step: 0.1
-		init: 1
-		minAdvised: 0.4
-		maxAdvised: 1.2
-		disabled: true
+		init: 0
+		minAdvised: 0
+		maxAdvised: 0.8
+		disabled: false
 	,
 		name: 'serifBall'
 		label: 'Terminal Ball'
