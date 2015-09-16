@@ -58,7 +58,7 @@ exports.glyphs['two'] =
 					type: 'smooth'
 					tensionIn: 1.2
 					expand: Object({
-						width: ( 162 / 115 ) * thickness * opticThickness
+						width: ( (115 + (47 * width)) / 115 ) * thickness * opticThickness
 						angle: - 9 + 'deg'
 						distr: 0.25
 					})
@@ -73,7 +73,7 @@ exports.glyphs['two'] =
 						distr: 0.75
 					})
 				3:
-					x: 295
+					x: contours[1].nodes[4].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[4].expandedTo[1].x ) * 0.5
 					y: capHeight + overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
