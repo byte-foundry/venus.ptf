@@ -106,7 +106,7 @@ exports.controls = [
 		init: -1
 		minAdvised: -1
 		maxAdvised: -0.3
-		disabled: true
+		disabled: false
 	,
 		name: 'aperture'
 		label: 'Aperture'
