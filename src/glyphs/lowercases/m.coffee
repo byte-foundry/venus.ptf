@@ -126,7 +126,7 @@ exports.glyphs['m'] =
 					type: 'smooth'
 					tensionIn: 1.1 * breakPath
 					expand: Object({
-						width: ( 113 / 115 ) * thickness
+						width: ( 113 / 115 ) * thickness * contrast
 						angle: - 113 + 'deg'
 						distr: 0
 					})
@@ -229,7 +229,7 @@ exports.glyphs['m'] =
 					tensionIn: 1.1 * breakPath
 					tensionOut: 0.9
 					expand: Object({
-						width: ( 113 / 115 ) * thickness
+						width: ( 113 / 115 ) * thickness * contrast
 						angle: - 113 + 'deg'
 						distr: 0
 					})

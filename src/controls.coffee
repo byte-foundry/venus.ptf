@@ -100,7 +100,7 @@ exports.controls = [
 	,
 		name: '_contrast'
 		label: 'Contrast'
-		min: -2.5
+		min: -1.3
 		max: -0.15
 		step: 0.01
 		init: -1
@@ -110,11 +110,11 @@ exports.controls = [
 	,
 		name: '_contrastExtremity'
 		label: 'extremity'
-		min: -2
-		max: -0.1
+		min: -1
+		max: -0.01
 		step: 0.01
 		init: -1
-		minAdvised: -1.5
+		minAdvised: -1
 		maxAdvised: -0.5
 		disabled: false
 		child: true

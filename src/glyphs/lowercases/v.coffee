@@ -3,8 +3,8 @@ exports.glyphs['v'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 10 * spacing + (32) + serifWidth / 2 
-		spacingRight: 10 * spacing + serifWidth / 2 
+		spacingLeft: 10 * spacing + (32) + serifWidth / 2
+		spacingRight: 10 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -40,12 +40,12 @@ exports.glyphs['v'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / 115 ) * thickness * contrast
+					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / 115 ) * thickness * contrast * contrastExtremity
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
 						# width: 4
 						angle: 180 + 'deg'
 						distr: 0

@@ -47,7 +47,8 @@ exports.glyphs['p'] =
 					tensionOut: 1.15
 					tensionIn: 1.15
 					expand: Object({
-						width: ( 49 / 2 / 115 ) * thickness + ( 49 / 2 / 115 ) * thickness * contrast
+						# width: ( 49 / 2 / 115 ) * thickness + ( 49 / 2 / 115 ) * thickness * contrast
+						width: ( 49 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
 					})
@@ -63,7 +64,8 @@ exports.glyphs['p'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						width: ( 102 / 115 ) * thickness * contrast
 						angle: - 112 + 'deg'
 						distr: 0
 					})
@@ -83,7 +85,8 @@ exports.glyphs['p'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						width: ( 102 / 115 ) * thickness * contrast
 						angle: 112 + 'deg'
 						distr: 0
 					})

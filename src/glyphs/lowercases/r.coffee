@@ -45,7 +45,7 @@ exports.glyphs['r'] =
 							{
 								x: contours[0].nodes[0].expandedTo[1].x
 								y: xHeight - Math.max(
-										105 + ( 1 - thickness / 60 ) * 150,
+										105 + ( 1 - thickness * contrast * contrastExtremity / 60 ) * 150,
 										105
 									)
 								dirOut: # 56 + 'deg'
@@ -54,7 +54,7 @@ exports.glyphs['r'] =
 											# 60 is the breakpoint where thickness takes effect
 											# 50 is the velocity
 											# 80 is the max dirOut
-											80 + ( 1 - thickness / 60 ) * 50,
+											80 + ( 1 - thickness / 60 ) * 50 * contrastExtremity,
 											80 # dirOut must not be over 80 deg
 										),
 										82 # dirOut must not be under 56 deg
@@ -63,7 +63,7 @@ exports.glyphs['r'] =
 							}
 							{
 								x: contours[0].nodes[0].expandedTo[1].x
-								y: contours[1].nodes[0].expandedTo[0].y - ( 130 / 115 ) * thickness
+								y: contours[1].nodes[0].expandedTo[0].y - ( 130 / 115 ) * thickness * contrast * contrastExtremity
 								dirIn: # 90 + 'deg'
 									Math.min(
 										Math.max(
@@ -80,10 +80,11 @@ exports.glyphs['r'] =
 					# 	( 150 / 115 ) * thickness * width - 50,
 					# 	150 * width - 50
 					# ) - ( serifHeight + serifCurve ) / 2
-					x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
-						( 150 / 115 ) * thickness * width - 50,
-						150 * width - 50
-					)
+					# x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
+					# 	( 150 / 115 ) * thickness * width - 50,
+					# 	150 * width - 50
+					# )
+					x: contours[0].nodes[0].expandedTo[1].x + 155 * width
 					# The vertical serif is not yet enough convincing to be implemented
 					y: xHeight
 					dirOut: 0 + 'deg'
@@ -91,7 +92,8 @@ exports.glyphs['r'] =
 					typeOut: 'line'
 					tensionIn: 1 * breakPath
 					expand: Object({
-						width: ( 125 / 115 ) * thickness
+						# width: ( 125 / 115 ) * thickness
+						width: ( 125 / 2 / 115 ) * thickness + ( 125 / 2 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 94 + 'deg'
 						distr: 0
 					})

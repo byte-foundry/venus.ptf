@@ -42,7 +42,7 @@ exports.glyphs['u'] =
 					type: 'smooth'
 					tensionOut: 1.3
 					expand: Object({
-						width: ( 110 / 115 ) * thickness
+						width: ( 110 / 115 ) * thickness * contrast
 						angle: 71 + 'deg'
 						distr: 0
 					})
@@ -51,9 +51,10 @@ exports.glyphs['u'] =
 						[
 							{
 								x: contours[1].nodes[0].expandedTo[0].x
-								y: contours[0].nodes[3].expandedTo[1].y - ( 140 / 115 ) * thickness
+								y: contours[0].nodes[3].expandedTo[1].y - ( 140 / 115 ) * thickness * contrast * contrastExtremity
 								y: Math.max(
-										70 + ( 1 - thickness / 60 ) * 80,
+										70 + ( 1 - thickness * contrast * contrastExtremity / 60 ) * 80,
+										# 70 + ( 1 - thickness / 60 ) * 80,
 										70
 									)
 								dirIn:
@@ -62,7 +63,7 @@ exports.glyphs['u'] =
 											# 60 is the breakpoint where thickness takes effect
 											# 50 is the velocity
 											# 80 is the max dirOut
-											80 + ( 1 - thickness / 60 ) * 50,
+											80 + ( 1 - thickness / 60 ) * 50 * contrastExtremity,
 											80 # dirOut must not be over 80 deg
 										),
 										57 # dirOut must not be under 56 deg
@@ -70,11 +71,11 @@ exports.glyphs['u'] =
 							}
 							{
 								x: contours[1].nodes[0].expandedTo[0].x
-								y: contours[0].nodes[3].expandedTo[0].y + ( 140 / 115 ) * thickness
+								y: contours[0].nodes[3].expandedTo[0].y + ( 140 / 115 ) * thickness * contrast * contrastExtremity
 								dirOut:
 									Math.min(
 										Math.max(
-											80 - ( 1 - thickness / 60 ) * 50,
+											80 - ( 1 - thickness * contrast * contrastExtremity / 60 ) * 50,
 											80
 										),
 										90
@@ -87,7 +88,7 @@ exports.glyphs['u'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x + 300 * width - (29)
+					x: contours[0].nodes[0].expandedTo[1].x + 50 + 250 * width - (29)
 					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

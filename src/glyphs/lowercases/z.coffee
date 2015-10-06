@@ -21,7 +21,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -31,7 +31,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -41,7 +41,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -71,7 +71,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -81,7 +81,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
@@ -91,7 +91,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
@@ -101,7 +101,7 @@ exports.glyphs['z'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})

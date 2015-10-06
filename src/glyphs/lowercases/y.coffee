@@ -24,7 +24,7 @@ exports.glyphs['y'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -34,7 +34,7 @@ exports.glyphs['y'] =
 					dirOut: 0 + 'deg'
 					tensionOut: 1.3
 					expand: Object({
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -45,7 +45,7 @@ exports.glyphs['y'] =
 					tensionIn: 1.3
 					typeOut: 'line'
 					expand: Object({
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 - 26 + 'deg'
 						distr: 0.25
 					})
