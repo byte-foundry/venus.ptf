@@ -25,7 +25,7 @@ exports.glyphs['a'] =
 						90
 					) + 'deg'
 					expand: Object({
-						width: ( 110 / 115 ) * thickness
+						width: ( 110 / 115 ) * thickness  * contrast * contrastExtremity
 						angle: - anglePenTop + 'deg'
 						distr: 0.25
 					})
@@ -92,7 +92,7 @@ exports.glyphs['a'] =
 					y: 205
 					dirOut: - 90 + 'deg'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 - 85 + 'deg'
 						distr: 1
 					})
@@ -137,7 +137,7 @@ exports.glyphs['a'] =
 						)
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 102 / 115 ) * thickness * contrast
+						width: ( 102 / 115 ) * thickness
 						angle: - 47 + 'deg'
 						distr: 0.25
 					})
@@ -170,7 +170,7 @@ exports.glyphs['a'] =
 								x: contours[0].nodes[2].expandedTo[1].x
 								y: contours[1].nodes[4].expandedTo[0].y - Math.max(
 									( 110 / 115 ) * thickness,
-									8
+									16
 								)
 								# dirOut: Math.max(
 								# 	- 88 - ( 47 / 115 ) * thickness + 'deg',

@@ -45,7 +45,7 @@ exports.glyphs['h'] =
 							{
 								x: contours[0].nodes[0].expandedTo[1].x
 								y: xHeight - Math.max(
-										75 + ( 1 - thickness / 60 ) * 150,
+										75 + ( 1 - thickness * contrastExtremity / 60 ) * 150,
 										75
 									)
 								dirOut: # 56 + 'deg'
@@ -54,8 +54,8 @@ exports.glyphs['h'] =
 											# 60 is the breakpoint where thickness takes effect
 											# 50 is the velocity
 											# 80 is the max dirOut
-											80 + ( 1 - thickness / 60 ) * 50,
-											80 # dirOut must not be over 80 deg
+											90 + ( 1 - thickness / 60 ) * 50 * contrastExtremity,
+											90 # dirOut must not be over 80 deg
 										),
 										56 # dirOut must not be under 56 deg
 									) + 'deg'
@@ -63,7 +63,7 @@ exports.glyphs['h'] =
 							}
 							{
 								x: contours[0].nodes[0].expandedTo[1].x
-								y: contours[1].nodes[0].expandedTo[0].y - ( 130 / 115 ) * thickness
+								y: contours[1].nodes[0].expandedTo[0].y - ( ( 130 / 115 ) * thickness * contrast * contrastExtremity )
 								dirIn: # 90 + 'deg'
 									Math.min(
 										Math.max(
@@ -82,7 +82,7 @@ exports.glyphs['h'] =
 					type: 'smooth'
 					tensionIn: 1 * breakPath
 					expand: Object({
-						width: ( 113 / 115 ) * thickness
+						width: ( 113 / 115 ) * thickness * contrast
 						angle: - 113 + 'deg'
 						distr: 0
 					})

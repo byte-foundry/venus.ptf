@@ -108,6 +108,17 @@ exports.controls = [
 		maxAdvised: -0.3
 		disabled: false
 	,
+		name: '_contrastExtremity'
+		label: 'extremity'
+		min: -2
+		max: -0.1
+		step: 0.01
+		init: -1
+		minAdvised: -1.5
+		maxAdvised: -0.5
+		disabled: false
+		child: true
+	,
 		name: 'aperture'
 		label: 'Aperture'
 		min: 0.3
