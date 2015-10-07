@@ -44,7 +44,7 @@ exports.glyphs['f'] =
 					tensionIn: 1.2
 					typeOut: 'line'
 					expand: Object({
-						width: ( 99 / 115 ) * thickness * contrast
+						width: ( 99 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 72 + 'deg'
 						distr: 0
 					})
@@ -54,7 +54,7 @@ exports.glyphs['f'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 95 / 115 ) * thickness * contrast
+						width: ( 95 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -68,7 +68,7 @@ exports.glyphs['f'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -78,7 +78,7 @@ exports.glyphs['f'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: contours[1].nodes[0].expand.width
+						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})

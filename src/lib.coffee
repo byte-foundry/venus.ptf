@@ -2,6 +2,7 @@ exports.lib =
 	parameters:
 		capHeight: xHeight + capDelta
 		contrast: _contrast * -1
+		contrastExtremity: _contrastExtremity * -1
 		ascenderHeight: xHeight + ascender
 		spacing: 1 * ( width / width ) # dirty workaround
 		diacriticHeight: 70 * ( width / width ) # dirty workaround

@@ -32,7 +32,7 @@ exports.glyphs['o'] =
 					type: 'smooth'
 					tensionOut: 1.15
 					expand: Object({
-						width: ( 85 / 115 ) * thickness * contrast
+						width: ( 85 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -54,7 +54,7 @@ exports.glyphs['o'] =
 					tensionOut: 1.15
 					type: 'smooth'
 					expand: Object({
-						width: ( 85 / 115 ) * thickness * contrast
+						width: ( 85 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})

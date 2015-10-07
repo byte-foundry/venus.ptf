@@ -8,8 +8,8 @@ exports.glyphs['V_cap'] =
 		'uppercase'
 	]
 	parameters:
-		spacingLeft: 10 * spacing + (36)  + serifWidth 
-		spacingRight: 10 * spacing  + serifWidth 
+		spacingLeft: 10 * spacing + (36)  + serifWidth
+		spacingRight: 10 * spacing  + serifWidth
 	contours:
 		0:
 			skeleton: true
@@ -45,7 +45,7 @@ exports.glyphs['V_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast
+						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						# width: 4
 						angle: 180 + 'deg'
 						distr: 0

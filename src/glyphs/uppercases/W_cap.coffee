@@ -3,8 +3,8 @@ exports.glyphs['W_cap'] =
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 10 * spacing + (36) + serifWidth 
-		spacingRight: 10 * spacing + serifWidth 
+		spacingLeft: 10 * spacing + (36) + serifWidth
+		spacingRight: 10 * spacing + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -45,7 +45,7 @@ exports.glyphs['W_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * contrast
+						width: ( 120 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0
 					})
@@ -93,7 +93,7 @@ exports.glyphs['W_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * contrast
+						width: ( 120 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0
 					})

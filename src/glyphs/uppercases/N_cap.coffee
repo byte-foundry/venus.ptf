@@ -31,7 +31,7 @@ exports.glyphs['N_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -45,17 +45,18 @@ exports.glyphs['N_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 150 / 115 ) * thickness * opticThickness * contrast + ( 20 * width - 20 )
+						width: ( 150 / 115 ) * thickness * opticThickness + ( 20 * width - 20 )
 						angle: 0 + 'deg'
 						distr: 0
 					})
 				1:
 					x: contours[2].nodes[0].expandedTo[1].x - ( 5 / 115 ) * thickness
+					x: contours[0].nodes[0].expandedTo[1].x + 180 + 265 * width - (34) * contrast
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 150 / 115 ) * thickness * opticThickness * contrast + ( 20 * width - 20 )
+						width: ( 150 / 115 ) * thickness * opticThickness + ( 20 * width - 20 )
 						angle: 0 + 'deg'
 						distr: 1
 					})
@@ -64,12 +65,12 @@ exports.glyphs['N_cap'] =
 			closed: false
 			nodes:
 				1:
-					x: 400 + 265 * width - (34)
+					x: contours[1].nodes[1].expandedTo[1].x + ( 5 / 115 ) * thickness
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.75
 					})

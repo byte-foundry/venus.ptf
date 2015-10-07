@@ -33,7 +33,7 @@ exports.glyphs['Q_cap'] =
 					tensionIn: 0.95
 					tensionOut: 0.95
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -54,7 +54,7 @@ exports.glyphs['Q_cap'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})

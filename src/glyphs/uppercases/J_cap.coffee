@@ -22,7 +22,7 @@ exports.glyphs['J_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 137 / 115 ) * thickness * opticThickness
+						width: ( 137 / 115 ) * thickness * opticThickness * contrastExtremity
 						angle: 10 + 'deg'
 						distr: 0.25
 					})
@@ -37,7 +37,7 @@ exports.glyphs['J_cap'] =
 					# ) + 'deg'
 					tensionOut: 1.15
 					expand: Object({
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / 115 ) * thickness * opticThickness * contrastExtremity
 						angle: 16 + 'deg'
 						# angle: anglePenBottom + 'deg'
 						distr: 0.25
@@ -50,7 +50,7 @@ exports.glyphs['J_cap'] =
 					tensionIn: 1.15
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})

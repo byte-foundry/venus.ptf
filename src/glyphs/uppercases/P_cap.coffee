@@ -45,7 +45,7 @@ exports.glyphs['P_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -58,7 +58,7 @@ exports.glyphs['P_cap'] =
 					dirOut: 0 + 'deg'
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 93 + 'deg'
 						distr: 0
 					})
@@ -84,7 +84,7 @@ exports.glyphs['P_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 - 93 + 'deg'
 						distr: 0.25
 					})

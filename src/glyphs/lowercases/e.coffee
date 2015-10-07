@@ -17,19 +17,22 @@ exports.glyphs['e'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
-					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 60 ) - (15) # 190 - (15)
+					# x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
+					x: contours[0].nodes[2].expandedTo[0].x + 250 * width + 100 - (31)
+					x: Math.max(contours[0].nodes[2].expandedTo[0].x, 175 * width ) + 250 * width + 100 - (31)
+					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 20 ) - (15) # 190 - (15)
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
 						90
 					) + 'deg'
 					expand: Object({
-						width: ( 115 / 115) * thickness
+						width: ( 115 / 115) * thickness * contrast * contrastExtremity
 						angle: - anglePenBottom + 'deg'
-						distr: 0.25
+						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
+					# x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
 						# Math.max(
 						# 	Math.min(
 						# 		( 50 / 115 * thickness ) / 100, 	# position is defined by thickness
@@ -58,6 +61,8 @@ exports.glyphs['e'] =
 					})
 				3:
 					x: contours[0].nodes[1].x
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
+					# x: contours[0].nodes[4].expandedTo[1].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -68,7 +73,7 @@ exports.glyphs['e'] =
 						distr: 1
 					})
 				4:
-					x: contours[0].nodes[0].x - ( 6 / 115 ) * thickness
+					x: contours[0].nodes[0].expandedTo[1].x - ( 70 / 115 ) * thickness
 					y: ( 250 / 520 ) * xHeight * crossbar
 					dirIn: 90 + 'deg'
 					typeOut: 'line'
@@ -93,7 +98,7 @@ exports.glyphs['e'] =
 					dirIn: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: contours[0].nodes[5].expand.width
+						width: contours[0].nodes[5].expand.width * contrastExtremity
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})

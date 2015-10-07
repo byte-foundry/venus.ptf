@@ -40,6 +40,7 @@ exports.glyphs['g'] =
 					type: 'smooth'
 					expand: Object({
 						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						width: ( 102 / 115 ) * thickness * contrast
 						angle: - 68 + 'deg'
 						distr: 0
 					})
@@ -49,7 +50,7 @@ exports.glyphs['g'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 115 ) * thickness
+						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -60,6 +61,7 @@ exports.glyphs['g'] =
 					type: 'smooth'
 					expand: Object({
 						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						width: ( 102 / 115 ) * thickness * contrast
 						angle: 68 + 'deg'
 						distr: 0
 					})
@@ -81,7 +83,7 @@ exports.glyphs['g'] =
 					# ) + 'deg'
 					tensionOut: Math.min( correctTensionAperture, 1.2 * aperture * apertureBottom )
 					expand: Object({
-						width: ( (105 + Math.min( 20, 20 * aperture * apertureBottom )) / 115 ) * thickness
+						width: ( (105 + Math.min( 20, 20 * aperture * apertureBottom )) / 115 ) * thickness * contrast * contrastExtremity
 						angle: - anglePenBottom + 'deg' # 0
 						distr: 0.25
 					})

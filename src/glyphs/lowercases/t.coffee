@@ -31,7 +31,7 @@ exports.glyphs['t'] =
 						]
 				1:
 					x: spacingLeft
-					y: 30 + thickness * contrast
+					y: 30 + thickness #* contrast
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.25
 					expand: Object({
@@ -46,7 +46,7 @@ exports.glyphs['t'] =
 					type: 'smooth'
 					tensionIn: 1.6
 					expand: Object({
-						width: ( 107 / 115 ) * thickness * contrast
+						width: ( 107 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 62 + 'deg'
 						distr: 0
 					})

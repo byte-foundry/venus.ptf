@@ -29,7 +29,6 @@ exports.glyphs['l'] =
 					x: contours[0].nodes[0].x
 					y: ascenderHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
-					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'

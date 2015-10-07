@@ -26,7 +26,7 @@ exports.glyphs['s'] =
 					) + 'deg'
 					tensionOut: Math.min( correctTensionAperture, aperture * apertureBottom )
 					expand: Object({
-						width: ( 112 / 115 ) * thickness
+						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
 						angle: anglePenBottom + 'deg'
 						distr: 0.25
 					})
@@ -35,7 +35,7 @@ exports.glyphs['s'] =
 					y: - overshoot / 2
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -79,7 +79,7 @@ exports.glyphs['s'] =
 					y: xHeight + overshoot / 2
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / 115 ) * thickness * contrast
 						angle: 180 - 90 + 'deg'
 						distr: 1
 					})
@@ -92,7 +92,7 @@ exports.glyphs['s'] =
 					) + 'deg'
 					tensionIn: Math.min( correctTensionAperture, aperture * apertureTop )
 					expand: Object({
-						width: ( 103 / 115 ) * thickness
+						width: ( 103 / 115 ) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

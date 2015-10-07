@@ -45,7 +45,7 @@ exports.glyphs['B_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast 
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -58,7 +58,7 @@ exports.glyphs['B_cap'] =
 					dirOut: 0 + 'deg'
 					tensionOut: 1.2
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast
 						angle: - 87 + 'deg'
 						distr: 0
 					})
@@ -82,7 +82,7 @@ exports.glyphs['B_cap'] =
 					dirIn: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 81 / 115 ) * thickness * opticThickness
+						width: ( 81 / 115 ) * thickness * opticThickness * contrast
 						angle: 180 - 42 + 'deg'
 						distr: 0.25
 					})
@@ -106,11 +106,11 @@ exports.glyphs['B_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[4].expandedTo[1].y - ( 25 / 115 ) * thickness
+					y: contours[1].nodes[4].expandedTo[1].y - ( 25 / 115 ) * thickness * contrast
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 75 / 115 ) * thickness * opticThickness
+						width: ( 75 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -122,7 +122,7 @@ exports.glyphs['B_cap'] =
 					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 117 / 115 ) * thickness * opticThickness
+						width: ( 117 / 115 ) * thickness * opticThickness * contrast
 						angle: - 140 + 'deg'
 						distr: 0
 					})
@@ -147,7 +147,7 @@ exports.glyphs['B_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.2
 					expand: Object({
-						width: ( 112 / 115 ) * thickness * opticThickness
+						width: ( 112 / 115 ) * thickness * opticThickness * contrast 
 						angle: 110 + 'deg'
 						distr: 0
 					})
