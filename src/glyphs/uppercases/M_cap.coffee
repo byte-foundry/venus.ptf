@@ -31,7 +31,7 @@ exports.glyphs['M_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 130 / 115 ) * thickness * opticThickness * contrast
+						width: ( 130 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -79,7 +79,7 @@ exports.glyphs['M_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast
+						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.65
 					})

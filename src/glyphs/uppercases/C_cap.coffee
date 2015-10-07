@@ -25,7 +25,7 @@ exports.glyphs['C_cap'] =
 						90
 					) + 'deg'
 					expand: Object({
-						width: ( 129 / 115) * thickness * opticThickness
+						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - anglePenBottom + 'deg'
 						distr: 0.75
 					})
@@ -69,7 +69,7 @@ exports.glyphs['C_cap'] =
 						90
 					) + 'deg'
 					expand: Object({
-						width: ( 129 / 115) * thickness * opticThickness
+						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

@@ -27,7 +27,7 @@ exports.glyphs['S_cap'] =
 					type: 'smooth'
 					tensionOut: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureBottom )
 					expand: Object({
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: anglePenBottom + 'deg'
 						distr: 0.25
 					})
@@ -38,7 +38,7 @@ exports.glyphs['S_cap'] =
 					type: 'smooth'
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 118 / 115 ) * thickness * opticThickness
+						width: ( 118 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -85,7 +85,7 @@ exports.glyphs['S_cap'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * opticThickness
+						width: ( 120 / 115 ) * thickness * opticThickness * contrast
 						angle: 180 - 90 + 'deg'
 						distr: 1
 					})
@@ -99,7 +99,7 @@ exports.glyphs['S_cap'] =
 					type: 'smooth'
 					tensionIn: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureTop )
 					expand: Object({
-						width: ( 129 / 115 ) * thickness * opticThickness
+						width: ( 129 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

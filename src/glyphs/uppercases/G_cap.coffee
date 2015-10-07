@@ -22,7 +22,7 @@ exports.glyphs['G_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 110 / 115) * thickness * opticThickness
+						width: ( 110 / 115) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0.75
 					})
@@ -88,7 +88,7 @@ exports.glyphs['G_cap'] =
 						90
 					) + 'deg'
 					expand: Object({
-						width: ( 129 / 115) * thickness * opticThickness
+						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})

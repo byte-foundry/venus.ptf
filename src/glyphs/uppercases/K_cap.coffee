@@ -45,7 +45,7 @@ exports.glyphs['K_cap'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 123 / 115 ) * thickness * opticThickness * contrast
+						width: ( 123 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 + 166 + 'deg'
 						distr: 0.75
 					})

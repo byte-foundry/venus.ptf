@@ -43,7 +43,7 @@ exports.glyphs['U_cap'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -54,7 +54,7 @@ exports.glyphs['U_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand: Object({
-						width: ( 137 / 115 ) * thickness * opticThickness
+						width: ( 137 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 - 10 + 'deg'
 						distr: 0.25
 					})
@@ -63,7 +63,7 @@ exports.glyphs['U_cap'] =
 					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast 
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
