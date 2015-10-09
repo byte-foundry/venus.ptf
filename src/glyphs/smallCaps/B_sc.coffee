@@ -11,7 +11,9 @@ exports.glyphs['B_sc'] =
 		0:
 			base: 'B_cap'
 			parentParameters:
-				capHeight: xHeight
+				capHeight: scCapHeight
+				thickness: scThickness
+				width: scWidth
 			parentAnchors:
 				0:
 					x: 0

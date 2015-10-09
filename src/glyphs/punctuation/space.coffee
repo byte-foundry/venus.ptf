@@ -1,11 +1,12 @@
 exports.glyphs['space'] =
-	unicode: ' '
+	unicode: '#'
 	ot:
 		advanceWidth: 250 * width
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
+		'test'
 	]
 	parameters:
 		spacingLeft: 0
