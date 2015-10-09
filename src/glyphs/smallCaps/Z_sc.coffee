@@ -11,7 +11,9 @@ exports.glyphs['Z_sc'] =
 		0:
 			base: 'Z_cap'
 			parentParameters:
-				capHeight: xHeight
+				capHeight: scCapHeight
+				thickness: scThickness
+				width: scWidth
 			parentAnchors:
 				0:
 					x: 0

@@ -1,6 +1,9 @@
 exports.lib =
 	parameters:
 		capHeight: xHeight + capDelta
+		scCapHeight: xHeight + thickness
+		scThickness: thickness * 0.9
+		scWidth: width * 0.8
 		contrast: _contrast * -1
 		contrastExtremity: _contrastExtremity * -1
 		ascenderHeight: xHeight + ascender
