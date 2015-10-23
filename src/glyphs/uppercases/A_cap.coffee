@@ -96,7 +96,6 @@ exports.glyphs['A_cap'] =
 						# angle: 90 + 'deg'
 						distr: 1
 					})
-					transforms: Array( [ 'translateX', 10 ] )
 	components:
 		0:
 			base: 'serif'
@@ -115,8 +114,8 @@ exports.glyphs['A_cap'] =
 					y: serifHeight + serifCurve
 				2:
 					anchorLine: 0
-					# leftWidth: 70
-					# rightWidth: 30
+					leftWidth: 50
+					rightWidth: 50
 					# leftCurve: 1.2
 					baseRight: contours[0].nodes[0].expandedTo[1].point
 					baseLeft: contours[0].nodes[0].expandedTo[0].point
@@ -140,8 +139,8 @@ exports.glyphs['A_cap'] =
 					y: serifHeight + serifCurve
 				2:
 					anchorLine: 0
-					# leftWidth: 70
-					# rightWidth: 100
+					leftWidth: 50
+					rightWidth: 50
 					# rightCurve: 0.0
 					# leftCurve: 0.5
 					baseRight: contours[0].nodes[3].expandedTo[0].point

@@ -1,5 +1,6 @@
 exports.glyphs['a'] =
 	unicode: 'a'
+	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[5].x + spacingRight
 	parameters:

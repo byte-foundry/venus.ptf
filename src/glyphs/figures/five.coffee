@@ -21,18 +21,18 @@ exports.glyphs['five'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 133 / 115 ) * thickness * opticThickness
+						width: ( 133 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 13 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: 110
+					x: contours[1].nodes[1].expandedTo[0].x - 130 - 85 * contrast # 110
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 180 / 115 ) * thickness * opticThickness
-						angle: - 46 + 'deg'
+						width: ( ( 122 + 58 * contrast * contrastExtremity ) / 115 ) * thickness * opticThickness
+						angle: - 90 + 46 * contrast * contrastExtremity + 'deg'
 						distr: 0
 					})
 				2:
@@ -55,12 +55,13 @@ exports.glyphs['five'] =
 					dirOut: 48 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness
-						angle: 180 + 95 + 'deg'
+						width: ( 110 / 115 ) * thickness * opticThickness # * contrast * contrastExtremity
+						angle: Utils.lineAngle( contours[1].nodes[0].point, contours[0].nodes[1].point ) + Math.PI # 180 + 95 + 'deg'
 						distr: 1
 					})
 				1:
-					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * 0.55
+					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.55
+					# x: contours[1].nodes[2].expandedTo[0].x
 					y: ( 490 / 750 ) * capHeight - (28)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
@@ -80,12 +81,13 @@ exports.glyphs['five'] =
 						distr: 0.25
 					})
 				3:
+					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[4].expandedTo[0].x ) * 0.48
 					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * 0.48
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * opticThickness
+						width: ( 120 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -95,7 +97,7 @@ exports.glyphs['five'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / 115 ) * thickness * opticThickness # * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
