@@ -41,48 +41,12 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					###########################
-					# FIXME: thickness issues
-					###########################
-					x: Utils.onLine({
-						on: [ contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ]
-						y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
-					})
-					y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
-					###########################
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
-						width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
-						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) #- Math.PI / 6 + Math.PI / 4
-						distr: 0.5
-					})
-				1:
-					# x: spacingLeft
-					# y: 0
-					x: Utils.onLine({
-						on: [ contours[2].nodes[0].point, contours[1].nodes[0].point ]
-						y: 0
-					})
-					y: 0
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
-						width: ( 125 / 115 ) * thickness * contrast
-						angle: 0 + 'deg'
-						distr: 1 - 0.5 * contrast
-					})
-		2:
-			skeleton: true
-			closed: false
-			nodes:
-				0:
-					# x: contours[0].nodes[1].x
+					x: contours[0].nodes[1].x
 					# y: xHeight
-					x: Utils.onLine({
-						on: [ contours[1].nodes[0].point, contours[2].nodes[1].point ]
-						y: xHeight
-						})
+					# x: Utils.onLine({
+					# 	on: [ contours[1].nodes[0].point, contours[2].nodes[1].point ]
+					# 	y: xHeight
+					# })
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -91,20 +55,71 @@ exports.glyphs['x'] =
 						angle: 0 + 'deg'
 						distr: 0.5 * contrast
 					})
+				# 0:
+				# 	###########################
+				# 	# FIXME: thickness issues
+				# 	###########################
+				# 	x: Utils.onLine({
+				# 		on: [ contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ]
+				# 		y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
+				# 	})
+				# 	y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
+				# 	###########################
+				# 	dirOut: 0 + 'deg'
+				# 	typeOut: 'line'
+				# 	expand: Object({
+				# 		width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
+				# 		angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) #- Math.PI / 6 + Math.PI / 4
+				# 		distr: 0.5
+				# 	})
 				1:
-					###########################
-					# FIXME: thickness issues
-					###########################
-					x: Utils.onLine({
-						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]
-						y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
-						})
-					y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
-					###########################
+					x: spacingLeft
+					# y: 0
+					# x: Utils.onLine({
+					# 	on: [ contours[2].nodes[0].point, contours[1].nodes[0].point ]
+					# 	y: 0
+					# })
+					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
-						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) #- Math.PI / 6 + Math.PI / 4
-						distr: 0.5
+						width: ( 125 / 115 ) * thickness * contrast
+						angle: 0 + 'deg'
+						distr: 1 - 0.5 * contrast
 					})
+		# 2:
+		# 	skeleton: true
+		# 	closed: false
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].x
+		# 			# y: xHeight
+		# 			# x: Utils.onLine({
+		# 			# 	on: [ contours[1].nodes[0].point, contours[2].nodes[1].point ]
+		# 			# 	y: xHeight
+		# 			# })
+		# 			y: xHeight
+		# 			dirOut: 0 + 'deg'
+		# 			typeOut: 'line'
+		# 			expand: Object({
+		# 				width: ( 125 / 115 ) * thickness * contrast
+		# 				angle: 0 + 'deg'
+		# 				distr: 0.5 * contrast
+		# 			})
+		# 		1:
+		# 			###########################
+		# 			# FIXME: thickness issues
+		# 			###########################
+		# 			x: Utils.onLine({
+		# 				on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]
+		# 				y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
+		# 				})
+		# 			y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
+		# 			###########################
+		# 			dirOut: 0 + 'deg'
+		# 			typeOut: 'line'
+		# 			expand: Object({
+		# 				width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
+		# 				angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) #- Math.PI / 6 + Math.PI / 4
+		# 				distr: 0.5
+		# 			})
