@@ -18,7 +18,7 @@ exports.glyphs['G_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x - 230 * width
-					y: ( 325 / 750 ) * capHeight + (82)
+					y: ( 325 / 750 ) * capHeight * crossbar + (82)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -87,6 +87,7 @@ exports.glyphs['G_cap'] =
 						anglePenTop + 90 - 10 - correctWidthAperture,
 						90
 					) + 'deg'
+					type: 'smooth'
 					expand: Object({
 						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'

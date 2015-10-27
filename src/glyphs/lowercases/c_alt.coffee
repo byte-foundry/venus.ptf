@@ -18,18 +18,6 @@ exports.glyphs['c_alt'] =
 			skeleton: true
 			closed: false
 			nodes:
-				# 0:
-				# 	x: Math.max(contours[0].nodes[2].expandedTo[0].x, 175 * width )  + 100 + 270 * width - (56)
-				# 	y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture * apertureBottom - 10 ) + (12) # 140
-				# 	dirOut: Math.min(
-				# 		- anglePenBottom + 90 + 6 + correctWidthAperture,
-				# 		90
-				# 	) + 'deg'
-				# 	expand: Object({
-				# 		width: ( 112 / 115 ) * thickness * contrastExtremity
-				# 		angle: - anglePenBottom + 'deg'
-				# 		distr: 0.75 # * contrastExtremity
-				# 	})
 				0:
 					# x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
 					x: contours[0].nodes[2].expandedTo[0].x + 250 * width + 100 - (31)
@@ -85,13 +73,12 @@ exports.glyphs['c_alt'] =
 					})
 				4:
 					x: contours[0].nodes[0].x
-					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12)
-					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12) # 190 - (15)
-					dirIn: 80 + anglePenTop + 'deg' # 15 + 90 + 'deg'
+					y: xHeight - 150 - (12) # 190 - (15)
+					dirIn: 95 + 10 * contrast * contrastExtremity + 'deg'
 					type: 'smooth'
 					expand: Object({
 						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
-						angle: anglePenTop + 'deg'
+						angle: 26 + 'deg'
 						distr: 0.75 # * contrastExtremity
 					})
 				5:
@@ -100,11 +87,8 @@ exports.glyphs['c_alt'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: (( 112 / 115 ) * thickness) / 2 * contrast * contrastExtremity
-						angle: 180 + Math.max(
-							anglePenTop + 90 - correctWidthAperture,
-							90
-						) + 'deg'
+						width: (( 112 / 115 ) * thickness) / 2 * contrastExtremity
+						angle: 180 + 105 + 'deg'
 						distr: 0
 					})
 				6:
@@ -113,7 +97,7 @@ exports.glyphs['c_alt'] =
 					dirIn: - 90  + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: (( 112 / 115 ) * thickness) / 2 * serifBall * contrast * contrastExtremity
+						width: (( 112 / 115 ) * thickness) / 2 * serifBall * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0
 					})
@@ -123,7 +107,10 @@ exports.glyphs['c_alt'] =
 					dirIn: - 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: (( 112 / 115 ) * thickness) * serifBall * contrast * contrastExtremity
+						width: Math.min(
+							(( 112 / 115 ) * thickness) * serifBall * contrastExtremity,
+							contours[0].nodes[3].expandedTo[0].y - contours[0].nodes[4].expandedTo[0].y
+						)
 						angle: 90 + 'deg'
 						distr: 0
 					})
