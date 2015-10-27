@@ -225,6 +225,30 @@ exports.controls = [
 		disabled: false
 		demo: true
 	,
+		name: 'serifLeft'
+		label: 'side 1'
+		min: 0
+		max: 2
+		step: 0.01
+		init: 1
+		minAdvised: 1
+		maxAdvised: 1
+		disabled: true
+		demo: false
+		child: true
+	,
+		name: 'serifRight'
+		label: 'side 2'
+		min: 0
+		max: 2
+		step: 0.01
+		init: 1
+		minAdvised: 1
+		maxAdvised: 1
+		disabled: true
+		demo: false
+		child: true
+	,
 		name: 'midWidth'
 		label: 'Middle Width'
 		min: 0.5
@@ -343,7 +367,7 @@ exports.controls = [
 		init: 1
 		minAdvised: 0
 		maxAdvised: 1.1
-		disabled: true
+		disabled: false
 		demo: true
 	]
 ]

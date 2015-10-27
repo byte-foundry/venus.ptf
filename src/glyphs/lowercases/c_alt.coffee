@@ -1,6 +1,6 @@
-exports.glyphs['c'] =
+exports.glyphs['c_alt'] =
 	unicode: 'c'
-	altImg: 'serif-less-c.svg'
+	altImg: 'ball-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
@@ -26,7 +26,7 @@ exports.glyphs['c'] =
 				# 		90
 				# 	) + 'deg'
 				# 	expand: Object({
-				# 		width: ( 112 / 115) * thickness * contrastExtremity
+				# 		width: ( 112 / 115 ) * thickness * contrastExtremity
 				# 		angle: - anglePenBottom + 'deg'
 				# 		distr: 0.75 # * contrastExtremity
 				# 	})
@@ -87,13 +87,43 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[0].x
 					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12)
 					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12) # 190 - (15)
-					dirIn: Math.max(
-						anglePenTop + 90 - correctWidthAperture,
-						90
-					) + 'deg'
+					dirIn: 80 + anglePenTop + 'deg' # 15 + 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 112 / 115) * thickness * contrast * contrastExtremity
+						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75 # * contrastExtremity
+					})
+				5:
+					x: contours[0].nodes[4].expandedTo[0].x
+					y: contours[0].nodes[4].expandedTo[0].y
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: (( 112 / 115 ) * thickness) / 2 * contrast * contrastExtremity
+						angle: 180 + Math.max(
+							anglePenTop + 90 - correctWidthAperture,
+							90
+						) + 'deg'
+						distr: 0
+					})
+				6:
+					x: contours[0].nodes[4].expandedTo[0].x
+					y: contours[0].nodes[5].expandedTo[1].y + ( contours[0].nodes[7].expandedTo[1].y - contours[0].nodes[5].expandedTo[1].y ) / 2
+					dirIn: - 90  + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: (( 112 / 115 ) * thickness) / 2 * serifBall * contrast * contrastExtremity
+						angle: 180 + 'deg'
+						distr: 0
+					})
+				7:
+					x: contours[0].nodes[4].expandedTo[0].x
+					y: contours[0].nodes[4].expandedTo[0].y
+					dirIn: - 180 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: (( 112 / 115 ) * thickness) * serifBall * contrast * contrastExtremity
+						angle: 90 + 'deg'
+						distr: 0
 					})

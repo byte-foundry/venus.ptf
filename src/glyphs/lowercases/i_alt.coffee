@@ -1,11 +1,11 @@
-exports.glyphs['i'] =
+exports.glyphs['i_alt'] =
 	unicode: 'i'
-	altImg: 'full-serifs-i.svg'
+	altImg: 'top-serif-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:
 		spacingLeft: 70 * spacing + (57) + serifWidth / 2
-		spacingRight: 70 * spacing + serifWidth / 2
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -18,7 +18,7 @@ exports.glyphs['i'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -47,17 +47,6 @@ exports.glyphs['i'] =
 						xHeight + 50
 					)
 		1:
-			base: 'serif'
-			parentAnchors:
-				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
-				2:
-					anchorLine: 0
-		2:
 			base: 'serif'
 			parentAnchors:
 				0:

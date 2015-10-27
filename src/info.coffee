@@ -12,8 +12,11 @@ exports.fontinfo =
 		'diacritic',
 		'smallcap'
 	]
-	defaultAlts:
-		97: 'a'
+	defaultAlts: {
+		97: 'a',
+		99: 'c',
+		105: 'i'
+	}
 	ascender: Math.max( ascenderHeight, capHeight ) * 1.3
 	descender: descender - 50
 	'cap-height': Math.max( ascenderHeight, capHeight ) * 1.3
