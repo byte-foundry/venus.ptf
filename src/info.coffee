@@ -92,6 +92,8 @@ exports.fontinfo =
 		')' : 'parenright'
 		'[' : 'bracketleft'
 		']' : 'bracketright'
+		'{' : 'braceleft'
+		'}' : 'braceright'
 		'0' : 'zero'
 		'1' : 'one'
 		'2' : 'two'
