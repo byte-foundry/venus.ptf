@@ -1,5 +1,6 @@
 exports.lib =
 	parameters:
+		diacriticHeight: 80 * ( xHeight / xheight ) # dirty workaround
 		capHeight: xHeight + capDelta
 		scCapHeight: xHeight + thickness
 		scThickness: thickness * 0.9
