@@ -1,4 +1,4 @@
-exports.glyphs['circumflex'] =
+exports.glyphs['caron'] =
 	anchors:
 		0:
 			x: parentAnchors[0].x
@@ -43,3 +43,5 @@ exports.glyphs['circumflex'] =
 					x: anchors[0].x + 65 * width
 					y: anchors[0].y
 					typeOut: 'line'
+			transformOrigin: Array( anchors[0].x, anchors[0].y + ( contours[0].nodes[3].y - anchors[0].y ) / 2 )
+			transforms: Array( [ 'scaleY', -1 ] )
