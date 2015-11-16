@@ -26,7 +26,7 @@ exports.glyphs['ampersand'] =
 						distr: 0
 					})
 				1:
-					x: 350 + 235 * width
+					x: 350 + 235
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'

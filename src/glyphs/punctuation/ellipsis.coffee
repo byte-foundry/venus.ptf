@@ -1,7 +1,7 @@
 exports.glyphs['ellipsis'] =
 	unicode: '…'
 	ot:
-		advanceWidth: spacingLeft + minThickness * 3 + Math.min( 50, 70 * width ) * 2 + spacingRight
+		advanceWidth: spacingLeft + minThickness + 75 + minThickness + 75 + minThickness + spacingRight
 	tags: [
 		'all',
 		'latin',
@@ -9,23 +9,23 @@ exports.glyphs['ellipsis'] =
 	]
 	parameters:
 		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing + minThickness
+		spacingRight: 50 * spacing
 	components:
 		0:
 			base: 'dot'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: minThickness
+					y: 0
 		1:
 			base: 'dot'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness / 2 + minThickness + Math.min( 50, 70 * width )
-					y: minThickness
+					x: spacingLeft + minThickness + 75 + minThickness / 2
+					y: 0
 		2:
 			base: 'dot'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness / 2 + minThickness + Math.min( 50, 70 * width ) + minThickness + Math.min( 50, 70 * width )
-					y: minThickness
+					x: spacingLeft + minThickness + 75 + minThickness + 75 + minThickness / 2
+					y: 0

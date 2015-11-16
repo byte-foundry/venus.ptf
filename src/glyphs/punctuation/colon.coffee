@@ -8,7 +8,7 @@ exports.glyphs['colon'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (23)
+		spacingLeft: 50 * spacing
 		spacingRight: 50 * spacing
 	components:
 		0:
@@ -16,10 +16,10 @@ exports.glyphs['colon'] =
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: minThickness
+					y: 0
 		1:
 			base: 'dot'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: xHeight
+					y: xHeight - minThickness
