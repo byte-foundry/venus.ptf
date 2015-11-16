@@ -1,5 +1,5 @@
-exports.glyphs['e_cap_acute'] =
-	unicode: 'É'
+exports.glyphs['e_cap_tilde'] =
+	unicode: 'Ẽ'
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
@@ -188,7 +188,7 @@ exports.glyphs['e_cap_acute'] =
 			transformOrigin: Array( contours[3].nodes[0].expandedTo[0].x, contours[3].nodes[0].expandedTo[0].y )
 			transforms: Array( [ 'skewX', serifRotate * (20) + 'deg' ] )
 		5:
-			base: 'acute'
+			base: 'tilde'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2

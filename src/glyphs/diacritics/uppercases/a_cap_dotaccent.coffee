@@ -1,5 +1,5 @@
-exports.glyphs['a_cap_circumflex'] =
-	unicode: 'Â'
+exports.glyphs['a_cap_dotaccent'] =
+	unicode: 'Ȧ'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:
@@ -179,7 +179,7 @@ exports.glyphs['a_cap_circumflex'] =
 					anchor_1: contours[0].nodes[1].expandedTo[0].x
 					angle: Utils.lineAngle( contours[0].nodes[0].point ,contours[0].nodes[1].point )
 		3:
-			base: 'circumflex'
+			base: 'dot'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[2].x
