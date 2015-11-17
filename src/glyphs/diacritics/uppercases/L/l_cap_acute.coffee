@@ -1,5 +1,5 @@
-exports.glyphs['L_cap'] =
-	unicode: 'L'
+exports.glyphs['l_cap_acute'] =
+	unicode: 'Ĺ'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
@@ -8,7 +8,8 @@ exports.glyphs['L_cap'] =
 	tags: [
 		'all',
 		'latin',
-		'uppercase'
+		'uppercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -100,3 +101,9 @@ exports.glyphs['L_cap'] =
 					# directionX: 1
 			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
 			transforms: Array( [ 'skewX', serifRotate * (20) + 'deg' ] )
+		3:
+			base: 'acute'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].x
+					y: capHeight + diacriticHeight

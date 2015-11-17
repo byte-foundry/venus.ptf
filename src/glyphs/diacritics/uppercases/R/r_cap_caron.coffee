@@ -1,5 +1,5 @@
-exports.glyphs['R_cap'] =
-	unicode: 'R'
+exports.glyphs['r_cap_caron'] =
+	unicode: 'Ř'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
@@ -8,7 +8,8 @@ exports.glyphs['R_cap'] =
 	tags: [
 		'all',
 		'latin',
-		'uppercase'
+		'uppercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -181,3 +182,9 @@ exports.glyphs['R_cap'] =
 					left: false
 			# parentParameters:
 			# 	serifCurve: serifCurve * 20
+		3:
+			base: 'caron'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+					y: capHeight + diacriticHeight

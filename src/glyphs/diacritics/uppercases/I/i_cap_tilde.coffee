@@ -1,5 +1,5 @@
-exports.glyphs['I_cap'] =
-	unicode: 'I'
+exports.glyphs['i_cap_tilde'] =
+	unicode: 'Ĩ'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
@@ -8,7 +8,8 @@ exports.glyphs['I_cap'] =
 	tags: [
 		'all',
 		'latin',
-		'uppercase'
+		'uppercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -59,3 +60,9 @@ exports.glyphs['I_cap'] =
 				2:
 					anchorLine: capHeight
 					directionY: -1
+		2:
+			base: 'tilde'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].x
+					y: capHeight + diacriticHeight

@@ -1,5 +1,5 @@
-exports.glyphs['L_cap'] =
-	unicode: 'L'
+exports.glyphs['l_cap_caron'] =
+	unicode: 'Ľ'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
@@ -8,7 +8,8 @@ exports.glyphs['L_cap'] =
 	tags: [
 		'all',
 		'latin',
-		'uppercase'
+		'uppercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -100,3 +101,12 @@ exports.glyphs['L_cap'] =
 					# directionX: 1
 			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
 			transforms: Array( [ 'skewX', serifRotate * (20) + 'deg' ] )
+		3:
+			base: 'caronSlovak'
+			parentAnchors:
+				0:
+					x: Math.min(
+						contours[1].nodes[0].x + ( contours[1].nodes[1].x - contours[1].nodes[0].x ) / 2 + serifWidth,
+						contours[1].nodes[1].x - thickness * ( 125 / 115 ) / 2 
+					)
+					y: capHeight + overshoot
