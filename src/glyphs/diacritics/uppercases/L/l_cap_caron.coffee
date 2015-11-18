@@ -107,6 +107,6 @@ exports.glyphs['l_cap_caron'] =
 				0:
 					x: Math.min(
 						contours[1].nodes[0].x + ( contours[1].nodes[1].x - contours[1].nodes[0].x ) / 2 + serifWidth,
-						contours[1].nodes[1].x - thickness * ( 125 / 115 ) / 2 
+						contours[1].nodes[1].x - thickness * ( 125 / 115 ) / 2
 					)
 					y: capHeight + overshoot

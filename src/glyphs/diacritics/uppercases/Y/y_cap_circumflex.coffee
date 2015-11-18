@@ -100,7 +100,7 @@ exports.glyphs['y_cap_circumflex'] =
 					# y: contours[1].nodes[1].expandedTo[0].y
 					# y: contours[0].nodes[1].expandedTo[1].y + 50
 					# y: ( 330 / 750 ) * capHeight + 150
-					y: ( 330 / 750 ) * capHeight + ( 168 / 115 ) * thickness * contrast
+					# y: ( 330 / 750 ) * capHeight + ( 168 / 115 ) * thickness * contrast
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

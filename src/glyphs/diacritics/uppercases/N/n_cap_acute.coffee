@@ -51,7 +51,7 @@ exports.glyphs['n_cap_acute'] =
 						distr: 0
 					})
 				1:
-					x: contours[2].nodes[0].expandedTo[1].x - ( 5 / 115 ) * thickness
+					# x: contours[2].nodes[0].expandedTo[1].x - ( 5 / 115 ) * thickness
 					x: contours[0].nodes[0].expandedTo[1].x + 180 + 265 * width - (34) * contrast
 					y: 0
 					dirOut: 0 + 'deg'

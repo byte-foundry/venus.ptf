@@ -13,7 +13,7 @@ exports.glyphs['caronSlovak'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x 
+					x: anchors[0].x
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({
