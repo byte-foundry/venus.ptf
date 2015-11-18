@@ -1,5 +1,5 @@
-exports.glyphs['a'] =
-	unicode: 'a'
+exports.glyphs['a_dieresis'] =
+	unicode: 'ä'
 	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[5].x + spacingRight
@@ -10,7 +10,8 @@ exports.glyphs['a'] =
 	tags: [
 		'all',
 		'latin',
-		'lowercase'
+		'lowercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -183,3 +184,16 @@ exports.glyphs['a'] =
 								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1
 							}
 						]
+	components:
+		0:
+			base: 'dot'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].x - 95 / 2 - minThickness / 2
+					y: xHeight + diacriticHeight
+		1:
+			base: 'dot'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].x + 95 / 2 + minThickness / 2
+					y: xHeight + diacriticHeight

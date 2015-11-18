@@ -1,16 +1,17 @@
-exports.glyphs['i'] =
-	unicode: 'i'
+exports.glyphs['i_circumflex'] =
+	unicode: 'î'
 	altImg: 'full-serifs-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
-	parameters:
-		spacingLeft: 70 * spacing + (57) + serifWidth / 2
-		spacingRight: 70 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
-		'lowercase'
+		'lowercase',
+		'diacritic'
 	]
+	parameters:
+		spacingLeft: 70 * spacing + (57) + serifWidth / 2
+		spacingRight: 70 * spacing + serifWidth / 2
 	contours:
 		0:
 			skeleton: true
@@ -38,14 +39,10 @@ exports.glyphs['i'] =
 					})
 	components:
 		0:
-			base: 'title'
+			base: 'circumflex'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
-					# y: Math.max(
-					# 	ascenderHeight - ( 125 / 115 ) * thickness,
-					# 	xHeight + 50
-					# )
+					x: contours[0].nodes[0].x
 					y: xHeight + diacriticHeight
 		1:
 			base: 'serif'

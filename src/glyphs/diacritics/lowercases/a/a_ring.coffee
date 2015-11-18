@@ -1,5 +1,5 @@
-exports.glyphs['a'] =
-	unicode: 'a'
+exports.glyphs['a_ring'] =
+	unicode: 'å'
 	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[5].x + spacingRight
@@ -10,7 +10,8 @@ exports.glyphs['a'] =
 	tags: [
 		'all',
 		'latin',
-		'lowercase'
+		'lowercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -183,3 +184,11 @@ exports.glyphs['a'] =
 								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1
 							}
 						]
+
+	components:
+		0:
+			base: 'ring'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[1].x
+					y: xHeight + diacriticHeight

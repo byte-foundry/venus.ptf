@@ -28,7 +28,7 @@ exports.glyphs['title'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight
+					y: contours[0].nodes[0].y + Math.max( thickness, 25 )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({

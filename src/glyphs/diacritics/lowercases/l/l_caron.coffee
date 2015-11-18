@@ -1,15 +1,15 @@
-exports.glyphs['i'] =
-	unicode: 'i'
-	altImg: 'full-serifs-i.svg'
+exports.glyphs['l_caron'] =
+	unicode: 'ľ'
 	ot:
-		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight + 50 + thickness * ( 125 / 115 ) / 2
 	parameters:
-		spacingLeft: 70 * spacing + (57) + serifWidth / 2
+		spacingLeft: 70 * spacing + (29) + serifWidth / 2
 		spacingRight: 70 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
-		'lowercase'
+		'lowercase',
+		'diacritic'
 	]
 	contours:
 		0:
@@ -24,30 +24,19 @@ exports.glyphs['i'] =
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - serifHeight - serifCurve
+					y: ascenderHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
-					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 	components:
 		0:
-			base: 'title'
-			parentAnchors:
-				0:
-					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
-					# y: Math.max(
-					# 	ascenderHeight - ( 125 / 115 ) * thickness,
-					# 	xHeight + 50
-					# )
-					y: xHeight + diacriticHeight
-		1:
 			base: 'serif'
 			parentAnchors:
 				0:
@@ -58,7 +47,7 @@ exports.glyphs['i'] =
 					y: contours[0].nodes[0].y
 				2:
 					anchorLine: 0
-		2:
+		1:
 			base: 'serif'
 			parentAnchors:
 				0:
@@ -68,8 +57,12 @@ exports.glyphs['i'] =
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].y
 				2:
-					anchorLine: xHeight
+					anchorLine: ascenderHeight
 					directionY: -1
 					right: false
-			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+		2:
+			base: 'caronSlovak'
+			parentAnchors:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+					y: ascenderHeight + overshoot
