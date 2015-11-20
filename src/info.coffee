@@ -25,7 +25,11 @@ exports.fontinfo =
 		237: 'i_acute',
 		238: 'i_circumflex',
 		239: 'i_dieresis',
-		269: 'c_caron'
+		257: 'a_macron',
+		259: 'a_breve',
+		269: 'c_caron',
+		299: 'i_macron',
+		301: 'i_breve'
 	}
 	ascender: Math.max( ascenderHeight, capHeight ) * 1.3
 	descender: descender - 50
