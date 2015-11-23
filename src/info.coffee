@@ -21,6 +21,7 @@ exports.fontinfo =
 		226: 'a_circumflex',
 		228: 'a_dieresis',
 		229: 'a_ring',
+		231: 'c_cedilla',
 		236: 'i_grave',
 		237: 'i_acute',
 		238: 'i_circumflex',
