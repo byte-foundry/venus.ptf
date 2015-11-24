@@ -50,10 +50,11 @@ exports.glyphs['R_cap'] =
 						distr: 0
 					})
 				1:
-					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x + 165,
-						contours[0].nodes[0].expandedTo[1].x
-					)
+					# x: Math.max(
+					# 	contours[0].nodes[0].expandedTo[1].x + 165,
+					# 	contours[0].nodes[0].expandedTo[1].x
+					# )
+					x: contours[1].nodes[3].x
 					y: contours[1].nodes[0].y
 					dirOut: 0 + 'deg'
 					tensionOut: 1.1
@@ -150,7 +151,6 @@ exports.glyphs['R_cap'] =
 				2:
 					anchorLine: capHeight
 					directionY: -1
-					right: false
 		2:
 			base: 'serif'
 			parentAnchors:

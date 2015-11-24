@@ -1,5 +1,5 @@
 exports.glyphs['period'] =
-	unicode: 46
+	unicode: '.'
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
 	tags: [
@@ -8,7 +8,7 @@ exports.glyphs['period'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (0)
+		spacingLeft: 50 * spacing
 		spacingRight: 50 * spacing
 	components:
 		0:
@@ -16,4 +16,4 @@ exports.glyphs['period'] =
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: minThickness
+					y: 0

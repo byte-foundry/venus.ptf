@@ -42,10 +42,11 @@ exports.glyphs['i'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
-					y: Math.max(
-						ascenderHeight - ( 125 / 115 ) * thickness,
-						xHeight + 50
-					)
+					# y: Math.max(
+					# 	ascenderHeight - ( 125 / 115 ) * thickness,
+					# 	xHeight + 50
+					# )
+					y: xHeight + diacriticHeight
 		1:
 			base: 'serif'
 			parentAnchors:

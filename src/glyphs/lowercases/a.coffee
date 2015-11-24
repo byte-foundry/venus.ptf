@@ -20,7 +20,7 @@ exports.glyphs['a'] =
 				0:
 					x: 55 + (26)
 					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
-					dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
+					# dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
 					dirOut: Math.min(
 						- anglePenTop + 90 + correctWidthAperture,
 						90
@@ -179,7 +179,7 @@ exports.glyphs['a'] =
 								# )
 								# dirOut: Math.min( - 90, - 67 - ( 68 / 115 ) * thickness * width ) + 'deg'
 								dirOut: - 88 - ( 47 / 115 ) * thickness + 'deg',
-								tensionOut: 2 - ( 1.4 / 520 ) * xHeight
+								# tensionOut: 2 - ( 1.4 / 520 ) * xHeight
 								tensionOut: 0.6 + ( 0.1 / 115 ) * thickness - 0.1
 							}
 						]

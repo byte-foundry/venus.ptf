@@ -3,7 +3,7 @@ exports.glyphs['L_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:
-		spacingLeft: 85 * spacing + (34) + serifWidth / 2
+		spacingLeft: 85 * spacing + (67/115) * thickness + serifWidth / 2
 		spacingRight: 30 * spacing + serifWidth / 2
 	tags: [
 		'all',
@@ -23,7 +23,7 @@ exports.glyphs['L_cap'] =
 					expand: Object({
 						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[0].x
@@ -33,7 +33,7 @@ exports.glyphs['L_cap'] =
 					expand: Object({
 						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})
 		1:
 			skeleton: true

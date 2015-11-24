@@ -8,7 +8,7 @@ exports.glyphs['semicolon'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (29)
+		spacingLeft: 50 * spacing
 		spacingRight: 50 * spacing
 	components:
 		0:
@@ -22,4 +22,4 @@ exports.glyphs['semicolon'] =
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: xHeight
+					y: xHeight - minThickness

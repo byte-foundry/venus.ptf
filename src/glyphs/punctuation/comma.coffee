@@ -56,7 +56,7 @@ exports.glyphs['comma'] =
 					type: 'smooth'
 					tensionIn: 1.2
 					expand: Object({
-						width:  Math.max( 8, ( 60 / 115 ) * thickness )
+						width: Math.max( 8, ( 60 / 115 ) * thickness )
 						angle: 90 + 'deg'
 						distr: 0
 					})

@@ -1,14 +1,14 @@
 exports.glyphs['exclam'] =
 	unicode: '!'
 	ot:
-		advanceWidth: spacingLeft + contours[0].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing + (90)
+		spacingLeft: 45 * spacing
 		spacingRight: 45 * spacing
 	contours:
 		0:
@@ -16,7 +16,7 @@ exports.glyphs['exclam'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + ( 135 / 115 ) * thickness / 2
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -49,5 +49,5 @@ exports.glyphs['exclam'] =
 			base: 'dot'
 			parentAnchors:
 				0:
-					x: spacingLeft + 5
-					y: minThickness
+					x: contours[0].nodes[0].x
+					y: 0
