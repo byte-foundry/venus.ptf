@@ -151,6 +151,7 @@ exports.glyphs['R_cap'] =
 				2:
 					anchorLine: capHeight
 					directionY: -1
+					right: false
 		2:
 			base: 'serif'
 			parentAnchors:
