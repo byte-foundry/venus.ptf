@@ -28,6 +28,7 @@ exports.fontinfo =
 		239: 'i_dieresis',
 		257: 'a_macron',
 		259: 'a_breve',
+		267: 'c_dot_accent',
 		269: 'c_caron',
 		299: 'i_macron',
 		301: 'i_breve'
