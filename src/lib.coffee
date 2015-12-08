@@ -1,6 +1,6 @@
 exports.lib =
 	parameters:
-		diacriticHeight: 80 * ( xHeight / xheight ) # dirty workaround
+		diacriticHeight: 80 * ( xHeight / xHeight ) # dirty workaround
 		capHeight: xHeight + capDelta
 		scCapHeight: xHeight + thickness
 		scThickness: thickness * 0.9
@@ -9,7 +9,6 @@ exports.lib =
 		contrastExtremity: _contrastExtremity * -1
 		ascenderHeight: xHeight + ascender
 		spacing: 1 * ( width / width ) # dirty workaround
-		diacriticHeight: 70 * ( width / width ) # dirty workaround
 		minThickness: Math.max( 45, ( 125 / 115 ) * thickness )
 		correctWidthAperture: Math.max(0, 180 - 180 * width)
 		correctTensionAperture: 1.2 * ( aperture / aperture ) # dirty workaround
