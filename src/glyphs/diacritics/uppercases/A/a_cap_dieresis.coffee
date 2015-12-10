@@ -1,5 +1,7 @@
 exports.glyphs['a_cap_dieresis'] =
 	unicode: 'Ä'
+	glyphName: "Adieresis"
+	characterName: "LATIN CAPITAL LETTER A WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

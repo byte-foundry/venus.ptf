@@ -1,5 +1,7 @@
 exports.glyphs['n'] =
 	unicode: 'n'
+	glyphName: "n"
+	characterName: "LATIN SMALL LETTER N"
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

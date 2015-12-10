@@ -1,5 +1,7 @@
 exports.glyphs['b'] =
 	unicode: 'b'
+	glyphName: "b"
+	characterName: "LATIN SMALL LETTER B"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

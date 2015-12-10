@@ -1,5 +1,7 @@
 exports.glyphs['o_cap_acute'] =
 	unicode: 'Ó'
+	glyphName: "Oacute"
+	characterName: "LATIN CAPITAL LETTER O WITH ACUTE"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

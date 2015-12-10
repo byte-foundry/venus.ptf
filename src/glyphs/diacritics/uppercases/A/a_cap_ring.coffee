@@ -1,5 +1,7 @@
 exports.glyphs['a_cap_ring'] =
 	unicode: 'Å'
+	glyphName: "Aring"
+	characterName: "LATIN CAPITAL LETTER A WITH RING ABOVE"
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

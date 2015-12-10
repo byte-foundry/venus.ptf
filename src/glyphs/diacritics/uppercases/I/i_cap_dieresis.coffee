@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_dieresis'] =
 	unicode: 'Ï'
+	glyphName: "Idieresis"
+	characterName: "LATIN CAPITAL LETTER I WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

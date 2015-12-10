@@ -1,5 +1,7 @@
 exports.glyphs['y_cap_acute'] =
 	unicode: 'Ý'
+	glyphName: "Yacute"
+	characterName: "LATIN CAPITAL LETTER Y WITH ACUTE"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

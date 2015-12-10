@@ -1,5 +1,7 @@
 exports.glyphs['u'] =
 	unicode: 'u'
+	glyphName: "u"
+	characterName: "LATIN SMALL LETTER U"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

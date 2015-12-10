@@ -1,5 +1,7 @@
 exports.glyphs['x'] =
 	unicode: 'x'
+	glyphName: "x"
+	characterName: "LATIN SMALL LETTER X"
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:

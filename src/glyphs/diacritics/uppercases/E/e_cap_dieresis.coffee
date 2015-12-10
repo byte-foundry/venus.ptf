@@ -1,5 +1,7 @@
 exports.glyphs['e_cap_dieresis'] =
 	unicode: 'Ë'
+	glyphName: "Edieresis"
+	characterName: "LATIN CAPITAL LETTER E WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

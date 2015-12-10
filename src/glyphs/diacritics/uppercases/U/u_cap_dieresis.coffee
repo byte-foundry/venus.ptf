@@ -1,5 +1,7 @@
 exports.glyphs['u_cap_dieresis'] =
 	unicode: 'Ü'
+	glyphName: "Udieresis"
+	characterName: "LATIN CAPITAL LETTER U WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:

@@ -66,7 +66,7 @@ exports.glyphs['a_macron'] =
 							) / 115 ) * thickness
 					)
 					dirOut: - 90 + 'deg'
-					tensionOut: 1.2
+					tensionOut: 1.6
 					expand: Object({
 						width: thickness
 						angle: 180 + 'deg'
@@ -76,7 +76,7 @@ exports.glyphs['a_macron'] =
 					x: contours[0].nodes[3].expandedTo[0].x + 45 # + ( 50 + ( Math.min( 25, 25 * width ) / 115 ) * thickness )
 					y: 0
 					dirIn: 180 + 'deg'
-					tensionIn: 1.2
+					tensionIn: 1.6
 					expand: Object({
 						width: ( 85 / 115 ) * thickness
 						angle: 180 + 90 + 'deg'
@@ -90,6 +90,7 @@ exports.glyphs['a_macron'] =
 					x: contours[0].nodes[2].expandedTo[1].x + ( 1 / 115 ) * thickness
 					y: 150 + ( 55 / 115 ) * thickness
 					dirOut: - 90 + 'deg'
+					tensionOut: 1.3
 					expand: Object({
 						width: Math.max(
 							( 35 / 115 ) * thickness * contrast * contrastExtremity,

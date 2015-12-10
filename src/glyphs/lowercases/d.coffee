@@ -1,5 +1,7 @@
 exports.glyphs['d'] =
 	unicode: 'd'
+	glyphName: "d"
+	characterName: "LATIN SMALL LETTER D"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

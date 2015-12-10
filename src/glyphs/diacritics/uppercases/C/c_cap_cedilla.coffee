@@ -1,5 +1,7 @@
 exports.glyphs['c_cap_cedilla'] =
 	unicode: 'Ç'
+	glyphName: "Ccedilla"
+	characterName: "LATIN CAPITAL LETTER C WITH CEDILLA"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

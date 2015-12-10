@@ -1,5 +1,7 @@
 exports.glyphs['k'] =
 	unicode: 'k'
+	glyphName: "k"
+	characterName: "LATIN SMALL LETTER K"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['r'] =
 	unicode: 'r'
+	glyphName: "r"
+	characterName: "LATIN SMALL LETTER R"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_acute'] =
 	unicode: 'Í'
+	glyphName: "Iacute"
+	characterName: "LATIN CAPITAL LETTER I WITH ACUTE"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

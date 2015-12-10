@@ -1,5 +1,7 @@
 exports.glyphs['o_cap_dieresis'] =
 	unicode: 'Ö'
+	glyphName: "Odieresis"
+	characterName: "LATIN CAPITAL LETTER O WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

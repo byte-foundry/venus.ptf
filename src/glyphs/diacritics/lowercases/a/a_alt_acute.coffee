@@ -1,5 +1,7 @@
 exports.glyphs['a_alt_acute'] =
 	unicode: 'á'
+	glyphName: "aacute"
+	characterName: "LATIN SMALL LETTER A WITH ACUTE"
 	altImg: 'single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight

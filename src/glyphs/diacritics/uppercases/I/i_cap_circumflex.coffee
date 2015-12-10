@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_circumflex'] =
 	unicode: 'Î'
+	glyphName: "Icircumflex"
+	characterName: "LATIN CAPITAL LETTER I WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

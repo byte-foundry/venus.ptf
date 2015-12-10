@@ -1,5 +1,7 @@
 exports.glyphs['f'] =
 	unicode: 'f'
+	glyphName: "f"
+	characterName: "LATIN SMALL LETTER F"
 	ot:
 		advanceWidth: contours[0].nodes[3].x + spacingRight
 	parameters:

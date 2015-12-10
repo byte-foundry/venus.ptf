@@ -1,5 +1,7 @@
 exports.glyphs['o'] =
 	unicode: 'o'
+	glyphName: "o"
+	characterName: "LATIN SMALL LETTER O"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['h'] =
 	unicode: 'h'
+	glyphName: "h"
+	characterName: "LATIN SMALL LETTER H"
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

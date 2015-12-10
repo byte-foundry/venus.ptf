@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_grave'] =
 	unicode: 'Ì'
+	glyphName: "Igrave"
+	characterName: "LATIN CAPITAL LETTER I WITH GRAVE"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

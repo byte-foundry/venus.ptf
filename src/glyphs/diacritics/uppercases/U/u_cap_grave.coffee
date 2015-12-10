@@ -1,5 +1,7 @@
 exports.glyphs['u_cap_grave'] =
 	unicode: 'Ù'
+	glyphName: "Ugrave"
+	characterName: "LATIN CAPITAL LETTER U WITH GRAVE"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:
