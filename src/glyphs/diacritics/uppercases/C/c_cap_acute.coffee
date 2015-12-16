@@ -1,5 +1,7 @@
 exports.glyphs['c_cap_acute'] =
 	unicode: 'Ć'
+	glyphName: "Cacute"
+	characterName: "LATIN CAPITAL LETTER C WITH ACUTE"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

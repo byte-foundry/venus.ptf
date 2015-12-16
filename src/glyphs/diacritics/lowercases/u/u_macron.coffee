@@ -1,5 +1,7 @@
 exports.glyphs['u_macron'] =
 	unicode: 'ū'
+	glyphName: "umacron"
+	characterName: "LATIN SMALL LETTER U WITH MACRON"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	tags: [

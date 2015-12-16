@@ -1,5 +1,7 @@
 exports.glyphs['s_cap_acute'] =
 	unicode: 'Ś'
+	glyphName: "Sacute"
+	characterName: "LATIN CAPITAL LETTER S WITH ACUTE"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['r_cap_caron'] =
 	unicode: 'Ř'
+	glyphName: "Rcaron"
+	characterName: "LATIN CAPITAL LETTER R WITH CARON"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

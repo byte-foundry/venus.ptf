@@ -1,5 +1,7 @@
 exports.glyphs['U_cap'] =
 	unicode: 'U'
+	glyphName: "U"
+	characterName: "LATIN CAPITAL LETTER U"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:
@@ -63,7 +65,7 @@ exports.glyphs['U_cap'] =
 					y: capHeight - serifHeight - serifCurve
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast 
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

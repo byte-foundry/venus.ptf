@@ -1,5 +1,7 @@
 exports.glyphs['g_breve'] =
 	unicode: 'ğ'
+	glyphName: "gbreve"
+	characterName: "LATIN SMALL LETTER G WITH BREVE"
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

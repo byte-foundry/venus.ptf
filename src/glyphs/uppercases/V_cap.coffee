@@ -1,5 +1,7 @@
 exports.glyphs['V_cap'] =
 	unicode: 'V'
+	glyphName: "V"
+	characterName: "LATIN CAPITAL LETTER V"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	tags: [

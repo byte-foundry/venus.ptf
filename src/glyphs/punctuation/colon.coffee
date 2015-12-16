@@ -1,5 +1,7 @@
 exports.glyphs['colon'] =
 	unicode: ":"
+	glyphName: "colon"
+	characterName: "COLON"
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
 	tags: [

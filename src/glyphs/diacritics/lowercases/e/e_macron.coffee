@@ -1,5 +1,7 @@
 exports.glyphs['e_macron'] =
 	unicode: 'ē'
+	glyphName: "emacron"
+	characterName: "LATIN SMALL LETTER E WITH MACRON"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

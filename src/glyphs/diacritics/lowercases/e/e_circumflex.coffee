@@ -1,5 +1,7 @@
 exports.glyphs['e_circumflex'] =
 	unicode: 'ê'
+	glyphName: "ecircumflex"
+	characterName: "LATIN SMALL LETTER E WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

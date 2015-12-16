@@ -1,5 +1,7 @@
 exports.glyphs['o_tilde'] =
 	unicode: 'õ'
+	glyphName: "otilde"
+	characterName: "LATIN SMALL LETTER O WITH TILDE"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	tags: [

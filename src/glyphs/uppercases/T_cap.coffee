@@ -1,5 +1,7 @@
 exports.glyphs['T_cap'] =
 	unicode: 'T'
+	glyphName: "T"
+	characterName: "LATIN CAPITAL LETTER T"
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['y_dieresis'] =
 	unicode: 'ÿ'
+	glyphName: "ydieresis"
+	characterName: "LATIN SMALL LETTER Y WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

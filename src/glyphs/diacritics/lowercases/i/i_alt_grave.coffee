@@ -1,5 +1,7 @@
 exports.glyphs['i_alt_grave'] =
 	unicode: 'ì'
+	glyphName: "igrave"
+	characterName: "LATIN SMALL LETTER I WITH GRAVE"
 	altImg: 'top-serif-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight

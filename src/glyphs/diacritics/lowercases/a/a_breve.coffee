@@ -1,5 +1,7 @@
 exports.glyphs['a_breve'] =
 	unicode: 'ă'
+	glyphName: "abreve"
+	characterName: "LATIN SMALL LETTER A WITH BREVE"
 	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight

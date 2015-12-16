@@ -1,5 +1,7 @@
 exports.glyphs['two'] =
 	unicode: '2'
+	glyphName: "two"
+	characterName: "DIGIT TWO"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[1].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['slash'] =
 	unicode: '/'
+	glyphName: "slash"
+	characterName: "SOLIDUS"
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x
 	tags: [

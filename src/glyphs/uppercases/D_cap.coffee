@@ -1,5 +1,7 @@
 exports.glyphs['D_cap'] =
 	unicode: 'D'
+	glyphName: "D"
+	characterName: "LATIN CAPITAL LETTER D"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

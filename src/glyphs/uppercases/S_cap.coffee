@@ -1,5 +1,7 @@
 exports.glyphs['S_cap'] =
 	unicode: 'S'
+	glyphName: "S"
+	characterName: "LATIN CAPITAL LETTER S"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

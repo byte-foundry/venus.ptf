@@ -1,5 +1,7 @@
 exports.glyphs['u_acute'] =
 	unicode: 'ú'
+	glyphName: "uacute"
+	characterName: "LATIN SMALL LETTER U WITH ACUTE"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	tags: [

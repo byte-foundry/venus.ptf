@@ -1,5 +1,7 @@
 exports.glyphs['n_cap_caron'] =
 	unicode: 'Ň'
+	glyphName: "Ncaron"
+	characterName: "LATIN CAPITAL LETTER N WITH CARON"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

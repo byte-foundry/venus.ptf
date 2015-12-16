@@ -1,5 +1,7 @@
 exports.glyphs['space'] =
-	unicode: 32
+	unicode: ' '
+	glyphName: "space"
+	characterName: "SPACE"
 	ot:
 		advanceWidth: 250 * width
 	tags: [

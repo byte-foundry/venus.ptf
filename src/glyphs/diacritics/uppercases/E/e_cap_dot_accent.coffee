@@ -1,5 +1,7 @@
 exports.glyphs['e_cap_dot_accent'] =
 	unicode: 'Ė'
+	glyphName: "Edotaccent"
+	characterName: "LATIN CAPITAL LETTER E WITH DOT ABOVE"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

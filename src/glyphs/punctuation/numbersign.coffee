@@ -1,5 +1,7 @@
 exports.glyphs['numbersign'] =
 	unicode: '#'
+	glyphName: "numbersign"
+	characterName: "NUMBER SIGN"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[1].x + spacingRight
 	tags: [

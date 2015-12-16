@@ -1,5 +1,7 @@
 exports.glyphs['l_cap_acute'] =
 	unicode: 'Ĺ'
+	glyphName: "Lacute"
+	characterName: "LATIN CAPITAL LETTER L WITH ACUTE"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

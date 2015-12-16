@@ -1,5 +1,7 @@
 exports.glyphs['dollar'] =
 	unicode: '$'
+	glyphName: "dollar"
+	characterName: "DOLLAR SIGN"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

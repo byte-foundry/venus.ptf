@@ -1,5 +1,7 @@
 exports.glyphs['l_cap_caron'] =
 	unicode: 'Ľ'
+	glyphName: "Lcaron"
+	characterName: "LATIN CAPITAL LETTER L WITH CARON"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

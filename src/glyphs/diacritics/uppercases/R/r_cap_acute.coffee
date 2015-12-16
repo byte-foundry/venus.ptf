@@ -1,5 +1,7 @@
 exports.glyphs['r_cap_acute'] =
 	unicode: 'Ŕ'
+	glyphName: "Racute"
+	characterName: "LATIN CAPITAL LETTER R WITH ACUTE"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

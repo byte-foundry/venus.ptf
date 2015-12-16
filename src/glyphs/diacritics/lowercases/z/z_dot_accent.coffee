@@ -1,5 +1,7 @@
 exports.glyphs['z_dot_accent'] =
 	unicode: 'ż'
+	glyphName: "zdotaccent"
+	characterName: "LATIN SMALL LETTER Z WITH DOT ABOVE"
 	ot:
 		advanceWidth: contours[0].nodes[8].expandedTo[0].x + spacingRight
 	parameters:

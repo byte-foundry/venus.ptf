@@ -1,5 +1,7 @@
 exports.glyphs['s_cap_cedilla'] =
 	unicode: 'Ş'
+	glyphName: "uni015E"
+	characterName: "LATIN CAPITAL LETTER S WITH CEDILLA"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

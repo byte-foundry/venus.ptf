@@ -1,5 +1,7 @@
 exports.glyphs['t_caron'] =
 	unicode: 'ť'
+	glyphName: "tcaron"
+	characterName: "LATIN SMALL LETTER T WITH CARON"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

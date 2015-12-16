@@ -1,5 +1,7 @@
 exports.glyphs['J_cap'] =
 	unicode: 'J'
+	glyphName: "J"
+	characterName: "LATIN CAPITAL LETTER J"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:

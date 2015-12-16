@@ -1,5 +1,7 @@
 exports.glyphs['o_circumflex'] =
 	unicode: 'ô'
+	glyphName: "ocircumflex"
+	characterName: "LATIN SMALL LETTER O WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	tags: [

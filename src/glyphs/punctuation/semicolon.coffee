@@ -1,5 +1,7 @@
 exports.glyphs['semicolon'] =
 	unicode: ';'
+	glyphName: "semicolon"
+	characterName: "SEMICOLON"
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
 	tags: [

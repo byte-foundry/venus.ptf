@@ -1,5 +1,7 @@
 exports.glyphs['a_cap_breve'] =
 	unicode: 'Ă'
+	glyphName: "Abreve"
+	characterName: "LATIN CAPITAL LETTER A WITH BREVE"
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

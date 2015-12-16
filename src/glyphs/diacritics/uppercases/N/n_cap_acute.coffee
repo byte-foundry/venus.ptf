@@ -1,5 +1,7 @@
 exports.glyphs['n_cap_acute'] =
 	unicode: 'Ń'
+	glyphName: "Nacute"
+	characterName: "LATIN CAPITAL LETTER N WITH ACUTE"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

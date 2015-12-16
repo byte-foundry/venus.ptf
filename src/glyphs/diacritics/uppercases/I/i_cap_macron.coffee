@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_macron'] =
 	unicode: 'Ī'
+	glyphName: "Imacron"
+	characterName: "LATIN CAPITAL LETTER I WITH MACRON"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

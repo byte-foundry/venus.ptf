@@ -1,5 +1,7 @@
 exports.glyphs['l_caron'] =
 	unicode: 'ľ'
+	glyphName: "lcaron"
+	characterName: "LATIN SMALL LETTER L WITH CARON"
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight + 50 + thickness * ( 125 / 115 ) / 2
 	parameters:

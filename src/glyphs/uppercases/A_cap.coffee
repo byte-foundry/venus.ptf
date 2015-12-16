@@ -1,5 +1,7 @@
 exports.glyphs['A_cap'] =
 	unicode: 'A'
+	glyphName: "A"
+	characterName: "LATIN CAPITAL LETTER A"
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

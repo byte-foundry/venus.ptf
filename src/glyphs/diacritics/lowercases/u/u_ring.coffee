@@ -1,5 +1,7 @@
 exports.glyphs['u_ring'] =
 	unicode: 'ů'
+	glyphName: "uring"
+	characterName: "LATIN SMALL LETTER U WITH RING ABOVE"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	tags: [

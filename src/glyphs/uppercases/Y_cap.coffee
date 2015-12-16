@@ -1,10 +1,12 @@
 exports.glyphs['Y_cap'] =
 	unicode: 'Y'
+	glyphName: "Y"
+	characterName: "LATIN CAPITAL LETTER Y"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 10 * spacing + (36) + serifWidth / 2 
-		spacingRight: 10 * spacing + serifWidth / 2 
+		spacingLeft: 10 * spacing + (36) + serifWidth / 2
+		spacingRight: 10 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',

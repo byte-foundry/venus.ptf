@@ -1,5 +1,7 @@
 exports.glyphs['K_cap'] =
 	unicode: 'K'
+	glyphName: "K"
+	characterName: "LATIN CAPITAL LETTER K"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

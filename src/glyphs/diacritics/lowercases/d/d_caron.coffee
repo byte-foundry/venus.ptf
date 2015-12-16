@@ -1,5 +1,7 @@
 exports.glyphs['d_caron'] =
 	unicode: 'ď'
+	glyphName: "dcaron"
+	characterName: "LATIN SMALL LETTER D WITH CARON"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight + 50 + thickness * ( 125 / 115 ) / 2
 	parameters:

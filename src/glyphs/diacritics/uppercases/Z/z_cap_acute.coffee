@@ -1,5 +1,7 @@
 exports.glyphs['z_cap_acute'] =
 	unicode: 'Ź'
+	glyphName: "Zacute"
+	characterName: "LATIN CAPITAL LETTER Z WITH ACUTE"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

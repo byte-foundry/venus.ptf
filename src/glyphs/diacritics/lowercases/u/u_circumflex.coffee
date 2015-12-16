@@ -1,5 +1,7 @@
 exports.glyphs['u_circumflex'] =
 	unicode: 'û'
+	glyphName: "ucircumflex"
+	characterName: "LATIN SMALL LETTER U WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	tags: [

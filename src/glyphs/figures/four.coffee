@@ -1,5 +1,7 @@
 exports.glyphs['four'] =
 	unicode: '4'
+	glyphName: "four"
+	characterName: "DIGIT FOUR"
 	ot:
 		advanceWidth: contours[1].nodes[5].expandedTo[0].x + spacingRight
 	parameters:

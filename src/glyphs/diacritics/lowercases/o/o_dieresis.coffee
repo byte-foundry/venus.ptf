@@ -1,5 +1,7 @@
 exports.glyphs['o_dieresis'] =
 	unicode: 'ö'
+	glyphName: "odieresis"
+	characterName: "LATIN SMALL LETTER O WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	tags: [

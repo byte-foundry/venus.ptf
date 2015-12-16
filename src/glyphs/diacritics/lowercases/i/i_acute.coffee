@@ -1,5 +1,7 @@
 exports.glyphs['i_acute'] =
 	unicode: 'í'
+	glyphName: "iacute"
+	characterName: "LATIN SMALL LETTER I WITH ACUTE"
 	altImg: 'full-serifs-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight

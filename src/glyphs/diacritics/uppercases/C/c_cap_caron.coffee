@@ -1,5 +1,7 @@
 exports.glyphs['c_cap_caron'] =
 	unicode: 'Č'
+	glyphName: "Ccaron"
+	characterName: "LATIN CAPITAL LETTER C WITH CARON"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

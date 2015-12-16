@@ -1,5 +1,7 @@
 exports.glyphs['C_cap'] =
 	unicode: 'C'
+	glyphName: "C"
+	characterName: "LATIN CAPITAL LETTER C"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

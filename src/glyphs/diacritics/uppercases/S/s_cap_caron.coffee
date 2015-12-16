@@ -1,5 +1,7 @@
 exports.glyphs['s_cap_caron'] =
 	unicode: 'Š'
+	glyphName: "Scaron"
+	characterName: "LATIN CAPITAL LETTER S WITH CARON"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
