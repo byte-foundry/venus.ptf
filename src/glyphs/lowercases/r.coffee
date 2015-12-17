@@ -4,6 +4,9 @@ exports.glyphs['r'] =
 	characterName: "LATIN SMALL LETTER R"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 70 * spacing + (29) + serifWidth / 2
 		spacingRight: 20 * spacing

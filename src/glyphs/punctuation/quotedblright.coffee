@@ -4,6 +4,9 @@ exports.glyphs['quotedblright'] =
 	characterName: "RIGHT DOUBLE QUOTATION MARK"
 	ot:
 		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

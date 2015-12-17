@@ -4,6 +4,9 @@ exports.glyphs['three'] =
 	characterName: "DIGIT THREE"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 45 * spacing + (34)
 		spacingRight: 45 * spacing

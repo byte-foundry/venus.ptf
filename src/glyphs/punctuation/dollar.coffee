@@ -4,6 +4,9 @@ exports.glyphs['dollar'] =
 	characterName: "DOLLAR SIGN"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 35 * spacing + (29)
 		spacingRight: 35 * spacing

@@ -4,6 +4,9 @@ exports.glyphs['Z_cap'] =
 	characterName: "LATIN CAPITAL LETTER Z"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 45 * spacing + serifWidth / 2 * serifRotate
 		spacingRight: 45 * spacing + serifWidth / 3 * serifRotate

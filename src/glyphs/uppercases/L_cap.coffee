@@ -4,6 +4,9 @@ exports.glyphs['L_cap'] =
 	characterName: "LATIN CAPITAL LETTER L"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (67/115) * thickness + serifWidth / 2
 		spacingRight: 30 * spacing + serifWidth / 2

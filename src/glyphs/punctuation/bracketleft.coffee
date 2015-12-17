@@ -4,6 +4,9 @@ exports.glyphs['bracketleft'] =
 	characterName: "LEFT SQUARE BRACKET"
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 125 * spacing + (19)
 		spacingRight: 30 * spacing

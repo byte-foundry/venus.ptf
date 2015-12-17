@@ -2,6 +2,9 @@ exports.glyphs['B_sc'] =
 	unicode: 'ʙ'
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

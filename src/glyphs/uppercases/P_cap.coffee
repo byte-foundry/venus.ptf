@@ -4,6 +4,9 @@ exports.glyphs['P_cap'] =
 	characterName: "LATIN CAPITAL LETTER P"
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (34) + serifWidth / 2
 		spacingRight: 35 * spacing

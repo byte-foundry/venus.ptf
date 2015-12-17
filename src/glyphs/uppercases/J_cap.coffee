@@ -4,6 +4,9 @@ exports.glyphs['J_cap'] =
 	characterName: "LATIN CAPITAL LETTER J"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 45 * spacing + (36)
 		spacingRight: 85 * spacing

@@ -4,6 +4,9 @@ exports.glyphs['semicolon'] =
 	characterName: "SEMICOLON"
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

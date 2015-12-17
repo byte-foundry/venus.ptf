@@ -4,6 +4,9 @@ exports.glyphs['q'] =
 	characterName: "LATIN SMALL LETTER Q"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + (31)
 		spacingRight: 70 * spacing + serifWidth / 2

@@ -2,6 +2,9 @@ exports.glyphs['R_sc'] =
 	unicode: 'ʀ'
 	ot:
 		advanceWidth: width * 780 + thickness * 2 - ( 86 * 2 )
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

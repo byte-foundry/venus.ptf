@@ -4,6 +4,9 @@ exports.glyphs['T_cap'] =
 	characterName: "LATIN CAPITAL LETTER T"
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 10 * spacing + serifWidth / 2 * serifRotate
 		spacingRight: 10 * spacing + serifWidth / 2 * serifRotate

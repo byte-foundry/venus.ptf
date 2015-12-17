@@ -4,6 +4,9 @@ exports.glyphs['four'] =
 	characterName: "DIGIT FOUR"
 	ot:
 		advanceWidth: contours[1].nodes[5].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 25 * spacing + (0)
 		spacingRight: 20 * spacing

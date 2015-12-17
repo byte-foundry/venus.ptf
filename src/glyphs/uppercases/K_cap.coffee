@@ -4,6 +4,9 @@ exports.glyphs['K_cap'] =
 	characterName: "LATIN CAPITAL LETTER K"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (34)
 		spacingRight: 10 * spacing

@@ -5,6 +5,9 @@ exports.glyphs['a'] =
 	characterName: "LATIN SMALL LETTER A"
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 70 * spacing + (29)
 		spacingRight: 30 * spacing

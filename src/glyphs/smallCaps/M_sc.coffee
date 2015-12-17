@@ -2,6 +2,9 @@ exports.glyphs['M_sc'] =
 	unicode: 'ᴍ'
 	ot:
 		advanceWidth: width * 900 + thickness * 2 - ( 86 * 2 )
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

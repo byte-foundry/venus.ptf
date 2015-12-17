@@ -4,6 +4,9 @@ exports.glyphs['period'] =
 	characterName: "FULL STOP"
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

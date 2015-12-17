@@ -4,6 +4,9 @@ exports.glyphs['space'] =
 	characterName: "SPACE"
 	ot:
 		advanceWidth: 250 * width
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

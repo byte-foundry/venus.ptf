@@ -4,6 +4,9 @@ exports.glyphs['quoteleft'] =
 	characterName: "LEFT SINGLE QUOTATION MARK"
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

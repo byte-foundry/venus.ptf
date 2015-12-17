@@ -4,6 +4,9 @@ exports.glyphs['question'] =
 	characterName: "QUESTION MARK"
 	ot:
 		advanceWidth: spacingLeft + contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

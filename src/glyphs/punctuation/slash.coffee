@@ -4,6 +4,9 @@ exports.glyphs['slash'] =
 	characterName: "SOLIDUS"
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

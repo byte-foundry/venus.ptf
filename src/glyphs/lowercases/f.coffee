@@ -4,6 +4,9 @@ exports.glyphs['f'] =
 	characterName: "LATIN SMALL LETTER F"
 	ot:
 		advanceWidth: contours[0].nodes[3].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 30 * spacing + (0)
 		spacingRight: 70 * spacing

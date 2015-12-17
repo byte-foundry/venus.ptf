@@ -2,6 +2,9 @@ exports.glyphs['J_sc'] =
 	unicode: 'ᴊ'
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

@@ -4,6 +4,9 @@ exports.glyphs['guillemotleft'] =
 	characterName: "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK"
 	ot:
 		advanceWidth: spacingLeft + 140 * width + ( 100 / 115 ) * thickness + space + 140 * width + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

@@ -4,6 +4,9 @@ exports.glyphs['v'] =
 	characterName: "LATIN SMALL LETTER V"
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 10 * spacing + (32) + serifWidth / 2
 		spacingRight: 10 * spacing + serifWidth / 2
