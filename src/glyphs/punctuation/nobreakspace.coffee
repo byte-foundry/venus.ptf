@@ -1,9 +1,9 @@
-exports.glyphs['space'] =
-	unicode: ' '
-	glyphName: "space"
-	characterName: "SPACE"
+exports.glyphs['nobreakspace'] =
+	unicode: 160
+	glyphName: "uni00A0"
+	characterName: "NO-BREAK SPACE"
 	ot:
-		advanceWidth: 250 * width
+		advanceWidth: 220 * width
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
