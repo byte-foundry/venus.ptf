@@ -1,5 +1,7 @@
 exports.glyphs['V_sc'] =
 	unicode: 'ᴠ'
+	glyphName: "vsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL V"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

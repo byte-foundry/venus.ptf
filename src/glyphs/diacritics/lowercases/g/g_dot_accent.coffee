@@ -1,5 +1,7 @@
 exports.glyphs['g_dot_accent'] =
 	unicode: 'ġ'
+	glyphName: "gdotaccent"
+	characterName: "LATIN SMALL LETTER G WITH DOT ABOVE"
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	parameters:

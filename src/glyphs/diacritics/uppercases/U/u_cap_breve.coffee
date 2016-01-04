@@ -1,5 +1,7 @@
 exports.glyphs['u_cap_breve'] =
 	unicode: 'Ŭ'
+	glyphName: "Ubreve"
+	characterName: "LATIN CAPITAL LETTER U WITH BREVE"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:

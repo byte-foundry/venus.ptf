@@ -1,5 +1,7 @@
 exports.glyphs['P_sc'] =
 	unicode: 'ᴘ'
+	glyphName: "psmall"
+	characterName: "LATIN LETTER SMALL CAPITAL P"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

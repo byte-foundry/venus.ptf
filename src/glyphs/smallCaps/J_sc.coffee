@@ -1,5 +1,7 @@
 exports.glyphs['J_sc'] =
 	unicode: 'ᴊ'
+	glyphName: "jsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL J"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

@@ -1,5 +1,7 @@
 exports.glyphs['y_cap_grave'] =
 	unicode: 'Ỳ'
+	glyphName: "Ygrave"
+	characterName: "LATIN CAPITAL LETTER Y WITH GRAVE"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
@@ -183,4 +185,3 @@ exports.glyphs['y_cap_grave'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
 					y: capHeight + diacriticHeight
-	

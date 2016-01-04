@@ -1,5 +1,7 @@
 exports.glyphs['B_sc'] =
 	unicode: 'ʙ'
+	glyphName: "bsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL B"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

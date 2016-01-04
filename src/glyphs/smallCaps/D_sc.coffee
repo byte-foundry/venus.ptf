@@ -1,5 +1,7 @@
 exports.glyphs['D_sc'] =
 	unicode: 'ᴅ'
+	glyphName: "dsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL D"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

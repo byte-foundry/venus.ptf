@@ -1,5 +1,7 @@
 exports.glyphs['O_sc'] =
 	unicode: 'ᴏ'
+	glyphName: "osmall"
+	characterName: "LATIN LETTER SMALL CAPITAL O"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

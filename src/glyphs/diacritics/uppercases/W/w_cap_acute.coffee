@@ -1,5 +1,7 @@
 exports.glyphs['w_cap_acute'] =
 	unicode: 'Ẃ'
+	glyphName: "Wacute"
+	characterName: "LATIN CAPITAL LETTER W WITH ACUTE"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

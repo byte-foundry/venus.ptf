@@ -1,5 +1,7 @@
 exports.glyphs['M_sc'] =
 	unicode: 'ᴍ'
+	glyphName: "msmall"
+	characterName: "LATIN LETTER SMALL CAPITAL M"
 	ot:
 		advanceWidth: width * 900 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

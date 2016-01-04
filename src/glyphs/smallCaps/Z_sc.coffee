@@ -1,5 +1,7 @@
 exports.glyphs['Z_sc'] =
 	unicode: 'ᴢ'
+	glyphName: "zsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL Z"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

@@ -1,5 +1,7 @@
 exports.glyphs['K_sc'] =
 	unicode: 'ᴋ'
+	glyphName: "ksmall"
+	characterName: "LATIN LETTER SMALL CAPITAL K"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

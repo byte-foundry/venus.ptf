@@ -1,5 +1,7 @@
 exports.glyphs['W_sc'] =
 	unicode: 'ᴡ'
+	glyphName: "wsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL W"
 	ot:
 		advanceWidth: width * 980 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

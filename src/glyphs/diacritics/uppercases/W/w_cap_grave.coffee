@@ -1,5 +1,7 @@
 exports.glyphs['w_cap_grave'] =
 	unicode: 'Ẁ'
+	glyphName: "Wgrave"
+	characterName: "LATIN CAPITAL LETTER W WITH GRAVE"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

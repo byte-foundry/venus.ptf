@@ -1,5 +1,7 @@
 exports.glyphs['I_sc'] =
 	unicode: 'ɪ'
+	glyphName: "ismall"
+	characterName: "LATIN LETTER SMALL CAPITAL I"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

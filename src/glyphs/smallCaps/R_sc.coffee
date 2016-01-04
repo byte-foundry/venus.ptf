@@ -1,5 +1,7 @@
 exports.glyphs['R_sc'] =
 	unicode: 'ʀ'
+	glyphName: "rsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL R"
 	ot:
 		advanceWidth: width * 780 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

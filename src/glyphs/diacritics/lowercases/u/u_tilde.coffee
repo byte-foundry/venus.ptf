@@ -1,5 +1,7 @@
 exports.glyphs['u_tilde'] =
 	unicode: 'ũ'
+	glyphName: "utilde"
+	characterName: "LATIN SMALL LETTER U WITH TILDE"
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	tags: [

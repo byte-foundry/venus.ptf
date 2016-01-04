@@ -1,5 +1,7 @@
 exports.glyphs['C_sc'] =
 	unicode: 'ᴄ'
+	glyphName: "csmall"
+	characterName: "LATIN LETTER SMALL CAPITAL C"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

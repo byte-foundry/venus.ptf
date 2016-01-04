@@ -1,5 +1,7 @@
 exports.glyphs['L_sc'] =
 	unicode: 'ʟ'
+	glyphName: "lsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL L"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

@@ -1,5 +1,7 @@
 exports.glyphs['U_sc'] =
 	unicode: 'ᴜ'
+	glyphName: "usmall"
+	characterName: "LATIN LETTER SMALL CAPITAL U"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

@@ -1,5 +1,7 @@
 exports.glyphs['E_sc'] =
 	unicode: 'ᴇ'
+	glyphName: "esmall"
+	characterName: "LATIN LETTER SMALL CAPITAL E"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

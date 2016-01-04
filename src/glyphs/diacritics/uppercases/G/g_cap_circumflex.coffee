@@ -1,5 +1,7 @@
 exports.glyphs['g_cap_circumflex'] =
 	unicode: 'Ĝ'
+	glyphName: "Gcircumflex"
+	characterName: "LATIN CAPITAL LETTER G WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[1].x + spacingRight
 	parameters:

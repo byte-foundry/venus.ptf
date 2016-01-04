@@ -1,5 +1,7 @@
 exports.glyphs['w_cap_circumflex'] =
 	unicode: 'Ŵ'
+	glyphName: "Wcircumflex"
+	characterName: "LATIN CAPITAL LETTER W WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

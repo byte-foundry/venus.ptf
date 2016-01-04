@@ -1,4 +1,6 @@
 exports.glyphs['dot_accent'] =
+	glyphName: "dotaccent"
+	characterName: "DOT ACCENT"
 	anchors:
 		0:
 			x: parentAnchors[0].x

@@ -1,5 +1,7 @@
 exports.glyphs['u_cap_tilde'] =
 	unicode: 'Ũ'
+	glyphName: "Utilde"
+	characterName: "LATIN CAPITAL LETTER U WITH TILDE"
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['s_cap_circumflex'] =
 	unicode: 'Ŝ'
+	glyphName: "Scircumflex"
+	characterName: "LATIN CAPITAL LETTER S WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:

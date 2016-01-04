@@ -1,5 +1,7 @@
 exports.glyphs['F_sc'] =
 	unicode: 'ꜰ'
+	glyphName: "fsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL F"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

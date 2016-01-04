@@ -1,5 +1,7 @@
 exports.glyphs['T_sc'] =
 	unicode: 'ᴛ'
+	glyphName: "tsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL T"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

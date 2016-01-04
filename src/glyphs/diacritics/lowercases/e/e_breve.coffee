@@ -1,5 +1,7 @@
 exports.glyphs['e_breve'] =
 	unicode: 'ĕ'
+	glyphName: "ebreve"
+	characterName: "LATIN SMALL LETTER E WITH BREVE"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

@@ -1,5 +1,7 @@
 exports.glyphs['e_cap_tilde'] =
 	unicode: 'Ẽ'
+	glyphName: "Etilde"
+	characterName: "LATIN CAPITAL LETTER E WITH TILDE"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

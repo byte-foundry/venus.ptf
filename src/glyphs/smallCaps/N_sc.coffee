@@ -1,5 +1,7 @@
 exports.glyphs['N_sc'] =
 	unicode: 'ɴ'
+	glyphName: "nsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL N"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

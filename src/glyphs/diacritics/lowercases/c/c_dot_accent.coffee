@@ -1,5 +1,7 @@
 exports.glyphs['c_dot_accent'] =
 	unicode: 'ċ'
+	glyphName: "cdotaccent"
+	characterName: "LATIN SMALL LETTER C WITH DOT ABOVE"
 	altImg: 'serif-less-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight

@@ -1,6 +1,4 @@
 exports.glyphs['title'] =
-	glyphName: "asciitilde"
-	characterName: "TILDE"
 	anchors:
 		0:
 			x: parentAnchors[0].x

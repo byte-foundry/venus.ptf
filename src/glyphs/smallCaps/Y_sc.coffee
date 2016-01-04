@@ -1,5 +1,7 @@
 exports.glyphs['Y_sc'] =
 	unicode: 'ʏ'
+	glyphName: "ysmall"
+	characterName: "LATIN LETTER SMALL CAPITAL Y"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

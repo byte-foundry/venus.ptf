@@ -1,5 +1,7 @@
 exports.glyphs['w_cap_dieresis'] =
 	unicode: 'Ẅ'
+	glyphName: "Wdieresis"
+	characterName: "LATIN CAPITAL LETTER W WITH DIAERESIS"
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	parameters:

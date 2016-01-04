@@ -1,5 +1,7 @@
 exports.glyphs['h_cap_circumflex'] =
 	unicode: 'Ĥ'
+	glyphName: "Hcircumflex"
+	characterName: "LATIN CAPITAL LETTER H WITH CIRCUMFLEX"
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

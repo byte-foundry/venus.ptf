@@ -1,4 +1,7 @@
-exports.glyphs['stem'] =
+exports.glyphs['dotlessi'] =
+	glyphName: "dotlessi"
+	characterName: "LATIN SMALL LETTER DOTLESS I"
+	unicode: 'ı'
 	anchors:
 		0:
 			x: parentAnchors[0].x

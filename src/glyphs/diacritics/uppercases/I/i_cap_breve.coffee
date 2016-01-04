@@ -1,5 +1,7 @@
 exports.glyphs['i_cap_breve'] =
 	unicode: 'Ĭ'
+	glyphName: "Ibreve"
+	characterName: "LATIN CAPITAL LETTER I WITH BREVE"
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:

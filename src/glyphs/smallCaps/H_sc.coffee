@@ -1,5 +1,7 @@
 exports.glyphs['H_sc'] =
 	unicode: 'ʜ'
+	glyphName: "hsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL H"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

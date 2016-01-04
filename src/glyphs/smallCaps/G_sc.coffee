@@ -1,5 +1,7 @@
 exports.glyphs['G_sc'] =
 	unicode: 'ɢ'
+	glyphName: "gsmall"
+	characterName: "LATIN LETTER SMALL CAPITAL G"
 	ot:
 		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
 	transforms: Array(

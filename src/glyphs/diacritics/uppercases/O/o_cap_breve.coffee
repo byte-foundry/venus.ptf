@@ -1,5 +1,7 @@
 exports.glyphs['o_cap_breve'] =
 	unicode: 'Ŏ'
+	glyphName: "Obreve"
+	characterName: "LATIN CAPITAL LETTER O WITH BREVE"
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
