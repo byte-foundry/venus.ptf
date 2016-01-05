@@ -1,7 +1,7 @@
 exports.glyphs['l'] =
 	unicode: 'l'
-	glyphName: "l"
-	characterName: "LATIN SMALL LETTER L"
+	glyphName: 'l'
+	characterName: 'LATIN SMALL LETTER L'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['l'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			y: ascenderHeight + overshoot
 	contours:
 		0:
 			skeleton: true

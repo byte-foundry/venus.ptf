@@ -1,7 +1,7 @@
 exports.glyphs['p'] =
 	unicode: 'p'
-	glyphName: "p"
-	characterName: "LATIN SMALL LETTER P"
+	glyphName: 'p'
+	characterName: 'LATIN SMALL LETTER P'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(

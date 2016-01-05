@@ -1,9 +1,9 @@
 exports.glyphs['H_sc'] =
 	unicode: 'ʜ'
-	glyphName: "hsmall"
-	characterName: "LATIN LETTER SMALL CAPITAL H"
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'hsmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL H'
+	base: 'H_cap'
+	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -12,14 +12,7 @@ exports.glyphs['H_sc'] =
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'H_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

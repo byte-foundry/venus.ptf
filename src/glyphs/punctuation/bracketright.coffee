@@ -1,7 +1,7 @@
 exports.glyphs['bracketright'] =
 	unicode: ']'
-	glyphName: "bracketright"
-	characterName: "RIGHT SQUARE BRACKET"
+	glyphName: 'bracketright'
+	characterName: 'RIGHT SQUARE BRACKET'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(

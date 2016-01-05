@@ -1,7 +1,7 @@
 exports.glyphs['J_cap'] =
 	unicode: 'J'
-	glyphName: "J"
-	characterName: "LATIN CAPITAL LETTER J"
+	glyphName: 'J'
+	characterName: 'LATIN CAPITAL LETTER J'
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -16,6 +16,10 @@ exports.glyphs['J_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[4].expandedTo[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -1,7 +1,7 @@
 exports.glyphs['j'] =
 	unicode: 'j'
-	glyphName: "j"
-	characterName: "LATIN SMALL LETTER J"
+	glyphName: 'j'
+	characterName: 'LATIN SMALL LETTER J'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[1].x + spacingRight
 	transforms: Array(

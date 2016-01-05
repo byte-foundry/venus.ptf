@@ -1,7 +1,7 @@
 exports.glyphs['L_cap'] =
 	unicode: 'L'
-	glyphName: "L"
-	characterName: "LATIN CAPITAL LETTER L"
+	glyphName: 'L'
+	characterName: 'LATIN CAPITAL LETTER L'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,16 @@ exports.glyphs['L_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[1].x
+			y: capHeight + diacriticHeight
+		1:
+			x: Math.min(
+				contours[1].nodes[0].x + ( contours[1].nodes[1].x - contours[1].nodes[0].x ) / 2 + serifWidth,
+				contours[1].nodes[1].x - thickness * ( 125 / 115 ) / 2
+			)
+			y: capHeight + overshoot
 	contours:
 		0:
 			skeleton: true

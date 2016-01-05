@@ -1,7 +1,7 @@
 exports.glyphs['less'] =
 	unicode: '<'
-	glyphName: "less"
-	characterName: "LESS-THAN SIGN"
+	glyphName: 'less'
+	characterName: 'LESS-THAN SIGN'
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(

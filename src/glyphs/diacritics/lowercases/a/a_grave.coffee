@@ -1,7 +1,7 @@
 exports.glyphs['a_grave'] =
 	unicode: 'à'
-	glyphName: "agrave"
-	characterName: "LATIN SMALL LETTER A WITH GRAVE"
+	glyphName: 'agrave'
+	characterName: 'LATIN SMALL LETTER A WITH GRAVE'
 	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight

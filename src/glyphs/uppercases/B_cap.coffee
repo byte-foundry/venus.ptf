@@ -1,7 +1,7 @@
 exports.glyphs['B_cap'] =
 	unicode: 'B'
-	glyphName: "B"
-	characterName: "LATIN CAPITAL LETTER B"
+	glyphName: 'B'
+	characterName: 'LATIN CAPITAL LETTER B'
 	ot:
 		advanceWidth: contours[2].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(

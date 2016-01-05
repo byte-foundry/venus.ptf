@@ -1,7 +1,7 @@
 exports.glyphs['quotedbl'] =
 	unicode: '"'
-	glyphName: "quotedbl"
-	characterName: "QUOTATION MARK"
+	glyphName: 'quotedbl'
+	characterName: 'QUOTATION MARK'
 	ot:
 		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
 	transforms: Array(

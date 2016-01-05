@@ -1,9 +1,9 @@
 exports.glyphs['M_sc'] =
 	unicode: 'ᴍ'
-	glyphName: "msmall"
-	characterName: "LATIN LETTER SMALL CAPITAL M"
-	ot:
-		advanceWidth: width * 900 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'msmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL M'
+	base: 'M_cap'
+	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -12,14 +12,7 @@ exports.glyphs['M_sc'] =
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'M_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

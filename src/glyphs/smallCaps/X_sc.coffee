@@ -1,8 +1,12 @@
-exports.glyphs['W_sc'] =
-	unicode: 'ᴡ'
-	glyphName: 'wsmall'
-	characterName: 'LATIN LETTER SMALL CAPITAL W'
-	base: 'W_cap'
+exports.glyphs['X_sc'] =
+	#
+	# TODO:
+	# LATIN LETTER SMALL CAPITAL X have no unicode for now…
+	#
+	unicode: 'x'
+	glyphName: 'xsmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL X'
+	base: 'X_cap'
 	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']

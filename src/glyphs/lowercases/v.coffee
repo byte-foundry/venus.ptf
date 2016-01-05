@@ -1,7 +1,7 @@
 exports.glyphs['v'] =
 	unicode: 'v'
-	glyphName: "v"
-	characterName: "LATIN SMALL LETTER V"
+	glyphName: 'v'
+	characterName: 'LATIN SMALL LETTER V'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(

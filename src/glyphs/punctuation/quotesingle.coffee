@@ -1,7 +1,7 @@
 exports.glyphs['quotesingle'] =
-	unicode: "'"
-	glyphName: "quotesingle"
-	characterName: "APOSTROPHE"
+	unicode: '\''
+	glyphName: 'quotesingle'
+	characterName: 'APOSTROPHE'
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
 	transforms: Array(

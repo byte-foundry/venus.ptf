@@ -1,7 +1,7 @@
 exports.glyphs['hyphen'] =
 	unicode: '-'
-	glyphName: "hyphen"
-	characterName: "HYPHEN-MINUS"
+	glyphName: 'hyphen'
+	characterName: 'HYPHEN-MINUS'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(

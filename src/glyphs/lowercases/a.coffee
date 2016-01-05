@@ -1,8 +1,8 @@
 exports.glyphs['a'] =
 	unicode: 'a'
 	altImg: 'double-story-a.svg'
-	glyphName: "a"
-	characterName: "LATIN SMALL LETTER A"
+	glyphName: 'a'
+	characterName: 'LATIN SMALL LETTER A'
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight
 	transforms: Array(
@@ -17,6 +17,10 @@ exports.glyphs['a'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[1].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

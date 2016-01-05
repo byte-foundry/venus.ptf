@@ -1,7 +1,7 @@
 exports.glyphs['underscore'] =
 	unicode: '_'
-	glyphName: "underscore"
-	characterName: "LOW LINE"
+	glyphName: 'underscore'
+	characterName: 'LOW LINE'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(

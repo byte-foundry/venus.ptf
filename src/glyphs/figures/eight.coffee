@@ -1,7 +1,7 @@
 exports.glyphs['eight'] =
 	unicode: '8'
-	glyphName: "eight"
-	characterName: "DIGIT EIGHT"
+	glyphName: 'eight'
+	characterName: 'DIGIT EIGHT'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(

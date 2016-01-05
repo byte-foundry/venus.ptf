@@ -1,7 +1,7 @@
 exports.glyphs['r'] =
 	unicode: 'r'
-	glyphName: "r"
-	characterName: "LATIN SMALL LETTER R"
+	glyphName: 'r'
+	characterName: 'LATIN SMALL LETTER R'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['r'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

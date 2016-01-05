@@ -1,7 +1,7 @@
 exports.glyphs['M_cap'] =
 	unicode: 'M'
-	glyphName: "M"
-	characterName: "LATIN CAPITAL LETTER M"
+	glyphName: 'M'
+	characterName: 'LATIN CAPITAL LETTER M'
 	ot:
 		advanceWidth: contours[3].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

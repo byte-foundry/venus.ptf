@@ -1,9 +1,9 @@
 exports.glyphs['A_sc'] =
 	unicode: 'ᴀ'
-	glyphName: "asmall"
-	characterName: "LATIN LETTER SMALL CAPITAL A"
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'asmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL A'
+	base: 'A_cap'
+	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -12,14 +12,7 @@ exports.glyphs['A_sc'] =
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'A_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

@@ -1,7 +1,7 @@
 exports.glyphs['n'] =
 	unicode: 'n'
-	glyphName: "n"
-	characterName: "LATIN SMALL LETTER N"
+	glyphName: 'n'
+	characterName: 'LATIN SMALL LETTER N'
 	ot:
 		advanceWidth: contours[1].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['n'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

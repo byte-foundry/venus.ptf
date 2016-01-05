@@ -1,7 +1,7 @@
 exports.glyphs['exclamdown'] =
 	unicode: '¡'
-	glyphName: "exclamdown"
-	characterName: "INVERTED EXCLAMATION MARK"
+	glyphName: 'exclamdown'
+	characterName: 'INVERTED EXCLAMATION MARK'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

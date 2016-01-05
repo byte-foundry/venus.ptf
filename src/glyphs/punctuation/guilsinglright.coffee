@@ -1,7 +1,7 @@
 exports.glyphs['guilsinglright'] =
 	unicode: '›'
-	glyphName: "guilsinglright"
-	characterName: "SINGLE RIGHT-POINTING ANGLE QUOTATION MARK"
+	glyphName: 'guilsinglright'
+	characterName: 'SINGLE RIGHT-POINTING ANGLE QUOTATION MARK'
 	ot:
 		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
 	transforms: Array(

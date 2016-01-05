@@ -1,7 +1,7 @@
 exports.glyphs['i_alt'] =
 	unicode: 'i'
-	glyphName: "i"
-	characterName: "LATIN SMALL LETTER I"
+	glyphName: 'i'
+	characterName: 'LATIN SMALL LETTER I'
 	altImg: 'top-serif-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight

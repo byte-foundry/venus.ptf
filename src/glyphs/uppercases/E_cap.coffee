@@ -1,7 +1,7 @@
 exports.glyphs['E_cap'] =
 	unicode: 'E'
-	glyphName: "E"
-	characterName: "LATIN CAPITAL LETTER E"
+	glyphName: 'E'
+	characterName: 'LATIN CAPITAL LETTER E'
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['E_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -1,7 +1,7 @@
 exports.glyphs['m'] =
 	unicode: 'm'
-	glyphName: "m"
-	characterName: "LATIN SMALL LETTER M"
+	glyphName: 'm'
+	characterName: 'LATIN SMALL LETTER M'
 	ot:
 		advanceWidth: contours[2].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(

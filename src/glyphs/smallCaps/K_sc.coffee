@@ -1,9 +1,9 @@
 exports.glyphs['K_sc'] =
 	unicode: 'ᴋ'
-	glyphName: "ksmall"
-	characterName: "LATIN LETTER SMALL CAPITAL K"
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'ksmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL K'
+	base: 'K_cap'
+	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -12,14 +12,7 @@ exports.glyphs['K_sc'] =
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'K_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

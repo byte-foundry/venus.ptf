@@ -1,7 +1,7 @@
 exports.glyphs['G_cap'] =
 	unicode: 'G'
-	glyphName: "G"
-	characterName: "LATIN CAPITAL LETTER G"
+	glyphName: 'G'
+	characterName: 'LATIN CAPITAL LETTER G'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -16,6 +16,10 @@ exports.glyphs['G_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[3].x
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

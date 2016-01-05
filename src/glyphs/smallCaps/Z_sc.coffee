@@ -1,9 +1,9 @@
 exports.glyphs['Z_sc'] =
 	unicode: 'ᴢ'
-	glyphName: "zsmall"
-	characterName: "LATIN LETTER SMALL CAPITAL Z"
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'zsmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL Z'
+	base: 'Z_cap'
+	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -12,14 +12,7 @@ exports.glyphs['Z_sc'] =
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'Z_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

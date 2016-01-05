@@ -1,7 +1,7 @@
 exports.glyphs['nobreakspace'] =
 	unicode: 160
-	glyphName: "uni00A0"
-	characterName: "NO-BREAK SPACE"
+	glyphName: 'uni00A0'
+	characterName: 'NO-BREAK SPACE'
 	ot:
 		advanceWidth: 220 * width
 	transforms: Array(

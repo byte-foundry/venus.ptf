@@ -1,7 +1,7 @@
 exports.glyphs['I_cap'] =
 	unicode: 'I'
-	glyphName: "I"
-	characterName: "LATIN CAPITAL LETTER I"
+	glyphName: 'I'
+	characterName: 'LATIN CAPITAL LETTER I'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['I_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

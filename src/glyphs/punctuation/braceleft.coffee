@@ -1,7 +1,7 @@
 exports.glyphs['braceleft'] =
 	unicode: '{'
-	glyphName: "braceleft"
-	characterName: "LEFT CURLY BRACKET"
+	glyphName: 'braceleft'
+	characterName: 'LEFT CURLY BRACKET'
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(

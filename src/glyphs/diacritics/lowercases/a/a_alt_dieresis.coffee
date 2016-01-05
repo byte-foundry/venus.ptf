@@ -1,7 +1,7 @@
 exports.glyphs['a_alt_dieresis'] =
 	unicode: 'ä'
-	glyphName: "adieresis"
-	characterName: "LATIN SMALL LETTER A WITH DIAERESIS"
+	glyphName: 'adieresis'
+	characterName: 'LATIN SMALL LETTER A WITH DIAERESIS'
 	altImg: 'single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight

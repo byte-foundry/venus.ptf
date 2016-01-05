@@ -1,7 +1,7 @@
 exports.glyphs['ampersand'] =
 	unicode: '&'
-	glyphName: "ampersand"
-	characterName: "AMPERSAND"
+	glyphName: 'ampersand'
+	characterName: 'AMPERSAND'
 	ot:
 		advanceWidth: spacingLeft + contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

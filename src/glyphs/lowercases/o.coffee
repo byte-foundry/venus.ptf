@@ -1,7 +1,7 @@
 exports.glyphs['o'] =
 	unicode: 'o'
-	glyphName: "o"
-	characterName: "LATIN SMALL LETTER O"
+	glyphName: 'o'
+	characterName: 'LATIN SMALL LETTER O'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -15,6 +15,10 @@ exports.glyphs['o'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[1].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

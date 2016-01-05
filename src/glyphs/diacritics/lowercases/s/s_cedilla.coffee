@@ -1,7 +1,7 @@
 exports.glyphs['s_cedilla'] =
 	unicode: 'ş'
-	glyphName: "uni015F"
-	characterName: "LATIN SMALL LETTER S WITH CEDILLA"
+	glyphName: 'uni015F'
+	characterName: 'LATIN SMALL LETTER S WITH CEDILLA'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	parameters:
