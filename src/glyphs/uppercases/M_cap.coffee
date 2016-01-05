@@ -1,7 +1,12 @@
 exports.glyphs['M_cap'] =
 	unicode: 'M'
+	glyphName: 'M'
+	characterName: 'LATIN CAPITAL LETTER M'
 	ot:
 		advanceWidth: contours[3].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (34) + serifWidth / 2
 		spacingRight: 85 * spacing + serifWidth / 2

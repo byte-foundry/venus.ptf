@@ -2,9 +2,9 @@ exports.lib =
 	parameters:
 		diacriticHeight: 80 * ( xHeight / xHeight ) # dirty workaround
 		capHeight: xHeight + capDelta
-		scCapHeight: xHeight + thickness
+		scCapHeight: xHeight + ( capDelta / 3 ) * smallCapDelta
 		scThickness: thickness * 0.9
-		scWidth: width * 0.8
+		scWidth: width * 0.7
 		contrast: _contrast * -1
 		contrastExtremity: _contrastExtremity * -1
 		ascenderHeight: xHeight + ascender
@@ -16,6 +16,3 @@ exports.lib =
 			if serifWidth < 0.1 && serifHeight < 0.1
 			then Math.max(5, serifHeight)
 			else serifHeight
-	transforms: Array(
-		['skewX', slant + 'deg']
-	)

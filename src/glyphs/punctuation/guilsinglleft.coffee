@@ -1,7 +1,12 @@
 exports.glyphs['guilsinglleft'] =
 	unicode: '‹'
+	glyphName: 'guilsinglleft'
+	characterName: 'SINGLE LEFT-POINTING ANGLE QUOTATION MARK'
 	ot:
 		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

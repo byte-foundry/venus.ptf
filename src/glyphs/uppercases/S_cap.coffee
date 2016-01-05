@@ -1,7 +1,12 @@
 exports.glyphs['S_cap'] =
 	unicode: 'S'
+	glyphName: 'S'
+	characterName: 'LATIN CAPITAL LETTER S'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 35 * spacing + (29)
 		spacingRight: 35 * spacing
@@ -12,6 +17,10 @@ exports.glyphs['S_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[6].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

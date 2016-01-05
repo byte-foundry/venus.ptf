@@ -1,7 +1,12 @@
 exports.glyphs['W_cap'] =
 	unicode: 'W'
+	glyphName: 'W'
+	characterName: 'LATIN CAPITAL LETTER W'
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 10 * spacing + (36) + serifWidth
 		spacingRight: 10 * spacing + serifWidth
@@ -10,6 +15,10 @@ exports.glyphs['W_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[3].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

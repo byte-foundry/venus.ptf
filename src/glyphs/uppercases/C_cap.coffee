@@ -1,7 +1,12 @@
 exports.glyphs['C_cap'] =
 	unicode: 'C'
+	glyphName: 'C'
+	characterName: 'LATIN CAPITAL LETTER C'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + (36)
 		spacingRight: 20 * spacing
@@ -9,6 +14,8 @@ exports.glyphs['C_cap'] =
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 100 ) # 40
 	anchors:
 		0:
+			x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) / 2
+			y: capHeight + diacriticHeight
 			baseSerifTop: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[0].expandedTo[1], serifHeight + Math.min( 180, serifCurve * ( 180 / 15 ) ), true )
 			baseSerifBottom: Utils.pointOnCurve( contours[0].nodes[0].expandedTo[0], contours[0].nodes[1].expandedTo[0], serifHeight + Math.min( 130, serifCurve * ( 130 / 15 ) ) )
 			baseSerifTop_: Utils.pointOnCurve( contours[0].nodes[4].expandedTo[1], contours[0].nodes[3].expandedTo[1], serifHeight + Math.min( 150, serifCurve * ( 150 / 15 ) ) )

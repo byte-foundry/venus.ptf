@@ -1,7 +1,12 @@
 exports.glyphs['m'] =
 	unicode: 'm'
+	glyphName: 'm'
+	characterName: 'LATIN SMALL LETTER M'
 	ot:
 		advanceWidth: contours[2].nodes[3].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 70 * spacing + (29) + serifWidth / 2
 		spacingRight: 65 * spacing + serifWidth / 2

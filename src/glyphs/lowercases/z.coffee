@@ -1,7 +1,12 @@
 exports.glyphs['z'] =
 	unicode: 'z'
+	glyphName: 'z'
+	characterName: 'LATIN SMALL LETTER Z'
 	ot:
 		advanceWidth: contours[0].nodes[8].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 30 * spacing + (0)
 		spacingRight: 20 * spacing
@@ -10,6 +15,10 @@ exports.glyphs['z'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x + ( contours[0].nodes[8].x - contours[0].nodes[0].x ) / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

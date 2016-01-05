@@ -1,20 +1,18 @@
 exports.glyphs['F_sc'] =
 	unicode: 'ꜰ'
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'fsmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL F'
+	base: 'F_cap'
+	advanceWidth: base.advanceWidth
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'F_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

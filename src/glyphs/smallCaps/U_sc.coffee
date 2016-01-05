@@ -1,20 +1,18 @@
 exports.glyphs['U_sc'] =
 	unicode: 'ᴜ'
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'usmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL U'
+	base: 'U_cap'
+	advanceWidth: base.advanceWidth
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'U_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

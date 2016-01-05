@@ -1,7 +1,12 @@
 exports.glyphs['comma'] =
 	unicode: ','
+	glyphName: 'comma'
+	characterName: 'COMMA'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

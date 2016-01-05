@@ -1,7 +1,12 @@
 exports.glyphs['A_cap'] =
 	unicode: 'A'
+	glyphName: 'A'
+	characterName: 'LATIN CAPITAL LETTER A'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 10 * spacing + (36) + serifWidth / 2
 		spacingRight: 10 * spacing + serifWidth / 2
@@ -10,8 +15,10 @@ exports.glyphs['A_cap'] =
 		'latin',
 		'uppercase'
 	]
-	# anchors:
-	# 	diacriticX: ( contours[0].nodes[3].expandedTo[0].x - spacingLeft ) / 2
+	anchors:
+		0:
+			x: contours[0].nodes[2].x
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

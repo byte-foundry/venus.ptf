@@ -1,20 +1,18 @@
 exports.glyphs['J_sc'] =
 	unicode: 'ᴊ'
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'jsmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL J'
+	base: 'J_cap'
+	advanceWidth: base.advanceWidth
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'J_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

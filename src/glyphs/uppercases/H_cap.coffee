@@ -1,7 +1,12 @@
 exports.glyphs['H_cap'] =
 	unicode: 'H'
+	glyphName: 'H'
+	characterName: 'LATIN CAPITAL LETTER H'
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (34) + serifWidth / 2
 		spacingRight: 85 * spacing + serifWidth / 2
@@ -10,6 +15,10 @@ exports.glyphs['H_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[1].nodes[0].x + ( contours[1].nodes[1].x - contours[1].nodes[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

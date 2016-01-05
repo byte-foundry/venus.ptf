@@ -1,7 +1,12 @@
 exports.glyphs['Z_cap'] =
 	unicode: 'Z'
+	glyphName: 'Z'
+	characterName: 'LATIN CAPITAL LETTER Z'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 45 * spacing + serifWidth / 2 * serifRotate
 		spacingRight: 45 * spacing + serifWidth / 3 * serifRotate
@@ -10,6 +15,10 @@ exports.glyphs['Z_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -1,8 +1,13 @@
 exports.glyphs['i'] =
 	unicode: 'i'
+	glyphName: 'i'
+	characterName: 'LATIN SMALL LETTER I'
 	altImg: 'full-serifs-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 70 * spacing + (57) + serifWidth / 2
 		spacingRight: 70 * spacing + serifWidth / 2

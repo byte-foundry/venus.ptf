@@ -1,7 +1,12 @@
 exports.glyphs['five'] =
 	unicode: '5'
+	glyphName: 'five'
+	characterName: 'DIGIT FIVE'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 45 * spacing + (34)
 		spacingRight: 40 * spacing

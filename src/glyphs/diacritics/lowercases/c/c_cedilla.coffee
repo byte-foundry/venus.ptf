@@ -1,5 +1,7 @@
 exports.glyphs['c_cedilla'] =
 	unicode: 'ç'
+	glyphName: 'ccedilla'
+	characterName: 'LATIN SMALL LETTER C WITH CEDILLA'
 	altImg: 'serif-less-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight

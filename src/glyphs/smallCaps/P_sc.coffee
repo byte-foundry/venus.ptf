@@ -1,20 +1,18 @@
 exports.glyphs['P_sc'] =
 	unicode: 'ᴘ'
-	ot:
-		advanceWidth: width * 580 + thickness * 2 - ( 86 * 2 )
+	glyphName: 'psmall'
+	characterName: 'LATIN LETTER SMALL CAPITAL P'
+	base: 'P_cap'
+	advanceWidth: base.advanceWidth
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',
 		'smallcap'
 	]
-	components:
-		0:
-			base: 'P_cap'
-			parentParameters:
-				capHeight: scCapHeight
-				thickness: scThickness
-				width: scWidth
-			parentAnchors:
-				0:
-					x: 0
-					y: 0
+	parameters:
+		capHeight: scCapHeight
+		thickness: scThickness
+		width: scWidth

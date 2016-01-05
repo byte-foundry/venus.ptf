@@ -1,7 +1,12 @@
 exports.glyphs['u'] =
 	unicode: 'u'
+	glyphName: 'u'
+	characterName: 'LATIN SMALL LETTER U'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 65 * spacing + (29) + serifWidth / 2
 		spacingRight: 70 * spacing + serifWidth / 2
@@ -10,6 +15,10 @@ exports.glyphs['u'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

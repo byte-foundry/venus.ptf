@@ -1,7 +1,12 @@
 exports.glyphs['d'] =
 	unicode: 'd'
+	glyphName: 'd'
+	characterName: 'LATIN SMALL LETTER D'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + (31)
 		spacingRight: 70 * spacing
@@ -10,6 +15,10 @@ exports.glyphs['d'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[1].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			y: ascenderHeight + overshoot
 	contours:
 		0:
 			skeleton: true

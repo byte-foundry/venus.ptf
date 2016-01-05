@@ -1,5 +1,7 @@
 exports.glyphs['i_breve'] =
 	unicode: 'ĭ'
+	glyphName: 'ibreve'
+	characterName: 'LATIN SMALL LETTER I WITH BREVE'
 	altImg: 'full-serifs-i.svg'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight

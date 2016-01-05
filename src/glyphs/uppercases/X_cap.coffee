@@ -1,10 +1,15 @@
 exports.glyphs['X_cap'] =
 	unicode: 'X'
+	glyphName: 'X'
+	characterName: 'LATIN CAPITAL LETTER X'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
-		spacingLeft: 15 * spacing + (47) + serifWidth / 2 
-		spacingRight: 15 * spacing + serifWidth / 2 
+		spacingLeft: 15 * spacing + (47) + serifWidth / 2
+		spacingRight: 15 * spacing + serifWidth / 2
 	tags: [
 		'all',
 		'latin',

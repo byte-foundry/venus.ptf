@@ -1,7 +1,12 @@
 exports.glyphs['braceright'] =
 	unicode: '}'
+	glyphName: 'braceright'
+	characterName: 'RIGHT CURLY BRACKET'
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

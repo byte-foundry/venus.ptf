@@ -1,7 +1,12 @@
 exports.glyphs['O_cap'] =
 	unicode: 'O'
+	glyphName: 'O'
+	characterName: 'LATIN CAPITAL LETTER O'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 55 * spacing + (36)
 		spacingRight: 55 * spacing
@@ -10,6 +15,10 @@ exports.glyphs['O_cap'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[1].x
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

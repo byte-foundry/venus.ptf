@@ -1,7 +1,12 @@
 exports.glyphs['t'] =
 	unicode: 't'
+	glyphName: 't'
+	characterName: 'LATIN SMALL LETTER T'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 90 * spacing + (29) * width
 		spacingRight: 30 * spacing
@@ -10,6 +15,10 @@ exports.glyphs['t'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			y: ascenderHeight + overshoot
 	contours:
 		0:
 			skeleton: true

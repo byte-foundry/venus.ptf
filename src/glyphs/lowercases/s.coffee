@@ -1,7 +1,12 @@
 exports.glyphs['s'] =
 	unicode: 's'
+	glyphName: 's'
+	characterName: 'LATIN SMALL LETTER S'
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 30 * spacing + (23)
 		spacingRight: 30 * spacing
@@ -12,6 +17,10 @@ exports.glyphs['s'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[5].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -1,8 +1,13 @@
 exports.glyphs['a_alt'] =
 	unicode: 'a'
+	glyphName: 'a'
+	characterName: 'LATIN SMALL LETTER A'
 	altImg: 'single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + (31)
 		spacingRight: 70 * spacing

@@ -1,7 +1,12 @@
 exports.glyphs['B_cap'] =
 	unicode: 'B'
+	glyphName: 'B'
+	characterName: 'LATIN CAPITAL LETTER B'
 	ot:
 		advanceWidth: contours[2].nodes[2].expandedTo[0].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 85 * spacing + (34) + serifWidth / 2
 		spacingRight: 35 * spacing
@@ -45,7 +50,7 @@ exports.glyphs['B_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast 
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -147,7 +152,7 @@ exports.glyphs['B_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.2
 					expand: Object({
-						width: ( 112 / 115 ) * thickness * opticThickness * contrast 
+						width: ( 112 / 115 ) * thickness * opticThickness * contrast
 						angle: 110 + 'deg'
 						distr: 0
 					})

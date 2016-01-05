@@ -25,6 +25,17 @@ exports.controls = [
 		disabled: false
 		demo: false
 	,
+		name: 'smallCapDelta'
+		label: 'SmallCap Height'
+		min: 0
+		max: 2.5
+		step: 0.01
+		init: 1
+		minAdvised: 0
+		maxAdvised: 1.5
+		disabled: false
+		demo: false
+	,
 		name: 'ascender'
 		label: 'Ascender'
 		min: 50

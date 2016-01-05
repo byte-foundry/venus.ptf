@@ -1,7 +1,12 @@
 exports.glyphs['ellipsis'] =
 	unicode: '…'
+	glyphName: 'ellipsis'
+	characterName: 'HORIZONTAL ELLIPSIS'
 	ot:
 		advanceWidth: spacingLeft + minThickness + 75 + minThickness + 75 + minThickness + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

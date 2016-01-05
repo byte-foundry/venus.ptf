@@ -1,7 +1,12 @@
 exports.glyphs['equal'] =
 	unicode: '='
+	glyphName: 'equal'
+	characterName: 'EQUALS SIGN'
 	ot:
 		advanceWidth: spacingLeft + contours[0].nodes[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

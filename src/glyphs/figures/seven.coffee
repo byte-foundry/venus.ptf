@@ -1,7 +1,12 @@
 exports.glyphs['seven'] =
 	unicode: '7'
+	glyphName: 'seven'
+	characterName: 'DIGIT SEVEN'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 30 * spacing + (0)
 		spacingRight: 10 * spacing

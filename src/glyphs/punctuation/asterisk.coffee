@@ -1,7 +1,12 @@
 exports.glyphs['asterisk'] =
 	unicode: '*'
+	glyphName: 'asterisk'
+	characterName: 'ASTERISK'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + 120 + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

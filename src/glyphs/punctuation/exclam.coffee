@@ -1,7 +1,12 @@
 exports.glyphs['exclam'] =
 	unicode: '!'
+	glyphName: 'exclam'
+	characterName: 'EXCLAMATION MARK'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	tags: [
 		'all',
 		'latin',

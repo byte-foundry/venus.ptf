@@ -1,4 +1,8 @@
 exports.glyphs['ring'] =
+	glyphName: "ring"
+	characterName: "RING ABOVE"
+	ot:
+		advanceWidth: 100
 	anchors:
 		0:
 			x: parentAnchors[0].x

@@ -1,7 +1,12 @@
 exports.glyphs['x'] =
 	unicode: 'x'
+	glyphName: 'x'
+	characterName: 'LATIN SMALL LETTER X'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 5 * spacing + (32) + serifWidth / 2
 		spacingRight: 5 * spacing + serifWidth / 2
