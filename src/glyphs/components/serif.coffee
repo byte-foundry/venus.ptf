@@ -319,10 +319,10 @@ exports.glyphs['serif'] =
 								y: contours[0].nodes[9].y
 								on: [ anchors[2].baseLeft, contours[0].nodes[10].point ]
 							}) - (serifCurve + serifHeight + anchors[2].leftWidth * anchors[2].leftCurve),
-							contours[0].nodes[8].x + Math.sqrt(Math.abs(1 - serifMedian)) * ( serifWidth + anchors[2].leftWidth ) + 20 / (serifCurve+serifHeight + anchors[2].leftWidth * anchors[2].leftCurve) * -(contours[0].nodes[8].x - Utils.onLine({
+							contours[0].nodes[8].x + Math.sqrt(Math.abs((1 - serifMedian) * 0.5)) * ( serifWidth + anchors[2].leftWidth ) + 20 / (serifCurve+serifHeight + anchors[2].leftWidth * anchors[2].leftCurve) * -(contours[0].nodes[8].x - Utils.onLine({
 								y: contours[0].nodes[9].y
 								on: [ anchors[2].baseLeft, contours[0].nodes[10].point ]
-							}))) else Math.max( contours[0].nodes[8].x + serifWidth / 5 + Math.sqrt(Math.abs(1 - serifMedian)) * ( serifWidth + anchors[2].leftWidth ), anchors[1].x - serifHeight - serifCurve - anchors[2].leftWidth * anchors[2].leftCurve )
+							}))) else Math.max( contours[0].nodes[8].x + serifWidth / 5 + Math.sqrt(Math.abs((1 - serifMedian) * 0.5)) * ( serifWidth + anchors[2].leftWidth ), anchors[1].x - serifHeight - serifCurve - anchors[2].leftWidth * anchors[2].leftCurve )
 					y:
 						if anchors[2].left == false
 						then anchors[2].baseLeft.y

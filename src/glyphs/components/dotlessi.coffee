@@ -2,10 +2,6 @@ exports.glyphs['dotlessi'] =
 	glyphName: "dotlessi"
 	characterName: "LATIN SMALL LETTER DOTLESS I"
 	unicode: 'ı'
-	anchors:
-		0:
-			x: parentAnchors[0].x
-			y: parentAnchors[0].y
 	tags: [
 		'component',
 		'diacritic'
@@ -15,6 +11,10 @@ exports.glyphs['dotlessi'] =
 	parameters:
 		spacingLeft: 70 * spacing + (97)
 		spacingRight: 70 * spacing
+	anchors:
+		0:
+			x: contours[0].nodes[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
