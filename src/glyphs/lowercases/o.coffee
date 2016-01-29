@@ -19,6 +19,8 @@ exports.glyphs['o'] =
 		0:
 			x: contours[0].nodes[1].x
 			y: xHeight + diacriticHeight
+			left: contours[0].nodes[0].expandedTo[0].x
+			right: contours[0].nodes[2].expandedTo[0].x
 	contours:
 		0:
 			skeleton: true
