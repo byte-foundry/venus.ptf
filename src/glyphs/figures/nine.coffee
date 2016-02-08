@@ -19,8 +19,8 @@ exports.glyphs['nine'] =
 		0:
 			# junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], - ( 40 / 115 ) * thickness + 40, true, 10 )
 			# junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 100 / 115 ) * thickness, true, 10 )
-			junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], 50 - ( 50 / 115 ) * thickness, true, 10 )
-			junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 100 / 115 ) * thickness + 50 - ( 50 / 115 ) * thickness, true, 10 )
+			junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 50 - ( 50 / 115 ) * thickness ) * contrast, true, 10 )
+			junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( ( 100 / 115 ) * thickness + 50 - ( 50 / 115 ) * thickness ) * contrast, true, 10 )
 	contours:
 		0:
 			skeleton: true
@@ -29,21 +29,21 @@ exports.glyphs['nine'] =
 				0:
 					x: 75 + (30)
 					y: ( 135 / 750 ) * capHeight + (11)
-					dirOut: 105 + 'deg'
+					dirOut: 90 + 15 * contrast + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 127 / 115 ) * thickness * opticThickness
+						width: ( 127 / 115 ) * thickness * opticThickness * contrast
 						angle: 26 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.44
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.45
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.05
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -65,7 +65,7 @@ exports.glyphs['nine'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: - 87 + 'deg'
 						distr: 0
 					})
@@ -85,15 +85,11 @@ exports.glyphs['nine'] =
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 117 / 115 ) * thickness * opticThickness
+						width: ( 117 / 115 ) * thickness * opticThickness * contrast
 						angle: 70 + 'deg'
 						distr: 0.25
 					})
-		1:
-			skeleton: true
-			closed: false
-			nodes:
-				0:
+				6:
 					x: contours[0].nodes[5].x
 					y: contours[0].nodes[5].y
 					dirOut: contours[0].nodes[5].dirIn
@@ -102,7 +98,7 @@ exports.glyphs['nine'] =
 						angle: contours[0].nodes[5].expand.angle
 						distr: contours[0].nodes[5].expand.distr
 					})
-				1:
+				7:
 					expandedTo:
 						[
 							{
@@ -118,15 +114,15 @@ exports.glyphs['nine'] =
 								type: 'smooth'
 							}
 						]
-				2:
+				8:
 					expandedTo:
 						[
 							{
-								x: contours[1].nodes[1].expandedTo[0].x + thickness / 4
-								y: contours[1].nodes[1].expandedTo[0].y
+								x: contours[0].nodes[7].expandedTo[0].x + thickness / 4
+								y: contours[0].nodes[7].expandedTo[0].y
 							}
 							{
-								x: contours[1].nodes[1].expandedTo[1].x + thickness / 4
-								y: contours[1].nodes[1].expandedTo[1].y
+								x: contours[0].nodes[7].expandedTo[1].x + thickness / 4
+								y: contours[0].nodes[7].expandedTo[1].y
 							}
 						]
