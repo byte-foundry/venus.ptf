@@ -100,11 +100,12 @@ exports.glyphs['two'] =
 					})
 				5:
 					x: 90 + (30)
+					x: contours[1].nodes[4].x + 45
 					y: ( 385 / 750 ) * capHeight + (15)
 					dirIn: 128 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 134 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 134 / 115 ) * thickness * opticThickness * contrast
 						angle: 180 + 27 + 'deg'
 						distr: 0.75
 					})

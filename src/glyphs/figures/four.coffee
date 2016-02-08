@@ -60,17 +60,17 @@ exports.glyphs['four'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 108 / 115 ) * thickness * opticThickness
+						width: ( 108 / 115 ) * thickness * opticThickness * contrast
 						angle: - Math.max( 15 * width, 15 ) + 'deg'
 						distr: 0
 					})
 				1:
 					x: spacingLeft
-					y: ( 315 / 750 ) * capHeight
+					y: ( ( 200 + 115 * contrast ) / 750 ) * capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 114 / 115 ) * thickness * opticThickness
+						width: ( 114 / 115 ) * thickness * opticThickness * contrast
 						angle: - Math.max( 7 * width, 7 ) + 'deg'
 						distr: 0
 					})
@@ -80,7 +80,7 @@ exports.glyphs['four'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -90,17 +90,17 @@ exports.glyphs['four'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 1
 					})
 				4:
 					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].expandedTo[0].y + ( 15 / 115 ) * thickness
+					y: contours[1].nodes[1].expandedTo[0].y + ( 15 / 115 ) * thickness * contrast
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * opticThickness
+						width: ( 120 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 1
 					})
@@ -110,7 +110,7 @@ exports.glyphs['four'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 120 / 115 ) * thickness * opticThickness
+						width: ( 120 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 1
 					})
