@@ -48,7 +48,7 @@ exports.glyphs['o'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 300 * width + (65)
+					x: contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width + (65)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.15

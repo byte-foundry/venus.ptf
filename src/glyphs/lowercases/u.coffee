@@ -97,7 +97,7 @@ exports.glyphs['u'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x + 50 + 250 * width - (29)
+					x: contours[0].nodes[0].expandedTo[1].x + 50 + 50 + 200 * width - (29)
 					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

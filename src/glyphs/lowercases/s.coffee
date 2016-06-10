@@ -49,7 +49,7 @@ exports.glyphs['s'] =
 						distr: 0
 					})
 				2:
-					x: 200 + 275 * width - (29)
+					x: 275 + 200 * width - (29)
 					y: Math.max( 140, ( 140 / 520 ) * xHeight )
 					dirIn: - 90 + 'deg'
 					dirOut: 90 + 'deg'
@@ -93,7 +93,7 @@ exports.glyphs['s'] =
 						distr: 1
 					})
 				6:
-					x: 200 + 261 * width - (24)
+					x: 261 + 200 * width - (24)
 					y: Math.max( contours[0].nodes[3].y + ( 40 / 520 ) * xHeight, xHeight - 152 * aperture * apertureTop ) + (9)
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,

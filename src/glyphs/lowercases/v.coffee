@@ -56,7 +56,7 @@ exports.glyphs['v'] =
 						distr: 0
 					})
 				1:
-					x: 200 + 280 * width - (32)
+					x: 280 + 200 * width - (32)
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

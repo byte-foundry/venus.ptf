@@ -32,7 +32,7 @@ exports.glyphs['x'] =
 						distr: 0.25
 					})
 				1:
-					x: 125 + 250 * width + (35)
+					x: 125 + 50 + 200 * width + (35)
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

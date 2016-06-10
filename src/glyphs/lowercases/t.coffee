@@ -3,7 +3,7 @@ exports.glyphs['t'] =
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
 	ot:
-		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
+		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -76,7 +76,7 @@ exports.glyphs['t'] =
 			closed: false
 			nodes:
 				0:
-					x: 10
+					x: contours[0].nodes[3].expandedTo[0].x
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
@@ -85,7 +85,7 @@ exports.glyphs['t'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[3].expandedTo[0].x
+					x: 10
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({

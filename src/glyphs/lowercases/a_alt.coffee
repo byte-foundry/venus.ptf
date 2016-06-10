@@ -43,7 +43,10 @@ exports.glyphs['a_alt'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 240 * width + (38)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[1].x + 40 + 200 * width,
+						205 + 200 * width
+					) + (38)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

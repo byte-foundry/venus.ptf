@@ -23,22 +23,11 @@ exports.glyphs['c'] =
 			skeleton: true
 			closed: false
 			nodes:
-				# 0:
-				# 	x: Math.max(contours[0].nodes[2].expandedTo[0].x, 175 * width )  + 100 + 270 * width - (56)
-				# 	y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 150 * aperture * apertureBottom - 10 ) + (12) # 140
-				# 	dirOut: Math.min(
-				# 		- anglePenBottom + 90 + 6 + correctWidthAperture,
-				# 		90
-				# 	) + 'deg'
-				# 	expand: Object({
-				# 		width: ( 112 / 115) * thickness * contrastExtremity
-				# 		angle: - anglePenBottom + 'deg'
-				# 		distr: 0.75 # * contrastExtremity
-				# 	})
 				0:
-					# x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
-					x: contours[0].nodes[2].expandedTo[0].x + 250 * width + 100 - (31)
-					x: Math.max(contours[0].nodes[2].expandedTo[0].x, 175 * width ) + 250 * width + 100 - (31)
+					x: Math.min(
+						contours[0].nodes[2].expandedTo[0].x + 145 + 200 * width,
+						320 + 200 * width
+					) - (26)
 					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 20 ) - (15) # 190 - (15)
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
@@ -51,12 +40,6 @@ exports.glyphs['c'] =
 					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
-						# Math.max(
-						# 	Math.min(
-						# 		( 50 / 115 * thickness ) / 100, 	# position is defined by thickness
-						# 		0.75 ), 							# max value between 2 points
-						# 	0.45 									# min value
-						# )
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
@@ -90,8 +73,10 @@ exports.glyphs['c'] =
 					})
 				4:
 					x: contours[0].nodes[0].x
-					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12)
-					y: Math.max( contours[0].nodes[2].y + ( 30 / 520 ) * xHeight, xHeight - 150 * aperture * apertureTop + 10 ) - (12) # 190 - (15)
+					y: Math.max(
+						contours[0].nodes[2].y + ( 30 / 520 ) * xHeight,
+						xHeight - 150 * aperture * apertureTop + 10
+					) - (12)
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,
 						90

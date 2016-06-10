@@ -45,16 +45,6 @@ exports.glyphs['k'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[2].nodes[0].expandedTo[1].x - 15 - (35)
-					y: xHeight
-					dirOut: - 90 + 'deg'
-					typeOut: 'line'
-					expand: Object({
-						width: ( 140 / 115 ) * thickness * contrast
-						angle: 0 + 'deg'
-						distr: 0.75
-					})
-				1:
 					x: contours[0].nodes[0].expandedTo[1].x - ( 108 / 115 ) * thickness * 0.25
 					y: ( 195 / 520 ) * xHeight + (5)
 					dirOut: - 90 + 'deg'
@@ -64,31 +54,48 @@ exports.glyphs['k'] =
 						angle: 180 + 166 + 'deg'
 						distr: 0.75
 					})
+				1:
+					x: Math.max(
+						contours[2].nodes[0].expandedTo[1].x - 15 - (35),
+						contours[0].nodes[0].expandedTo[1].x + 50 + contours[1].nodes[1].expand.width * contours[1].nodes[1].expand.distr
+					)
+					y: xHeight
+					dirOut: - 90 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 140 / 115 ) * thickness * contrast * Math.sqrt( width )
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: 377 * width + (98)
+					# x: Math.max(
+					# 	177 + 200 * width + (98),
+					# 	contours[1].nodes[1].x
+					# )
+					x: 177 + 200 * width + (98)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 138 / 115 ) * thickness
+						width: ( 138 / 115 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
 				1:
 					x: Utils.onLine({
 						y: ( 325 / 520 ) * xHeight + (5)
-						on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
+						on: [ contours[1].nodes[1].expandedTo[1].point, contours[1].nodes[0].expandedTo[1].point ]
 					})
 					y: ( 325 / 520 ) * xHeight + (5)
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 127 / 115 ) * thickness
-						angle: Utils.lineAngle( contours[1].nodes[1].expandedTo[1].point, contours[1].nodes[0].expandedTo[1].point )
+						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point )
 						distr: 0.75
 					})
 	components:
@@ -149,20 +156,20 @@ exports.glyphs['k'] =
 				0:
 					x: Utils.onLine({
 						y: xHeight - serifHeight - serifCurve
-						on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
+						on: [ contours[1].nodes[1].expandedTo[1].point, contours[1].nodes[0].expandedTo[1].point ]
 					})
 					y: xHeight - serifHeight - serifCurve
 				1:
 					x: Utils.onLine({
 						y: xHeight - serifHeight - serifCurve
-						on: [ contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point ]
+						on: [ contours[1].nodes[1].expandedTo[0].point, contours[1].nodes[0].expandedTo[0].point ]
 					})
 					y: xHeight - serifHeight - serifCurve
 				2:
 					anchorLine: xHeight
 					# leftWidth: 0.9
 					# rightWidth: 0.9
-					baseLeft: contours[1].nodes[0].expandedTo[0].point
-					baseRight: contours[1].nodes[0].expandedTo[1].point
-					angle: Utils.lineAngle( contours[1].nodes[1].expandedTo[1].point, contours[1].nodes[0].expandedTo[1].point )
+					baseLeft: contours[1].nodes[1].expandedTo[0].point
+					baseRight: contours[1].nodes[1].expandedTo[1].point
+					angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point )
 					directionY: -1

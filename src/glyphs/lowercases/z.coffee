@@ -105,7 +105,7 @@ exports.glyphs['z'] =
 						distr: 1
 					})
 				8:
-					x: 200 + 240 * width
+					x: 200 + 40 + 200 * width
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

@@ -49,69 +49,33 @@ exports.glyphs['r'] =
 			closed: false
 			nodes:
 				0:
-					expandedTo:
-						[
-							{
-								x: contours[0].nodes[0].expandedTo[1].x
-								y: xHeight - Math.max(
-										105 + ( 1 - thickness * contrast * contrastExtremity / 60 ) * 150,
-										105
-									)
-								dirOut: # 56 + 'deg'
-									Math.max(
-										Math.min(
-											# 60 is the breakpoint where thickness takes effect
-											# 50 is the velocity
-											# 80 is the max dirOut
-											80 + ( 1 - thickness / 60 ) * 50 * contrastExtremity,
-											80 # dirOut must not be over 80 deg
-										),
-										82 # dirOut must not be under 56 deg
-									) + 'deg'
-								tensionOut: 1 * breakPath
-							}
-							{
-								x: contours[0].nodes[0].expandedTo[1].x
-								y: contours[1].nodes[0].expandedTo[0].y - ( 130 / 115 ) * thickness * contrast * contrastExtremity
-								dirIn: # 90 + 'deg'
-									Math.min(
-										Math.max(
-											80 - ( 1 - thickness / 60 ) * 50,
-											80
-										),
-										90
-									) + 'deg'
-								tensionIn: 1 * breakPath
-							}
-						]
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: xHeight - 240 - ( 50 / 115 ) * thickness
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
+						angle: 180 + 'deg'
+						distr: 0
+					})
 				1:
-					# x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
-					# 	( 150 / 115 ) * thickness * width - 50,
-					# 	150 * width - 50
-					# ) - ( serifHeight + serifCurve ) / 2
-					# x: contours[0].nodes[0].expandedTo[1].x + 55 + Math.max(
-					# 	( 150 / 115 ) * thickness * width - 50,
-					# 	150 * width - 50
-					# )
-					x: contours[0].nodes[0].expandedTo[1].x + 155 * width
-					# The vertical serif is not yet enough convincing to be implemented
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[1].x + 155 * width,
+						140 + 200 * width
+					)
 					y: xHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					typeOut: 'line'
 					tensionIn: 1 * breakPath
 					expand: Object({
-						# width: ( 125 / 115 ) * thickness
-						width: ( 125 / 2 / 115 ) * thickness + ( 125 / 2 / 115 ) * thickness * contrast * contrastExtremity
-						angle: - 94 + 'deg'
-						distr: 0
+						width: ( 125 / 115 ) * thickness * contrast
+						angle: 180 - 95 + 'deg'
+						distr: 1
 					})
 				2:
 					expandedTo:
 						[
 							{
-								# x: contours[1].nodes[1].x + 20 + serifHeight + serifCurve
-								x: contours[1].nodes[1].x + 20
+								x: contours[1].nodes[1].x + 10
 								y: contours[1].nodes[1].expandedTo[0].y
 							}
 							{
