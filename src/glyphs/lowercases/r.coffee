@@ -3,7 +3,7 @@ exports.glyphs['r'] =
 	glyphName: 'r'
 	characterName: 'LATIN SMALL LETTER R'
 	ot:
-		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -17,7 +17,7 @@ exports.glyphs['r'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
 			y: xHeight + diacriticHeight
 	contours:
 		0:
@@ -49,14 +49,17 @@ exports.glyphs['r'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: xHeight - 240 - ( 50 / 115 ) * thickness
-					dirOut: 90 + 'deg'
-					expand: Object({
-						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
-						distr: 0
-					})
+					expandedTo:
+						[
+							{
+								x: contours[1].nodes[1].x + 10
+								y: contours[1].nodes[1].expandedTo[0].y
+							}
+							{
+								x: contours[1].nodes[0].expandedTo[0].x
+								y: contours[1].nodes[1].expandedTo[1].y
+							}
+						]
 				1:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[1].x + 155 * width,
@@ -65,24 +68,21 @@ exports.glyphs['r'] =
 					y: xHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					tensionIn: 1 * breakPath
+					tensionOut: 1.2
 					expand: Object({
 						width: ( 125 / 115 ) * thickness * contrast
 						angle: 180 - 95 + 'deg'
 						distr: 1
 					})
 				2:
-					expandedTo:
-						[
-							{
-								x: contours[1].nodes[1].x + 10
-								y: contours[1].nodes[1].expandedTo[0].y
-							}
-							{
-								x: contours[1].nodes[2].expandedTo[0].x
-								y: contours[1].nodes[1].expandedTo[1].y
-							}
-						]
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: xHeight - 240 - ( 50 / 115 ) * thickness
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
+						angle: 180 + 'deg'
+						distr: 0
+					})
 	components:
 		0:
 			base: 'serif'
@@ -117,13 +117,13 @@ exports.glyphs['r'] =
 		# 	base: 'serif-v'
 		# 	parentAnchors:
 		# 		0:
-		# 			x: contours[1].nodes[2].expandedTo[1].x - serifHeight - serifCurve
-		# 			y: contours[1].nodes[2].expandedTo[0].y
+		# 			x: contours[1].nodes[0].expandedTo[1].x - serifHeight - serifCurve
+		# 			y: contours[1].nodes[0].expandedTo[0].y
 		# 		1:
-		# 			x: contours[1].nodes[2].expandedTo[0].x - serifHeight - serifCurve
-		# 			y: contours[1].nodes[2].expandedTo[1].y
+		# 			x: contours[1].nodes[0].expandedTo[0].x - serifHeight - serifCurve
+		# 			y: contours[1].nodes[0].expandedTo[1].y
 		# 		2:
-		# 			anchorLine: contours[1].nodes[2].expandedTo[0].x
+		# 			anchorLine: contours[1].nodes[0].expandedTo[0].x
 		# 			right: false
-		# 			baseRight: contours[1].nodes[2].expandedTo[0].point
+		# 			baseRight: contours[1].nodes[0].expandedTo[0].point
 		# 			directionY: -1

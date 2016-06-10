@@ -3,7 +3,7 @@ exports.glyphs['m'] =
 	glyphName: 'm'
 	characterName: 'LATIN SMALL LETTER M'
 	ot:
-		advanceWidth: contours[2].nodes[3].expandedTo[1].x + spacingRight
+		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -15,17 +15,6 @@ exports.glyphs['m'] =
 		'latin',
 		'lowercase'
 	]
-	anchors:
-		0:
-			junction: Utils.pointOnCurve(
-				contours[1].nodes[1].expandedTo[0],
-				contours[1].nodes[2].expandedTo[0],
-				Math.min(
-					( 100 / 115 ) * thickness * contrastExtremity,
-					100
-				),
-				true
-			)
 	contours:
 		0:
 			skeleton: true
@@ -56,99 +45,100 @@ exports.glyphs['m'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: xHeight - 150 - ( 50 / 115 ) * thickness
-					dirOut: 90 + 'deg'
+					x: contours[1].nodes[1].x
+					y: 0 + serifHeight + serifCurve
+					typeOut: 'line'
 					expand: Object({
-						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
-						distr: 0
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.5
 					})
 				1:
-					x: Math.min(
-						contours[1].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[0].expandedTo[1].x ) * 0.55,
-						contours[1].nodes[2].expandedTo[0].x
-					)
-					y: xHeight + overshoot / 2
-					dirOut: 0 + 'deg'
-					type: 'smooth'
-					tensionIn: 1 * breakPath
-					expand: Object({
-						width: ( 113 / 115 ) * thickness * contrast
-						angle: 180 - 113 + 'deg'
-						distr: 1
-					})
-				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width,
 						285 + 200 * width
 					) - (64)
 					y: xHeight - 205
-					dirOut: 0 + 'deg'
+					dirOut: 90 + 'deg'
 					type: 'smooth'
-					typeOut: 'line'
-					tensionIn: 1.1
+					tensionOut: 1.1
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
-				3:
-					x: contours[1].nodes[2].x
-					y: 0 + serifHeight + serifCurve
-					dirOut: 0 + 'deg'
+				2:
+					x: Math.min(
+						contours[1].nodes[3].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[1].x - contours[1].nodes[3].expandedTo[1].x ) * 0.55,
+						contours[1].nodes[1].expandedTo[0].x
+					)
+					y: xHeight + overshoot / 2
+					dirOut: 180 + 'deg'
+					type: 'smooth'
+					tensionOut: 1 * breakPath
 					expand: Object({
-						width: thickness
-						angle: 0 + 'deg'
-						distr: 0.5
+						width: ( 113 / 115 ) * thickness * contrast
+						angle: 180 - 113 + 'deg'
+						distr: 1
+					})
+				3:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: xHeight - 150 - ( 50 / 115 ) * thickness
+					dirIn: 90 + 'deg'
+					expand: Object({
+						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
+						angle: 180 + 'deg'
+						distr: 0
 					})
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[3].expandedTo[1].x
-					y: xHeight - 150 - ( 50 / 115 ) * thickness
-					dirOut: 90 + 'deg'
+					x: contours[2].nodes[1].x
+					y: 0 + serifHeight + serifCurve
+					typeOut: 'line'
 					expand: Object({
-						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
-						distr: 0
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.75
 					})
 				1:
+					x: Math.max(
+						contours[1].nodes[0].expandedTo[1].x + 95 + 200 * width,
+						contours[1].nodes[0].expandedTo[1].x + ( contours[1].nodes[0].x - contours[0].nodes[0].expandedTo[1].x )
+					) - (29)
+					y: xHeight - 205
+					dirOut: 90 + 'deg'
+					type: 'smooth'
+					tensionOut: 1.1
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
+				2:
 					x: Math.min(
-						contours[2].nodes[0].expandedTo[1].x + ( contours[2].nodes[2].expandedTo[1].x - contours[2].nodes[0].expandedTo[1].x ) * 0.55,
-						contours[2].nodes[2].expandedTo[0].x
+						contours[2].nodes[3].expandedTo[1].x + ( contours[2].nodes[1].expandedTo[1].x - contours[2].nodes[3].expandedTo[1].x ) * 0.55,
+						contours[2].nodes[1].expandedTo[0].x
 					)
 					y: xHeight + overshoot / 2
-					dirOut: 0 + 'deg'
+					dirOut: 180 + 'deg'
 					type: 'smooth'
-					tensionIn: 1 * breakPath
+					tensionOut: 1 * breakPath
 					expand: Object({
 						width: ( 113 / 115 ) * thickness * contrast
 						angle: 180 - 113 + 'deg'
 						distr: 1
 					})
-				2:
-					x: contours[1].nodes[3].expandedTo[1].x + 95 + 200 * width - (29)
-					y: xHeight - 205
-					dirOut: 0 + 'deg'
-					type: 'smooth'
-					typeOut: 'line'
-					tensionIn: 1.1
-					expand: Object({
-						width: thickness
-						angle: 0 + 'deg'
-						distr: 0.75
-					})
 				3:
-					x: contours[2].nodes[2].x
-					y: 0 + serifHeight + serifCurve
-					dirOut: 0 + 'deg'
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: xHeight - 150 - ( 50 / 115 ) * thickness
+					dirIn: 90 + 'deg'
 					expand: Object({
-						width: thickness
-						angle: 0 + 'deg'
-						distr: 0.75
+						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
+						angle: 180 + 'deg'
+						distr: 0
 					})
 	components:
 		0:
@@ -181,21 +171,21 @@ exports.glyphs['m'] =
 			base: 'serif'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[3].expandedTo[0].x
-					y: contours[1].nodes[3].y
+					x: contours[1].nodes[0].expandedTo[0].x
+					y: contours[1].nodes[0].y
 				1:
-					x: contours[1].nodes[3].expandedTo[1].x
-					y: contours[1].nodes[3].y
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].y
 				2:
 					anchorLine: 0
 		3:
 			base: 'serif'
 			parentAnchors:
 				0:
-					x: contours[2].nodes[3].expandedTo[0].x
-					y: contours[2].nodes[3].y
+					x: contours[2].nodes[0].expandedTo[0].x
+					y: contours[2].nodes[0].y
 				1:
-					x: contours[2].nodes[3].expandedTo[1].x
-					y: contours[2].nodes[3].y
+					x: contours[2].nodes[0].expandedTo[1].x
+					y: contours[2].nodes[0].y
 				2:
 					anchorLine: 0
