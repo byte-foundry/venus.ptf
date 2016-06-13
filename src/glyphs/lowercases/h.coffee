@@ -121,10 +121,10 @@ exports.glyphs['h'] =
 			base: 'serif'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[0].expandedTo[0].x
+					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].y
 				1:
-					x: contours[1].nodes[0].expandedTo[1].x
+					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].y
 				2:
 					anchorLine: 0

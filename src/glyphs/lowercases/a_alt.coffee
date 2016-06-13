@@ -31,8 +31,7 @@ exports.glyphs['a_alt'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
-					# x: contours[0].nodes[2].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
