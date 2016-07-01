@@ -3,7 +3,7 @@ exports.glyphs['guilsinglright'] =
 	glyphName: 'guilsinglright'
 	characterName: 'SINGLE RIGHT-POINTING ANGLE QUOTATION MARK'
 	ot:
-		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
+		advanceWidth: spacingLeft + (140 * width) + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
