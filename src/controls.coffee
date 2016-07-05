@@ -1,5 +1,21 @@
 exports.controls = [
 	tab: true
+	label: 'Settings'
+	icon: '...'
+	parameters: [
+		name: 'spacing'
+		label: 'spacing'
+		min: 0
+		max: 1.5
+		step: 1
+		init: 1
+		minAdvised: 0.9
+		maxAdvised: 1.2
+		disabled: false
+		demo: true
+	]
+,
+	tab: true
 	label: 'Func'
 	icon: '...'
 	parameters: [
