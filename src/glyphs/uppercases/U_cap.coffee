@@ -57,7 +57,7 @@ exports.glyphs['U_cap'] =
 						distr: 0
 					})
 				3:
-					x: 300 + 260 * width + (66)
+					x: contours[0].nodes[0].expandedTo[1].x + 145 + 200 * width + (66)
 					y: ( 295 / 750 ) * capHeight
 					dirIn: - 90 + 'deg'
 					typeOut: 'line'

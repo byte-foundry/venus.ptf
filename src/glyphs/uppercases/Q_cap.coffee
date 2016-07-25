@@ -43,7 +43,7 @@ exports.glyphs['Q_cap'] =
 						distr: 0
 					})
 				2:
-					x: 500 + 295 * width - (36)
+					x: contours[0].nodes[0].expandedTo[1].x + 395 + 200 * width - (36)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

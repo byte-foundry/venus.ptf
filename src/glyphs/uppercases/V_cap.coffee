@@ -56,7 +56,7 @@ exports.glyphs['V_cap'] =
 						distr: 0
 					})
 				1:
-					x: 400 + 230 * width - (36)
+					x: contours[0].nodes[0].expandedTo[1].x + 275 + 200 * width - (36)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

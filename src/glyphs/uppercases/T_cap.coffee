@@ -35,7 +35,7 @@ exports.glyphs['T_cap'] =
 						distr: 0
 					})
 				1:
-					x: 300 + 285 * width
+					x: contours[0].nodes[0].x + 375 + 200 * width
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

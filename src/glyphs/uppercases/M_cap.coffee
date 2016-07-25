@@ -93,7 +93,7 @@ exports.glyphs['M_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 400 + 295 * width + (101)
+					x: contours[0].nodes[0].expandedTo[1].x + 275 + 200 * width + (101)
 					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

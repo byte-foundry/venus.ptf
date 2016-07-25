@@ -69,7 +69,7 @@ exports.glyphs['K_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 400 + 285 * width - (45)
+					x: contours[0].nodes[0].expandedTo[1].x + 265 + 200 * width - (45)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'

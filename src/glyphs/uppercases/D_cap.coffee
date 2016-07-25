@@ -72,7 +72,7 @@ exports.glyphs['D_cap'] =
 						distr: 0
 					})
 				2:
-					x: 300 + 265 * width + (105)
+					x: contours[0].nodes[0].expandedTo[1].x + 145 + 200 * width + (105)
 					y: ( 375 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

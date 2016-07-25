@@ -60,7 +60,7 @@ exports.glyphs['A_cap'] =
 						distr: 0.5
 					})
 				3:
-					x: 320 + 250 * width + (109)
+					x: contours[0].nodes[0].expandedTo[1].x + 165 + 250 * width + (109)
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

@@ -68,7 +68,7 @@ exports.glyphs['B_cap'] =
 						distr: 0
 					})
 				2:
-					x: 280 + 200 * width + (105)
+					x: contours[0].nodes[0].expandedTo[1].x + 60 + 200 * width + (105)
 					y: ( 550 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -132,7 +132,7 @@ exports.glyphs['B_cap'] =
 						distr: 0
 					})
 				2:
-					x: 300 + 245 * width + (105)
+					x: contours[0].nodes[0].expandedTo[1].x + 125 + 200 * width + (105)
 					y: ( 220 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
