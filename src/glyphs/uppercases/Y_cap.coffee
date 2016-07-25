@@ -8,7 +8,7 @@ exports.glyphs['Y_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 10 * spacing + (36) + serifWidth / 2
+		spacingLeft: 10 * spacing + (39) + serifWidth / 2
 		spacingRight: 10 * spacing + serifWidth / 2
 	tags: [
 		'all',
@@ -74,6 +74,7 @@ exports.glyphs['Y_cap'] =
 			nodes:
 				0:
 					x: 300 + 285 * width - (39)
+					x: contours[0].nodes[0].expandedTo[0].x + 200 * width + 375 - (39)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
