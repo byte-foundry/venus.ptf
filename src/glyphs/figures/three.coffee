@@ -8,7 +8,7 @@ exports.glyphs['three'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 45 * spacing + (34)
+		spacingLeft: 45 * spacing
 		spacingRight: 45 * spacing
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['three'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (34)
 					y: ( 245 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					expand: Object({
@@ -40,7 +40,11 @@ exports.glyphs['three'] =
 						distr: 0
 					})
 				2:
-					x: 200 + 210 * width + (109)
+					# x: 200 + 210 * width + (109)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 165 + (109),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 210 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -68,7 +72,7 @@ exports.glyphs['three'] =
 							}
 						]
 				4:
-					x: 100 + 115 * width
+					x: contours[0].nodes[1].x - 85
 					y: ( 350 / 750 ) * capHeight - ( 60 / 115 ) * thickness + 60
 					dirOut: 0 + 'deg'
 					expand: Object({
@@ -127,7 +131,7 @@ exports.glyphs['three'] =
 						distr: 0
 					})
 				4:
-					x: 70 + (34)
+					x: contours[0].nodes[0].expandedTo[0].x + 25 + (34)
 					y: capHeight  - ( 210 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					expand: Object({

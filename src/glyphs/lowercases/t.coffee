@@ -1,3 +1,4 @@
+# TODO: bottom curve when thin
 exports.glyphs['t'] =
 	unicode: 't'
 	glyphName: 't'

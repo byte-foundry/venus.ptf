@@ -8,7 +8,7 @@ exports.glyphs['two'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 40 * spacing + (39)
+		spacingLeft: 40 * spacing
 		spacingRight: 50 * spacing
 	tags: [
 		'all',
@@ -45,7 +45,7 @@ exports.glyphs['two'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (39)
 					y: 0
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -68,7 +68,8 @@ exports.glyphs['two'] =
 						distr: 0.25
 					})
 				2:
-					x: 300 + 250 * width - (34)
+					# x: 300 + 250 * width - (34)
+					x: spacingLeft + 200 * width + 310 - (34)
 					y: ( 520 / 750 ) * capHeight + (2)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -89,7 +90,7 @@ exports.glyphs['two'] =
 						distr: 1
 					})
 				4:
-					x: 45 + (32)
+					x: contours[1].nodes[0].expandedTo[0].x + 5 + (30)
 					y: ( 535 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -99,8 +100,8 @@ exports.glyphs['two'] =
 						distr: 0.75
 					})
 				5:
-					x: 90 + (30)
-					x: contours[1].nodes[4].x + 45
+					# x: 90 + (30)
+					x: contours[1].nodes[4].x + 42
 					y: ( 385 / 750 ) * capHeight + (15)
 					dirIn: 128 + 'deg'
 					type: 'smooth'

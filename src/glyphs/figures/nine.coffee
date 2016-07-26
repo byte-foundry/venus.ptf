@@ -3,13 +3,13 @@ exports.glyphs['nine'] =
 	glyphName: 'nine'
 	characterName: 'DIGIT NINE'
 	ot:
-		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + (36)
-		spacingRight: 55 * spacing
+		spacingLeft: 55 * spacing
+		spacingRight: 50 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -17,76 +17,79 @@ exports.glyphs['nine'] =
 	]
 	anchors:
 		0:
-			# junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], - ( 40 / 115 ) * thickness + 40, true, 10 )
-			# junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 100 / 115 ) * thickness, true, 10 )
-			junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 50 - ( 50 / 115 ) * thickness ) * contrast, true, 10 )
-			junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( ( 100 / 115 ) * thickness + 50 - ( 50 / 115 ) * thickness ) * contrast, true, 10 )
+			junctionTop: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( 50 - ( 50 / 115 ) * thickness ) * contrast * contrastExtremity, true, 10 )
+			junctionBottom: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[1], contours[0].nodes[2].expandedTo[1], ( ( 100 / 115 ) * thickness + 50 - ( 50 / 115 ) * thickness ) * contrast * contrastExtremity, true, 10 )
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: 75 + (30)
-					y: ( 135 / 750 ) * capHeight + (11)
-					dirOut: 90 + 15 * contrast + 'deg'
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[0].x + 200 * width + 300 - (25),
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( 119 / 115 ) * thickness * opticThickness * contrast + 10
+					)
+					y: ( 635 / 750 ) * capHeight - (16)
+					dirOut: 105 + 15 * contrast + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 127 / 115 ) * thickness * opticThickness * contrast
-						angle: 26 + 'deg'
+						width: ( 119 / 115 ) * thickness * opticThickness * contrast
+						angle: - 147 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.45
+					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.55
+					y: capHeight + overshoot
+					dirOut: 180 + 'deg'
+					type: 'smooth'
+					tensionOut: 1.1
+					expand: Object({
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast
+						angle: - 90 + 'deg'
+						distr: 0
+					})
+				2:
+					x: spacingLeft + (34)
+					y: ( 375 / 750 ) * capHeight + (0)
+					dirOut: - 90 + 'deg'
+					type: 'smooth'
+					tensionOut: 1.1
+					expand: Object({
+						width: ( 142 / 115 ) * thickness * opticThickness
+						angle: 10 + 'deg'
+						distr: 0.25
+					})
+				3:
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.53
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					tensionOut: 1.05
+					tensionIn: 1.1
 					expand: Object({
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
-				2:
-					x: 300 + 275 * width - (35)
-					y: ( 375 / 750 ) * capHeight + (6)
-					dirOut: 90 + 'deg'
-					type: 'smooth'
-					tensionIn: 1.05
-					tensionOut: 1.05
-					expand: Object({
-						width: ( 142 / 115 ) * thickness * opticThickness
-						angle: - 170 + 'deg'
-						distr: 0.25
-					})
-				3:
-					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) * 0.48
-					y: capHeight + overshoot
-					dirOut: 180 + 'deg'
-					type: 'smooth'
-					expand: Object({
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
-						angle: - 87 + 'deg'
-						distr: 0
-					})
 				4:
-					x: spacingLeft
-					y: ( 495 / 750 ) * capHeight + (3)
-					dirOut: - 90 + 'deg'
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[0].x + 200 * width + 325 - (35),
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
+					y: ( 245 / 750 ) * capHeight + (0)
+					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
 						width: ( 145 / 115 ) * thickness * opticThickness
-						angle: 4 + 'deg'
+						angle: 180 + 'deg'
 						distr: 0.25
 					})
 				5:
-					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) * 0.35
-					y: ( 250 / 750 ) * capHeight + (27)
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.57
+					y: ( 500 / 750 ) * capHeight - (28)
 					dirIn: 0 + 'deg'
-					type: 'smooth'
 					expand: Object({
-						width: ( 117 / 115 ) * thickness * opticThickness * contrast
-						angle: 70 + 'deg'
+						width: ( 113 / 115 ) * thickness * opticThickness * contrast
+						angle: - 103 + 'deg'
 						distr: 0.25
 					})
 				6:
@@ -118,11 +121,16 @@ exports.glyphs['nine'] =
 					expandedTo:
 						[
 							{
-								x: contours[0].nodes[7].expandedTo[0].x + thickness / 4
+								x: contours[0].nodes[7].expandedTo[0].x - thickness / 4
 								y: contours[0].nodes[7].expandedTo[0].y
 							}
 							{
-								x: contours[0].nodes[7].expandedTo[1].x + thickness / 4
+								x: contours[0].nodes[7].expandedTo[1].x - thickness / 4
 								y: contours[0].nodes[7].expandedTo[1].y
 							}
 						]
+			transformOrigin: Array( (contours[0].nodes[4].expandedTo[0].x + spacingRight) / 2, 0 )
+			transforms: Array(
+				['translateY', ( capHeight ) ],
+				['rotate', 180 + 'deg']
+			)

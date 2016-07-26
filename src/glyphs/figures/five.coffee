@@ -8,7 +8,7 @@ exports.glyphs['five'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 45 * spacing + (34)
+		spacingLeft: 45 * spacing
 		spacingRight: 40 * spacing
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['five'] =
 			closed: false
 			nodes:
 				0:
-					x: 70 + (32)
+					x: contours[1].nodes[4].expandedTo[0].x + 25 + (33)
 					y: ( 350 / 750 ) * capHeight - (7)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -41,7 +41,10 @@ exports.glyphs['five'] =
 						distr: 0
 					})
 				2:
-					x: contours[1].nodes[2].x - 19
+					x: Math.max(
+						contours[1].nodes[2].expandedTo[0].x - 55,
+						contours[1].nodes[2].x
+					)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -76,7 +79,10 @@ exports.glyphs['five'] =
 						distr: 0.25
 					})
 				2:
-					x: 300 + 255 * width - (36)
+					x: Math.max(
+						contours[1].nodes[4].expandedTo[0].x + 200 * width + 310 - (36),
+						contours[1].nodes[4].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 235 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -86,8 +92,7 @@ exports.glyphs['five'] =
 						distr: 0.25
 					})
 				3:
-					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[4].expandedTo[0].x ) * 0.48
-					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * 0.48
+					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * 0.5
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -97,7 +102,7 @@ exports.glyphs['five'] =
 						distr: 0
 					})
 				4:
-					x: spacingLeft
+					x: spacingLeft + (35)
 					y: ( 245 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
