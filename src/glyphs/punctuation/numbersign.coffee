@@ -14,7 +14,7 @@ exports.glyphs['numbersign'] =
 		'test'
 	]
 	parameters:
-		spacingLeft: 20 * spacing + (2)
+		spacingLeft: 20 * spacing
 		spacingRight: 20 * spacing
 	contours:
 		0:
@@ -22,7 +22,7 @@ exports.glyphs['numbersign'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (2)
 					y: 230
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -32,7 +32,7 @@ exports.glyphs['numbersign'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[2].nodes[1].expandedTo[1].x + 133 + 250 * width + (20)
+					x: contours[2].nodes[1].expandedTo[1].x + 200 * width + 183 + (20)
 					y: 230
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -82,7 +82,7 @@ exports.glyphs['numbersign'] =
 						distr: 0.5
 					})
 				1:
-					x: Math.max( thickness / 2, 120 * width ) + (55)
+					x: contours[0].nodes[0].expandedTo[0].x + 115 * width + (55)
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

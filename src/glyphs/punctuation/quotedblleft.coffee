@@ -15,7 +15,7 @@ exports.glyphs['quotedblleft'] =
 	parameters:
 		spacingLeft: 50 * spacing
 		spacingRight: 50 * spacing
-		space: ( 65 / 115 ) * thickness + spacingLeft
+		space: minThickness
 	components:
 		0:
 			base: '_quoteleft'

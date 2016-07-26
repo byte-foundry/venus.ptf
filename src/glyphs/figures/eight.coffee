@@ -43,7 +43,6 @@ exports.glyphs['eight'] =
 						distr: 0.25
 					})
 				2:
-					# x: 300 + 275 * width - (37)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 320 - (37),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness + 10
@@ -95,7 +94,6 @@ exports.glyphs['eight'] =
 						distr: 0
 					})
 				2:
-					x: 300 + 245 * width - (31)
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 200 * width + 260 - (31),
 						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10

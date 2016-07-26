@@ -18,6 +18,10 @@ exports.glyphs['c_alt'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[3].expandedTo[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

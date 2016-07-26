@@ -3,7 +3,7 @@ exports.glyphs['plus'] =
 	glyphName: 'plus'
 	characterName: 'PLUS SIGN'
 	ot:
-		advanceWidth: spacingLeft + contours[0].nodes[1].x + spacingRight
+		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -13,7 +13,7 @@ exports.glyphs['plus'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 25 * spacing + (0)
+		spacingLeft: 25 * spacing
 		spacingRight: 25 * spacing
 	contours:
 		0:
@@ -31,7 +31,7 @@ exports.glyphs['plus'] =
 						distr: 0.5
 					})
 				1:
-					x: xHeight + 20
+					x: contours[0].nodes[0].x + xHeight + 20
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
