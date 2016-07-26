@@ -24,10 +24,10 @@ exports.glyphs['c'] =
 			closed: false
 			nodes:
 				0:
-					x: Math.min(
-						contours[0].nodes[2].expandedTo[0].x + 145 + 200 * width,
-						320 + 200 * width
-					) - (26)
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[1].x + 200 * width + 270 - (22),
+						contours[0].nodes[2].expandedTo[0].x + 0.75 * thickness + 10
+					)
 					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 20 ) - (15) # 190 - (15)
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 6 + correctWidthAperture,

@@ -33,6 +33,10 @@ exports.glyphs['x'] =
 					})
 				1:
 					x: 125 + 50 + 200 * width + (35)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 160 + (35),
+						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 140 / 115 ) * thickness + 10
+					)
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -62,7 +66,7 @@ exports.glyphs['x'] =
 					})
 				# 0:
 				# 	###########################
-				# 	# FIXME: thickness issues
+				# 	# TODO: thickness issues
 				# 	###########################
 				# 	x: Utils.onLine({
 				# 		on: [ contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ]
@@ -113,7 +117,7 @@ exports.glyphs['x'] =
 		# 			})
 		# 		1:
 		# 			###########################
-		# 			# FIXME: thickness issues
+		# 			# TODO: thickness issues
 		# 			###########################
 		# 			x: Utils.onLine({
 		# 				on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]

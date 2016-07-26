@@ -56,13 +56,15 @@ exports.glyphs['v'] =
 						distr: 0
 					})
 				1:
-					x: 280 + 200 * width - (32)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 270 - (32),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 130 / 115 ) * thickness * contrast + 10
+					)
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 130 / 115 ) * thickness * contrast
-						# width: 4
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

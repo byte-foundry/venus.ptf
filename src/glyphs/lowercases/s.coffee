@@ -49,7 +49,11 @@ exports.glyphs['s'] =
 						distr: 0
 					})
 				2:
-					x: 275 + 200 * width - (29)
+					# x: 275 + 200 * width - (29)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 245 - (29),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness + 10
+					)
 					y: Math.max( 140, ( 140 / 520 ) * xHeight )
 					dirIn: - 90 + 'deg'
 					dirOut: 90 + 'deg'
@@ -93,7 +97,11 @@ exports.glyphs['s'] =
 						distr: 1
 					})
 				6:
-					x: 261 + 200 * width - (24)
+					# x: 261 + 200 * width - (24)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 230 - (24),
+						contours[0].nodes[4].expandedTo[0].x + Math.cos( anglePenTop / 180 * Math.PI ) * 0.75 * ( 103 / 115 ) * thickness * contrast * contrastExtremity + 10
+					)
 					y: Math.max( contours[0].nodes[3].y + ( 40 / 520 ) * xHeight, xHeight - 152 * aperture * apertureTop ) + (9)
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,

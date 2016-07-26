@@ -21,7 +21,7 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: 110 * width + (29)
+					x: contours[1].nodes[0].x + 80 * width + (29)
 					y: 0 + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'

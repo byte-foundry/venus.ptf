@@ -104,7 +104,7 @@ exports.glyphs['w'] =
 						distr: 0
 					})
 				1:
-					x: 517 + 200 * width - (31)
+					x: contours[0].nodes[0].expandedTo[0].x + 200 * width + 507 - (31)
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

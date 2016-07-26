@@ -21,8 +21,8 @@ exports.glyphs['j'] =
 			closed: false
 			nodes:
 				0:
-					# x: contours[0].nodes[2].expandedTo[0].x - 85
-					x: - 15
+					x: contours[0].nodes[2].expandedTo[0].x - 85 * width
+					# x: - 15
 					y: ( 75 / 250 ) * descender
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
@@ -53,7 +53,7 @@ exports.glyphs['j'] =
 						distr: 0.5
 					})
 				3:
-					x: spacingLeft * width
+					x: spacingLeft + 150 * width - 150
 					y: xHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'

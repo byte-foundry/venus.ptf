@@ -8,7 +8,7 @@ exports.glyphs['z'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing + (0)
+		spacingLeft: 30 * spacing
 		spacingRight: 20 * spacing
 	tags: [
 		'all',
@@ -105,7 +105,8 @@ exports.glyphs['z'] =
 						distr: 1
 					})
 				8:
-					x: 200 + 40 + 200 * width
+					# x: 200 + 40 + 200 * width
+					x: contours[0].nodes[5].expandedTo[0].x + 200 * width + 210
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
