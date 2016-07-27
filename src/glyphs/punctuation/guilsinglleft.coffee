@@ -13,8 +13,8 @@ exports.glyphs['guilsinglleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (25)
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 50 + (25)
+		spacingRight: 50 * spacing + 50
 	components:
 		0:
 			base: '_guilsinglleft'

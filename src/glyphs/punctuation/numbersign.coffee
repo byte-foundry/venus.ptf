@@ -14,8 +14,8 @@ exports.glyphs['numbersign'] =
 		'test'
 	]
 	parameters:
-		spacingLeft: 20 * spacing
-		spacingRight: 20 * spacing
+		spacingLeft: 50 * spacing + 20
+		spacingRight: 50 * spacing + 20
 	contours:
 		0:
 			skeleton: true

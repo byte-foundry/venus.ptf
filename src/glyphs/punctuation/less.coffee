@@ -13,8 +13,8 @@ exports.glyphs['less'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing
-		spacingRight: 60 * spacing
+		spacingLeft: 50 * spacing + 45
+		spacingRight: 50 * spacing + 60
 	contours:
 		0:
 			skeleton: true

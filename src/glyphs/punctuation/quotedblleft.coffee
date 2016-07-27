@@ -13,8 +13,8 @@ exports.glyphs['quotedblleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 50
 		space: minThickness
 	components:
 		0:

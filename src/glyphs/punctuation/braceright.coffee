@@ -13,8 +13,8 @@ exports.glyphs['braceright'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 30 * spacing
-		spacingRight: 55 * spacing
+		spacingLeft: 50 * spacing + 30
+		spacingRight: 50 * spacing + 55
 	# All code below is a clone of braceleft reversed
 	contours:
 		0:

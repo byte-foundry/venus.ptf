@@ -13,8 +13,8 @@ exports.glyphs['question'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 15 * spacing
-		spacingRight: 35 * spacing
+		spacingLeft: 50 * spacing + 15
+		spacingRight: 50 * spacing + 35
 	contours:
 		0:
 			skeleton: true

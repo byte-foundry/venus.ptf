@@ -9,8 +9,8 @@ exports.glyphs['c_alt'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + (31)
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 30
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 86 ) # 26
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 86 ) # 26
 	tags: [
@@ -53,7 +53,7 @@ exports.glyphs['c_alt'] =
 						distr: 1
 					})
 				2:
-					x: spacingLeft
+					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'

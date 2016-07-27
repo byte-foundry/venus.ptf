@@ -8,8 +8,8 @@ exports.glyphs['S_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 35 * spacing
-		spacingRight: 35 * spacing
+		spacingLeft: 50 * spacing + 35
+		spacingRight: 50 * spacing + 35
 		anglePenTop: Math.max( - 10, - 40 * aperture * apertureTop + 82 ) # 42
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 95 ) # 35
 	tags: [

@@ -14,8 +14,8 @@ exports.glyphs['parenleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 100 * spacing
-		spacingRight: 20 * spacing
+		spacingLeft: 50 * spacing + 100
+		spacingRight: 50 * spacing + 20
 	contours:
 		0:
 			skeleton: true

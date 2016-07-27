@@ -14,8 +14,8 @@ exports.glyphs['ampersand'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 35 * spacing
-		spacingRight: 25 * spacing
+		spacingLeft: 50 * spacing + 35
+		spacingRight: 50 * spacing + 25
 	contours:
 		0:
 			skeleton: true

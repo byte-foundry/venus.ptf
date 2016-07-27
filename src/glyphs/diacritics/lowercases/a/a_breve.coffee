@@ -6,8 +6,8 @@ exports.glyphs['a_breve'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight
 	parameters:
-		spacingLeft: 70 * spacing + (29)
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 40
+		spacingRight: 50 * spacing + 30
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 78 ) # 18
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['a_breve'] =
 			closed: false
 			nodes:
 				0:
-					x: 55 + (26)
+					x: spacingLeft + 15 + (26)
 					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
 					# dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
 					dirOut: Math.min(
@@ -46,7 +46,6 @@ exports.glyphs['a_breve'] =
 						distr: 0
 					})
 				2:
-					# x: 360 + (86)
 					x: contours[0].nodes[3].x
 					y: ( 380 / 520 ) * xHeight - (32) - ( 30 / 115 ) * thickness + 30
 					dirIn: 90 + 'deg'
@@ -58,7 +57,8 @@ exports.glyphs['a_breve'] =
 						distr: 0.25
 					})
 				3:
-					x: 275 + 200 * width - (29)
+					# x: 275 + 200 * width - (29)
+					x: (contours[1].nodes[2].x - 0.25 * thickness) + 200 * width + 235 - (29)
 					y: Math.max(
 						45,
 						( 85 / 115 ) * thickness +
@@ -114,7 +114,7 @@ exports.glyphs['a_breve'] =
 						distr: 0
 					})
 				2:
-					x: 40 + (29)
+					x: spacingLeft + (29)
 					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.25
 					type: 'smooth'
 					dirOut: 90 + 'deg'

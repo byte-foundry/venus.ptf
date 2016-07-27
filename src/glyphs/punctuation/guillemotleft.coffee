@@ -13,8 +13,8 @@ exports.glyphs['guillemotleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing + (50)
-		spacingRight: 45 * spacing
+		spacingLeft: 50 * spacing + 45 + (50)
+		spacingRight: 50 * spacing + 45
 		space: ( 45 / 115 ) * thickness
 	components:
 		0:

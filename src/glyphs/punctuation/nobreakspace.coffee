@@ -13,8 +13,8 @@ exports.glyphs['nobreakspace'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 0
-		spacingRight: 0
+		spacingLeft: 50 * spacing + 0
+		spacingRight: 50 * spacing + 0
 	contours:
 		0:
 			skeleton: false

@@ -4,8 +4,8 @@ exports.glyphs['c_alt_dot_accent'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 50 * spacing + (31)
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 50 + (31)
+		spacingRight: 50 * spacing + 30
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 86 ) # 26
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 86 ) # 26
 	tags: [
@@ -20,9 +20,10 @@ exports.glyphs['c_alt_dot_accent'] =
 			closed: false
 			nodes:
 				0:
-					# x: spacingLeft + ( 240 * width + 188 - 50 ) - (9)
-					# x: contours[0].nodes[2].expandedTo[0].x + 250 * width + 100 - (31)
-					x: Math.max(contours[0].nodes[2].expandedTo[0].x, 175 * width ) + 250 * width + 100 - (31)
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[1].x + 200 * width + 270 - (26),
+						contours[0].nodes[2].expandedTo[0].x + 0.75 * thickness + 10
+					)
 					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 20 ) - (15) # 190 - (15)
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
@@ -35,12 +36,6 @@ exports.glyphs['c_alt_dot_accent'] =
 					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
-						# Math.max(
-						# 	Math.min(
-						# 		( 50 / 115 * thickness ) / 100, 	# position is defined by thickness
-						# 		0.75 ), 							# max value between 2 points
-						# 	0.45 									# min value
-						# )
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
@@ -50,7 +45,7 @@ exports.glyphs['c_alt_dot_accent'] =
 						distr: 1
 					})
 				2:
-					x: spacingLeft
+					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
