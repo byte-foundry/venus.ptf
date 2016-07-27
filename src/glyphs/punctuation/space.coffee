@@ -18,7 +18,7 @@ exports.glyphs['space'] =
 	contours:
 		0:
 			skeleton: false
-			closed: false
+			closed: true
 			nodes:
 				0:
 					x: 0
