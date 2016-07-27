@@ -24,7 +24,7 @@ exports.controls = [
 		disabled: false
 	,
 		name: 'opticThickness'
-		label: 'Optic thickness'
+		label: 'Capital thickness'
 		min: 0.7
 		max: 1.3
 		step: 0.01
