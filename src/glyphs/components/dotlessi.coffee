@@ -9,7 +9,7 @@ exports.glyphs['dotlessi'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 70 * spacing + (97)
+		spacingLeft: 70 * spacing
 		spacingRight: 70 * spacing
 	anchors:
 		0:
@@ -21,7 +21,7 @@ exports.glyphs['dotlessi'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (97)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
