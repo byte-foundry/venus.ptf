@@ -75,7 +75,7 @@ exports.glyphs['h'] =
 					y: xHeight + overshoot / 2
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					tensionOut: 1 * breakPath
+					# tensionOut: 1 * breakPath
 					expand: Object({
 						width: ( 113 / 115 ) * thickness * contrast
 						angle: 180 - 113 + 'deg'
