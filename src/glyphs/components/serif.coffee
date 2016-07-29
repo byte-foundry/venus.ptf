@@ -2,6 +2,8 @@ exports.glyphs['serif'] =
 	# parameters:
 	# 	anchorLine: anchorLine || 0
 	# 	left: if typeof left != 'undefined' then left else true
+	parameters:
+		serifAperture: 1
 	anchors:
 		0:
 			x: parentAnchors[0].x
