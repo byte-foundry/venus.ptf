@@ -60,7 +60,7 @@ exports.glyphs['D_cap'] =
 					})
 				1:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[1].x - 245,
+						contours[1].nodes[2].expandedTo[0].x - 100 * width - 290,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: contours[1].nodes[0].y
@@ -72,7 +72,10 @@ exports.glyphs['D_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 145 + 200 * width + (105)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 425 - (36),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 375 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -85,7 +88,7 @@ exports.glyphs['D_cap'] =
 					})
 				3:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[1].x - 215,
+						contours[1].nodes[2].expandedTo[0].x - 100 * width - 260,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: 0
