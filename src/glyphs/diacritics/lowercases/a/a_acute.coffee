@@ -5,6 +5,9 @@ exports.glyphs['a_acute'] =
 	altImg: 'double-story-a.svg'
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
 		spacingRight: 50 * spacing + 30

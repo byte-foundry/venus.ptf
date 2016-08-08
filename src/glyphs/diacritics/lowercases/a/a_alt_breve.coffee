@@ -5,6 +5,9 @@ exports.glyphs['a_alt_breve'] =
 	altImg: 'single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
 		spacingRight: 50 * spacing + 70

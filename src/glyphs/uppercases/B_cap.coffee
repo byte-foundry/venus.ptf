@@ -56,7 +56,7 @@ exports.glyphs['B_cap'] =
 					})
 				1:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[1].x - 135,
+						contours[1].nodes[2].expandedTo[0].x - 100 * width - 175,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: contours[1].nodes[0].y
@@ -68,7 +68,10 @@ exports.glyphs['B_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 60 + 200 * width + (105)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 335 - (35),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 140 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 550 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -80,7 +83,7 @@ exports.glyphs['B_cap'] =
 					})
 				3:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[1].x - 55,
+						contours[1].nodes[2].expandedTo[0].x - 100 * width - 155,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: ( 400 / 750 ) * capHeight * crossbar + (14)
@@ -121,7 +124,7 @@ exports.glyphs['B_cap'] =
 					})
 				1:
 					x: Math.max(
-						contours[2].nodes[2].expandedTo[1].x - 100,
+						contours[2].nodes[2].expandedTo[0].x - 100 * width - 145,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: contours[2].nodes[0].y
@@ -132,7 +135,10 @@ exports.glyphs['B_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 125 + 200 * width + (105)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 405 - (36),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 146 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 220 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -144,7 +150,7 @@ exports.glyphs['B_cap'] =
 					})
 				3:
 					x: Math.max(
-						contours[2].nodes[2].expandedTo[1].x - 130,
+						contours[2].nodes[2].expandedTo[0].x - 100 * width - 175,
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: 0

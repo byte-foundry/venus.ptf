@@ -3,6 +3,9 @@ exports.glyphs['c_alt_dot_accent'] =
 	altImg: 'ball-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
 		spacingLeft: 50 * spacing + 50 + (31)
 		spacingRight: 50 * spacing + 30
