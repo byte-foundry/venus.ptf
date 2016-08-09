@@ -57,7 +57,7 @@ exports.glyphs['k'] =
 				1:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[1].x - 15 - (35),
-						contours[0].nodes[0].expandedTo[1].x + 50 + contours[1].nodes[1].expand.width * contours[1].nodes[1].expand.distr
+						contours[0].nodes[0].expandedTo[1].x + 50 + 0.75 * (( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness)
 					)
 					y: xHeight
 					dirOut: - 90 + 'deg'
