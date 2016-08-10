@@ -1,11 +1,13 @@
-exports.glyphs['question'] =
-	unicode: '?'
-	glyphName: 'question'
-	characterName: 'QUESTION MARK'
+exports.glyphs['questiondown'] =
+	unicode: '¿'
+	glyphName: 'questiondown'
+	characterName: 'INVERTED QUESTION MARK'
 	ot:
-		advanceWidth: spacingLeft + contours[0].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant + 'deg'],
+		['scaleY', -1], ['translateY', - xHeight],
+		['scaleX', -1], ['translateX', - (contours[0].nodes[2].expandedTo[0].x + spacingRight) ]
 	)
 	tags: [
 		'all',
@@ -41,7 +43,6 @@ exports.glyphs['question'] =
 						distr: 0
 					})
 				2:
-					x: 200 + 285 * width - (30)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 270,
 						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 120 / 115 ) * thickness + 10

@@ -13,8 +13,8 @@ exports.glyphs['comma'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (0)
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 50
 	anchors:
 		0:
 			minValue: minThickness

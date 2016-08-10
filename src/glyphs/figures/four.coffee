@@ -8,8 +8,8 @@ exports.glyphs['four'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 25 * spacing + (0)
-		spacingRight: 20 * spacing
+		spacingLeft: 50 * spacing + 25
+		spacingRight: 50 * spacing + 20
 	tags: [
 		'all',
 		'latin',
@@ -106,6 +106,7 @@ exports.glyphs['four'] =
 					})
 				5:
 					x: 300 + 275 * width
+					x: contours[1].nodes[1].x + 200 * width + 350 
 					y: contours[1].nodes[4].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

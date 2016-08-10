@@ -8,8 +8,8 @@ exports.glyphs['U_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 80 * spacing + (32) + serifWidth / 2
-		spacingRight: 80 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 80 + (32) + serifWidth / 2
+		spacingRight: 50 * spacing + 80 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -57,7 +57,7 @@ exports.glyphs['U_cap'] =
 						distr: 0
 					})
 				3:
-					x: 300 + 260 * width + (66)
+					x: contours[0].nodes[0].expandedTo[1].x + 145 + 200 * width + (66)
 					y: ( 295 / 750 ) * capHeight
 					dirIn: - 90 + 'deg'
 					typeOut: 'line'

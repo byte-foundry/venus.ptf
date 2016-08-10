@@ -8,8 +8,8 @@ exports.glyphs['k'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 70 * spacing + (29)
-		spacingRight: 10 * spacing
+		spacingLeft: 50 * spacing + 70 + (29)
+		spacingRight: 50 * spacing + 10
 	tags: [
 		'all',
 		'latin',
@@ -50,20 +50,20 @@ exports.glyphs['k'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 108 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 166 + 'deg'
+						width: ( 140 / 115 ) * thickness * contrast * contrastExtremity
+						angle: 180 + 90 + 'deg'
 						distr: 0.75
 					})
 				1:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[1].x - 15 - (35),
-						contours[0].nodes[0].expandedTo[1].x + 50 + contours[1].nodes[1].expand.width * contours[1].nodes[1].expand.distr
+						contours[0].nodes[0].expandedTo[1].x + 50 + 0.75 * (( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness)
 					)
 					y: xHeight
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness * contrast * Math.sqrt( width )
+						width: ( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -72,16 +72,16 @@ exports.glyphs['k'] =
 			closed: false
 			nodes:
 				0:
-					# x: Math.max(
-					# 	177 + 200 * width + (98),
-					# 	contours[1].nodes[1].x
-					# )
-					x: 177 + 200 * width + (98)
+					# x: 177 + 200 * width + (98)
+					x: Math.max(
+						contours[0].nodes[1].expandedTo[0].x + 200 * width + 107 + (98),
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * (( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness) + 10
+					)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 138 / 115 ) * thickness * Math.sqrt( width )
+						width: ( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness # TODO: apply this hack on each oblic
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -94,7 +94,7 @@ exports.glyphs['k'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 127 / 115 ) * thickness
+						width: ( 127 / 115 ) * thickness + (width - 1) * ( 4 / 115 ) * thickness
 						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point )
 						distr: 0.75
 					})

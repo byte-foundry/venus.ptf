@@ -8,8 +8,8 @@ exports.glyphs['s'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing + (23)
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 30
+		spacingRight: 50 * spacing + 30
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 84 ) # 24
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 81 ) # 21
 	tags: [
@@ -21,13 +21,16 @@ exports.glyphs['s'] =
 		0:
 			x: contours[0].nodes[5].x
 			y: xHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[1].x
+			y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (23)
 					y: Math.min( contours[0].nodes[3].y - ( 40 / 520 ) * xHeight, 150 * aperture * apertureBottom - 20 ) + (10) # 130
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture,
@@ -49,7 +52,11 @@ exports.glyphs['s'] =
 						distr: 0
 					})
 				2:
-					x: 275 + 200 * width - (29)
+					# x: 275 + 200 * width - (29)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 245 - (29),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness + 10
+					)
 					y: Math.max( 140, ( 140 / 520 ) * xHeight )
 					dirIn: - 90 + 'deg'
 					dirOut: 90 + 'deg'
@@ -93,7 +100,11 @@ exports.glyphs['s'] =
 						distr: 1
 					})
 				6:
-					x: 261 + 200 * width - (24)
+					# x: 261 + 200 * width - (24)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 230 - (24),
+						contours[0].nodes[4].expandedTo[0].x + Math.cos( anglePenTop / 180 * Math.PI ) * 0.75 * ( 103 / 115 ) * thickness * contrast * contrastExtremity + 10
+					)
 					y: Math.max( contours[0].nodes[3].y + ( 40 / 520 ) * xHeight, xHeight - 152 * aperture * apertureTop ) + (9)
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,

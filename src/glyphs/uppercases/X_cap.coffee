@@ -8,8 +8,8 @@ exports.glyphs['X_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 15 * spacing + (47) + serifWidth / 2
-		spacingRight: 15 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 15 + (34) + serifWidth / 2
+		spacingRight: 50 * spacing + 15 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -21,7 +21,8 @@ exports.glyphs['X_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 42 + (37)
+					# x: 42 + (37)
+					x: contours[1].nodes[1].expandedTo[0].x + 27 + (38)
 					y: capHeight - serifArc * serifHeight
 					## TODO: Apply serifArc all over oblic glyphs / @yannnick
 					# y: capHeight - serifArc * serifHeight
@@ -33,7 +34,8 @@ exports.glyphs['X_cap'] =
 						distr: 0.25
 					})
 				1:
-					x: 200 + 267 * width + (39)
+					# x: 200 + 267 * width + (39)
+					x: contours[1].nodes[1].expandedTo[1].x + 200 + 95 + (39)
 					y: 0 + serifArc * serifHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

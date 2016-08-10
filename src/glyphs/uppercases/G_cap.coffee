@@ -8,8 +8,8 @@ exports.glyphs['G_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + (36)
-		spacingRight: 45 * spacing
+		spacingLeft: 50 * spacing + 50 + (36)
+		spacingRight: 50 * spacing + 45
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 100 ) # 40
 	tags: [
 		'all',
@@ -50,7 +50,7 @@ exports.glyphs['G_cap'] =
 							}
 						]
 				2:
-					x: 400 + 340 * width - (36)
+					x: contours[0].nodes[4].expandedTo[0].x + 345 + 200 * width - (36)
 					y: 90 + (16)
 					dirOut: - 140 + 'deg'
 					expand: Object({
@@ -77,6 +77,7 @@ exports.glyphs['G_cap'] =
 					expand: Object({
 						width: ( 145 / 115) * thickness * opticThickness
 						angle: 180 + 'deg'
+						# TODO: distr is inverted boy...
 						distr: 0.75
 					})
 				5:

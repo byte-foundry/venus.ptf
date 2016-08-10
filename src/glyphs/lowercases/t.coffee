@@ -8,8 +8,8 @@ exports.glyphs['t'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 90 * spacing + (29) * width
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 10
+		spacingRight: 50 * spacing + 30
 	tags: [
 		'all',
 		'latin',
@@ -29,27 +29,36 @@ exports.glyphs['t'] =
 						[
 							{
 								x: contours[0].nodes[1].expandedTo[0].x
-								y: ascenderHeight - ( 95 / 115 ) * thickness
+								y: Math.max(
+									contours[0].nodes[0].expandedTo[1].y - ( 95 / 115 ) * thickness,
+									xHeight
+								)
 								typeOut: 'line'
 							}
 							{
 								x: contours[0].nodes[1].expandedTo[1].x
-								y: ascenderHeight
+								y: Math.min(
+									xHeight + 230,
+									ascenderHeight
+								)
 								typeIn: 'line'
 							}
 						]
 				1:
-					x: spacingLeft
-					y: 30 + thickness #* contrast
+					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.45
+					y: 130 +  ( 15 / 115 ) * thickness #* contrast
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.25
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})
 				2:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: Math.min(
+						contours[0].nodes[1].expandedTo[0].x + ( contours[1].nodes[0].x - contours[0].nodes[1].expandedTo[0].x ) * 0.5,
+						contours[0].nodes[1].expandedTo[0].x + 130 +  ( 15 / 115 ) * thickness
+					)
 					y: 0
 					typeOut: 'line'
 					type: 'smooth'
@@ -63,7 +72,7 @@ exports.glyphs['t'] =
 					expandedTo:
 						[
 							{
-								x: contours[0].nodes[2].expandedTo[1].x + 60 * width
+								x: contours[1].nodes[0].expandedTo[0].x
 								y: contours[0].nodes[2].expandedTo[0].y
 							}
 							{
@@ -76,7 +85,10 @@ exports.glyphs['t'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[3].expandedTo[0].x
+					x: Math.max(
+						contours[1].nodes[1].x + 200 * width + 105,
+						contours[0].nodes[1].expandedTo[1].x + 10
+					)
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
@@ -85,7 +97,7 @@ exports.glyphs['t'] =
 						distr: 0
 					})
 				1:
-					x: 10
+					x: spacingLeft
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({

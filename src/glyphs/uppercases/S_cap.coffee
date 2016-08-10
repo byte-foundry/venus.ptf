@@ -8,8 +8,8 @@ exports.glyphs['S_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 35 * spacing + (29)
-		spacingRight: 35 * spacing
+		spacingLeft: 50 * spacing + 35
+		spacingRight: 50 * spacing + 35
 		anglePenTop: Math.max( - 10, - 40 * aperture * apertureTop + 82 ) # 42
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 95 ) # 35
 	tags: [
@@ -27,7 +27,7 @@ exports.glyphs['S_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29)
 					y: Math.min( contours[0].nodes[3].y - ( 60 / 750 ) * capHeight, 140 * aperture * apertureBottom + 20 ) + (20) # 160
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture - (10),
@@ -52,7 +52,7 @@ exports.glyphs['S_cap'] =
 						distr: 0
 					})
 				2:
-					x: 400 + 235 * width - (35)
+					x: contours[0].nodes[4].expandedTo[0].x + 225 + 200 * width - (36)
 					y: ( 210 / 750 ) * capHeight - (1)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -78,7 +78,7 @@ exports.glyphs['S_cap'] =
 						distr: 0.5
 					})
 				4:
-					x: 70 + (35)
+					x: spacingLeft + 35
 					y: ( 545 / 750 ) * capHeight + (4)
 					dirOut: 90 + 'deg'
 					type: 'smooth'

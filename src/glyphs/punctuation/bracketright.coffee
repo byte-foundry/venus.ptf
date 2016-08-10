@@ -8,8 +8,8 @@ exports.glyphs['bracketright'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing + (0)
-		spacingRight: 125 * spacing
+		spacingLeft: 50 * spacing + 30
+		spacingRight: 50 * spacing + 125
 	tags: [
 		'all',
 		'latin',

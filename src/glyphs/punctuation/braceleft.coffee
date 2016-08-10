@@ -13,8 +13,8 @@ exports.glyphs['braceleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 55 * spacing
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 55
+		spacingRight: 50 * spacing + 30
 	contours:
 		0:
 			skeleton: true

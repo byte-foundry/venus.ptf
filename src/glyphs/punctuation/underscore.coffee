@@ -13,8 +13,8 @@ exports.glyphs['underscore'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (0)
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 50
 	contours:
 		0:
 			skeleton: true
@@ -31,7 +31,7 @@ exports.glyphs['underscore'] =
 						distr: 0.5
 					})
 				1:
-					x: 415 + 215 * width
+					x: contours[0].nodes[0].x + 200 * width + 380
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

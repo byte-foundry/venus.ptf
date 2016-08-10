@@ -1,3 +1,4 @@
+# TODO: width
 exports.glyphs['parenleft'] =
 	unicode: '('
 	glyphName: 'parenleft'
@@ -13,16 +14,16 @@ exports.glyphs['parenleft'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 100 * spacing + (19)
-		spacingRight: 20 * spacing
+		spacingLeft: 50 * spacing + 100
+		spacingRight: 50 * spacing + 20
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: 250 + 50 * width + (0)
-					y: capHeight + overshoot * ( 35 / 10 )
+					x: contours[0].nodes[1].expandedTo[0].x + 50 * width + 150
+					y: capHeight + 45
 					dirOut: - 140 + 'deg'
 					tensionOut: 1.1
 					expand: Object({
@@ -31,7 +32,7 @@ exports.glyphs['parenleft'] =
 						distr: 0
 					})
 				1:
-					x: spacingLeft
+					x: spacingLeft + (19)
 					y: capHeight * ( 335 / 750 )
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.1

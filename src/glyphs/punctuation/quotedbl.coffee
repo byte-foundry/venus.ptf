@@ -13,19 +13,19 @@ exports.glyphs['quotedbl'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing + (30)
-		spacingRight: 45 * spacing
-		space: ( 70 / 115 ) * thickness + spacingLeft
+		spacingLeft: 50 * spacing + 45
+		spacingRight: 50 * spacing + 45
+		space: minThickness
 	components:
 		0:
 			base: '_quotesingle'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness / 2
+					x: spacingLeft + (30) + minThickness / 2
 					y: capHeight
 		1:
 			base: '_quotesingle'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness + space
+					x: spacingLeft + (30) + minThickness + space
 					y: capHeight

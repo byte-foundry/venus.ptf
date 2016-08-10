@@ -8,9 +8,12 @@ exports.glyphs['dotlessi'] =
 	]
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
-		spacingLeft: 70 * spacing + (97)
-		spacingRight: 70 * spacing
+		spacingLeft: 50 * spacing + 70
+		spacingRight: 50 * spacing + 70
 	anchors:
 		0:
 			x: contours[0].nodes[0].x
@@ -21,7 +24,7 @@ exports.glyphs['dotlessi'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (97)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'

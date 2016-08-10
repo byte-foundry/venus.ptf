@@ -8,8 +8,8 @@ exports.glyphs['Z_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 45 * spacing + serifWidth / 2 * serifRotate
-		spacingRight: 45 * spacing + serifWidth / 3 * serifRotate
+		spacingLeft: 50 * spacing + 45 + serifWidth / 2 * serifRotate
+		spacingRight: 50 * spacing + 45 + serifWidth / 3 * serifRotate
 	tags: [
 		'all',
 		'latin',
@@ -25,7 +25,7 @@ exports.glyphs['Z_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 400 + 210 * width
+					x: contours[1].nodes[0].x + 200 * width + 365
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -35,7 +35,7 @@ exports.glyphs['Z_cap'] =
 						distr: 0
 					})
 				1:
-					x: 60
+					x: contours[1].nodes[0].x + 15
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

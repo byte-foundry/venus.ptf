@@ -8,8 +8,8 @@ exports.glyphs['seven'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing + (0)
-		spacingRight: 10 * spacing
+		spacingLeft: 50 * spacing + 30
+		spacingRight: 50 * spacing + 10
 	tags: [
 		'all',
 		'latin',
@@ -31,7 +31,7 @@ exports.glyphs['seven'] =
 						distr: 0
 					})
 				1:
-					x: 200 + 280 * width
+					x: contours[0].nodes[0].x + 200 * width + 250
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -63,6 +63,7 @@ exports.glyphs['seven'] =
 					})
 				1:
 					x: 110 * width + (37)
+					x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) * 0.43
 					y: 0
 					dirIn: 90 + 'deg'
 					typeOut: 'line'
@@ -70,5 +71,5 @@ exports.glyphs['seven'] =
 					expand: Object({
 						width: ( 150 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
-						distr: 0.75
+						distr: 0.25
 					})

@@ -1,3 +1,4 @@
+# TODO: thickness
 exports.glyphs['y'] =
 	unicode: 'y'
 	glyphName: 'y'
@@ -8,8 +9,8 @@ exports.glyphs['y'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 10 * spacing + (32) + serifWidth / 2
-		spacingRight: 10 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 10 + serifWidth / 2
+		spacingRight: 50 * spacing + 10 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -25,7 +26,7 @@ exports.glyphs['y'] =
 			closed: false
 			nodes:
 				0:
-					x: 45
+					x: contours[1].nodes[0].expandedTo[0].x + 35
 					y: Math.min(
 						( 200 / 250 ) * descender,
 						contours[0].nodes[2].expandedTo[1].y - ( 100 / 115 ) * thickness - 15
@@ -48,7 +49,9 @@ exports.glyphs['y'] =
 						distr: 0
 					})
 				2:
-					x: 275 - (21)
+					# x: 275 - (21)
+					# x: contours[0].nodes[0].x + 200 * width + 30 - (21)
+					x: contours[1].nodes[0].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5 + ( 7 / 90 ) * thickness
 					y: ( ( 85 / 115 ) * thickness / 250 ) * descender + (12)
 					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[2].point )
 					tensionIn: 1.3
@@ -59,7 +62,12 @@ exports.glyphs['y'] =
 						distr: 0.25
 					})
 				3:
-					x: 480 - (33)
+					# x: 480 - (33)
+					x: Math.max(
+						contours[1].nodes[0].expandedTo[0].x + 200 * width + 270 - (33),
+						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 130 / 115 ) * thickness * contrast + 10
+					)
+					# x: contours[1].nodes[0].expandedTo[0].x
 					y: xHeight
 					dirOut: 0 + 'deg'
 					expand: Object({
@@ -72,7 +80,7 @@ exports.glyphs['y'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft - serifWidth / 2
+					x: spacingLeft + (32) - serifWidth / 2
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

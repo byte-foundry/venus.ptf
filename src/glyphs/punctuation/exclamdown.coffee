@@ -5,7 +5,9 @@ exports.glyphs['exclamdown'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant + 'deg'],
+		['scaleY', -1], ['translateY', - xHeight],
+		['scaleX', -1], ['translateX', - (contours[0].nodes[0].expandedTo[1].x + spacingRight) ]
 	)
 	tags: [
 		'all',
@@ -13,8 +15,8 @@ exports.glyphs['exclamdown'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing
-		spacingRight: 45 * spacing
+		spacingLeft: 50 * spacing + 45
+		spacingRight: 50 * spacing + 45
 	contours:
 		0:
 			skeleton: true
@@ -22,7 +24,7 @@ exports.glyphs['exclamdown'] =
 			nodes:
 				0:
 					x: spacingLeft + ( 135 / 115 ) * thickness / 2
-					y: contours[0].nodes[1].y - ( 310 / 750 ) * capHeight
+					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +34,7 @@ exports.glyphs['exclamdown'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[2].y - ( 230 / 750 ) * capHeight
+					y: ( 440 / 750 ) * capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -42,7 +44,7 @@ exports.glyphs['exclamdown'] =
 					})
 				2:
 					x: contours[0].nodes[0].x
-					y: xHeight - minThickness - 170 + ( 85 / 115 ) * thickness
+					y: minThickness + 170 - ( 85 / 115 ) * thickness
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: ( 35 / 115 ) * thickness
@@ -55,4 +57,4 @@ exports.glyphs['exclamdown'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].x
-					y: xHeight - minThickness
+					y: 0

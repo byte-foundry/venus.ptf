@@ -8,8 +8,8 @@ exports.glyphs['m'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 70 * spacing + (29) + serifWidth / 2
-		spacingRight: 65 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingRight: 50 * spacing + 65 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -75,7 +75,7 @@ exports.glyphs['m'] =
 					y: xHeight + overshoot / 2
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					tensionOut: 1 * breakPath
+					# tensionOut: 1 * breakPath
 					expand: Object({
 						width: ( 113 / 115 ) * thickness * contrast
 						angle: 180 - 113 + 'deg'
@@ -125,7 +125,7 @@ exports.glyphs['m'] =
 					y: xHeight + overshoot / 2
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					tensionOut: 1 * breakPath
+					# tensionOut: 1 * breakPath
 					expand: Object({
 						width: ( 113 / 115 ) * thickness * contrast
 						angle: 180 - 113 + 'deg'

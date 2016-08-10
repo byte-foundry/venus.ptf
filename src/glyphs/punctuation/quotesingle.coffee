@@ -13,8 +13,8 @@ exports.glyphs['quotesingle'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 45 * spacing + (30)
-		spacingRight: 45 * spacing
+		spacingLeft: 50 * spacing + 45 + (30)
+		spacingRight: 50 * spacing + 45
 	components:
 		0:
 			base: '_quotesingle'

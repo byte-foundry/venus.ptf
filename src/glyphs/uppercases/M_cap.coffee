@@ -8,8 +8,8 @@ exports.glyphs['M_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 85 * spacing + (34) + serifWidth / 2
-		spacingRight: 85 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 85 + (34) + serifWidth / 2
+		spacingRight: 50 * spacing + 85 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -93,7 +93,7 @@ exports.glyphs['M_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 400 + 295 * width + (101)
+					x: contours[0].nodes[0].expandedTo[1].x + 275 + 200 * width + (101)
 					y: 0 + serifHeight + serifCurve
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

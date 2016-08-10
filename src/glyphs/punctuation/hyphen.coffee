@@ -13,8 +13,8 @@ exports.glyphs['hyphen'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + (0)
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 50
 	contours:
 		0:
 			skeleton: true
@@ -31,7 +31,7 @@ exports.glyphs['hyphen'] =
 						distr: 0.5
 					})
 				1:
-					x: 100 + 215 * width
+					x: contours[0].nodes[0].x + 200 * width + 65
 					y: ( 262 / 750 ) * capHeight + (1)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

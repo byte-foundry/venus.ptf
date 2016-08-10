@@ -8,8 +8,8 @@ exports.glyphs['six'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 55 * spacing + (34)
-		spacingRight: 50 * spacing
+		spacingLeft: 50 * spacing + 55
+		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
 		'latin',
@@ -25,7 +25,10 @@ exports.glyphs['six'] =
 			closed: false
 			nodes:
 				0:
-					x: 300 + 255 * width - (25)
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[0].x + 200 * width + 300 - (25),
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( 119 / 115 ) * thickness * opticThickness * contrast + 10
+					)
 					y: ( 635 / 750 ) * capHeight - (16)
 					dirOut: 105 + 15 * contrast + 'deg'
 					type: 'smooth'
@@ -46,7 +49,7 @@ exports.glyphs['six'] =
 						distr: 0
 					})
 				2:
-					x: spacingLeft
+					x: spacingLeft + (34)
 					y: ( 375 / 750 ) * capHeight + (0)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -68,7 +71,10 @@ exports.glyphs['six'] =
 						distr: 0
 					})
 				4:
-					x: 300 + 280 * width - (36)
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[0].x + 200 * width + 325 - (35),
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 245 / 750 ) * capHeight + (0)
 					dirOut: 90 + 'deg'
 					type: 'smooth'

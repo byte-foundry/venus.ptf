@@ -8,8 +8,8 @@ exports.glyphs['zero'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 55 * spacing + (30)
-		spacingRight: 55 * spacing
+		spacingLeft: 50 * spacing + 55
+		spacingRight: 50 * spacing + 55
 	tags: [
 		'all',
 		'latin',
@@ -21,7 +21,7 @@ exports.glyphs['zero'] =
 			closed: true
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (30)
 					y: ( 375 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					tensionOut: 1.05
@@ -45,6 +45,10 @@ exports.glyphs['zero'] =
 					})
 				2:
 					x: 400 + 245 * width - (35)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 200 * width + 390 - (30),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 140 / 115 ) * thickness * opticThickness + 10
+					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

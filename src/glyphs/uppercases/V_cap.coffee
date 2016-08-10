@@ -13,8 +13,8 @@ exports.glyphs['V_cap'] =
 		'uppercase'
 	]
 	parameters:
-		spacingLeft: 10 * spacing + (36)  + serifWidth
-		spacingRight: 10 * spacing  + serifWidth
+		spacingLeft: 50 * spacing + 10 + (36)  + serifWidth
+		spacingRight: 50 * spacing + 10  + serifWidth
 	contours:
 		0:
 			skeleton: true
@@ -56,7 +56,7 @@ exports.glyphs['V_cap'] =
 						distr: 0
 					})
 				1:
-					x: 400 + 230 * width - (36)
+					x: contours[0].nodes[0].expandedTo[1].x + 275 + 200 * width - (36)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

@@ -9,8 +9,8 @@ exports.glyphs['c'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + (31)
-		spacingRight: 30 * spacing
+		spacingLeft: 50 * spacing + 50
+		spacingRight: 50 * spacing + 30
 		anglePenTop: Math.max( - 10, - 60 * aperture * apertureTop + 86 ) # 26
 		anglePenBottom: Math.max( - 10, - 60 * aperture * apertureBottom + 86 ) # 26
 	tags: [
@@ -18,16 +18,20 @@ exports.glyphs['c'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[3].expandedTo[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: Math.min(
-						contours[0].nodes[2].expandedTo[0].x + 145 + 200 * width,
-						320 + 200 * width
-					) - (26)
+					x: Math.max(
+						contours[0].nodes[2].expandedTo[1].x + 200 * width + 270 - (22),
+						contours[0].nodes[2].expandedTo[0].x + 0.75 * thickness + 10
+					)
 					y: Math.min( contours[0].nodes[2].y - ( 30 / 520 ) * xHeight, 130 * aperture * apertureBottom + 20 ) - (15) # 190 - (15)
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
@@ -49,7 +53,7 @@ exports.glyphs['c'] =
 						distr: 1
 					})
 				2:
-					x: spacingLeft
+					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'

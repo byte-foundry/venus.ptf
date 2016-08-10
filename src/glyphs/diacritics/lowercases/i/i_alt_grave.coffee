@@ -11,16 +11,19 @@ exports.glyphs['i_alt_grave'] =
 		'lowercase',
 		'diacritic'
 	]
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
 	parameters:
-		spacingLeft: 70 * spacing + (57) + serifWidth / 2
-		spacingRight: 70 * spacing + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth / 2
+		spacingRight: 50 * spacing + 70 + serifWidth / 2
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (57)
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
