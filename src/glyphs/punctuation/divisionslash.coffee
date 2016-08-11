@@ -1,7 +1,7 @@
-exports.glyphs['slash'] =
-	unicode: '/'
-	glyphName: 'slash'
-	characterName: 'SOLIDUS'
+exports.glyphs['divisionslash'] =
+	unicode: '∕'
+	glyphName: 'uni2215'
+	characterName: 'DIVISION SLASH'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -26,17 +26,17 @@ exports.glyphs['slash'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 220
+					x: contours[0].nodes[0].expandedTo[1].x + 380
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
 					})

@@ -8,8 +8,8 @@ exports.glyphs['l'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
-		spacingRight: 50 * spacing + 70 + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth
+		spacingRight: 50 * spacing + 70 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -19,20 +19,23 @@ exports.glyphs['l'] =
 		0:
 			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
 			y: ascenderHeight + overshoot
+		1:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
+			y: ascenderHeight + diacriticHeight / 2
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (57)
 					y: 0 + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[0].x
@@ -41,7 +44,7 @@ exports.glyphs['l'] =
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})
 	components:
 		0:

@@ -1,7 +1,7 @@
-exports.glyphs['slash'] =
-	unicode: '/'
-	glyphName: 'slash'
-	characterName: 'SOLIDUS'
+exports.glyphs['fraction'] =
+	unicode: '⁄'
+	glyphName: 'fraction'
+	characterName: 'FRACTION SLASH'
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -13,8 +13,8 @@ exports.glyphs['slash'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + 0
-		spacingRight: 50 * spacing + 0
+		spacingLeft: 50 * spacing + 60
+		spacingRight: 50 * spacing + 60
 	contours:
 		0:
 			skeleton: true
@@ -26,17 +26,17 @@ exports.glyphs['slash'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 220
+					x: contours[0].nodes[0].expandedTo[1].x + 380
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
 					})

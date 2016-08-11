@@ -1,8 +1,8 @@
-exports.glyphs['l_caron'] =
-	unicode: 'ľ'
-	glyphName: 'lcaron'
-	characterName: 'LATIN SMALL LETTER L WITH CARON'
-	base: 'l'
+exports.glyphs['z_acute'] =
+	unicode: 'ź'
+	glyphName: 'zacute'
+	characterName: 'LATIN SMALL LETTER Z WITH ACUTE'
+	base: 'z'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -12,7 +12,7 @@ exports.glyphs['l_caron'] =
 	]
 	components:
 		0:
-			base: 'caronSlovak'
+			base: 'acute'
 			copy: true
 			parentAnchors:
 				0:
