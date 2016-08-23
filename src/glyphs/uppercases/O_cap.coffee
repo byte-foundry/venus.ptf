@@ -49,7 +49,10 @@ exports.glyphs['O_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 395 + 200 * width - (36)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 540 + 200 * width - (36),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

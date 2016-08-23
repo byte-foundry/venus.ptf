@@ -1,14 +1,14 @@
-exports.glyphs['p'] =
-	unicode: 'p'
-	glyphName: 'p'
-	characterName: 'LATIN SMALL LETTER P'
+exports.glyphs['þ'] =
+	unicode: 'þ'
+	glyphName: 'thorn'
+	characterName: 'LATIN SMALL LETTER THORN'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + (29)
 		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
@@ -22,7 +22,7 @@ exports.glyphs['p'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 155 / 250 ) * descender + serifHeight + serifCurve
+					y: descender + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +32,7 @@ exports.glyphs['p'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - serifHeight - serifCurve
+					y: ascenderHeight - serifHeight - serifCurve
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -52,7 +52,6 @@ exports.glyphs['p'] =
 					tensionOut: 1.15
 					tensionIn: 1.15
 					expand: Object({
-						# width: ( 49 / 2 / 115 ) * thickness + ( 49 / 2 / 115 ) * thickness * contrast
 						width: ( 49 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
@@ -63,7 +62,6 @@ exports.glyphs['p'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
 						width: ( 102 / 115 ) * thickness * contrast
 						angle: - 112 + 'deg'
 						distr: 0
@@ -87,8 +85,7 @@ exports.glyphs['p'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
 						angle: 112 + 'deg'
 						distr: 0
 					})
@@ -103,7 +100,7 @@ exports.glyphs['p'] =
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].y
 				2:
-					anchorLine: ( 155 / 250 ) * descender
+					anchorLine: descender
 		1:
 			base: 'serif'
 			parentAnchors:
@@ -114,7 +111,7 @@ exports.glyphs['p'] =
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].y
 				2:
-					anchorLine: xHeight
+					anchorLine: ascenderHeight
 					directionY: -1
 					right: false
 			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )

@@ -26,7 +26,7 @@ exports.glyphs['Y_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -75,7 +75,7 @@ exports.glyphs['Y_cap'] =
 				0:
 					x: 300 + 285 * width - (39)
 					x: contours[0].nodes[0].expandedTo[0].x + 200 * width + 375 - (39)
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -120,7 +120,7 @@ exports.glyphs['Y_cap'] =
 					})
 				1:
 					x: contours[2].nodes[0].x
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -134,10 +134,10 @@ exports.glyphs['Y_cap'] =
 			parentAnchors:
 				0:
 					x: contours[2].nodes[1].expandedTo[1].x
-					y: contours[2].nodes[1].y
+					y: contours[2].nodes[1].y + serifHeight + serifCurve
 				1:
 					x: contours[2].nodes[1].expandedTo[0].x
-					y: contours[2].nodes[1].y
+					y: contours[2].nodes[1].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:

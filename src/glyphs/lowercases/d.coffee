@@ -8,7 +8,7 @@ exports.glyphs['d'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 50 + (31)
+		spacingLeft: 50 * spacing + 50
 		spacingRight: 50 * spacing + 70
 	tags: [
 		'all',
@@ -19,13 +19,16 @@ exports.glyphs['d'] =
 		0:
 			x: contours[1].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
 			y: ascenderHeight + overshoot
+		1:
+			x: contours[0].nodes[1].expandedTo[0].x
+			y: ( xHeight + overshoot + ascenderHeight ) / 2
 	contours:
 		0:
 			skeleton: true
 			closed: true
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
 					expand: Object({
@@ -34,7 +37,7 @@ exports.glyphs['d'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5 # (207 / 365)
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -46,7 +49,7 @@ exports.glyphs['d'] =
 					})
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 200 * width + 215 + (38),
+						contours[0].nodes[0].expandedTo[0].x + 215 + 200 * width - (12),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 50 / 115 ) * thickness * contrast * contrastExtremity + 10
 					)
 					y: contours[0].nodes[0].y

@@ -32,7 +32,7 @@ exports.glyphs['L_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -42,7 +42,7 @@ exports.glyphs['L_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -65,7 +65,7 @@ exports.glyphs['L_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 100 + 225 * width
+					x: contours[0].nodes[0].expandedTo[1].x + 125 + 200 * width - Math.max( 0, serifHeight * serifArc )
 					y: contours[1].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -80,10 +80,10 @@ exports.glyphs['L_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 					right: false
@@ -92,10 +92,10 @@ exports.glyphs['L_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				2:
 					anchorLine: capHeight
 					directionY: -1
@@ -109,7 +109,7 @@ exports.glyphs['L_cap'] =
 					x: contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve
 					y: contours[1].nodes[1].expandedTo[0].y
 				2:
-					anchorLine: contours[1].nodes[1].expandedTo[0].x
+					anchorLine: contours[1].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					left: false
 					baseLeft: contours[1].nodes[1].expandedTo[0].point
 					# directionX: 1

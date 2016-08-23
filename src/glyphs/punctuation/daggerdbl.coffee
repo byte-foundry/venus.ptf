@@ -69,8 +69,8 @@ exports.glyphs['daggerdbl'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x
-					y: contours[2].nodes[1].y
+					x: contours[1].nodes[1].x
+					y: contours[0].nodes[1].y + ( contours[0].nodes[0].expandedTo[0].x - contours[1].nodes[1].x )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -79,8 +79,8 @@ exports.glyphs['daggerdbl'] =
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[1].x
-					y: contours[0].nodes[1].y + ( contours[0].nodes[0].expandedTo[0].x - contours[1].nodes[1].x )
+					x: contours[1].nodes[0].x
+					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

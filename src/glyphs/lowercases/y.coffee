@@ -68,7 +68,7 @@ exports.glyphs['y'] =
 						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 130 / 115 ) * thickness * contrast + 10
 					)
 					# x: contours[1].nodes[0].expandedTo[0].x
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: ( 130 / 115 ) * thickness * contrast
@@ -81,7 +81,7 @@ exports.glyphs['y'] =
 			nodes:
 				0:
 					x: spacingLeft + (32) - serifWidth / 2
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

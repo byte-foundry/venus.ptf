@@ -26,7 +26,7 @@ exports.glyphs['W_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -108,7 +108,7 @@ exports.glyphs['W_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 465 + 200 * width - (36)
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

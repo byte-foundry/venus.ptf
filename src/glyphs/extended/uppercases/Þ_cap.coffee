@@ -1,7 +1,7 @@
-exports.glyphs['D_cap'] =
-	unicode: 'D'
-	glyphName: 'D'
-	characterName: 'LATIN CAPITAL LETTER D'
+exports.glyphs['Þ_cap'] =
+	unicode: 'Þ'
+	glyphName: 'Thorn'
+	characterName: 'LATIN CAPITAL LETTER THORN'
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -9,19 +9,12 @@ exports.glyphs['D_cap'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 85 + (34) + serifWidth / 2
-		spacingRight: 50 * spacing + 55
+		spacingRight: 50 * spacing + 35
 	tags: [
 		'all',
 		'latin',
 		'uppercase'
 	]
-	anchors:
-		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
-			y: capHeight + diacriticHeight
-		1:
-			x: contours[0].nodes[0].expandedTo[0].x - 80
-			y: contours[1].nodes[4].expandedTo[1].y + ( contours[1].nodes[0].expandedTo[1].y - contours[1].nodes[4].expandedTo[1].y ) * 0.5
 	contours:
 		0:
 			skeleton: true
@@ -53,70 +46,69 @@ exports.glyphs['D_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: capHeight
+					y: Math.min(
+						capHeight - ( 150 / 750 ) * capHeight - 0.25 * (( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity),
+						capHeight - serifHeight - 20
+					)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
-						distr: 0
+						distr: 0.25
 					})
 				1:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[0].x - 100 * width - 290,
+						contours[1].nodes[2].expandedTo[1].x - 135,
 						contours[0].nodes[0].expandedTo[1].x
 					)
-					y: contours[1].nodes[0].y
+					y: contours[1].nodes[0].expandedTo[0].y
 					dirOut: 0 + 'deg'
 					tensionOut: 1.1
 					expand: Object({
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 87 + 'deg'
+						angle: - 93 + 'deg'
 						distr: 0
 					})
 				2:
-					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 200 * width + 425 - (36),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
-					)
-					y: ( 375 / 750 ) * capHeight
+					x: contours[0].nodes[0].expandedTo[0].x + 200 * width + 370 - (100)
+					y: capHeight / 2
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					tensionIn: 1.1
-					tensionOut: 1.13
+					tensionOut: 1.1
 					expand: Object({
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
 				3:
 					x: Math.max(
-						contours[1].nodes[2].expandedTo[0].x - 100 * width - 260,
+						contours[1].nodes[2].expandedTo[1].x - 135,
 						contours[0].nodes[0].expandedTo[1].x
 					)
-					y: 0
+					y: contours[1].nodes[4].expandedTo[0].y
 					dirIn: 0 + 'deg'
 					typeOut: 'line'
-					tensionIn: 1.13
+					tensionIn: 1.1
 					expand: Object({
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 95 + 'deg'
+						angle: 180 - 93 + 'deg'
 						distr: 0
 					})
 				4:
-					expandedTo:
-						[
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[0].y
-								typeOut: 'line'
-							}
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[1].y
-								typeIn: 'line'
-							}
-						]
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: Math.max(
+						( 150 / 750 ) * capHeight + 0.25 * (( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity),
+						serifHeight - 20
+					)
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						angle: 90 + 'deg'
+						distr: 0.25
+					})
 	components:
 		0:
 			base: 'serif'
@@ -129,7 +121,6 @@ exports.glyphs['D_cap'] =
 					y: contours[0].nodes[0].y
 				2:
 					anchorLine: 0
-					right: false
 		1:
 			base: 'serif'
 			parentAnchors:
@@ -142,4 +133,3 @@ exports.glyphs['D_cap'] =
 				2:
 					anchorLine: capHeight
 					directionY: -1
-					right: false

@@ -26,7 +26,7 @@ exports.glyphs['R_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -36,7 +36,7 @@ exports.glyphs['R_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -73,7 +73,10 @@ exports.glyphs['R_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width + (100)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 370 + 200 * width - (100),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 135 / 115 ) * thickness * opticThickness + 10
+					)
 					y: ( 525 / 750 ) * capHeight
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
@@ -99,32 +102,27 @@ exports.glyphs['R_cap'] =
 						distr: 0.25
 					})
 				4:
-					expandedTo:
-						[
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[0].y
-								typeOut: 'line'
-							}
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[1].y
-								typeIn: 'line'
-							}
-						]
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[3].expandedTo[0].y
+					expand: Object({
+						width: Math.cos( 3 / 180 * Math.PI) * ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						angle: 90 + 'deg'
+						distr: 0
+					})
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x + 265 + 200 * width - (40)
-					y: 0
+					x: contours[1].nodes[2].expandedTo[0].x
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 155 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 0.75
+						distr: 0.8
 					})
 				1:
 					x: contours[1].nodes[3].x - (10)
@@ -142,10 +140,10 @@ exports.glyphs['R_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:
@@ -153,10 +151,10 @@ exports.glyphs['R_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				2:
 					anchorLine: capHeight
 					directionY: -1

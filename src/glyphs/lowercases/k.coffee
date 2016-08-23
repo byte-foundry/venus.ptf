@@ -22,7 +22,7 @@ exports.glyphs['k'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +32,7 @@ exports.glyphs['k'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight - serifHeight - serifCurve
+					y: ascenderHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -59,7 +59,7 @@ exports.glyphs['k'] =
 						contours[2].nodes[0].expandedTo[1].x - 15 - (35),
 						contours[0].nodes[0].expandedTo[1].x + 50 + 0.75 * (( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness)
 					)
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -77,7 +77,7 @@ exports.glyphs['k'] =
 						contours[0].nodes[1].expandedTo[0].x + 200 * width + 107 + (98),
 						contours[0].nodes[1].expandedTo[1].x + 0.75 * (( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness) + 10
 					)
-					y: 0
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -104,10 +104,10 @@ exports.glyphs['k'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:
@@ -115,10 +115,10 @@ exports.glyphs['k'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				2:
 					anchorLine: ascenderHeight
 					directionY: -1
