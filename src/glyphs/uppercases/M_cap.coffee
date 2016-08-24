@@ -62,21 +62,21 @@ exports.glyphs['M_cap'] =
 					expand: Object({
 						width: ( 125 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 0.4
+						distr: 0.4 * contrast
 					})
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x
+					x: contours[1].nodes[0].expandedTo[1].x
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 1
 					})
 				1:
 					x: contours[3].nodes[1].expandedTo[0].x
