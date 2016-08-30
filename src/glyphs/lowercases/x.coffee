@@ -21,27 +21,32 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					# x: contours[1].nodes[1].expandedTo[0].x + 10 + (34)
 					x: spacingLeft
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness
+						# width: ( 140 / 115 ) * thickness
+						width: Math.min(
+							thickness / ( Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) ) ),
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: 125 + 50 + 200 * width + (35)
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 200 * width + 160 + (35),
-						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 140 / 115 ) * thickness + 10
+						(contours[0].nodes[0].x - 0.25 * (( 140 / 115 ) * thickness)) + 200 * width + 160 + (35),
+						(contours[0].nodes[0].x + 0.75 * (( 140 / 115 ) * thickness)) + thickness + 10
 					)
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) ),
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -60,7 +65,11 @@ exports.glyphs['x'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / 115 ) * thickness * contrast
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) ) * contrast,
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.5 * contrast
 					})
@@ -92,7 +101,11 @@ exports.glyphs['x'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / 115 ) * thickness * contrast
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) ) * contrast,
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 1 - 0.5 * contrast
 					})

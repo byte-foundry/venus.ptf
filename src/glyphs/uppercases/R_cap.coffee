@@ -49,7 +49,7 @@ exports.glyphs['R_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: contours[0].nodes[1].x
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -102,7 +102,7 @@ exports.glyphs['R_cap'] =
 						distr: 0.25
 					})
 				4:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].x
 					y: contours[1].nodes[3].expandedTo[0].y
 					expand: Object({
 						width: Math.cos( 3 / 180 * Math.PI) * ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity

@@ -45,7 +45,7 @@ exports.glyphs['P_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: contours[0].nodes[1].x
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -98,7 +98,7 @@ exports.glyphs['P_cap'] =
 						distr: 0
 					})
 				4:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: contours[0].nodes[1].x
 					y: ( 300 / 750 ) * capHeight * crossbar + (26)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
