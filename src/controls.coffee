@@ -225,26 +225,6 @@ exports.controls = [
 		minAdvised: 0.4
 		maxAdvised: 0.8
 		disabled: false
-	# ,
-	# 	name: 'breakPath'
-	# 	label: 'Break Path'
-	# 	min: 0
-	# 	max: 1
-	# 	step: 0.1
-	# 	init: 1
-	# 	minAdvised: 0.5
-	# 	maxAdvised: 1
-	# 	disabled: true
-	# ,
-	# 	name: 'axis'
-	# 	label: 'axis'
-	# 	min: - 35
-	# 	max: 35
-	# 	step: 1
-	# 	init: 0
-	# 	minAdvised: -15
-	# 	maxAdvised: 15
-	# 	disabled: true
 	]
 ,
 	tab: true

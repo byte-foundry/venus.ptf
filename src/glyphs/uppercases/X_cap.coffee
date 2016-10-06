@@ -64,6 +64,8 @@ exports.glyphs['X_cap'] =
 	components:
 		0:
 			base: 'serif-oblique-acute'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
@@ -71,6 +73,8 @@ exports.glyphs['X_cap'] =
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
 		1:
 			base: 'serif-oblique-acute'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
@@ -83,6 +87,8 @@ exports.glyphs['X_cap'] =
 			)
 		2:
 			base: 'serif-oblique-acute'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1].point
@@ -91,6 +97,8 @@ exports.glyphs['X_cap'] =
 					scaleX: -1
 		3:
 			base: 'serif-oblique-obtuse'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
@@ -104,6 +112,8 @@ exports.glyphs['X_cap'] =
 			)
 		4:
 			base: 'serif-oblique-acute'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0].point
@@ -117,6 +127,8 @@ exports.glyphs['X_cap'] =
 			)
 		5:
 			base: 'serif-oblique-acute'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
@@ -125,6 +137,8 @@ exports.glyphs['X_cap'] =
 					scaleX: -1
 		6:
 			base: 'serif-oblique-obtuse'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1].point
@@ -137,6 +151,8 @@ exports.glyphs['X_cap'] =
 			)
 		7:
 			base: 'serif-oblique-obtuse'
+			parentParameters:
+				serifHeight: 1 + serifHeight
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[0].point

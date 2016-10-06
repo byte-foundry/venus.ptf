@@ -45,7 +45,7 @@ exports.glyphs['F_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[1].x - (1)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -69,7 +69,7 @@ exports.glyphs['F_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[1].x - (1)
 					y: ( 387 / 750 ) * capHeight * crossbar
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
