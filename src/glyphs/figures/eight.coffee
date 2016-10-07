@@ -27,7 +27,7 @@ exports.glyphs['eight'] =
 					type: 'smooth'
 					tensionOut: 1.15
 					expand: Object({
-						width: ( 145 / 115 ) * thickness
+						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 4 + 'deg'
 						distr: 0.25
 					})
@@ -38,21 +38,21 @@ exports.glyphs['eight'] =
 					type: 'smooth'
 					tensionOut: 1.15
 					expand: Object({
-						width: ( 80 / 115 ) * thickness * contrast
+						width: ( 80 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0.25
 					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 320 - (37),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.15
 					type: 'smooth'
 					expand: Object({
-						width: ( 145 / 115 ) * thickness
+						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 175 + 'deg'
 						distr: 0.25
 					})
@@ -63,7 +63,7 @@ exports.glyphs['eight'] =
 					tensionOut: 1.15
 					type: 'smooth'
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * contrast
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -78,7 +78,7 @@ exports.glyphs['eight'] =
 					tensionOut: 1.1
 					type: 'smooth'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / 115 ) * thickness * opticThickness
 						angle: - 5 + 'deg'
 						distr: 0.25
 					})
@@ -89,21 +89,21 @@ exports.glyphs['eight'] =
 					type: 'smooth'
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 110 / 115 ) * thickness * contrast
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
 				2:
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 200 * width + 260 - (31),
-						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness * opticThickness + 10
 					)
 					y: contours[1].nodes[0].y
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.15
 					type: 'smooth'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / 115 ) * thickness * opticThickness
 						angle: 180 + 5 + 'deg'
 						distr: 0.25
 					})
@@ -114,7 +114,7 @@ exports.glyphs['eight'] =
 					tensionOut: 1.15
 					type: 'smooth'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness * contrast
+						width: ( 80 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

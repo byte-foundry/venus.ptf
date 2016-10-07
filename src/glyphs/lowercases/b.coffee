@@ -57,7 +57,7 @@ exports.glyphs['b'] =
 						distr: 1
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
+					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * (207 / 415)
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -67,7 +67,10 @@ exports.glyphs['b'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 40 + 200 * width + (94)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 280 + 200 * width - (32),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+					)
 					y: contours[1].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'

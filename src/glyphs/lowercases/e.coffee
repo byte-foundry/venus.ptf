@@ -20,6 +20,20 @@ exports.glyphs['e'] =
 		0:
 			x: contours[0].nodes[3].x
 			y: xHeight + diacriticHeight
+		# 1:
+		# 	ogonek: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[0].expandedTo[1], 100 * width + 75 - ( 75 / 115 ) * thickness * contrast, true, 10 )
+		# 2:
+		# 	x: anchors[1].ogonek.x
+		# 	y: anchors[1].ogonek.y
+		# 	normal: anchors[1].ogonek.normal
+		# 	middle: contours[0].nodes[1].expandedTo[0].x
+		# 	# x: contours[0].nodes[0].expandedTo[1].x
+		# 	# y: contours[0].nodes[0].expandedTo[1].y
+		# 	# angle: - anglePenBottom
+		# 	# normal: Math.min(
+		# 	# 	- anglePenBottom + 90 + 6 + correctWidthAperture,
+		# 	# 	90
+		# 	# )
 	contours:
 		0:
 			skeleton: true
@@ -41,14 +55,7 @@ exports.glyphs['e'] =
 						distr: 0.75
 					})
 				1:
-					# x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
-						# Math.max(
-						# 	Math.min(
-						# 		( 50 / 115 * thickness ) / 100, 	# position is defined by thickness
-						# 		0.75 ), 							# max value between 2 points
-						# 	0.45 									# min value
-						# )
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
@@ -70,9 +77,7 @@ exports.glyphs['e'] =
 						distr: 0.75
 					})
 				3:
-					x: contours[0].nodes[1].x
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
-					# x: contours[0].nodes[4].expandedTo[1].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'

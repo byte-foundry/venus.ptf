@@ -26,11 +26,11 @@ exports.glyphs['A_cap'] =
 			nodes:
 				0:
 					x: spacingLeft + (34) + serifWidth / 2
-					y: 0
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 145 / 115 ) * thickness * contrast * opticThickness
+						width: ( 30 / 115 ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -38,11 +38,11 @@ exports.glyphs['A_cap'] =
 					x:
 						contours[0].nodes[0].expandedTo[1].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 -
 						( 142 / 115 ) * thickness / 2
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 137 / 115 ) * thickness * contrast * opticThickness
+						width: ( 22 / 115 ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -55,7 +55,7 @@ exports.glyphs['A_cap'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 141 / 115 ) * thickness * opticThickness
+						width: ( 26 / 115 ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.5
 					})
@@ -65,11 +65,11 @@ exports.glyphs['A_cap'] =
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 505 - (34),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
 					)
-					y: 0
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 30 / 115 ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -82,7 +82,7 @@ exports.glyphs['A_cap'] =
 						on: [ contours[0].nodes[2].expandedTo[1].point, contours[0].nodes[3].expandedTo[1].point ]
 						# on: [ contours[0].nodes[2].point, contours[0].nodes[3].point ]
 						y: ( 260 / 750 ) * capHeight * crossbar
-						})
+					})
 					y: ( 260 / 750 ) * capHeight * crossbar
 					dirOut: 0 + 'deg'
 					typeOut: 'line'

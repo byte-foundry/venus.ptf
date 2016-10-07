@@ -35,7 +35,7 @@ exports.glyphs['Z_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[0].x + 15
+					x: contours[1].nodes[0].x + 15 + Math.max( 0, serifHeight * serifArc )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -59,7 +59,7 @@ exports.glyphs['Z_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].x
+					x: contours[0].nodes[0].x - Math.max( 0, serifHeight * serifArc )
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -103,7 +103,7 @@ exports.glyphs['Z_cap'] =
 					x: contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve
 					y: contours[1].nodes[1].expandedTo[0].y
 				2:
-					anchorLine: contours[1].nodes[1].expandedTo[0].x
+					anchorLine: contours[1].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					left: false
 					baseLeft: contours[1].nodes[1].expandedTo[0].point
 			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
@@ -118,7 +118,7 @@ exports.glyphs['Z_cap'] =
 					x: contours[0].nodes[1].expandedTo[0].x + serifHeight + serifCurve
 					y: contours[0].nodes[1].expandedTo[1].y
 				2:
-					anchorLine: contours[0].nodes[1].expandedTo[0].x
+					anchorLine: contours[0].nodes[1].expandedTo[0].x - Math.max( 0, serifHeight * serifArc )
 					right: false
 					baseRight: contours[0].nodes[1].expandedTo[0].point
 					directionX: -1

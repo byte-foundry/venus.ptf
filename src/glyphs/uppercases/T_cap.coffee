@@ -25,7 +25,7 @@ exports.glyphs['T_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + Math.max( 0, serifHeight * serifArc )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -35,7 +35,7 @@ exports.glyphs['T_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].x + 375 + 200 * width
+					x: contours[0].nodes[0].x + 375 + 200 * width - 2 * Math.max( 0, serifHeight * serifArc )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -60,7 +60,7 @@ exports.glyphs['T_cap'] =
 					})
 				0:
 					x: contours[1].nodes[1].x
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -74,10 +74,10 @@ exports.glyphs['T_cap'] =
 			parentAnchors:
 				0:
 					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].y
+					y: contours[1].nodes[0].y + serifHeight + serifCurve
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].y
+					y: contours[1].nodes[0].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:
@@ -90,7 +90,7 @@ exports.glyphs['T_cap'] =
 					x: contours[0].nodes[1].expandedTo[1].x - serifHeight - serifCurve
 					y: contours[0].nodes[1].expandedTo[1].y
 				2:
-					anchorLine: contours[0].nodes[1].expandedTo[0].x
+					anchorLine: contours[0].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					right: false
 					# leftWidth: 60
 					# leftCurve: 1.2
@@ -110,7 +110,7 @@ exports.glyphs['T_cap'] =
 					x: contours[0].nodes[0].expandedTo[1].x + serifHeight + serifCurve
 					y: contours[0].nodes[0].expandedTo[0].y
 				2:
-					anchorLine: contours[0].nodes[0].expandedTo[0].x
+					anchorLine: contours[0].nodes[0].expandedTo[0].x - Math.max( 0, serifHeight * serifArc )
 					directionX: -1
 					right: false
 					# leftWidth: 60

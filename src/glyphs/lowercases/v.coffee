@@ -22,7 +22,7 @@ exports.glyphs['v'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -60,7 +60,7 @@ exports.glyphs['v'] =
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 270 - (32),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 130 / 115 ) * thickness * contrast + 10
 					)
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

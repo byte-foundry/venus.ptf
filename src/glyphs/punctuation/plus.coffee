@@ -46,7 +46,7 @@ exports.glyphs['plus'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) / 2
-					y: xHeight
+					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -56,7 +56,7 @@ exports.glyphs['plus'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: 0
+					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

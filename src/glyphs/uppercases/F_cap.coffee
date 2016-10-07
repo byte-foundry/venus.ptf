@@ -22,7 +22,7 @@ exports.glyphs['F_cap'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +32,7 @@ exports.glyphs['F_cap'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -45,7 +45,7 @@ exports.glyphs['F_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[1].x - (1)
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -55,7 +55,7 @@ exports.glyphs['F_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 110 + 250 * width
+					x: contours[0].nodes[0].expandedTo[1].x + 160 + 200 * width - Math.max( 0, serifHeight * serifArc )
 					y: contours[1].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -69,7 +69,7 @@ exports.glyphs['F_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[1].x - (1)
 					y: ( 387 / 750 ) * capHeight * crossbar
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -79,7 +79,7 @@ exports.glyphs['F_cap'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[1].nodes[1].x - 30 * width
+					x: contours[0].nodes[0].expandedTo[1].x + 130 + 200 * width - Math.max( 0, serifHeight * serifArc )
 					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -94,10 +94,10 @@ exports.glyphs['F_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:
@@ -105,10 +105,10 @@ exports.glyphs['F_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y - serifHeight - serifCurve
 				2:
 					anchorLine: capHeight
 					directionY: -1
@@ -123,7 +123,7 @@ exports.glyphs['F_cap'] =
 					x: Math.max(contours[2].nodes[0].expandedTo[1].x, contours[2].nodes[1].expandedTo[1].x - serifHeight - serifCurve )
 					y: contours[2].nodes[0].expandedTo[1].y
 				2:
-					anchorLine: contours[2].nodes[1].expandedTo[0].x
+					anchorLine: contours[2].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					# leftWidth: 75
 					# rightWidth: 75
 			# parentParameters:
@@ -140,7 +140,7 @@ exports.glyphs['F_cap'] =
 					x: Math.max(contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve )
 					y: contours[1].nodes[1].expandedTo[0].y
 				2:
-					anchorLine: contours[1].nodes[1].expandedTo[0].x
+					anchorLine: contours[1].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					right: false
 					# leftWidth: 60
 					# leftCurve: 1.2

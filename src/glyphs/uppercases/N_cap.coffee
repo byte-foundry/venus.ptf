@@ -26,7 +26,7 @@ exports.glyphs['N_cap'] =
 			nodes:
 				1:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -36,7 +36,7 @@ exports.glyphs['N_cap'] =
 					})
 				0:
 					x: contours[0].nodes[1].x
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -50,7 +50,7 @@ exports.glyphs['N_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -73,6 +73,16 @@ exports.glyphs['N_cap'] =
 			skeleton: true
 			closed: false
 			nodes:
+				0:
+					x: contours[2].nodes[1].x
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
 				1:
 					x: contours[1].nodes[1].expandedTo[1].x + ( 5 / 115 ) * thickness
 					y: 0
@@ -83,26 +93,16 @@ exports.glyphs['N_cap'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
-				0:
-					x: contours[2].nodes[1].x
-					y: capHeight - serifHeight - serifCurve
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
-						distr: 0.75
-					})
 	components:
 		0:
 			base: 'serif'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y + serifHeight + serifCurve
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y + serifHeight + serifCurve
 				2:
 					anchorLine: 0
 		1:
@@ -110,12 +110,13 @@ exports.glyphs['N_cap'] =
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y - serifHeight - serifCurve
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
+					y: contours[0].nodes[0].y - serifHeight - serifCurve
 				2:
 					anchorLine: capHeight
+					baseRight: contours[0].nodes[0].expandedTo[1].point
 					directionY: -1
 					right: false
 		2:
@@ -123,10 +124,10 @@ exports.glyphs['N_cap'] =
 			parentAnchors:
 				0:
 					x: contours[2].nodes[0].expandedTo[1].x
-					y: contours[2].nodes[0].y
+					y: contours[2].nodes[0].y - serifHeight - serifCurve
 				1:
 					x: contours[2].nodes[0].expandedTo[0].x
-					y: contours[2].nodes[0].y
+					y: contours[2].nodes[0].y - serifHeight - serifCurve
 				2:
 					anchorLine: capHeight
 					directionY: -1

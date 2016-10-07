@@ -54,7 +54,7 @@ exports.glyphs['f'] =
 						distr: 0
 					})
 				3:
-					x: contours[0].nodes[0].expandedTo[1].x + 110 * width + serifHeight + serifCurve
+					x: contours[0].nodes[0].expandedTo[1].x + 110 * width - Math.max( 0, serifHeight * serifArc ) + serifHeight + serifCurve
 					y: ascenderHeight
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
@@ -109,7 +109,7 @@ exports.glyphs['f'] =
 					x: contours[0].nodes[3].expandedTo[0].x - serifHeight - serifCurve
 					y: contours[0].nodes[3].expandedTo[1].y
 				2:
-					anchorLine: contours[0].nodes[3].expandedTo[0].x
+					anchorLine: contours[0].nodes[3].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
 					right: false
 					baseRight: contours[0].nodes[3].expandedTo[0].point
 					directionY: -1
