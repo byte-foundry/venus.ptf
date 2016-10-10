@@ -1,13 +1,12 @@
 exports.glyphs['serif-oblique-obtuse'] =
 	parameters:
-		serifWidth:
-			if serifHeight < 0.05
-			then serifWidth = 0.05
-			else serifWidth = serifWidth
 		serifHeight:
 			if serifWidth < 0.05
 			then serifHeight = 0
-			else serifHeight = serifHeight
+			else
+				if serifWidth >= 0.05
+				then Math.max(serifHeight, 3);
+				else serifHeight = serifHeight
 		serifCurve:
 			if serifWidth < 0.05
 			then serifCurve = 0
@@ -27,6 +26,7 @@ exports.glyphs['serif-oblique-obtuse'] =
 	]
 	contours:
 		0:
+			exportReversed: parentAnchors[0].reversed == true
 			closed: true
 			nodes:
 				0:
@@ -68,8 +68,8 @@ exports.glyphs['serif-oblique-obtuse'] =
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
 				3:
-					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / serifWidth * anchors[3].scaleX ) * ( serifMedian - 1 ) ) - serifTerminal * anchors[3].scaleX * serifHeight
-					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / serifWidth * anchors[3].scaleX ) * ( serifMedian - 1 ) )
+					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) * anchors[3].scaleX ) * ( serifMedian - 1 ) ) - serifTerminal * anchors[3].scaleX * serifHeight
+					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) * anchors[3].scaleX ) * ( serifMedian - 1 ) )
 					dirOut: Utils.lineAngle( contours[0].nodes[2].point ,contours[0].nodes[4].point )
 					type: 'smooth'
 					tensionOut: serifTerminalCurve

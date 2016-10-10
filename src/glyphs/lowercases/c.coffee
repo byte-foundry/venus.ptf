@@ -91,3 +91,14 @@ exports.glyphs['c'] =
 						angle: anglePenTop + 'deg'
 						distr: 0.75 # * contrastExtremity
 					})
+	components:
+		0:
+			base: 'serif-curve-inside-auto'
+			id: 'top'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[4].expandedTo[1]
+					opposite: contours[0].nodes[4].expandedTo[0].point
+					curveEnd: contours[0].nodes[3].expandedTo[1]
+					rotationAngle: -18
+					rotationCenter: contours[0].nodes[4].expandedTo[1].point
