@@ -98,7 +98,18 @@ exports.glyphs['c'] =
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[1]
-					opposite: contours[0].nodes[4].expandedTo[0].point
+					opposite: contours[0].nodes[4].expandedTo[1].point
 					curveEnd: contours[0].nodes[3].expandedTo[1]
-					rotationAngle: -18
+					rotationAngle: -15
 					rotationCenter: contours[0].nodes[4].expandedTo[1].point
+		# 1:
+		# 	base: 'serif-curve-inside-auto'
+		# 	id: 'topbottom'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[4].expandedTo[0]
+		# 			opposite: contours[0].nodes[4].expandedTo[1].point
+		# 			curveEnd: contours[0].nodes[3].expandedTo[0]
+		# 			rotationAngle: -15
+		# 			down: true
+		# 			rotationCenter: contours[0].nodes[4].expandedTo[1].point

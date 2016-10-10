@@ -55,6 +55,7 @@ exports.glyphs['j'] =
 				3:
 					x: spacingLeft + 150 * width - 150
 					y: xHeight - serifHeight - serifCurve
+					y: xHeight - Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -65,6 +66,7 @@ exports.glyphs['j'] =
 	components:
 		0:
 			base: 'title'
+			id: 'title'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[3].expandedTo[0].x + thickness / 2
@@ -74,17 +76,16 @@ exports.glyphs['j'] =
 					# )
 					y: xHeight + diacriticHeight
 		1:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[3].expandedTo[1].x
-					y: contours[0].nodes[3].y
-				1:
-					x: contours[0].nodes[3].expandedTo[0].x
-					y: contours[0].nodes[3].y
-				2:
-					anchorLine: xHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[0].nodes[3].expandedTo[1].x, contours[0].nodes[3].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+					base: contours[0].nodes[3].expandedTo[0].point
+					opposite: contours[0].nodes[3].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[3].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				# [ 'skewY', 15 * spurHeight + 'deg' ],
+				# [ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)

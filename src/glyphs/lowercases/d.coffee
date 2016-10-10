@@ -1,3 +1,4 @@
+# TODO: spurHeight
 exports.glyphs['d'] =
 	unicode: 'd'
 	glyphName: 'd'
@@ -77,7 +78,7 @@ exports.glyphs['d'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: 0 + serifHeight + serifCurve
+					y:Math.max(0, serifHeight * serifArc )# + ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -87,7 +88,7 @@ exports.glyphs['d'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: ascenderHeight - serifHeight - serifCurve
+					y: ascenderHeight # - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -95,33 +96,52 @@ exports.glyphs['d'] =
 						angle: 0 + 'deg'
 						distr: 0
 					})
+		# 2:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[1].nodes[1].expandedTo[1].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 		1:
+		# 			x: contours[1].nodes[1].expandedTo[1].x
+		# 			y: contours[1].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 		2:
+		# 			x: contours[1].nodes[1].expandedTo[0].x
+		# 			y: contours[1].nodes[1].expandedTo[0].y
+		# 			typeOut: 'line'
+		# 		3:
+		# 			x: contours[1].nodes[1].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
 	components:
 		0:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].y
-				1:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].y
-				2:
-					anchorLine: 0
-					left: false
-			transformOrigin: Array( contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[0].expandedTo[0].y )
-			transforms: Array( [ 'skewY', spurHeight * (10) + 'deg' ] )
+					base: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				# [ 'skewY', - 15 * spurHeight + 'deg' ]
+				# [ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)
 		1:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].y
-				1:
-					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].y
-				2:
-					anchorLine: ascenderHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[1].nodes[1].expandedTo[1].x, contours[1].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+					base: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[1].nodes[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				# [ 'skewY', 15 * spurHeight + 'deg' ],
+				# [ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)

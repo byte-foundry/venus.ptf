@@ -1,3 +1,4 @@
+# TODO: spurHeight
 exports.glyphs['b'] =
 	unicode: 'b'
 	glyphName: 'b'
@@ -22,7 +23,7 @@ exports.glyphs['b'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0
+					y: Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +33,7 @@ exports.glyphs['b'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
+					y: ascenderHeight # - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -89,26 +90,26 @@ exports.glyphs['b'] =
 						angle: 112 + 'deg'
 						distr: 0
 					})
-		2:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: ascenderHeight
-					typeOut: 'line'
-				1:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
-				2:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].expandedTo[0].y
-					typeOut: 'line'
-				3:
-					x: contours[0].nodes[1].x
-					y: ascenderHeight
-					typeOut: 'line'
+		# 2:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 		1:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 		2:
+		# 			x: contours[0].nodes[1].expandedTo[0].x
+		# 			y: contours[0].nodes[1].expandedTo[0].y
+		# 			typeOut: 'line'
+		# 		3:
+		# 			x: contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
 	components:
 		0:
 			base: 'serif-vertical'
@@ -127,7 +128,7 @@ exports.glyphs['b'] =
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point
 			transforms: Array(
-				[ 'skewY', 15 * spurHeight + 'deg' ],
 				[ 'scaleY', -1 ],
-				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+				# [ 'skewY', 15 * spurHeight + 'deg' ],
+				# [ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
 			)

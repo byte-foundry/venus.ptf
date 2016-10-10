@@ -1,3 +1,4 @@
+# TODO: vertical serif?
 exports.glyphs['r'] =
 	unicode: 'r'
 	glyphName: 'r'
@@ -26,7 +27,7 @@ exports.glyphs['r'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -36,7 +37,7 @@ exports.glyphs['r'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - serifHeight - serifCurve
+					y: xHeight - Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -52,7 +53,7 @@ exports.glyphs['r'] =
 					expandedTo:
 						[
 							{
-								x: contours[1].nodes[1].x + 10
+								x: contours[1].nodes[1].x + 10 # + serifHeight + serifCurve
 								y: contours[1].nodes[1].expandedTo[0].y
 							}
 							{
@@ -85,45 +86,43 @@ exports.glyphs['r'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'bottomleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
-				2:
-					anchorLine: 0
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
 		1:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
-				1:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
-				2:
-					anchorLine: xHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
-		#
-		# The vertical serif is not yet enough convincing to be implemented
-		#
-		# 2:
-		# 	base: 'serif-v'
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: 'serif-vertical'
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					# spur: 20
+					reversed: true
+			transformOrigin: contours[0].nodes[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				# [ 'skewY', 15 * serifRotate + 'deg' ],
+				# [ 'translateY', - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)
+		# 3:
+		# 	base: 'serif-horizontal'
+		# 	id: 'topright'
 		# 	parentAnchors:
 		# 		0:
-		# 			x: contours[1].nodes[0].expandedTo[1].x - serifHeight - serifCurve
-		# 			y: contours[1].nodes[0].expandedTo[0].y
-		# 		1:
-		# 			x: contours[1].nodes[0].expandedTo[0].x - serifHeight - serifCurve
-		# 			y: contours[1].nodes[0].expandedTo[1].y
-		# 		2:
-		# 			anchorLine: contours[1].nodes[0].expandedTo[0].x
-		# 			right: false
-		# 			baseRight: contours[1].nodes[0].expandedTo[0].point
-		# 			directionY: -1
+		# 			base: contours[1].nodes[0].expandedTo[0].point
+		# 			opposite: contours[1].nodes[0].expandedTo[1].point
