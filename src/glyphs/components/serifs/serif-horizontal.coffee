@@ -36,7 +36,7 @@ exports.glyphs['serif-horizontal'] =
 				1:
 					y: anchors[0].y + Math.max(
 						( contours[0].nodes[2].y - anchors[0].y ) * 0.85,
-						- Math.abs( contours[0].nodes[0].x - ( anchors[0].x + serifHeight ) )
+						- Math.abs( contours[0].nodes[0].x - ( anchors[0].x - serifHeight ) )
 					)
 					x: anchors[0].x - ( serifHeight - ( ( contours[0].nodes[1].y - anchors[0].y ) / (serifWidth || 0.01) ) * (serifMedian - 1) * serifHeight )
 					dirIn: Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[2].point )

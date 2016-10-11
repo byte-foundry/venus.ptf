@@ -94,33 +94,26 @@ exports.glyphs['Z_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-v'
+			base: 'serif-horizontal'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[1].expandedTo[1].x - serifHeight - serifCurve
-					y: contours[1].nodes[1].expandedTo[1].y
-				1:
-					x: contours[1].nodes[1].expandedTo[0].x - serifHeight - serifCurve
-					y: contours[1].nodes[1].expandedTo[0].y
-				2:
-					anchorLine: contours[1].nodes[1].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
-					left: false
-					baseLeft: contours[1].nodes[1].expandedTo[0].point
-			transformOrigin: Array( contours[1].nodes[1].expandedTo[0].x, contours[1].nodes[1].expandedTo[0].y )
-			transforms: Array( [ 'skewX', serifRotate * 5 + 'deg' ] )
+					base: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
 		1:
-			base: 'serif-v'
+			base: 'serif-horizontal'
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + serifHeight + serifCurve
-					y: contours[0].nodes[1].expandedTo[0].y
-				1:
-					x: contours[0].nodes[1].expandedTo[0].x + serifHeight + serifCurve
-					y: contours[0].nodes[1].expandedTo[1].y
-				2:
-					anchorLine: contours[0].nodes[1].expandedTo[0].x - Math.max( 0, serifHeight * serifArc )
-					right: false
-					baseRight: contours[0].nodes[1].expandedTo[0].point
-					directionX: -1
-			transformOrigin: Array( contours[0].nodes[1].expandedTo[0].x, contours[0].nodes[1].expandedTo[0].y )
-			transforms: Array( [ 'skewX', serifRotate * 10 + 'deg' ] )
+					base: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)

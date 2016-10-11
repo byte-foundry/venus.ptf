@@ -95,39 +95,57 @@ exports.glyphs['N_cap'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'bottomleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y + serifHeight + serifCurve
-				1:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y + serifHeight + serifCurve
-				2:
-					anchorLine: 0
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
 		1:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y - serifHeight - serifCurve
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y - serifHeight - serifCurve
-				2:
-					anchorLine: capHeight
-					baseRight: contours[0].nodes[0].expandedTo[1].point
-					directionY: -1
-					right: false
+					base: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
 		2:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[2].nodes[0].expandedTo[1].x
-					y: contours[2].nodes[0].y - serifHeight - serifCurve
-				1:
-					x: contours[2].nodes[0].expandedTo[0].x
-					y: contours[2].nodes[0].y - serifHeight - serifCurve
-				2:
-					anchorLine: capHeight
-					directionY: -1
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: 'serif-vertical'
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[0].point
+					opposite: contours[2].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[2].nodes[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		4:
+			base: 'serif-vertical'
+			id: 'topright2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[1].point
+					opposite: contours[2].nodes[0].expandedTo[0].point
+			transformOrigin: contours[2].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

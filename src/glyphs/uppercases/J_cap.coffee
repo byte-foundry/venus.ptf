@@ -75,7 +75,7 @@ exports.glyphs['J_cap'] =
 					})
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x + 200 * width + 105 - (34)
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -85,15 +85,26 @@ exports.glyphs['J_cap'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[4].expandedTo[0].x
-					y: contours[0].nodes[4].y
-				1:
-					x: contours[0].nodes[4].expandedTo[1].x
-					y: contours[0].nodes[4].y
-				2:
-					anchorLine: capHeight
-					directionY: -1
-					right: false
+					base: contours[0].nodes[4].expandedTo[1].point
+					opposite: contours[0].nodes[4].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[4].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: 'serif-vertical'
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[4].expandedTo[0].point
+					opposite: contours[0].nodes[4].expandedTo[1].point
+			transformOrigin: contours[0].nodes[4].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

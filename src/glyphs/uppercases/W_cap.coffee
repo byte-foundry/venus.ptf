@@ -118,69 +118,58 @@ exports.glyphs['W_cap'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: 'serif-oblique-obtuse'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: Utils.onLine({
-						y: capHeight - serifHeight - serifCurve
-						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]
-					})
-					y: capHeight - serifHeight - serifCurve
-				1:
-					x: Utils.onLine({
-						y: capHeight - serifHeight - serifCurve
-						on: [ contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ]
-					})
-					y: capHeight - serifHeight - serifCurve
-				2:
-					anchorLine: capHeight
-					# leftWidth: 0.9
-					# rightWidth: 0.9
-					angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point )
-					directionY: -1
-					baseLeft: contours[0].nodes[0].expandedTo[0].point
-					baseRight: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
 		1:
-			base: 'serif'
+			base: 'serif-oblique-acute'
+			id: 'topright'
 			parentAnchors:
 				0:
-					x: Utils.onLine({
-						y: capHeight - serifHeight - serifCurve
-						on: [ contours[3].nodes[1].expandedTo[0].point, contours[3].nodes[0].expandedTo[0].point ]
-					})
-					y: capHeight - serifHeight - serifCurve
-				1:
-					x: Utils.onLine({
-						y: capHeight - serifHeight - serifCurve
-						on: [ contours[3].nodes[1].expandedTo[1].point, contours[3].nodes[0].expandedTo[1].point ]
-					})
-					y: capHeight - serifHeight - serifCurve
-				2:
-					anchorLine: capHeight
-					# leftWidth: 0.9
-					# rightWidth: 0.9
-					angle: Utils.lineAngle( contours[3].nodes[1].expandedTo[0].point, contours[3].nodes[0].expandedTo[0].point )
-					directionY: -1
-					baseLeft: contours[3].nodes[1].expandedTo[1].point
-					baseRight: contours[3].nodes[1].expandedTo[0].point
-		# 2:
-		# 	base: 'serif'
-		# 	parentAnchors:
-		# 		0:
-		# 			x: Utils.onLine({
-		# 				y: capHeight - serifHeight - serifCurve
-		# 				on: [ contours[2].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[1].point ]
-		# 			})
-		# 			y: capHeight - serifHeight - serifCurve
-		# 		1:
-		# 			x: Utils.onLine({
-		# 				y: capHeight - serifHeight - serifCurve
-		# 				on: [ contours[2].nodes[1].expandedTo[0].point, contours[2].nodes[0].expandedTo[0].point ]
-		# 			})
-		# 			y: capHeight - serifHeight - serifCurve
-		# 		2:
-		# 			anchorLine: capHeight
-		# 			# leftWidth: 0.9
-		# 			# rightWidth: 0.9
-		# 			angle: Utils.lineAngle( contours[2].nodes[1].expandedTo[0].point, contours[2].nodes[0].expandedTo[0].point )
-		# 			directionY: -1
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: 'serif-oblique-obtuse'
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[3].nodes[1].expandedTo[0].point
+					opposite: contours[3].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[3].nodes[0].expandedTo[0].point
+			transformOrigin: contours[3].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: 'serif-oblique-acute'
+			id: 'topright2'
+			parentAnchors:
+				0:
+					base: contours[3].nodes[1].expandedTo[1].point
+					opposite: contours[3].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[3].nodes[0].expandedTo[1].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[3].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

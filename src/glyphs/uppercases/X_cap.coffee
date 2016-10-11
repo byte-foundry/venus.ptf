@@ -63,18 +63,23 @@ exports.glyphs['X_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-oblique-acute'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			base: 'serif-oblique-obtuse'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
 		1:
 			base: 'serif-oblique-acute'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
@@ -87,58 +92,58 @@ exports.glyphs['X_cap'] =
 			)
 		2:
 			base: 'serif-oblique-acute'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			id: 'bottomleft2'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+		3:
+			base: 'serif-oblique-obtuse'
+			id: 'bottomright2'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1].point
 					opposite: contours[0].nodes[1].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[1].point
 					scaleX: -1
-		3:
-			base: 'serif-oblique-obtuse'
-			parentParameters:
-				serifHeight: 1 + serifHeight
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
-					scaleX: -1
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
+					reversed: true
 		4:
-			base: 'serif-oblique-acute'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			base: 'serif-oblique-obtuse'
+			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[0].point
-					opposite: contours[1].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[1].nodes[1].expandedTo[0].point
-					scaleX: -1
-			transformOrigin: contours[1].nodes[0].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
+					base: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
 		5:
 			base: 'serif-oblique-acute'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			id: 'bottomleft'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
 					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
 					scaleX: -1
+					reversed: true
 		6:
+			base: 'serif-oblique-acute'
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		7:
 			base: 'serif-oblique-obtuse'
-			parentParameters:
-				serifHeight: 1 + serifHeight
+			id: 'topright2'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1].point
@@ -149,12 +154,3 @@ exports.glyphs['X_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-		7:
-			base: 'serif-oblique-obtuse'
-			parentParameters:
-				serifHeight: 1 + serifHeight
-			parentAnchors:
-				0:
-					base: contours[1].nodes[1].expandedTo[0].point
-					opposite: contours[1].nodes[1].expandedTo[1].point
-					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
