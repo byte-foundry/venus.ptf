@@ -23,8 +23,8 @@ exports.glyphs['i_alt_grave'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (57)
-					y: 0
+					x: spacingLeft
+					y: Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -34,7 +34,7 @@ exports.glyphs['i_alt_grave'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - serifHeight - serifCurve
+					y: xHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -42,6 +42,26 @@ exports.glyphs['i_alt_grave'] =
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
+		1:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: xHeight
+					typeOut: 'line'
+				1:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
+				2:
+					x: contours[0].nodes[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
+				3:
+					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+					y: xHeight
+					typeOut: 'line'
 	components:
 		0:
 			base: 'grave'
@@ -50,17 +70,16 @@ exports.glyphs['i_alt_grave'] =
 					x: contours[0].nodes[0].x
 					y: xHeight + diacriticHeight
 		1:
-			base: 'serif'
+			base: 'serif-vertical'
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
-				1:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
-				2:
-					anchorLine: xHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[1].point
+			transforms: Array(
+				[ 'skewY', 15 * spurHeight + 'deg' ],
+				[ 'scaleY', -1 ],
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)

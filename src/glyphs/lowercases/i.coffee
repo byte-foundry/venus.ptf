@@ -33,7 +33,7 @@ exports.glyphs['i'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
+					y: xHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -95,11 +95,10 @@ exports.glyphs['i'] =
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
-					# spur: 20
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point
 			transforms: Array(
-				[ 'skewY', 15 * serifRotate + 'deg' ],
+				[ 'skewY', 15 * spurHeight + 'deg' ],
 				[ 'scaleY', -1 ],
-				[ 'translateY', - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
 			)

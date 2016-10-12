@@ -119,6 +119,6 @@ exports.glyphs['q'] =
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
-				# [ 'skewY', 15 * serifRotate + 'deg' ],
-				# [ 'translateY', - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+				# [ 'skewY', 15 * spurHeight + 'deg' ],
+				# [ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
 			)

@@ -54,7 +54,7 @@ exports.glyphs['F_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 160 + 200 * width - Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[0].expandedTo[1].x + 160 + 200 * width - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: capHeight
 					dirIn: 180 + 'deg'
 					expand: Object({
@@ -125,6 +125,11 @@ exports.glyphs['F_cap'] =
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
 		4:
 			base: 'serif-horizontal'
 			id: 'middletop'

@@ -1,4 +1,3 @@
-# TODO: serifRotate
 exports.glyphs['k'] =
 	unicode: 'k'
 	glyphName: 'k'
@@ -33,7 +32,7 @@ exports.glyphs['k'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight - Math.max( 0, serifHeight * serifArc )
+					y: ascenderHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -99,6 +98,26 @@ exports.glyphs['k'] =
 						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point )
 						distr: 0.75
 					})
+		3:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: ascenderHeight
+					typeOut: 'line'
+				1:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
+				2:
+					x: contours[0].nodes[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
+				3:
+					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+					y: ascenderHeight
+					typeOut: 'line'
 	components:
 		0:
 			base: 'serif-vertical'
@@ -126,13 +145,12 @@ exports.glyphs['k'] =
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
-					# spur: 20
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				# [ 'skewY', 15 * serifRotate + 'deg' ],
-				# [ 'translateY', - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+				[ 'skewY', - 15 * spurHeight + 'deg' ],
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
 			)
 		3:
 			base: 'serif-oblique-acute'

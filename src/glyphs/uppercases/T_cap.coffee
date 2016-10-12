@@ -25,7 +25,7 @@ exports.glyphs['T_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + Math.max( 0, serifHeight * serifArc )
+					x: spacingLeft + Math.max( 0, serifHeight * serifArc ) + ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -35,7 +35,7 @@ exports.glyphs['T_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].x + 375 + 200 * width - 2 * Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[0].x + 375 + 200 * width - 2 * Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -98,7 +98,9 @@ exports.glyphs['T_cap'] =
 					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
-				[ 'scaleX', -1 ]
+				[ 'scaleX', -1 ],
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		3:
 			base: 'serif-horizontal'
@@ -107,3 +109,24 @@ exports.glyphs['T_cap'] =
 				0:
 					base: contours[0].nodes[1].expandedTo[1].point
 					opposite: contours[0].nodes[1].expandedTo[0].point
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
+		# TODO: both sides of top serifs
+		# 4:
+		# 	base: 'serif-horizontal'
+		# 	id: 'topleft2'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[0].expandedTo[0].point
+		# 			opposite: contours[0].nodes[0].expandedTo[1].point
+		# 			# reversed: true
+		# 	transformOrigin: contours[0].nodes[0].expandedTo[0].point
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ],
+		# 		[ 'skewX', 15 * serifRotate + 'deg' ],
+		# 		[ 'translateX', - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+		# 	)

@@ -58,7 +58,7 @@ exports.glyphs['E_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 160 + 200 * width - Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[0].expandedTo[1].x + 160 + 200 * width - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: capHeight
 					dirIn: 180 + 'deg'
 					expand: Object({
@@ -104,7 +104,7 @@ exports.glyphs['E_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 175 + 200 * width - Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[0].expandedTo[1].x + 175 + 200 * width - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: 0
 					dirIn: 180 + 'deg'
 					expand: Object({
@@ -139,6 +139,11 @@ exports.glyphs['E_cap'] =
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
 		3:
 			base: 'serif-horizontal'
 			id: 'middletop'
@@ -169,5 +174,7 @@ exports.glyphs['E_cap'] =
 					reversed: true
 			transformOrigin: contours[3].nodes[1].expandedTo[1].point
 			transforms: Array(
-				[ 'scaleY', -1 ]
+				[ 'scaleY', -1 ],
+				[ 'skewX', - 10 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
