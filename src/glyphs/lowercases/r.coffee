@@ -50,17 +50,15 @@ exports.glyphs['r'] =
 			closed: false
 			nodes:
 				0:
-					expandedTo:
-						[
-							{
-								x: contours[1].nodes[1].x + 10 # + serifHeight + serifCurve
-								y: contours[1].nodes[1].expandedTo[0].y
-							}
-							{
-								x: contours[1].nodes[0].expandedTo[0].x
-								y: contours[1].nodes[1].expandedTo[1].y
-							}
-						]
+					x: contours[1].nodes[1].x + 10 * width
+					y: contours[1].nodes[1].expandedTo[0].y
+					typeOut: 'line'
+					expand: Object({
+						# width: Math.cos( contours[1].nodes[1].expand.angle ) * contours[1].nodes[1].expand.width
+						width: Math.cos( (5) / 180 * Math.PI ) * contours[1].nodes[1].expand.width
+						angle: 180 - 90 + 'deg'
+						distr: 0
+					})
 				1:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[1].x + 155 * width,
@@ -72,7 +70,7 @@ exports.glyphs['r'] =
 					tensionOut: 1.2
 					expand: Object({
 						width: ( 125 / 115 ) * thickness * contrast
-						angle: 180 - 95 + 'deg'
+						angle: ( 180 - 95 ) / 180 * Math.PI
 						distr: 1
 					})
 				2:

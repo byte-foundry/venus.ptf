@@ -96,19 +96,13 @@ exports.glyphs['B_cap'] =
 						distr: 0.25
 					})
 				4:
-					expandedTo:
-						[
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[0].y
-								typeOut: 'line'
-							}
-							{
-								x: contours[0].nodes[1].expandedTo[1].x
-								y: contours[1].nodes[3].expandedTo[1].y
-								typeIn: 'line'
-							}
-						]
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[3].expandedTo[0].y
+					expand: Object({
+						width: Math.sin( 42 / 180 * Math.PI ) * ( 81 / 115 ) * thickness * opticThickness * contrast
+						angle: 90 + 'deg'
+						distr: 0
+					})
 		2:
 			skeleton: true
 			closed: false

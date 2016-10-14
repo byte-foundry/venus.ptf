@@ -60,7 +60,7 @@ exports.glyphs['Y_cap'] =
 					})
 				1:
 					x: contours[2].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[0].y
+					y: contours[2].nodes[0].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[2].nodes[0].expandedTo[1].y ) * contrast
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

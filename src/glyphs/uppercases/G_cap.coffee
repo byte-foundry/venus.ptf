@@ -49,6 +49,15 @@ exports.glyphs['G_cap'] =
 								typeIn: 'line'
 							}
 						]
+				# 1:
+				# 	x: contours[0].nodes[2].expandedTo[1].x
+				# 	y: contours[0].nodes[0].expandedTo[1].y
+				# 	typeOut: 'line'
+				# 	expand: Object({
+				# 		width: ( 70 / 115 ) * thickness
+				# 		angle: 40 + 'deg'
+				# 		distr: 0.25
+				# 	})
 				2:
 					x: Math.max(
 						contours[0].nodes[4].expandedTo[1].x + 480 + 200 * width - (36),
