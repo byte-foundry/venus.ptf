@@ -105,13 +105,17 @@ exports.glyphs['d'] =
 					typeOut: 'line'
 				1:
 					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].expandedTo[1].y
+					y: contours[1].nodes[1].expandedTo[1].y - 10
 					typeOut: 'line'
 				2:
 					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].expandedTo[0].y
+					y: contours[1].nodes[1].expandedTo[0].y - 10
 					typeOut: 'line'
 				3:
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].expandedTo[0].y
+					typeOut: 'line'
+				4:
 					x: ( contours[1].nodes[1].expandedTo[0].x + contours[1].nodes[1].expandedTo[1].x ) / 2
 					y: ascenderHeight
 					typeOut: 'line'
@@ -125,13 +129,17 @@ exports.glyphs['d'] =
 					typeOut: 'line'
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].expandedTo[0].y
+					y: contours[1].nodes[0].expandedTo[0].y + 10
 					typeOut: 'line'
 				2:
 					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].expandedTo[1].y
+					y: contours[1].nodes[0].expandedTo[1].y + 10
 					typeOut: 'line'
 				3:
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].expandedTo[1].y
+					typeOut: 'line'
+				4:
 					x: ( contours[1].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x ) / 2
 					y: 0
 					typeOut: 'line'
