@@ -122,19 +122,36 @@ exports.glyphs['s'] =
 			id: 'top'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[6].expandedTo[1]
-					opposite: contours[0].nodes[6].expandedTo[1].point
+					baseWidth: contours[0].nodes[6].expandedTo[1]
+					baseHeight: contours[0].nodes[6].expandedTo[1].point
+					opposite: contours[0].nodes[6].expandedTo[0].point
 					curveEnd: contours[0].nodes[5].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[6].expandedTo[1].point
+					inverseMidStump: true
 		1:
 			base: 'serif-curve-inside-auto'
 			id: 'bottom'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1]
-					opposite: contours[0].nodes[0].expandedTo[0].point
+					baseWidth: contours[0].nodes[0].expandedTo[1]
+					baseHeight: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
 					curveEnd: contours[0].nodes[1].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[0].expandedTo[0].point
+					left: true
+					inverseOrder: true
+		2:
+			base: 'serif-curve-inside-auto'
+			id: 'bottombottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[0].expandedTo[0]
+					baseHeight: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					curveEnd: contours[0].nodes[1].expandedTo[0]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[0].expandedTo[0].point
+					down: true
 					left: true

@@ -119,8 +119,9 @@ exports.glyphs['S_cap'] =
 			id: 'top'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[6].expandedTo[1]
-					opposite: contours[0].nodes[6].expandedTo[1].point
+					baseWidth: contours[0].nodes[6].expandedTo[1]
+					baseHeight: contours[0].nodes[6].expandedTo[1].point
+					opposite: contours[0].nodes[6].expandedTo[0].point
 					curveEnd: contours[0].nodes[5].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[6].expandedTo[1].point
@@ -129,7 +130,8 @@ exports.glyphs['S_cap'] =
 			id: 'bottom'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1]
+					baseWidth: contours[0].nodes[0].expandedTo[1]
+					baseHeight: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					curveEnd: contours[0].nodes[1].expandedTo[1]
 					rotationAngle: -15
