@@ -20,20 +20,13 @@ exports.glyphs['e'] =
 		0:
 			x: contours[0].nodes[3].x
 			y: xHeight + diacriticHeight
-		# 1:
-		# 	ogonek: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[0].expandedTo[1], 100 * width + 75 - ( 75 / 115 ) * thickness * contrast, true, 10 )
-		# 2:
-		# 	x: anchors[1].ogonek.x
-		# 	y: anchors[1].ogonek.y
-		# 	normal: anchors[1].ogonek.normal
-		# 	middle: contours[0].nodes[1].expandedTo[0].x
-		# 	# x: contours[0].nodes[0].expandedTo[1].x
-		# 	# y: contours[0].nodes[0].expandedTo[1].y
-		# 	# angle: - anglePenBottom
-		# 	# normal: Math.min(
-		# 	# 	- anglePenBottom + 90 + 6 + correctWidthAperture,
-		# 	# 	90
-		# 	# )
+		1:
+			ogonek: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[0].expandedTo[1], 100 * width + 75 - ( 75 / 115 ) * thickness * contrast, false, 10 )
+		2:
+			x: anchors[1].ogonek.x
+			y: anchors[1].ogonek.y
+			normal: anchors[1].ogonek.normal
+			middle: contours[0].nodes[1].expandedTo[0].x
 	contours:
 		0:
 			skeleton: true

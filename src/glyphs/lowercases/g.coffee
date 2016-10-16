@@ -121,7 +121,7 @@ exports.glyphs['g'] =
 					})
 				3:
 					x: contours[1].nodes[2].x
-					y: xHeight - serifHeight - serifCurve
+					y: xHeight - Math.max(0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -131,15 +131,14 @@ exports.glyphs['g'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
 			parentAnchors:
 				0:
-					x: contours[1].nodes[3].expandedTo[0].x
-					y: contours[1].nodes[3].y
-				1:
-					x: contours[1].nodes[3].expandedTo[1].x
-					y: contours[1].nodes[3].y
-				2:
-					anchorLine: xHeight
-					directionY: -1
-					left: false
+					base: contours[1].nodes[3].expandedTo[0].point
+					noneAnchor: contours[1].nodes[3].expandedTo[0].point
+					opposite: contours[1].nodes[3].expandedTo[1].point
+			transformOrigin: contours[1].nodes[3].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

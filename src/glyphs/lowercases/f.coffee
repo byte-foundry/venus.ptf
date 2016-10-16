@@ -22,7 +22,7 @@ exports.glyphs['f'] =
 			nodes:
 				0:
 					x: contours[1].nodes[0].x + 80 * width + (29)
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -89,27 +89,31 @@ exports.glyphs['f'] =
 					})
 	components:
 		0:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
-				2:
-					anchorLine: 0
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
 		1:
-			base: 'serif-v'
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[3].expandedTo[1].x - serifHeight - serifCurve
-					y: contours[0].nodes[3].expandedTo[0].y
-				1:
-					x: contours[0].nodes[3].expandedTo[0].x - serifHeight - serifCurve
-					y: contours[0].nodes[3].expandedTo[1].y
-				2:
-					anchorLine: contours[0].nodes[3].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
-					right: false
-					baseRight: contours[0].nodes[3].expandedTo[0].point
-					directionY: -1
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: ['serif-horizontal', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[3].expandedTo[1].point
+					noneAnchor: contours[0].nodes[3].expandedTo[1].point
+					opposite: contours[0].nodes[3].expandedTo[0].point

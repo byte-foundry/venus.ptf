@@ -1,5 +1,5 @@
 exports.glyphs['s_acute'] =
-	unicode: 'š'
+	unicode: 'ś'
 	glyphName: 'sacute'
 	characterName: 'LATIN SMALL LETTER S WITH ACUTE'
 	base: 's'

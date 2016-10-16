@@ -1,3 +1,4 @@
+# TODO: angletop & bottom related to thickness
 exports.glyphs['S_cap'] =
 	unicode: 'S'
 	glyphName: 'S'
@@ -112,3 +113,30 @@ exports.glyphs['S_cap'] =
 						angle: anglePenTop + 'deg'
 						distr: 0.75
 					})
+	components:
+		0:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'top'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[6].expandedTo[1]
+					baseHeight: contours[0].nodes[6].expandedTo[1].point
+					noneAnchor: contours[0].nodes[6].expandedTo[1].point
+					opposite: contours[0].nodes[6].expandedTo[0].point
+					curveEnd: contours[0].nodes[5].expandedTo[1]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[6].expandedTo[1].point
+		1:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[0].expandedTo[0]
+					baseHeight: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					curveEnd: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[0].expandedTo[0].point
+					down: true
+					left: true

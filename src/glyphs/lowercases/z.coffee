@@ -25,7 +25,7 @@ exports.glyphs['z'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[4].x + 15 + Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[4].x + 15 + Math.max( 0, serifHeight * serifArc ) + + ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -106,7 +106,7 @@ exports.glyphs['z'] =
 					})
 				8:
 					# x: 200 + 40 + 200 * width
-					x: contours[0].nodes[5].expandedTo[0].x + 200 * width + 210 - Math.max( 0, serifHeight * serifArc )
+					x: contours[0].nodes[5].expandedTo[0].x + 200 * width + 210 - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
@@ -117,29 +117,32 @@ exports.glyphs['z'] =
 					})
 	components:
 		0:
-			base: 'serif-v'
+			base: ['serif-horizontal', 'none']
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[8].expandedTo[1].x - serifHeight - serifCurve
-					y: contours[0].nodes[8].expandedTo[0].y
-				1:
-					x: contours[0].nodes[8].expandedTo[0].x - serifHeight - serifCurve
-					y: contours[0].nodes[8].expandedTo[1].y
-				2:
-					anchorLine: contours[0].nodes[8].expandedTo[0].x + Math.max( 0, serifHeight * serifArc )
-					left: false
-					baseLeft: contours[0].nodes[8].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
 		1:
-			base: 'serif-v'
+			base: ['serif-horizontal', 'none']
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x + serifHeight + serifCurve
-					y: contours[0].nodes[0].expandedTo[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x + serifHeight + serifCurve
-					y: contours[0].nodes[0].expandedTo[1].y
-				2:
-					anchorLine: contours[0].nodes[0].expandedTo[0].x - Math.max( 0, serifHeight * serifArc )
-					right: false
-					baseRight: contours[0].nodes[0].expandedTo[0].point
-					directionX: -1
+					base: contours[0].nodes[8].expandedTo[0].point
+					noneAnchor: contours[0].nodes[8].expandedTo[0].point
+					opposite: contours[0].nodes[8].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[8].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'skewX', - 10 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)

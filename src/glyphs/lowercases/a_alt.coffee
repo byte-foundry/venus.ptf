@@ -16,6 +16,13 @@ exports.glyphs['a_alt'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: 0
+			y: 0
+		1:
+			x: contours[1].nodes[0].expandedTo[1].x
+			y: contours[1].nodes[0].expandedTo[1].y
 	contours:
 		0:
 			skeleton: true
@@ -88,3 +95,30 @@ exports.glyphs['a_alt'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
