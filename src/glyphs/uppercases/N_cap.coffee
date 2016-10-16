@@ -26,7 +26,7 @@ exports.glyphs['N_cap'] =
 			nodes:
 				1:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -36,7 +36,7 @@ exports.glyphs['N_cap'] =
 					})
 				0:
 					x: contours[0].nodes[1].x
-					y: capHeight - serifHeight - serifCurve
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -50,7 +50,7 @@ exports.glyphs['N_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: capHeight
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -73,6 +73,16 @@ exports.glyphs['N_cap'] =
 			skeleton: true
 			closed: false
 			nodes:
+				0:
+					x: contours[2].nodes[1].x
+					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
 				1:
 					x: contours[1].nodes[1].expandedTo[1].x + ( 5 / 115 ) * thickness
 					y: 0
@@ -83,50 +93,64 @@ exports.glyphs['N_cap'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
-				0:
-					x: contours[2].nodes[1].x
-					y: capHeight - serifHeight - serifCurve
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
-						distr: 0.75
-					})
 	components:
 		0:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
-				1:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
-				2:
-					anchorLine: 0
+					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
 		1:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
 			parentAnchors:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
-				2:
-					anchorLine: capHeight
-					directionY: -1
-					right: false
+					base: contours[0].nodes[1].expandedTo[1].point
+					noneAnchor: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
 		2:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[2].nodes[0].expandedTo[1].x
-					y: contours[2].nodes[0].y
-				1:
-					x: contours[2].nodes[0].expandedTo[0].x
-					y: contours[2].nodes[0].y
-				2:
-					anchorLine: capHeight
-					directionY: -1
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: ['serif-vertical', 'none']
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[0].point
+					noneAnchor: contours[2].nodes[0].expandedTo[0].point
+					opposite: contours[2].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[2].nodes[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		4:
+			base: ['serif-vertical', 'none']
+			id: 'topright2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[1].point
+					noneAnchor: contours[2].nodes[0].expandedTo[1].point
+					opposite: contours[2].nodes[0].expandedTo[0].point
+			transformOrigin: contours[2].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

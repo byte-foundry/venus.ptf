@@ -48,7 +48,10 @@ exports.glyphs['o'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width + (65)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 290 + 200 * width - (31),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.15
@@ -56,7 +59,7 @@ exports.glyphs['o'] =
 					expand: Object({
 						width: ( 125 / 115 ) * thickness
 						angle: 180 + 'deg'
-						distr: 0
+						distr: 0.25
 					})
 				3:
 					x: contours[0].nodes[1].x

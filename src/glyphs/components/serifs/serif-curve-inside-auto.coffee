@@ -20,6 +20,7 @@ exports.glyphs['serif-curve-inside-auto'] =
 			point5: anchors[0].serif[5]
 			point6: anchors[0].serif[6]
 			point7: anchors[0].serif[7]
+			point8: anchors[0].serif[8]
 	tags: [
 		'component'
 	]
@@ -33,7 +34,7 @@ exports.glyphs['serif-curve-inside-auto'] =
 					dirOut: anchors[0].point0.dirOut
 					type: anchors[0].point0.type
 					typeOut: anchors[0].point0.typeOut
-					dirOut: anchors[0].point0.dirOut
+					dirIn: anchors[0].point0.dirIn
 				1:
 					x: anchors[0].point1.x
 					y: anchors[0].point1.y
@@ -74,5 +75,15 @@ exports.glyphs['serif-curve-inside-auto'] =
 					y: anchors[0].point7.y
 					type: 'corner'
 					dirIn: anchors[0].point7.dirIn
-					dirOut: anchors[0].point7.dirIn
+					dirOut: anchors[0].point7.dirOut
 					typeOut: anchors[0].point7.typeOut
+					typeIn: anchors[0].point7.typeIn
+					tensionOut: anchors[0].point7.tensionOut
+				8:
+					x: anchors[0].point8.x
+					y: anchors[0].point8.y
+					type: 'corner'
+					dirIn: anchors[0].point8.dirIn
+					dirOut: anchors[0].point8.dirIn
+					typeOut: anchors[0].point8.typeOut
+					tensionIn: anchors[0].point8.tensionIn
