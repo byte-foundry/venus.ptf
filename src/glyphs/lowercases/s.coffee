@@ -129,7 +129,7 @@ exports.glyphs['s'] =
 					curveEnd: contours[0].nodes[5].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[6].expandedTo[1].point
-		2:
+		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottombottom'
 			parentAnchors:
