@@ -113,11 +113,12 @@ exports.glyphs['five'] =
 					})
 	components:
 		0:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'toprightbottom'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[2].expandedTo[1].point
+					noneAnchor: contours[0].nodes[2].expandedTo[1].point
 					opposite: contours[0].nodes[2].expandedTo[0].point
 			transformOrigin: contours[0].nodes[2].expandedTo[1].point
 			transforms: Array(

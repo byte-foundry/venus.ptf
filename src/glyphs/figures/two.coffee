@@ -112,11 +112,12 @@ exports.glyphs['two'] =
 					})
 	components:
 		0:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point

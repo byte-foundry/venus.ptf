@@ -117,18 +117,20 @@ exports.glyphs['E_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point
@@ -136,11 +138,12 @@ exports.glyphs['E_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		2:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
 			transformOrigin: contours[1].nodes[1].expandedTo[1].point
 			transforms: Array(
@@ -148,11 +151,12 @@ exports.glyphs['E_cap'] =
 				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		3:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'middletop'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[0].point
+					noneAnchor: contours[2].nodes[1].expandedTo[0].point
 					opposite: contours[2].nodes[1].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[2].nodes[1].expandedTo[0].point
@@ -160,19 +164,21 @@ exports.glyphs['E_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		4:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'middlebottom'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[1].point
+					noneAnchor: contours[2].nodes[1].expandedTo[1].point
 					opposite: contours[2].nodes[1].expandedTo[0].point
 					scaleX: -1
 		5:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[3].nodes[1].expandedTo[1].point
+					noneAnchor: contours[3].nodes[1].expandedTo[1].point
 					opposite: contours[3].nodes[1].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[3].nodes[1].expandedTo[1].point

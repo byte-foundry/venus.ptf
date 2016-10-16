@@ -94,11 +94,12 @@ exports.glyphs['Z_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1].point
+					noneAnchor: contours[0].nodes[1].expandedTo[1].point
 					opposite: contours[0].nodes[1].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[1].expandedTo[1].point
@@ -108,11 +109,12 @@ exports.glyphs['Z_cap'] =
 				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		1:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[1].nodes[1].expandedTo[1].point

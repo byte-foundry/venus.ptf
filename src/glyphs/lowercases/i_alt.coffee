@@ -73,10 +73,11 @@ exports.glyphs['i_alt'] =
 					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
 					y: xHeight + diacriticHeight
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point

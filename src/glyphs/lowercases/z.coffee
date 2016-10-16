@@ -117,11 +117,12 @@ exports.glyphs['z'] =
 					})
 	components:
 		0:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
@@ -131,11 +132,12 @@ exports.glyphs['z'] =
 				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		1:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[8].expandedTo[0].point
+					noneAnchor: contours[0].nodes[8].expandedTo[0].point
 					opposite: contours[0].nodes[8].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[8].expandedTo[0].point

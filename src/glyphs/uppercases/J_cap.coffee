@@ -85,11 +85,12 @@ exports.glyphs['J_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[1].point
+					noneAnchor: contours[0].nodes[4].expandedTo[1].point
 					opposite: contours[0].nodes[4].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[4].point
@@ -97,11 +98,12 @@ exports.glyphs['J_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[0].point
+					noneAnchor: contours[0].nodes[4].expandedTo[0].point
 					opposite: contours[0].nodes[4].expandedTo[1].point
 			transformOrigin: contours[0].nodes[4].expandedTo[0].point
 			transforms: Array(

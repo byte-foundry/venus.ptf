@@ -78,11 +78,12 @@ exports.glyphs['U_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[0].point
@@ -90,11 +91,12 @@ exports.glyphs['U_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
@@ -102,11 +104,12 @@ exports.glyphs['U_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		2:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topleft2'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[1].point
+					noneAnchor: contours[0].nodes[4].expandedTo[1].point
 					opposite: contours[0].nodes[4].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[4].point
@@ -114,11 +117,12 @@ exports.glyphs['U_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		3:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topright2'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[0].point
+					noneAnchor: contours[0].nodes[4].expandedTo[0].point
 					opposite: contours[0].nodes[4].expandedTo[1].point
 			transformOrigin: contours[0].nodes[4].expandedTo[0].point
 			transforms: Array(

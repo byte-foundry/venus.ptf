@@ -131,10 +131,11 @@ exports.glyphs['g'] =
 					})
 	components:
 		0:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			parentAnchors:
 				0:
 					base: contours[1].nodes[3].expandedTo[0].point
+					noneAnchor: contours[1].nodes[3].expandedTo[0].point
 					opposite: contours[1].nodes[3].expandedTo[1].point
 			transformOrigin: contours[1].nodes[3].expandedTo[0].point
 			transforms: Array(

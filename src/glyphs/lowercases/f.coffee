@@ -89,18 +89,20 @@ exports.glyphs['f'] =
 					})
 	components:
 		0:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
@@ -108,9 +110,10 @@ exports.glyphs['f'] =
 				[ 'scaleX', -1 ]
 			)
 		2:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[1].point
+					noneAnchor: contours[0].nodes[3].expandedTo[1].point
 					opposite: contours[0].nodes[3].expandedTo[0].point

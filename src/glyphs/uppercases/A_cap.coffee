@@ -113,29 +113,32 @@ exports.glyphs['A_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-oblique-obtuse'
+			base: ['serif-oblique-obtuse', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
 		1:
-			base: 'serif-oblique-acute'
+			base: ['serif-oblique-acute', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
 					scaleX: -1
 					reversed: true
 		2:
-			base: 'serif-oblique-acute'
+			base: ['serif-oblique-acute', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
 					scaleX: -1
@@ -146,19 +149,21 @@ exports.glyphs['A_cap'] =
 				[ 'scaleY', -1 ]
 			)
 		3:
-			base: 'serif-oblique-acute'
+			base: ['serif-oblique-acute', 'none']
 			id: 'bottomleft2'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[1].point
+					noneAnchor: contours[0].nodes[3].expandedTo[1].point
 					opposite: contours[0].nodes[3].expandedTo[0].point
 					obliqueEndPoint: contours[0].nodes[2].expandedTo[1].point
 		4:
-			base: 'serif-oblique-obtuse'
+			base: ['serif-oblique-obtuse', 'none']
 			id: 'bottomright2'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[0].point
+					noneAnchor: contours[0].nodes[3].expandedTo[0].point
 					opposite: contours[0].nodes[3].expandedTo[1].point
 					obliqueEndPoint: contours[0].nodes[2].expandedTo[0].point
 					scaleX: -1

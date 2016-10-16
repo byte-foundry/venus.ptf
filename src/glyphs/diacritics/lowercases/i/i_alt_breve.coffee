@@ -68,11 +68,12 @@ exports.glyphs['i_alt_breve'] =
 					x: contours[0].nodes[0].x
 					y: xHeight + diacriticHeight
 		1:
-			base: 'serif-vertical'
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[1].point

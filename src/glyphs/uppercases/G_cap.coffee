@@ -116,12 +116,13 @@ exports.glyphs['G_cap'] =
 					})
 	components:
 		0:
-			base: 'serif-curve-inside-auto'
+			base: ['serif-curve-inside-auto', 'none']
 			id: 'top'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[1]
 					baseHeight: contours[0].nodes[6].expandedTo[1].point
+					noneAnchor: contours[0].nodes[6].expandedTo[1].point
 					opposite: contours[0].nodes[6].expandedTo[0].point
 					curveEnd: contours[0].nodes[5].expandedTo[1]
 					rotationAngle: -15
