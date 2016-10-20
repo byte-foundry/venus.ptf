@@ -103,7 +103,6 @@ exports.glyphs['c'] =
 					curveEnd: contours[0].nodes[3].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[4].expandedTo[1].point
-					inverseMidStump: true
 		# 1:
 		# 	base: 'serif-curve-inside-auto'
 		# 	id: 'topbottom'
