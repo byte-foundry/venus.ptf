@@ -19,6 +19,9 @@ exports.glyphs['E_cap'] =
 		0:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
 			y: capHeight + diacriticHeight
+		1:
+			x: ( contours[0].nodes[0].x + contours[3].nodes[1].expandedTo[0].x ) / 2
+			y: contours[3].nodes[0].expandedTo[0].y
 	contours:
 		0:
 			skeleton: true

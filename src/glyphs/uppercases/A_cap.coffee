@@ -19,6 +19,10 @@ exports.glyphs['A_cap'] =
 		0:
 			x: contours[0].nodes[2].x
 			y: capHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[3].expandedTo[0].x
+			y: contours[0].nodes[3].expandedTo[0].y
+			angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[0].point, contours[0].nodes[2].expandedTo[1].point )
 	contours:
 		0:
 			skeleton: true

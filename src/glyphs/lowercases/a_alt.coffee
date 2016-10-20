@@ -16,6 +16,13 @@ exports.glyphs['a_alt'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: 0
+			y: 0
+		1:
+			x: contours[1].nodes[0].expandedTo[1].x
+			y: contours[1].nodes[0].expandedTo[1].y
 	contours:
 		0:
 			skeleton: true

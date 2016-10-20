@@ -25,6 +25,12 @@ exports.glyphs['L_cap'] =
 				contours[1].nodes[1].x - thickness * ( 125 / 115 ) / 2
 			)
 			y: capHeight + overshoot
+		2:
+			x: contours[0].nodes[0].expandedTo[0].x - 80
+			y: contours[0].nodes[1].expandedTo[0].y / 2 - 50
+		3:
+			x: ( contours[1].nodes[1].expandedTo[1].x + contours[1].nodes[0].expandedTo[1].x ) / 2
+			y: contours[0].nodes[1].expandedTo[1].y / 2 + 50
 	contours:
 		0:
 			skeleton: true
