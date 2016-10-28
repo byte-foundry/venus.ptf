@@ -2,7 +2,7 @@ exports.glyphs['serif-horizontal'] =
 	parameters:
 		serifHeight:
 			if serifWidth < 0.05
-			then serifHeight = 0
+			then serifHeight = 5
 			else
 				if serifWidth >= 0.05
 				then Math.max(serifHeight, 3);

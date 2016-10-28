@@ -115,34 +115,55 @@ exports.glyphs['z'] =
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
+		1:
+			closed: true
+			skeleton: false
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'skewX', 15 * serifRotate + 'deg' ],
+			)
+			nodes:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].point.x
+					y: contours[0].nodes[0].expandedTo[0].point.y
+					typeOut: 'line'
+				1:
+					x: contours[0].nodes[0].expandedTo[1].point.x + 100
+					y: contours[0].nodes[0].expandedTo[0].point.y
+					typeOut: 'line'
+				2:
+					x: contours[0].nodes[0].expandedTo[1].point.x + 100
+					y: contours[0].nodes[0].expandedTo[1].point.y
+					typeOut: 'line'
+				3:
+					x: contours[0].nodes[0].expandedTo[1].point.x
+					y: contours[0].nodes[0].expandedTo[1].point.y
+					typeOut: 'line'
 	components:
 		0:
-			base: ['serif-horizontal', 'none']
+			base: 'serif-horizontal'
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'skewX', - 15 * serifRotate + 'deg' ],
-				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		1:
-			base: ['serif-horizontal', 'none']
+			base: 'serif-horizontal'
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[8].expandedTo[0].point
-					noneAnchor: contours[0].nodes[8].expandedTo[0].point
 					opposite: contours[0].nodes[8].expandedTo[1].point
 					reversed: true
-			transformOrigin: contours[0].nodes[8].expandedTo[0].point
+			transformOrigin: contours[0].nodes[8].expandedTo[1].point
 			transforms: Array(
+				[ 'skewX', 10 * serifRotate + 'deg' ],
 				[ 'scaleY', -1 ],
-				[ 'skewX', - 10 * serifRotate + 'deg' ],
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'translateY', -2 * (90 / 115) * thickness]
 			)

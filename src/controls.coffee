@@ -257,7 +257,7 @@ exports.controls = [
 		min: 0.05 #temporary FIX (instead 0)
 		max: 200
 		step: 1
-		init: 0.05
+		init: 0.01
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
@@ -279,7 +279,7 @@ exports.controls = [
 		min: 0.001
 		max: 100
 		step: 1
-		init: 0.001
+		init: 5
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
