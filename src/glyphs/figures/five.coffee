@@ -50,7 +50,7 @@ exports.glyphs['five'] =
 					typeOut: 'line'
 					expand: Object({
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: - 94 + 'deg'
+						angle: (- 94 - 15 * serifRotate )  / 180 * Math.PI
 						distr: 0
 					})
 		1:
@@ -111,3 +111,29 @@ exports.glyphs['five'] =
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-horizontal', 'none']
+			id: 'toprightbottom'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[2].expandedTo[1].point
+					noneAnchor: contours[0].nodes[2].expandedTo[1].point
+					opposite: contours[0].nodes[2].expandedTo[0].point
+			transformOrigin: contours[0].nodes[2].expandedTo[1].point
+			transforms: Array(
+				[ 'skewX', Math.PI / 2 - contours[0].nodes[2].expand.angle ]
+			)
+		# 1:
+		# 	base: 'serif-horizontal'
+		# 	id: 'toprighttop'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[2].expandedTo[0].point
+		# 			opposite: contours[0].nodes[2].expandedTo[1].point
+		# 			reversed: true
+		# 	transformOrigin: contours[0].nodes[2].expandedTo[0].point
+		# 	transforms: Array(
+		# 		[ 'scaleY', -1 ],
+		# 		[ 'skewX', Math.PI / 2 + contours[0].nodes[2].expand.angle ]
+		# 	)

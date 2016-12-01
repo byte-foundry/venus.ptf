@@ -22,7 +22,7 @@ exports.glyphs['m'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -32,7 +32,7 @@ exports.glyphs['m'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight - serifHeight - serifCurve
+					y: xHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -46,7 +46,7 @@ exports.glyphs['m'] =
 			nodes:
 				0:
 					x: contours[1].nodes[1].x
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
@@ -96,7 +96,7 @@ exports.glyphs['m'] =
 			nodes:
 				0:
 					x: contours[2].nodes[1].x
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
@@ -140,52 +140,106 @@ exports.glyphs['m'] =
 						angle: 180 + 'deg'
 						distr: 0
 					})
-	components:
-		0:
-			base: 'serif'
-			parentAnchors:
-				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].y
-				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].y
-				2:
-					anchorLine: 0
-		1:
-			base: 'serif'
-			parentAnchors:
+		3:
+			skeleton: false
+			closed: true
+			nodes:
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].y
+					y: xHeight
+					typeOut: 'line'
 				1:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].y
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y - 10
+					typeOut: 'line'
 				2:
-					anchorLine: xHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[0].nodes[1].expandedTo[1].x, contours[0].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+					x: contours[0].nodes[1].x
+					y: contours[0].nodes[1].expandedTo[1].y - 10
+					typeOut: 'line'
+				3:
+					x: contours[0].nodes[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
+				4:
+					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+					y: xHeight
+					typeOut: 'line'
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
 		2:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
 			parentAnchors:
 				0:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].y
-				1:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].y
-				2:
-					anchorLine: 0
+					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'skewY', - 15 * spurHeight + 'deg' ],
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
+			)
 		3:
-			base: 'serif'
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft2'
 			parentAnchors:
 				0:
-					x: contours[2].nodes[0].expandedTo[1].x
-					y: contours[2].nodes[0].y
-				1:
-					x: contours[2].nodes[0].expandedTo[0].x
-					y: contours[2].nodes[0].y
-				2:
-					anchorLine: 0
+					base: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+		4:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		5:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft3'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[0].point
+					noneAnchor: contours[2].nodes[0].expandedTo[0].point
+					opposite: contours[2].nodes[0].expandedTo[1].point
+		6:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright3'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[0].expandedTo[1].point
+					noneAnchor: contours[2].nodes[0].expandedTo[1].point
+					opposite: contours[2].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[2].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)

@@ -64,7 +64,7 @@ exports.glyphs['seven'] =
 				1:
 					x: 110 * width + (37)
 					x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) * 0.43
-					y: 0
+					y: Math.max(0, serifHeight * serifArc )
 					dirIn: 90 + 'deg'
 					typeOut: 'line'
 					tensionIn: 1.2
@@ -73,3 +73,19 @@ exports.glyphs['seven'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-horizontal', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)

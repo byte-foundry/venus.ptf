@@ -21,27 +21,32 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					# x: contours[1].nodes[1].expandedTo[0].x + 10 + (34)
 					x: spacingLeft
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness
+						# width: ( 140 / 115 ) * thickness
+						width: Math.min(
+							thickness / ( Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) ) ),
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: 125 + 50 + 200 * width + (35)
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 200 * width + 160 + (35),
-						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 140 / 115 ) * thickness + 10
+						(contours[0].nodes[0].x - 0.25 * (( 140 / 115 ) * thickness)) + 200 * width + 160 + (35),
+						(contours[0].nodes[0].x + 0.75 * (( 140 / 115 ) * thickness)) + thickness + 10
 					)
-					y: 0
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 140 / 115 ) * thickness
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) ),
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -56,11 +61,15 @@ exports.glyphs['x'] =
 					# 	on: [ contours[1].nodes[0].point, contours[2].nodes[1].point ]
 					# 	y: xHeight
 					# })
-					y: xHeight
+					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / 115 ) * thickness * contrast
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) ) * contrast,
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 0.5 * contrast
 					})
@@ -88,11 +97,15 @@ exports.glyphs['x'] =
 					# 	on: [ contours[2].nodes[0].point, contours[1].nodes[0].point ]
 					# 	y: 0
 					# })
-					y: 0
+					y: 0 + Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / 115 ) * thickness * contrast
+						width: Math.min(
+							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) ) * contrast,
+							thickness + 75
+						)
 						angle: 0 + 'deg'
 						distr: 1 - 0.5 * contrast
 					})
@@ -132,3 +145,104 @@ exports.glyphs['x'] =
 		# 				angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) #- Math.PI / 6 + Math.PI / 4
 		# 				distr: 0.5
 		# 			})
+	components:
+		0:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: ['serif-oblique-acute', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomleft2'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+		3:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomright2'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1].point
+					noneAnchor: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[1].point
+					scaleX: -1
+					reversed: true
+		4:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
+		5:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
+					scaleX: -1
+					reversed: true
+		6:
+			base: ['serif-oblique-acute', 'none']
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		7:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'topright2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[1].point
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

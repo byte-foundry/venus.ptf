@@ -8,7 +8,7 @@ exports.glyphs['d'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 50 + (31)
+		spacingLeft: 50 * spacing + 50
 		spacingRight: 50 * spacing + 70
 	tags: [
 		'all',
@@ -19,13 +19,16 @@ exports.glyphs['d'] =
 		0:
 			x: contours[1].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
 			y: ascenderHeight + overshoot
+		1:
+			x: contours[0].nodes[1].expandedTo[0].x
+			y: ( xHeight + overshoot + ascenderHeight ) / 2
 	contours:
 		0:
 			skeleton: true
 			closed: true
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
 					expand: Object({
@@ -34,7 +37,7 @@ exports.glyphs['d'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5 # (207 / 365)
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
@@ -46,7 +49,7 @@ exports.glyphs['d'] =
 					})
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 200 * width + 215 + (38),
+						contours[0].nodes[0].expandedTo[0].x + 215 + 200 * width - (12),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 50 / 115 ) * thickness * contrast * contrastExtremity + 10
 					)
 					y: contours[0].nodes[0].y
@@ -74,7 +77,7 @@ exports.glyphs['d'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
-					y: 0 + serifHeight + serifCurve
+					y: Math.max(0, serifHeight * serifArc ) + ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -84,7 +87,7 @@ exports.glyphs['d'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: ascenderHeight - serifHeight - serifCurve
+					y: ascenderHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -92,33 +95,82 @@ exports.glyphs['d'] =
 						angle: 0 + 'deg'
 						distr: 0
 					})
-	components:
-		0:
-			base: 'serif'
-			parentAnchors:
-				0:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].y
-				1:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].y
-				2:
-					anchorLine: 0
-					left: false
-			transformOrigin: Array( contours[1].nodes[0].expandedTo[0].x, contours[1].nodes[0].expandedTo[0].y )
-			transforms: Array( [ 'skewY', spurHeight * (10) + 'deg' ] )
-		1:
-			base: 'serif'
-			parentAnchors:
+		2:
+			skeleton: false
+			closed: true
+			nodes:
 				0:
 					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].y
+					y: ascenderHeight
+					typeOut: 'line'
 				1:
-					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].y
+					x: contours[1].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[1].expandedTo[1].y - 10
+					typeOut: 'line'
 				2:
-					anchorLine: ascenderHeight
-					directionY: -1
-					right: false
-			transformOrigin: Array( contours[1].nodes[1].expandedTo[1].x, contours[1].nodes[1].expandedTo[1].y )
-			transforms: Array( [ 'skewY', spurHeight * (15) + 'deg' ] )
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].expandedTo[0].y - 10
+					typeOut: 'line'
+				3:
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].expandedTo[0].y
+					typeOut: 'line'
+				4:
+					x: ( contours[1].nodes[1].expandedTo[0].x + contours[1].nodes[1].expandedTo[1].x ) / 2
+					y: ascenderHeight
+					typeOut: 'line'
+		3:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[1].nodes[0].expandedTo[0].x
+					y: 0
+					typeOut: 'line'
+				1:
+					x: contours[1].nodes[0].expandedTo[0].x
+					y: contours[1].nodes[0].expandedTo[0].y + 10
+					typeOut: 'line'
+				2:
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].expandedTo[1].y + 10
+					typeOut: 'line'
+				3:
+					x: contours[1].nodes[0].expandedTo[1].x
+					y: contours[1].nodes[0].expandedTo[1].y
+					typeOut: 'line'
+				4:
+					x: ( contours[1].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x ) / 2
+					y: 0
+					typeOut: 'line'
+	components:
+		0:
+			base: ['serif-vertical','none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					reversed: true
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'skewY', - 15 * spurHeight + 'deg' ]
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
+			)
+		1:
+			base: ['serif-vertical','none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					reversed: true
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: contours[1].nodes[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'skewY', - 15 * spurHeight + 'deg' ],
+				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
+			)

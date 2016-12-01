@@ -8,7 +8,7 @@ exports.glyphs['Q_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 55 + (36)
+		spacingLeft: 50 * spacing + 55
 		spacingRight: 50 * spacing + 55
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['Q_cap'] =
 			closed: true
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (36)
 					y: ( 375 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					tensionOut: 0.95
@@ -43,7 +43,10 @@ exports.glyphs['Q_cap'] =
 						distr: 0
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 395 + 200 * width - (36)
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[0].x + 540 + 200 * width - (72),
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
