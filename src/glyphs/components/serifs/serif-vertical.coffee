@@ -1,13 +1,9 @@
 exports.glyphs['serif-vertical'] =
 	parameters:
 		roundCorner: serifHeight # TODO: make a real param in controls.coffee
-		serifWidth:
-			if serifHeight < 0.05
-			then serifWidth = 0.05
-			else serifWidth = serifWidth
 		serifHeight:
 			if serifWidth < 0.05
-			then serifHeight = 0
+			then serifHeight = 5
 			else
 				if serifWidth >= 0.05
 				then Math.max(serifHeight, 3);
