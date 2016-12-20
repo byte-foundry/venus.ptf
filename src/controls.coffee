@@ -246,28 +246,6 @@ exports.controls = [
 		maxAdvised: 0.8
 		disabled: false
 		demo: true
-	# ,
-	# 	name: 'breakPath'
-	# 	label: 'Break Path'
-	# 	min: 0
-	# 	max: 1
-	# 	step: 0.1
-	# 	init: 1
-	# 	minAdvised: 0.5
-	# 	maxAdvised: 1
-	# 	disabled: true
-	# demo: false
-	# ,
-	# 	name: 'axis'
-	# 	label: 'axis'
-	# 	min: - 35
-	# 	max: 35
-	# 	step: 1
-	# 	init: 0
-	# 	minAdvised: -15
-	# 	maxAdvised: 15
-	# 	disabled: true
-	# demo: false
 	]
 ,
 	tab: true
@@ -276,10 +254,10 @@ exports.controls = [
 	parameters: [
 		name: 'serifWidth'
 		label: 'Serif Width'
-		min: 0.001 #temporary FIX (instead 0)
+		min: 0.05 #temporary FIX (instead 0)
 		max: 200
 		step: 1
-		init: 0
+		init: 0.01
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
@@ -301,7 +279,7 @@ exports.controls = [
 		min: 0.001
 		max: 100
 		step: 1
-		init: 0.001
+		init: 5
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false

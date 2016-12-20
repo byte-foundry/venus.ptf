@@ -1,4 +1,4 @@
-exports.glyphs['O_cap_slash'] =
+exports.glyphs['Ø_cap_slash'] =
 	unicode: 'Ø'
 	glyphName: 'Oslash'
 	characterName: 'LATIN CAPITAL LETTER O WITH STROKE'

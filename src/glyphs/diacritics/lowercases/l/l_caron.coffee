@@ -17,4 +17,4 @@ exports.glyphs['l_caron'] =
 			parentAnchors:
 				0:
 					x: anchors[0].x
-					y: ascenderHeight + overshoot
+					y: anchors[0].y

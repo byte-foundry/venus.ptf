@@ -22,13 +22,13 @@ exports.glyphs['title'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: Math.max( thickness, 25 ) # Set a min value to display a legible title in thin weights
+						width: minThickness # Math.max( thickness, 25 ) # Set a min value to display a legible title in thin weights
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[0].y + Math.max( thickness, 25 )
+					y: contours[0].nodes[0].y + minThickness # Math.max( thickness, 25 )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
