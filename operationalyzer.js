@@ -5,7 +5,8 @@ var through = require('through2'),
 	escodegen = require('escodegen'),
 	estraverse = require('estraverse'),
 	_ = require('lodash'),
-	PluginError = gutil.PluginError;
+	PluginError = gutil.PluginError,
+	util = require('util');
 
 // consts
 const PLUGIN_NAME = 'gulp-operationalyzer';
@@ -37,6 +38,7 @@ function operationalyzer() {
 			toLiteralize = [],
 			parameters,
 			dependencies,
+			types,
 			updatedAst;
 
 		updatedAst = estraverse.replace( ast, {
@@ -84,6 +86,16 @@ function operationalyzer() {
 				if ( toLiteralize.indexOf( node ) !== -1 ) {
 					inOperation = false;
 					toLiteralize.splice( toLiteralize.indexOf( node ), 1 );
+						/*
+					console.log('======================================================================');
+					console.log('======================================================================');
+					console.log(file);
+					console.log('======================================================================');
+					console.log(util.inspect(node, false, null));
+					console.log('======================================================================');
+					console.log('======================================================================');
+					*/
+
 
 					var tmp = escodegen.generate( node );
 

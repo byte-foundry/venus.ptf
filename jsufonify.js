@@ -7,6 +7,74 @@ var through = require('through2'),
 // consts
 const PLUGIN_NAME = 'gulp-jsufonify';
 
+function ufoToPtf( src ) {
+	if ( src.parameter ) {
+		src.parameters = src.parameter;
+		delete src.parameter;
+	}
+
+	if ( src.anchor ) {
+		src.anchors = src.anchor;
+		delete src.anchor;
+	}
+
+	if ( src.outline && src.outline.contour ) {
+		src.contours = src.outline.contour;
+		delete src.outline.contour;
+	}
+
+	if ( src.contours ) {
+		src.contours.forEach(function(contour) {
+			if ( contour.point ) {
+				contour.nodes = contour.point;
+				delete contour.point;
+			}
+		});
+	}
+
+	if ( src.outline && src.outline.component ) {
+		src.components = src.outline.component;
+
+		src.components.forEach(function(component) {
+			if ( component.anchor ) {
+				component.parentAnchors = component.anchor;
+				delete component.anchor;
+			}
+
+			if ( component.parameter ) {
+				component.parentParameters = component.parameter;
+				delete component.parameter;
+			}
+		});
+
+		delete src.outline.component;
+	}
+
+	delete src.outline;
+
+	if ( src.lib && src.lib.transforms ) {
+		src.transforms = src.lib.transforms;
+		delete src.lib.transforms;
+	}
+
+	if ( src.lib && src.lib.transformOrigin ) {
+		src.transformOrigin = src.lib.transformOrigin;
+		delete src.lib.transformOrigin;
+	}
+
+	if ( src.lib && src.lib.parameters ) {
+		src.parameters = src.lib.parameters;
+		delete src.lib.parameters;
+	}
+
+	if ( src.lib && src.lib.solvingOrder ) {
+		src.solvingOrder = src.lib.solvingOrder;
+		delete src.lib.solvingOrder;
+	}
+
+	return src;
+};
+
 function addComponents( glyph ) {
 	_(glyph.components).forEach(function( component, i ) {
 		glyph.outline.component[i] = component;
@@ -38,6 +106,8 @@ function jsufonify(/*prefixText*/) {
 		vm.runInNewContext( file.contents, sandbox );
 
 		font = sandbox.exports;
+
+		ufoToPtf(font);
 
 		var charMap = {};
 
@@ -111,6 +181,8 @@ function jsufonify(/*prefixText*/) {
 				};
 				delete glyph.transformList;
 			}
+
+			ufoToPtf(glyph);
 
 			return glyph;
 		});
