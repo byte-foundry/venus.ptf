@@ -37,19 +37,17 @@ exports.glyphs['_quoteleft'] =
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width:  Math.max( 8, ( 60 / 115 ) * thickness )
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width:  Math.max( 8, ( 75 / 115 ) * thickness )
 						angle: 0 + 'deg'
 						distr: 0
-					})

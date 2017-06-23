@@ -15,5 +15,5 @@ exports.glyphs['cent'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
+					x: parentAnchors[0].x
 					y: xHeight

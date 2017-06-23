@@ -15,18 +15,16 @@ exports.glyphs['stroke'] =
 					y: 0 - overshoot
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: anchors[0].right
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 1
-					})

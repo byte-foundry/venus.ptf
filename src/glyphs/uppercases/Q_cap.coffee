@@ -25,11 +25,10 @@ exports.glyphs['Q_cap'] =
 					y: ( 375 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					tensionOut: 0.95
-					expand: Object({
+					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: capHeight + overshoot
@@ -37,11 +36,10 @@ exports.glyphs['Q_cap'] =
 					type: 'smooth'
 					tensionIn: 0.95
 					tensionOut: 0.95
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 540 + 200 * width - (72),
@@ -51,21 +49,19 @@ exports.glyphs['Q_cap'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					tensionIn: 0.95
-					expand: Object({
+					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -75,18 +71,16 @@ exports.glyphs['Q_cap'] =
 					y: contours[0].nodes[3].expandedTo[1].y + Math.min( 90, ( 90 / 115 ) * thickness ) + (16)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
-						angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[1].point, contours[0].nodes[2].expandedTo[0].point )
+						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y} )
 						distr: 0.25
-					})
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x - (5)
 					y: ( 90 / 250 ) * descender
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness
-						angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[1].point, contours[0].nodes[2].expandedTo[0].point )
+						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y} )
 						distr: 0
-					})

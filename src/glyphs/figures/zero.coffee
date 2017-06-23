@@ -26,11 +26,10 @@ exports.glyphs['zero'] =
 					dirOut: 90 + 'deg'
 					tensionOut: 1.05
 					tensionIn: 1.1
-					expand: Object({
+					expand:
 						width: ( 140 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: capHeight + overshoot
@@ -38,11 +37,10 @@ exports.glyphs['zero'] =
 					type: 'smooth'
 					tensionIn: 1.05
 					tensionOut: 1.05
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: 400 + 245 * width - (35)
 					x: Math.max(
@@ -54,11 +52,10 @@ exports.glyphs['zero'] =
 					type: 'smooth'
 					tensionIn: 1.05
 					tensionOut: 1.1
-					expand: Object({
+					expand:
 						width: ( 140 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: - overshoot
@@ -66,8 +63,7 @@ exports.glyphs['zero'] =
 					type: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})

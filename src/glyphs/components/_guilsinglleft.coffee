@@ -16,28 +16,25 @@ exports.glyphs['_guilsinglleft'] =
 					y: ( 470 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 100 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: anchors[0].x + (0)
 					y: anchors[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 100 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[0].x
 					y: ( 50 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 100 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})

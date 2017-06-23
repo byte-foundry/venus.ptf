@@ -37,21 +37,19 @@ exports.glyphs['c'] =
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
 						90
 					) + 'deg'
-					expand: Object({
+					expand:
 						width: ( 115 / 115) * thickness * contrast * contrastExtremity
 						angle: - anglePenBottom + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 95 / 115) * thickness * contrast
 						angle: 180 + 90 + 'deg'
 						distr: 1
-					})
 				2:
 					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
@@ -59,22 +57,20 @@ exports.glyphs['c'] =
 					type: 'smooth'
 					tensionIn: 1.15
 					tensionOut: 1.15
-					expand: Object({
+					expand:
 						width: ( 125 / 115) * thickness
 						angle: 180 + 'deg'
 						distr: 0.75
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width: ( 90 / 115) * thickness * contrast
 						angle: 180 - 90 + 'deg'
 						distr: 1
-					})
 				4:
 					x: contours[0].nodes[0].x
 					y: Math.max(
@@ -86,11 +82,10 @@ exports.glyphs['c'] =
 						90
 					) + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 112 / 115) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75 # * contrastExtremity
-					})
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
@@ -98,20 +93,20 @@ exports.glyphs['c'] =
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[4].expandedTo[1]
-					baseHeight: contours[0].nodes[4].expandedTo[1].point
-					noneAnchor: contours[0].nodes[4].expandedTo[1].point
-					opposite: contours[0].nodes[4].expandedTo[0].point
+					baseHeight: contours[0].nodes[4].expandedTo[1]
+					noneAnchor: contours[0].nodes[4].expandedTo[1]
+					opposite: contours[0].nodes[4].expandedTo[0]
 					curveEnd: contours[0].nodes[3].expandedTo[1]
 					rotationAngle: -15
-					rotationCenter: contours[0].nodes[4].expandedTo[1].point
+					rotationCenter: contours[0].nodes[4].expandedTo[1]
 		# 1:
 		# 	base: 'serif-curve-inside-auto'
 		# 	id: 'topbottom'
 		# 	parentAnchors:
 		# 		0:
 		# 			base: contours[0].nodes[4].expandedTo[0]
-		# 			opposite: contours[0].nodes[4].expandedTo[1].point
+		# 			opposite: contours[0].nodes[4].expandedTo[1]
 		# 			curveEnd: contours[0].nodes[3].expandedTo[0]
 		# 			rotationAngle: -15
 		# 			down: true
-		# 			rotationCenter: contours[0].nodes[4].expandedTo[1].point
+		# 			rotationCenter: contours[0].nodes[4].expandedTo[1]

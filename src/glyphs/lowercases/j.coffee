@@ -24,43 +24,39 @@ exports.glyphs['j'] =
 					x: contours[0].nodes[2].expandedTo[0].x - 85 * width
 					y: ( 75 / 250 ) * descender
 					dirOut: - 90 + 'deg'
-					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 95 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x - 50
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
+					typeIn: 'smooth'
 					tensionOut: 1.3
-					expand: Object({
+					expand:
 						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 72 + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[3].x
 					y: 0
 					dirOut: - 90 + 'deg'
 					tensionIn: 1.3
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				3:
 					x: spacingLeft + 150 * width - 150
 					y: xHeight - Math.max(0, serifHeight * serifArc )- ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: false
 			closed: true
@@ -102,11 +98,11 @@ exports.glyphs['j'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[3].expandedTo[0].point
-					noneAnchor: contours[0].nodes[3].expandedTo[0].point
-					opposite: contours[0].nodes[3].expandedTo[1].point
+					base: contours[0].nodes[3].expandedTo[0]
+					noneAnchor: contours[0].nodes[3].expandedTo[0]
+					opposite: contours[0].nodes[3].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[3].point
+			transformOrigin: contours[0].nodes[3]
 			transforms: Array(
 				[ 'scaleY', -1 ],
 				[ 'skewY', - 15 * spurHeight + 'deg' ],

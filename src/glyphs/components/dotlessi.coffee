@@ -28,18 +28,16 @@ exports.glyphs['dotlessi'] =
 					y: 0
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: xHeight
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

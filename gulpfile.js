@@ -3,8 +3,7 @@
 var gulp = require('gulp'),
 	karma = require('karma').server,
 	operation = require('./operationalyzer'),
-	jsufon = require('./jsufonify'),
-	naive = require('./naive.js');
+	jsufon = require('./jsufonify');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*']
@@ -21,7 +20,6 @@ gulp.task('build', ['copy'], function() {
 		.pipe(operation())
 		.pipe($.concat('font.json'))
 		.pipe(jsufon())
-		.pipe(naive())
 		.pipe(gulp.dest('dist/'));
 });
 

@@ -24,17 +24,15 @@ exports.glyphs['backslash'] =
 					x: 260 + (30)
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 50 / 115 )
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: spacingLeft
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 50 / 115 )
 						angle: 0 + 'deg'
 						distr: 0
-					})

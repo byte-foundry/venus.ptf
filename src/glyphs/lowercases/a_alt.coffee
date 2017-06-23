@@ -32,42 +32,39 @@ exports.glyphs['a_alt'] =
 					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
-					expand: Object({
+					typeIn: 'smooth'
+					expand:
 						width: ( 125 / 115) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.55
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'smooth'
+					expand:
 						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
 						width: ( 102 / 115 ) * thickness * contrast
 						angle: - 68 + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'smooth'
+					expand:
 						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 1
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: - overshoot
 					dirOut: 180 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'smooth'
+					expand:
 						width: ( 102 / 115 ) * thickness * contrast
 						angle: 68 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -80,32 +77,30 @@ exports.glyphs['a_alt'] =
 					y: 0
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[1].nodes[0].x
 					y: xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[1].point
-					noneAnchor: contours[1].nodes[0].expandedTo[1].point
-					opposite: contours[1].nodes[0].expandedTo[0].point
+					base: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transformOrigin: contours[1].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
@@ -114,10 +109,10 @@ exports.glyphs['a_alt'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[1].expandedTo[1].point
-					noneAnchor: contours[1].nodes[1].expandedTo[1].point
-					opposite: contours[1].nodes[1].expandedTo[0].point
-			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+					base: contours[1].nodes[1].expandedTo[1]
+					noneAnchor: contours[1].nodes[1].expandedTo[1]
+					opposite: contours[1].nodes[1].expandedTo[0]
+			transformOrigin: contours[1].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]

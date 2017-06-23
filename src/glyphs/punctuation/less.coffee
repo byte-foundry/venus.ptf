@@ -25,38 +25,34 @@ exports.glyphs['less'] =
 					y: ( 470 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 95 / 115 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: spacingLeft
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 85 / 115 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
-					})
 				2:
 					x: spacingLeft
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 85 / 115 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				3:
 					x: contours[0].nodes[0].x
 					y: ( 50 / 520 ) * xHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 95 / 115 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.25
-					})

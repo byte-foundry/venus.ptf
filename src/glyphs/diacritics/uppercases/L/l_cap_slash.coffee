@@ -16,8 +16,8 @@ exports.glyphs['l_cap_slash'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[2].x
-					y: anchors[2].y
+					x: parentAnchors[2].x
+					y: parentAnchors[2].y
 				1:
-					x: anchors[3].x
-					y: anchors[3].y
+					x: parentAnchors[3].x
+					y: parentAnchors[3].y

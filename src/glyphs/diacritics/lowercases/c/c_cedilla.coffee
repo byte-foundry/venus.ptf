@@ -34,21 +34,19 @@ exports.glyphs['c_cedilla'] =
 						- anglePenBottom + 90 + 6 + correctWidthAperture,
 						90
 					) + 'deg'
-					expand: Object({
+					expand:
 						width: ( 115 / 115) * thickness * contrast * contrastExtremity
 						angle: - anglePenBottom + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 					y: - overshoot
 					dirOut: - 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 95 / 115) * thickness * contrast
 						angle: 180 + 90 + 'deg'
 						distr: 1
-					})
 				2:
 					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
@@ -56,22 +54,20 @@ exports.glyphs['c_cedilla'] =
 					type: 'smooth'
 					tensionIn: 1.15
 					tensionOut: 1.15
-					expand: Object({
+					expand:
 						width: ( 125 / 115) * thickness
 						angle: 180 + 'deg'
 						distr: 0.75
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width: ( 90 / 115) * thickness * contrast
 						angle: 180 - 90 + 'deg'
 						distr: 1
-					})
 				4:
 					x: contours[0].nodes[0].x
 					y: Math.max(
@@ -83,11 +79,10 @@ exports.glyphs['c_cedilla'] =
 						90
 					) + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 112 / 115) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75 # * contrastExtremity
-					})
 	components:
 		0:
 			base: 'cedilla'

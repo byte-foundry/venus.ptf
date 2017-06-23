@@ -27,30 +27,27 @@ exports.glyphs['exclamdown'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 135 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 440 / 750 ) * capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 135 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				2:
 					x: contours[0].nodes[0].x
 					y: minThickness + 170 - ( 85 / 115 ) * thickness
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 35 / 115 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 	components:
 		0:
 			base: 'dot'

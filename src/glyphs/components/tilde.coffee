@@ -18,11 +18,10 @@ exports.glyphs['tilde'] =
 					x: anchors[0].x - 80 * width
 					y: anchors[0].y
 					dirOut: 90 + 'deg'
-					expand: Object({
+					expand:
 						width: thickness * ( 85 / 115 )
 						angle: 180 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( anchors[0].x - contours[0].nodes[0].expandedTo[0].x ) *
 						Math.min(
@@ -32,11 +31,10 @@ exports.glyphs['tilde'] =
 					y: contours[1].nodes[1].y + overshoot
 					dirIn: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness * ( 90 / 115 )
 						angle: 180 - 85 + 'deg'
 						distr: 1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -50,20 +48,18 @@ exports.glyphs['tilde'] =
 					y: anchors[0].y - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness * ( 90 / 115 )
 						angle: 95 + 'deg'
 						distr: 0
-					})
 				1:
 					x: anchors[0].x + 80 * width
 					y: Math.min( anchors[0].y + 150 , anchors[0].y + 50 + ( 100 / 115 ) * thickness )
 					dirIn: - 90 + 'deg'
-					expand: Object({
+					expand:
 						width: thickness * ( 85 / 115 )
 						angle: 180 + 'deg'
 						distr: 1
-					})
 		2:
 			skeleton: false
 			closed: true

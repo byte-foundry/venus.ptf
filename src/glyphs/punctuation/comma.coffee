@@ -49,19 +49,17 @@ exports.glyphs['comma'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width:  Math.max( 8, ( 75 / 115 ) * thickness )
 						angle: 180 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[2].y - 60 - ( 60 / 115 ) * thickness
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					tensionIn: 1.2
-					expand: Object({
+					expand:
 						width: Math.max( 8, ( 60 / 115 ) * thickness )
 						angle: 90 + 'deg'
 						distr: 0
-					})

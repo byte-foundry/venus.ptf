@@ -37,20 +37,18 @@ exports.glyphs['s'] =
 						90
 					) + 'deg'
 					tensionOut: Math.min( correctTensionAperture, aperture * apertureBottom )
-					expand: Object({
+					expand:
 						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
 						angle: anglePenBottom + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.52
 					y: - overshoot / 2
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 90 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				2:
 					# x: 275 + 200 * width - (29)
 					x: Math.max(
@@ -60,45 +58,41 @@ exports.glyphs['s'] =
 					y: Math.max( 140, ( 140 / 520 ) * xHeight )
 					dirIn: - 90 + 'deg'
 					dirOut: 90 + 'deg'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 180 + 5 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[1].x + ( contours[0].nodes[5].x - contours[0].nodes[1].x ) * 0.46
 					y: ( 260 / 520 ) * xHeight
 					dirOut: Math.min(
-						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[0].point ) + Math.PI / 6,
+						Utils.lineAngle({x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y}, {x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y} ) + Math.PI / 6,
 						Math.PI + Math.PI / 60 / width
 					)
 					tensionIn: 1.1
 					tensionOut: 1.1
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 106 / 115 ) * thickness # + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
 						angle: 180 + 75 + 'deg'
 						distr: 0.5
-					})
 				4:
 					x: contours[0].nodes[0].x + (33)
 					y: xHeight - Math.max( 140, ( 140 / 520 ) * xHeight )
 					dirIn: - 90 + 'deg'
 					dirOut: 90 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness
 						angle: 180 + 5 + 'deg'
 						distr: 0.75
-					})
 				5:
 					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[6].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) * 0.5
 					y: xHeight + overshoot / 2
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 85 / 115 ) * thickness * contrast
 						angle: 180 - 90 + 'deg'
 						distr: 1
-					})
 				6:
 					# x: 261 + 200 * width - (24)
 					x: Math.max(
@@ -111,35 +105,36 @@ exports.glyphs['s'] =
 						90
 					) + 'deg'
 					tensionIn: Math.min( correctTensionAperture, aperture * apertureTop )
-					expand: Object({
+					expand:
 						width: ( 103 / 115 ) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'
 						distr: 0.75
-					})
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'top'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[6].dirIn
 					baseWidth: contours[0].nodes[6].expandedTo[1]
-					baseHeight: contours[0].nodes[6].expandedTo[1].point
-					noneAnchor: contours[0].nodes[6].expandedTo[1].point
-					opposite: contours[0].nodes[6].expandedTo[0].point
+					baseHeight: contours[0].nodes[6].expandedTo[1]
+					noneAnchor: contours[0].nodes[6].expandedTo[1]
+					opposite: contours[0].nodes[6].expandedTo[0]
 					curveEnd: contours[0].nodes[5].expandedTo[1]
 					rotationAngle: -15
-					rotationCenter: contours[0].nodes[6].expandedTo[1].point
+					rotationCenter: contours[0].nodes[6].expandedTo[1]
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottombottom'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirIn
 					baseWidth: contours[0].nodes[0].expandedTo[0]
-					baseHeight: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					baseHeight: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					curveEnd: contours[0].nodes[1].expandedTo[0]
 					rotationAngle: -15
-					rotationCenter: contours[0].nodes[0].expandedTo[0].point
+					rotationCenter: contours[0].nodes[0].expandedTo[0]
 					down: true
 					left: true

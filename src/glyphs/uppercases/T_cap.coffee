@@ -29,21 +29,19 @@ exports.glyphs['T_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].x + 375 + 200 * width - 2 * Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -53,40 +51,38 @@ exports.glyphs['T_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) / 2
 					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[0].point
-					noneAnchor: contours[1].nodes[0].expandedTo[0].point
-					opposite: contours[1].nodes[0].expandedTo[1].point
+					base: contours[1].nodes[0].expandedTo[0]
+					noneAnchor: contours[1].nodes[0].expandedTo[0]
+					opposite: contours[1].nodes[0].expandedTo[1]
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[1].point
-					noneAnchor: contours[1].nodes[0].expandedTo[1].point
-					opposite: contours[1].nodes[0].expandedTo[0].point
+					base: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transformOrigin: contours[1].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
@@ -95,11 +91,11 @@ exports.glyphs['T_cap'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'skewX', - 15 * serifRotate + 'deg' ],
@@ -110,10 +106,10 @@ exports.glyphs['T_cap'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[1].point
-					noneAnchor: contours[0].nodes[1].expandedTo[1].point
-					opposite: contours[0].nodes[1].expandedTo[0].point
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'skewX', - 15 * serifRotate + 'deg' ],
 				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
@@ -124,10 +120,10 @@ exports.glyphs['T_cap'] =
 		# 	id: 'topleft2'
 		# 	parentAnchors:
 		# 		0:
-		# 			base: contours[0].nodes[0].expandedTo[0].point
-		# 			opposite: contours[0].nodes[0].expandedTo[1].point
+		# 			base: contours[0].nodes[0].expandedTo[0]
+		# 			opposite: contours[0].nodes[0].expandedTo[1]
 		# 			# reversed: true
-		# 	transformOrigin: contours[0].nodes[0].expandedTo[0].point
+		# 	transformOrigin: contours[0].nodes[0].expandedTo[0]
 		# 	transforms: Array(
 		# 		[ 'scaleX', -1 ],
 		# 		[ 'scaleY', -1 ],

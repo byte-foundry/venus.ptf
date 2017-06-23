@@ -107,8 +107,6 @@ function jsufonify(/*prefixText*/) {
 
 		font = sandbox.exports;
 
-		ufoToPtf(font);
-
 		var charMap = {};
 
 		// WIP: convert ptf object to jsufon
@@ -181,8 +179,6 @@ function jsufonify(/*prefixText*/) {
 				};
 				delete glyph.transformList;
 			}
-
-			ufoToPtf(glyph);
 
 			return glyph;
 		});

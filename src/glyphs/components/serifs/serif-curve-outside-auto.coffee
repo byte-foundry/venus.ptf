@@ -22,8 +22,8 @@ exports.glyphs['serif-curve-outside'] =
 			rotate: parentAnchors[0].rotate || 0
 			fakePointTwoY: anchors[0].y - (serifWidth || 1)
 			fakePointTwoX: anchors[0].x - serifHeight
-			onOutsideCurve: Utils.pointOnCurve( anchors[2].leftSerifCurveIntersect[0], anchors[2].leftSerifCurveIntersect[1], serifCurve, true, 50 )
-			serifCurveIntersect: Utils.lineCurveIntersection( parentAnchors[0].curveEnd, parentAnchors[0].base, {x: anchors[2].fakePointTwoX, y: 0}, {x: anchors[2].fakePointTwoX, y: 100})
+			onOutsideCurve: Utils.pointOnCurve( anchors[2].leftSerifCurveIntersect[0], anchors[2].leftSerifCurveIntersect[0].handleOut, anchors[2].leftSerifCurveIntersect[1], anchors[2].leftSerifCurveIntersect[1].handleIn, serifCurve, true, 50 )
+			serifCurveIntersect: Utils.lineCurveIntersection( parentAnchors[0].curveEnd, parentAnchors[0].curveEnd.handleOut, parentAnchors[0].base, parentAnchors[0].base.handleIn, {x: anchors[2].fakePointTwoX, y: 0}, {x: anchors[2].fakePointTwoX, y: 100})
 			leftSerifCurveIntersect: anchors[2].serifCurveIntersect.left
 			zeroLeftSerifCurveIntersect: anchors[2].leftSerifCurveIntersect[1]
 			pointTwoYAxis: Math.max( anchors[0].y - serifWidth, anchors[3].y )
@@ -36,10 +36,10 @@ exports.glyphs['serif-curve-outside'] =
 			)
 			pointOneYAxis: anchors[2].zeroLeftSerifCurveIntersect.y + anchors[2].vectorFromZeroLeftToPointTwo.y * anchors[2].distanceFromZeroLeftToPointOne
 			pointOneXAxis: anchors[2].zeroLeftSerifCurveIntersect.x + anchors[2].vectorFromZeroLeftToPointTwo.x * anchors[2].distanceFromZeroLeftToPointOne
-			pointOneXAxisIntersection: Utils.lineCurveIntersection( parentAnchors[0].curveEnd, parentAnchors[0].base, {x: anchors[2].pointOneXAxis, y: 0}, {x: anchors[2].pointOneXAxis, y: 100})
+			pointOneXAxisIntersection: Utils.lineCurveIntersection(parentAnchors[0].curveEnd, parentAnchors[0].curveEnd.handleOut, parentAnchors[0].base, parentAnchors[0].base.handleIn, {x: anchors[2].pointOneXAxis, y: 0}, {x: anchors[2].pointOneXAxis, y: 100})
 			leftPointOneXAxisIntersection: anchors[2].pointOneXAxisIntersection.left
 			zeroLeftPointOneXAxisIntersection: anchors[2].leftPointOneXAxisIntersection[1]
-			pointTwoXAxisIntersection: Utils.lineCurveIntersection( parentAnchors[0].curveEnd, parentAnchors[0].base, {x: anchors[2].pointTwoXAxis, y: 0}, {x: anchors[2].pointTwoXAxis, y: 100})
+			pointTwoXAxisIntersection: Utils.lineCurveIntersection(parentAnchors[0].curveEnd, parentAnchors[0].curveEnd.handleOut, parentAnchors[0].base, parentAnchors[0].base.handleIn, {x: anchors[2].pointTwoXAxis, y: 0}, {x: anchors[2].pointTwoXAxis, y: 100})
 			leftPointTwoXAxisIntersection: anchors[2].pointTwoXAxisIntersection.left
 			zeroLeftPointTwoXAxisIntersection: anchors[2].leftPointTwoXAxisIntersection[1]
 		3:
@@ -58,7 +58,7 @@ exports.glyphs['serif-curve-outside'] =
 					y: anchors[2].onOutsideCurve.y
 					dirOut: anchors[2].onOutsideCurve.normal
 					tensionOut: serifRoundness
-					transformOrigin: contours[0].nodes[5].point
+					transformOrigin: contours[0].nodes[5]
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				1:
 					y: Math.min(
@@ -73,12 +73,12 @@ exports.glyphs['serif-curve-outside'] =
 						if contours[0].nodes[1].y == anchors[2].zeroLeftPointOneXAxisIntersection.y
 						then Utils.lineAngle({x: 0, y:0}, anchors[2].zeroLeftPointOneXAxisIntersection.handleOut)
 						else
-							if Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[1].point ) < anchors[2].onOutsideCurve.normal + Math.PI/24 && Utils.lineAngle( contours[0].nodes[2].point, contours[0].nodes[1].point ) > anchors[2].onOutsideCurve.normal - Math.PI/24
-							then Utils.lineAngle(contours[0].nodes[1].point, contours[0].nodes[0].point) - Math.PI/12
-							else Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[2].point )
+							if Utils.lineAngle( {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} ) < anchors[2].onOutsideCurve.normal + Math.PI/24 && Utils.lineAngle( {x: contours[0].nodes[2].point.x, y: contours[0].nodes[2].point.y}, {x: contours[0].nodes[1].point.x, y: contours[0].nodes[1].point.y} ) > anchors[2].onOutsideCurve.normal - Math.PI/24
+							then Utils.lineAngle({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}) - Math.PI/12
+							else Utils.lineAngle( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y} )
 					typeOut: 'line'
 					tensionIn: serifRoundness
-					transformOrigin: contours[0].nodes[5].point
+					transformOrigin: contours[0].nodes[5]
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				2:
 					y: Math.min(
@@ -97,9 +97,9 @@ exports.glyphs['serif-curve-outside'] =
 						else
 							if contours[0].nodes[2].y == anchors[2].zeroLeftPointTwoXAxisIntersection.y
 							then -90 + 'deg'
-							else Utils.lineAngle(contours[0].nodes[2].point, contours[0].nodes[1].point)
+							else Utils.lineAngle({x: contours[0].nodes[2].x, y: contours[0].nodes[2].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})
 					tensionOut: serifTerminalCurve
-					transformOrigin: contours[0].nodes[5].point
+					transformOrigin: contours[0].nodes[5]
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				3:
 					y:
@@ -110,11 +110,11 @@ exports.glyphs['serif-curve-outside'] =
 						if serifWidth >= 0.01
 						then contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 - anchors[0].y ) / serifWidth ) * ( serifMedian - 1 ) )
 						else anchors[0].x
-					dirOut: Utils.lineAngle( contours[0].nodes[2].point ,contours[0].nodes[4].point )
+					dirOut: Utils.lineAngle( {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y}, {x: contours[0].nodes[4].x, y: contours[0].nodes[4].y} )
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
 					tensionIn: serifTerminalCurve
-					transformOrigin: contours[0].nodes[5].point
+					transformOrigin: contours[0].nodes[5]
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				4:
 					y: Math.max(
@@ -127,15 +127,15 @@ exports.glyphs['serif-curve-outside'] =
 					dirOut:
 						if serifWidth > 0
 						then 90 + 'deg'
-						else Utils.lineAngle(contours[0].nodes[4].point, contours[0].nodes[3].point)
-					transformOrigin: contours[0].nodes[5].point
+						else Utils.lineAngle( {x: contours[0].nodes[4].x, y: contours[0].nodes[4].y}, {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y})
+					transformOrigin: contours[0].nodes[5]
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				5:
 					y: anchors[0].y
 					x: anchors[0].x
 					dirIn: - 90 + 'deg'
 					typeOut: 'line'
-					transformOrigin: contours[0].nodes[5].point
+					transformOrigin: {x: contours[0].nodes[5].x, y: contours[0].nodes[5].y}
 					transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
 				6:
 					y: Math.min(

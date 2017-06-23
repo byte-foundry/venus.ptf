@@ -25,21 +25,19 @@ exports.glyphs['logicalnot'] =
 					y: ( 262 / 750 ) * capHeight + (1)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 95 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 100 + thickness * contrast
 					y: ( 262 / 750 ) * capHeight + (1)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 95 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -48,17 +46,15 @@ exports.glyphs['logicalnot'] =
 					x: contours[1].nodes[1].x
 					y: contours[0].nodes[0].expandedTo[0].y - 150
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 115 / 115 ) * thickness * contrast
 						angle: 180 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 115 / 115 ) * thickness * contrast
 						angle: 180 + 'deg'
 						distr: 0
-					})

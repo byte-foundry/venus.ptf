@@ -21,17 +21,15 @@ exports.glyphs['hstroke'] =
 					x: anchors[0].x
 					y: anchors[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 80 / 115 ) * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: anchors[1].x
 					y: anchors[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 80 / 115 ) * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})

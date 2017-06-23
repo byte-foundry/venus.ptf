@@ -1,4 +1,4 @@
-exports.glyphs['a_ogonek'] =
+exports.glyphs['a_alt_ogonek'] =
 	unicode: 'ą'
 	glyphName: 'aogonek'
 	characterName: 'LATIN SMALL LETTER A WITH OGONEK'
@@ -16,5 +16,5 @@ exports.glyphs['a_ogonek'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[1].x
-					y: anchors[1].y
+					x: parentAnchors[1].x
+					y: parentAnchors[1].y

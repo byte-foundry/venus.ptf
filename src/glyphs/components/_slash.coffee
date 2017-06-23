@@ -17,16 +17,14 @@ exports.glyphs['_slash'] =
 					x: anchors[0].x
 					y: anchors[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 85 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: anchors[1].x
 					y: anchors[1].y
-					expand: Object({
+					expand:
 						width: ( 85 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
