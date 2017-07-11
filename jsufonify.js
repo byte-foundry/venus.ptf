@@ -28,7 +28,7 @@ function addComponents( glyph ) {
 }
 
 // plugin level function (dealing with files)
-function jsufonify(/*prefixText*/) {
+function jsufonify(/*prefixText*/free) {
 
 	// creating a stream through which each file will pass
 	var stream = through.obj(function(file, enc, cb) {
@@ -41,8 +41,33 @@ function jsufonify(/*prefixText*/) {
 
 		var charMap = {};
 
+		if (free) {
+			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
+				if (glyph.unicode === undefined) {
+					return glyph;
+				}
+				else {
+					if (typeof glyph.unicode === 'number') {
+						return (glyph.unicode >=65 && glyph.unicode <= 90) ||
+							(glyph.unicode >= 87 && glyph.unicode <= 122) ? glyph : undefined;
+					}
+					else {
+						return (glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
+							(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
+					}
+				}
+				return glyph.unicode === undefined ||
+					(glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
+					(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
+			});
+		}
+
 		// WIP: convert ptf object to jsufon
 		_.forEach(font.glyphs, function( glyph, name ) {
+			if (glyph === undefined) {
+				delete font.glyphs[name];
+				return;
+			}
 			glyph.name = name;
 
 			if ( glyph.name.length === 1 ) {
