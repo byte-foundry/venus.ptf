@@ -26,6 +26,7 @@ exports.glyphs['zero'] =
 					dirOut: 90 + 'deg'
 					tensionOut: 1.05
 					tensionIn: 1.1
+					type: 'smooth'
 					expand: Object({
 						width: ( 140 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'

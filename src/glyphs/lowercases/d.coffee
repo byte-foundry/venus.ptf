@@ -31,6 +31,7 @@ exports.glyphs['d'] =
 					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
+					type: 'smooth'
 					expand: Object({
 						width: ( 125 / 115) * thickness
 						angle: 0 + 'deg'

@@ -25,6 +25,7 @@ exports.glyphs['Q_cap'] =
 					y: ( 375 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
 					tensionOut: 0.95
+					type: 'smooth'
 					expand: Object({
 						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 0 + 'deg'
