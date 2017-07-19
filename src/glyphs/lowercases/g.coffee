@@ -31,6 +31,7 @@ exports.glyphs['g'] =
 					dirOut: 90 + 'deg'
 					tensionOut: 1.2
 					tensionIn: 1.2
+					type: 'smooth'
 					expand: Object({
 						width: ( 125 / 115) * thickness
 						angle: 0 + 'deg'
