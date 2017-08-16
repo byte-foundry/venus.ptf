@@ -23,6 +23,11 @@ exports.glyphs['nine'] =
 		0:
 			skeleton: true
 			closed: false
+			transformOrigin: Object({x: (contours[0].nodes[4].expandedTo[0].x + spacingRight) / 2, y: 0})
+			transforms: Array(
+				['rotate', 180 + 'deg']
+				['translateY', ( capHeight ) ],
+			)
 			nodes:
 				0:
 					x: Math.max(
@@ -89,6 +94,11 @@ exports.glyphs['nine'] =
 		1:
 			skeleton: true
 			closed: false
+			transformOrigin: Object({x: (contours[0].nodes[4].expandedTo[0].x + spacingRight) / 2, y: 0})
+			transforms: Array(
+				['rotate', 180 + 'deg']
+				['translateY', ( capHeight ) ],
+			)
 			nodes:
 				0:
 					x: contours[0].nodes[5].x
@@ -110,7 +120,7 @@ exports.glyphs['nine'] =
 							{
 								x: anchors[0].junctionBottom.x
 								y: anchors[0].junctionBottom.y
-								dirOut: Math.min(100, Math.max(65, ( 90 / 115 ) * thickness )) + 'deg'
+								dirIn: Math.min(100, Math.max(65, ( 90 / 115 ) * thickness )) + 'deg'
 								typeOut: 'smooth'
 							}
 						]
@@ -126,8 +136,3 @@ exports.glyphs['nine'] =
 								y: contours[1].nodes[1].expandedTo[1].y
 							}
 						]
-			transformOrigin: Array( (contours[0].nodes[4].expandedTo[0].x + spacingRight) / 2, 0 )
-			transforms: Array(
-				['translateY', ( capHeight ) ],
-				['rotate', 180 + 'deg']
-			)

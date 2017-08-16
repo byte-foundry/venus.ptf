@@ -13,6 +13,7 @@ exports.glyphs['e_cap_ogonek'] =
 	components:
 		0:
 			base: 'ogonek'
+			id: 'ogonek'
 			copy: true
 			parentAnchors:
 				0:

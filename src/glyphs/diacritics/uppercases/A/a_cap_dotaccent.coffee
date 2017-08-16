@@ -13,6 +13,7 @@ exports.glyphs['a_cap_dotaccent'] =
 	components:
 		0:
 			base: 'dot_accent'
+			base: 'dot_accent'
 			copy: true
 			parentAnchors:
 				0:

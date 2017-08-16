@@ -18,12 +18,14 @@ exports.glyphs['semicolon'] =
 	components:
 		0:
 			base: 'comma'
+			id: 'comma'
 			parentAnchors:
 				0:
 					x: 0
 					y: 0
 		1:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2

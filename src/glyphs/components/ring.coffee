@@ -30,7 +30,7 @@ exports.glyphs['ring'] =
 					x: anchors[0].x
 					y: anchors[0].y + 160 + overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.05
 					tensionOut: 1.05
 					expand:
@@ -41,7 +41,7 @@ exports.glyphs['ring'] =
 					x: anchors[0].x + ( contours[0].nodes[1].expandedTo[1].y - contours[0].nodes[3].expandedTo[1].y ) * ( 57 / 63 ) / 2 + ( ( 57 / 115 ) * thickness * 0.25 )
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.05
 					tensionOut: 1.1
 					expand:
@@ -52,7 +52,7 @@ exports.glyphs['ring'] =
 					x: contours[0].nodes[1].x
 					y: anchors[0].y
 					dirOut: 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:

@@ -25,6 +25,12 @@ exports.glyphs['a'] =
 		1:
 			x: contours[0].nodes[4].expandedTo[0].x
 			y: contours[0].nodes[4].expandedTo[0].y
+		2:
+			x: contours[0].nodes[1].x - 95 / 2 - minThickness / 2
+			y: xHeight + diacriticHeight
+		3:
+			x: contours[0].nodes[1].x + 95 / 2 + minThickness / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

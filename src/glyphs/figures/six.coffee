@@ -31,7 +31,7 @@ exports.glyphs['six'] =
 					)
 					y: ( 635 / 750 ) * capHeight - (16)
 					dirOut: 105 + 15 * contrast + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 119 / 115 ) * thickness * opticThickness * contrast
 						angle: - 147 + 'deg'
@@ -50,7 +50,7 @@ exports.glyphs['six'] =
 					x: spacingLeft + (34)
 					y: ( 375 / 750 ) * capHeight + (0)
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 1.1
 					expand:
 						width: ( 142 / 115 ) * thickness * opticThickness
@@ -60,7 +60,7 @@ exports.glyphs['six'] =
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.53
 					y: - overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.1
 					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
@@ -72,8 +72,8 @@ exports.glyphs['six'] =
 						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
 					)
 					y: ( 245 / 750 ) * capHeight + (0)
-					dirOut: 90 + 'deg'
-					type: 'smooth'
+					dirIn: 90 + 'deg'
+					typeOut: 'smooth'
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
 						angle: 180 + 'deg'
@@ -105,13 +105,13 @@ exports.glyphs['six'] =
 								x: anchors[0].junctionTop.x
 								y: anchors[0].junctionTop.y
 								dirIn: Math.max(65, ( 65 / 115 ) * thickness ) + 'deg'
-								type: 'smooth'
+								typeOut: 'smooth'
 							}
 							{
 								x: anchors[0].junctionBottom.x
 								y: anchors[0].junctionBottom.y
-								dirOut: Math.min(100, Math.max(65, ( 90 / 115 ) * thickness )) + 'deg'
-								type: 'smooth'
+								dirIn: Math.min(100, Math.max(65, ( 90 / 115 ) * thickness )) + 'deg'
+								typeOut: 'smooth'
 							}
 						]
 				2:

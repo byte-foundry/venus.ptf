@@ -19,12 +19,14 @@ exports.glyphs['quotedbl'] =
 	components:
 		0:
 			base: '_quotesingle'
+			id: 'quotesingle1'
 			parentAnchors:
 				0:
 					x: spacingLeft + (30) + minThickness / 2
 					y: capHeight
 		1:
 			base: '_quotesingle'
+			id: 'quotesingle2'
 			parentAnchors:
 				0:
 					x: spacingLeft + (30) + minThickness + space

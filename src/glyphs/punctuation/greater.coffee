@@ -23,7 +23,6 @@ exports.glyphs['greater'] =
 				0:
 					x: spacingLeft
 					y: ( 470 / 520 ) * xHeight
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness
@@ -32,7 +31,7 @@ exports.glyphs['greater'] =
 				1:
 					x: spacingLeft + 450 * width + (0)
 					y: ( 260 / 520 ) * xHeight
-					dirOut: 0 + 'deg'
+					typeIn: 'line'
 					typeOut: 'line'
 					expand:
 						width: ( 85 / 115 ) * thickness
@@ -41,7 +40,7 @@ exports.glyphs['greater'] =
 				2:
 					x: contours[0].nodes[1].x
 					y: ( 260 / 520 ) * xHeight
-					dirOut: 0 + 'deg'
+					typeIn: 'line'
 					typeOut: 'line'
 					expand:
 						width: ( 85 / 115 ) * thickness
@@ -50,8 +49,7 @@ exports.glyphs['greater'] =
 				3:
 					x: contours[0].nodes[0].x
 					y: ( 50 / 520 ) * xHeight
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness
 						angle: 90 + 'deg'

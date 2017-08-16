@@ -23,7 +23,6 @@ exports.glyphs['logicalnot'] =
 				0:
 					x: spacingLeft
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
@@ -32,8 +31,7 @@ exports.glyphs['logicalnot'] =
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 100 + thickness * contrast
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'
@@ -53,7 +51,7 @@ exports.glyphs['logicalnot'] =
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness * contrast
 						angle: 180 + 'deg'

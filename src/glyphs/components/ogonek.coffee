@@ -28,7 +28,7 @@ exports.glyphs['ogonek'] =
 					x: contours[0].nodes[0].expandedTo[0].x - 70
 					y: ( contours[0].nodes[0].expandedTo[1].y + ( contours[0].nodes[2].y - contours[0].nodes[2].expand.width * ( 1 - contours[0].nodes[2].expand.distr )) ) / 2
 					dirIn: 90 + 'deg'
-					type: 'smooth'
+					typeOut: 'smooth'
 					expand:
 						width: thickness * ( 65 / 115 )
 						angle: 180 + 10 + 'deg'
@@ -40,7 +40,7 @@ exports.glyphs['ogonek'] =
 					)
 					y: - 200
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 55 / 90 ) * thickness * contrast
 						angle: 180 + 85 + 'deg'

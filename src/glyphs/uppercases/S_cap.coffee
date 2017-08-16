@@ -22,6 +22,9 @@ exports.glyphs['S_cap'] =
 		0:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[6].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
 			y: capHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[1].x
+			y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
 	contours:
 		0:
 			skeleton: true
@@ -111,6 +114,7 @@ exports.glyphs['S_cap'] =
 			id: 'top'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[6].dirIn
 					baseWidth: contours[0].nodes[6].expandedTo[1]
 					baseHeight: contours[0].nodes[6].expandedTo[1]
 					noneAnchor: contours[0].nodes[6].expandedTo[1]
@@ -123,6 +127,7 @@ exports.glyphs['S_cap'] =
 			id: 'bottom'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					opposite: contours[0].nodes[0].expandedTo[1]

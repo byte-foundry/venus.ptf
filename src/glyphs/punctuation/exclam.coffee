@@ -41,7 +41,7 @@ exports.glyphs['exclam'] =
 				2:
 					x: contours[0].nodes[0].x
 					y: minThickness + 170 - ( 85 / 115 ) * thickness
-					dirOut: 0 + 'deg'
+					typeIn: 'line'
 					expand:
 						width: ( 35 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -49,6 +49,7 @@ exports.glyphs['exclam'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].x

@@ -32,7 +32,7 @@ exports.glyphs['arobase'] =
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[0].x ) * 0.55
 					y: - 242
 					dirOut: 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 75 / 115 ) * thickness * contrast
 						angle: 180 + 90 + 'deg'
@@ -65,7 +65,7 @@ exports.glyphs['arobase'] =
 					x: contours[0].nodes[6].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[6].expandedTo[1].x ) * 0.5
 					y: 0
 					dirOut: 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 75 / 115 ) * thickness * contrast
 						angle: 180 + 62 + 'deg'
@@ -85,7 +85,7 @@ exports.glyphs['arobase'] =
 				7:
 					x: contours[0].nodes[6].x + 15 + Math.min( 20, ( 20 / 500 ) * xHeight )
 					y: ( 480 / 500 ) * xHeight
-					dirOut: 0 + 'deg'
+					dirIn: 0 + 'deg'
 					expand:
 						width: ( 105 / 115 ) * thickness
 						angle: 180 + 0 + 'deg'
@@ -113,7 +113,7 @@ exports.glyphs['arobase'] =
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
 					y: ( 490 / 500 ) * xHeight
 					dirOut: 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 100 / 115 ) * thickness * contrast
 						angle: Math.PI + Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
@@ -123,7 +123,7 @@ exports.glyphs['arobase'] =
 					y: contours[1].nodes[3].y + ( contours[1].nodes[0].y - contours[1].nodes[3].y ) * 0.5
 					y: contours[0].nodes[2].y
 					dirOut: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 115 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -133,7 +133,7 @@ exports.glyphs['arobase'] =
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.45
 					y: 20
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 100 / 115 ) * thickness * contrast
 						angle: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )

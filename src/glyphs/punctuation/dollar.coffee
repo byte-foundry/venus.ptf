@@ -12,6 +12,7 @@ exports.glyphs['dollar'] =
 	components:
 		0:
 			base: 'line'
+			id: 'line1'
 			copy: true
 			parentAnchors:
 				0:
@@ -19,6 +20,7 @@ exports.glyphs['dollar'] =
 					y: capHeight
 		1:
 			base: 'line'
+			id: 'line2'
 			copy: true
 			parentAnchors:
 				0:

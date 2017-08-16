@@ -27,22 +27,27 @@ exports.glyphs['circumflex'] =
 						contours[0].nodes[2].x + ( 105 / 115 ) * thickness
 					)
 					y: anchors[0].y
+					typeIn: 'line'
 					typeOut: 'line'
 				2:
 					x: anchors[0].x - 105 - 65 * width
 					y: contours[0].nodes[1].y
+					typeIn: 'line'
 					typeOut: 'line'
 				3:
 					x: anchors[0].x - Math.min( 70, ( 58 / 115 ) * thickness )
 					y: anchors[0].y + 150
+					typeIn: 'line'
 					typeOut: 'line'
 				4:
 					x: anchors[0].x + Math.min( 70, ( 58 / 115 ) * thickness )
 					y: contours[0].nodes[3].y
+					typeIn: 'line'
 					typeOut: 'line'
 				5:
 					x: anchors[0].x + 105 + 65 * width
 					y: anchors[0].y
+					typeIn: 'line'
 					typeOut: 'line'
 				6:
 					x: Math.max(
@@ -50,4 +55,5 @@ exports.glyphs['circumflex'] =
 						contours[0].nodes[5].x - ( 105 / 115 ) * thickness
 					)
 					y: anchors[0].y
+					typeIn: 'line'
 					typeOut: 'line'

@@ -47,7 +47,7 @@ exports.glyphs['tilde'] =
 						)
 					y: anchors[0].y - overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: thickness * ( 90 / 115 )
 						angle: 95 + 'deg'
@@ -73,6 +73,7 @@ exports.glyphs['tilde'] =
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
+					typeIn: 'line'
 					typeOut: 'line'
 					tensionIn: Math.max( 0.9, (0.4/115) * thickness )
 				2:
@@ -83,5 +84,4 @@ exports.glyphs['tilde'] =
 				3:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
-					typeOut: 'line'
 					tensionIn: Math.max( 0.9, (0.4/115) * thickness )

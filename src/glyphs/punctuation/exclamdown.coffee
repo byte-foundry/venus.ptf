@@ -6,8 +6,7 @@ exports.glyphs['exclamdown'] =
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg'],
-		['scaleY', -1], ['translateY', - xHeight],
-		['scaleX', -1], ['translateX', - (contours[0].nodes[0].expandedTo[1].x + spacingRight) ]
+		['scaleY', -1], ['translateY', capHeight],
 	)
 	tags: [
 		'all',
@@ -25,7 +24,6 @@ exports.glyphs['exclamdown'] =
 				0:
 					x: spacingLeft + ( 135 / 115 ) * thickness / 2
 					y: capHeight
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness
@@ -34,7 +32,6 @@ exports.glyphs['exclamdown'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 440 / 750 ) * capHeight
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness
@@ -43,7 +40,7 @@ exports.glyphs['exclamdown'] =
 				2:
 					x: contours[0].nodes[0].x
 					y: minThickness + 170 - ( 85 / 115 ) * thickness
-					dirOut: 0 + 'deg'
+					typeIn: 'line'
 					expand:
 						width: ( 35 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -51,7 +48,12 @@ exports.glyphs['exclamdown'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].x
 					y: 0
+			transforms: Array(
+				['skewX', slant + 'deg'],
+				['scaleY', -1], ['translateY', capHeight],
+			)

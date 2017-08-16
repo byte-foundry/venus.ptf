@@ -18,6 +18,7 @@ exports.glyphs['quotesingle'] =
 	components:
 		0:
 			base: '_quotesingle'
+			id: 'quotesingle'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2

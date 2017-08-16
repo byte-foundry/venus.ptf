@@ -38,7 +38,7 @@ exports.glyphs['comma'] =
 				3:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[2].y
-					typeOut: 'line'
+					typeIn: 'line'
 		1:
 			skeleton: true
 			closed: false
@@ -47,7 +47,7 @@ exports.glyphs['comma'] =
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[2].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width:  Math.max( 8, ( 75 / 115 ) * thickness )
@@ -57,7 +57,7 @@ exports.glyphs['comma'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[2].y - 60 - ( 60 / 115 ) * thickness
 					dirIn: 0 + 'deg'
-					type: 'smooth'
+					typeOut: 'smooth'
 					tensionIn: 1.2
 					expand:
 						width: Math.max( 8, ( 60 / 115 ) * thickness )

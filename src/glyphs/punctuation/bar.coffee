@@ -23,7 +23,6 @@ exports.glyphs['bar'] =
 				0:
 					x: spacingLeft + ( 75 / 115 ) * thickness / 2
 					y: ascenderHeight + 50
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 75 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['bar'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 200 / 250 ) * descender - 50
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 75 / 115 ) * thickness
 						angle: 0 + 'deg'

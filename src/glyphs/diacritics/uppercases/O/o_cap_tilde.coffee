@@ -13,6 +13,7 @@ exports.glyphs['o_cap_tilde'] =
 	components:
 		0:
 			base: 'tilde'
+			id: 'tilde'
 			copy: true
 			parentAnchors:
 				0:

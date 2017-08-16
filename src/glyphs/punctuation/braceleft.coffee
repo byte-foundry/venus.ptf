@@ -59,7 +59,7 @@ exports.glyphs['braceleft'] =
 					x: contours[0].nodes[5].x + 10 * width
 					y: contours[0].nodes[5].expandedTo[0].y
 					typeOut: 'line'
-					type: 'smooth'
+					dirIn: 0
 					expand:
 						width: thickness * ( 76 / 115 )
 						angle: - 23 + 'deg'
@@ -83,8 +83,8 @@ exports.glyphs['braceleft'] =
 				7:
 					x: contours[0].nodes[4].x
 					y: contours[0].nodes[5].expandedTo[1].y
-					dirOut: 0 + 'deg'
-					type: 'smooth'
+					dirOut: 0
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 76 / 115 )
 						angle: 23 + 'deg'
@@ -93,7 +93,7 @@ exports.glyphs['braceleft'] =
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[5].expandedTo[1].y - ( 60 / 750 ) * capHeight
 					typeOut: 'line'
-					type: 'smooth'
+					dirIn: 90 + 'deg'
 					expand:
 						width: thickness * ( 76 / 115 )
 						angle: - 11 + 'deg'
@@ -117,7 +117,7 @@ exports.glyphs['braceleft'] =
 				11:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[10].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
 						angle: 90 + 'deg'

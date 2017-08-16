@@ -24,6 +24,7 @@ exports.glyphs['_slash'] =
 				1:
 					x: anchors[1].x
 					y: anchors[1].y
+					typeIn: 'line'
 					expand:
 						width: ( 85 / 115 ) * thickness * contrast
 						angle: 90 + 'deg'

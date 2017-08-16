@@ -123,6 +123,7 @@ exports.glyphs['g'] =
 	components:
 		0:
 			base: ['serif-vertical', 'none']
+			id: 'topright'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[3].expandedTo[0]

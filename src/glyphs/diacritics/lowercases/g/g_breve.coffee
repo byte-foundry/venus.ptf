@@ -13,6 +13,7 @@ exports.glyphs['g_breve'] =
 	components:
 		0:
 			base: 'breve'
+			id: 'breve'
 			copy: true
 			parentAnchors:
 				0:

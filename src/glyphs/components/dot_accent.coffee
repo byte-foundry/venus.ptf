@@ -22,11 +22,14 @@ exports.glyphs['dot_accent'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y + minThickness
 					typeOut: 'line'
+					typeIn: 'line'
 				2:
 					x: contours[0].nodes[1].x + minThickness
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
+					typeIn: 'line'
 				3:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[2].y - minThickness
 					typeOut: 'line'
+					typeIn: 'line'

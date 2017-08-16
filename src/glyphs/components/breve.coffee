@@ -26,7 +26,7 @@ exports.glyphs['breve'] =
 					x: anchors[0].x
 					y: anchors[0].y - overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: thickness * ( 80 / 115 )
 						angle: 90 + 'deg'

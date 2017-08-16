@@ -18,12 +18,15 @@ exports.glyphs['dot'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y + minThickness
+					typeIn: 'line'
 					typeOut: 'line'
 				2:
 					x: contours[0].nodes[1].x + minThickness
 					y: contours[0].nodes[1].y
+					typeIn: 'line'
 					typeOut: 'line'
 				3:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[2].y - minThickness
+					typeIn: 'line'
 					typeOut: 'line'

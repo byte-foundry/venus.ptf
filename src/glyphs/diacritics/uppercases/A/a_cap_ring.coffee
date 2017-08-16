@@ -13,6 +13,7 @@ exports.glyphs['a_cap_ring'] =
 	components:
 		0:
 			base: 'ring'
+			id: 'ring'
 			copy: true
 			parentAnchors:
 				0:

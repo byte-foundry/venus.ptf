@@ -13,6 +13,7 @@ exports.glyphs['l_cap_slash'] =
 	components:
 		0:
 			base: '_slash'
+			id: '_slash'
 			copy: true
 			parentAnchors:
 				0:

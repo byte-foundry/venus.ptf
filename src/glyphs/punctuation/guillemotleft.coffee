@@ -19,12 +19,14 @@ exports.glyphs['guillemotleft'] =
 	components:
 		0:
 			base: '_guilsinglleft'
+			id: 'guilsinglleft1'
 			parentAnchors:
 				0:
 					x: spacingLeft
 					y: ( 260 / 520 ) * xHeight
 		1:
 			base: '_guilsinglleft'
+			id: 'guilsinglleft2'
 			parentAnchors:
 				0:
 					x: spacingLeft + 140 * width + space

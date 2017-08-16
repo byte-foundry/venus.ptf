@@ -18,6 +18,7 @@ exports.glyphs['period'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2

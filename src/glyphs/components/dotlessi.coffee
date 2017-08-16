@@ -26,7 +26,6 @@ exports.glyphs['dotlessi'] =
 				0:
 					x: spacingLeft + (97)
 					y: 0
-					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: thickness
@@ -35,8 +34,7 @@ exports.glyphs['dotlessi'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: xHeight
-					dirOut: - 90 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0 + 'deg'

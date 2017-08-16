@@ -13,6 +13,7 @@ exports.glyphs['e_cap_dieresis'] =
 	components:
 		0:
 			base: 'dot_accent'
+			id: 'dot_accent1'
 			copy: true
 			parentAnchors:
 				0:
@@ -20,6 +21,7 @@ exports.glyphs['e_cap_dieresis'] =
 					y: parentAnchors[0].y
 		1:
 			base: 'dot_accent'
+			id: 'dot_accent2'
 			copy: true
 			parentAnchors:
 				0:

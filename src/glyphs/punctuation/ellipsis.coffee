@@ -18,18 +18,21 @@ exports.glyphs['ellipsis'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot1'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
 					y: 0
 		1:
 			base: 'dot'
+			id: 'dot2'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness + 75 + minThickness / 2
 					y: 0
 		2:
 			base: 'dot'
+			id: 'dot3'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness + 75 + minThickness + 75 + minThickness / 2

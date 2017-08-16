@@ -20,8 +20,11 @@ exports.glyphs['c_alt'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[3].expandedTo[0].x
+			x: contours[0].nodes[3].x
 			y: xHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
+			y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
 	contours:
 		0:
 			skeleton: true

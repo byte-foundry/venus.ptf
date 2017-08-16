@@ -1,4 +1,5 @@
 exports.glyphs['serif-curve-outside'] =
+	componentLabel: 'Serif'
 	parameters:
 		serifCurve:
 			if serifHeight == 0

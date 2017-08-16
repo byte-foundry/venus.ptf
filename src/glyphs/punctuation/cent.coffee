@@ -12,6 +12,7 @@ exports.glyphs['cent'] =
 	components:
 		0:
 			base: 'line'
+			id: 'line'
 			copy: true
 			parentAnchors:
 				0:

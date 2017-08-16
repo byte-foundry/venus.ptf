@@ -18,6 +18,7 @@ exports.glyphs['guilsinglright'] =
 	components:
 		0:
 			base: '_guilsinglright'
+			id: 'guilsinglright'
 			parentAnchors:
 				0:
 					x: spacingLeft

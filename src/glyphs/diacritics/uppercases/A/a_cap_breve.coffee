@@ -13,6 +13,7 @@ exports.glyphs['a_cap_breve'] =
 	components:
 		0:
 			base: 'breve'
+			id: 'breve'
 			copy: true
 			parentAnchors:
 				0:

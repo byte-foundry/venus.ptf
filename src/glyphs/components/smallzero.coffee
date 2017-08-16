@@ -28,7 +28,7 @@ exports.glyphs['smallzero'] =
 					x: contours[0].nodes[0].x - (anchors[0].height * 0.6) / 2 * width - 20
 					y: contours[0].nodes[0].y + anchors[0].height / 2
 					dirOut: 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 65 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -39,7 +39,7 @@ exports.glyphs['smallzero'] =
 					dirOut: 0 + 'deg'
 					tensionIn: 1.1
 					tensionOut: 1.1
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 60 / 115 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
@@ -48,7 +48,7 @@ exports.glyphs['smallzero'] =
 					x: contours[0].nodes[0].x + (anchors[0].height * 0.6) / 2 * width + 20
 					y: contours[0].nodes[1].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 65 / 115 ) * thickness
 						angle: 180 + 'deg'

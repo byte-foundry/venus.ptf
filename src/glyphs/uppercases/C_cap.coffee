@@ -21,6 +21,9 @@ exports.glyphs['C_cap'] =
 			baseSerifBottom: Utils.pointOnCurve( contours[0].nodes[0].expandedTo[0], contours[0].nodes[0].expandedTo[0].handleOut, contours[0].nodes[1].expandedTo[0], contours[0].nodes[1].expandedTo[0].handleIn, serifHeight + Math.min( 130, serifCurve * ( 130 / 15 ) ) )
 			baseSerifTop_: Utils.pointOnCurve( contours[0].nodes[4].expandedTo[1], contours[0].nodes[4].expandedTo[1].handleOut, contours[0].nodes[3].expandedTo[1], contours[0].nodes[3].expandedTo[1].handleIn, serifHeight + Math.min( 150, serifCurve * ( 150 / 15 ) ) )
 			baseSerifBottom_: Utils.pointOnCurve( contours[0].nodes[3].expandedTo[0], contours[0].nodes[3].expandedTo[0].handleOut, contours[0].nodes[4].expandedTo[0], contours[0].nodes[4].expandedTo[0].handleIn, serifHeight + Math.min( 130, serifCurve * ( 130 / 15 ) ), true )
+		1:
+			x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
+			y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
 	tags: [
 		'all',
 		'latin',

@@ -13,6 +13,7 @@ exports.glyphs['y_cap_grave'] =
 	components:
 		0:
 			base: 'grave'
+			id: 'grave'
 			copy: true
 			parentAnchors:
 				0:

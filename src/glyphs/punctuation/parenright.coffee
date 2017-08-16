@@ -48,7 +48,7 @@ exports.glyphs['parenright'] =
 						width: ( 60 / 115 ) * thickness
 						angle: 48 + 'deg'
 						distr: 0
-			transformOrigin: Array( (contours[0].nodes[2].expandedTo[1].x + spacingRight) / 2, 0 )
+			transformOrigin: Object({x: (contours[0].nodes[2].expandedTo[1].x + spacingRight) / 2, y: 0})
 			transforms: Array(
 				['translateY', (capHeight + 45) - 115 ],
 				['rotate', 180 + 'deg']

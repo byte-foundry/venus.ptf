@@ -1,5 +1,6 @@
 exports.glyphs['none'] =
 	glyphName: "none"
+	componentLabel: 'No serif'
 	characterName: "NONE"
 	anchors:
 		0:

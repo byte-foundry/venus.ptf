@@ -2,8 +2,9 @@ exports.glyphs['a_alt_ogonek'] =
 	unicode: 'ą'
 	glyphName: 'aogonek'
 	characterName: 'LATIN SMALL LETTER A WITH OGONEK'
-	base: 'a'
+	base: 'a_alt'
 	advanceWidth: base.advanceWidth
+	altImg: 'single-story-a.svg'
 	tags: [
 		'all',
 		'latin',
@@ -13,6 +14,7 @@ exports.glyphs['a_alt_ogonek'] =
 	components:
 		0:
 			base: 'ogonek'
+			id: 'ogonek'
 			copy: true
 			parentAnchors:
 				0:

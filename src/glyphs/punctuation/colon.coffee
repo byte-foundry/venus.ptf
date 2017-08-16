@@ -18,12 +18,14 @@ exports.glyphs['colon'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot1'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
 					y: 0
 		1:
 			base: 'dot'
+			id: 'dot2'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2

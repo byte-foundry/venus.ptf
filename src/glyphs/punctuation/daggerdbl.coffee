@@ -23,7 +23,6 @@ exports.glyphs['daggerdbl'] =
 				0:
 					x: contours[1].nodes[1].x + thickness / 2 + 170
 					y: ascenderHeight
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['daggerdbl'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 50 / 250 ) * descender
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -45,7 +43,6 @@ exports.glyphs['daggerdbl'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x + 170
 					y: contours[1].nodes[1].y
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
@@ -54,8 +51,7 @@ exports.glyphs['daggerdbl'] =
 				1:
 					x: spacingLeft
 					y: contours[0].nodes[0].y - ( contours[0].nodes[0].expandedTo[0].x - contours[1].nodes[1].x )
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
 						angle: - 90 + 'deg'
@@ -67,7 +63,6 @@ exports.glyphs['daggerdbl'] =
 				0:
 					x: contours[1].nodes[1].x
 					y: contours[0].nodes[1].y + ( contours[0].nodes[0].expandedTo[0].x - contours[1].nodes[1].x )
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
@@ -76,8 +71,7 @@ exports.glyphs['daggerdbl'] =
 				1:
 					x: contours[1].nodes[0].x
 					y: contours[2].nodes[0].y
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
 						angle: 90 + 'deg'

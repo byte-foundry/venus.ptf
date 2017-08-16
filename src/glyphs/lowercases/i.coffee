@@ -16,6 +16,10 @@ exports.glyphs['i'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -23,7 +23,6 @@ exports.glyphs['minus'] =
 				0:
 					x: spacingLeft
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['minus'] =
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 315
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness
 						angle: 90 + 'deg'

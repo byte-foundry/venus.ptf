@@ -34,7 +34,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[11].expandedTo[1].x + 20
 					y: - overshoot
 					dirOut: 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 1.5
 					expand:
 						width: ( 105 / 115 ) * thickness * contrast
@@ -45,7 +45,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * 0.5
 					y: ( 133 / 750 ) * capHeight + (16)
 					dirOut: Utils.lineAngle( {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y}, {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y} )
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 130 / 115 ) * thickness
 						angle: 9 + 'deg'
@@ -56,7 +56,7 @@ exports.glyphs['ampersand'] =
 					# x: contours[0].nodes[10].expandedTo[1].x
 					y: ( 355 / 750 ) * capHeight + (16)
 					dirOut: Utils.lineAngle( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y} )
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 112 / 115 ) * thickness
 						angle: 35 + 'deg'
@@ -66,7 +66,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[9].expandedTo[1].x + 120
 					y: ( 530 / 750 ) * capHeight
 					dirOut: 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 108 / 115 ) * thickness
 						angle: 5 + 'deg'
@@ -75,7 +75,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[6].expandedTo[0].x - contours[0].nodes[4].expandedTo[0].x ) * 0.5 + (5)
 					y: ( 695 / 750 ) * capHeight
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
 						angle: - 90 + 'deg'
@@ -85,7 +85,7 @@ exports.glyphs['ampersand'] =
 					# y: ( 545 / 750 ) * capHeight - (1)
 					y: contours[0].nodes[7].expandedTo[0].y + ( ( 695 / 750 ) * capHeight - contours[0].nodes[7].expandedTo[0].y ) * 0.5
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 99 / 115 ) * thickness
 						angle: - 177 + 'deg'
@@ -119,6 +119,7 @@ exports.glyphs['ampersand'] =
 					# dirOut: - 156 + 'deg'
 					# type: 'smooth'
 					dirOut: contours[0].nodes[7].expand.angle + Math.PI / 2
+					typeIn: 'smooth'
 					expand:
 						width: ( 83 / 115 ) * thickness * contrast
 						angle: Math.min(
@@ -133,7 +134,7 @@ exports.glyphs['ampersand'] =
 					x: spacingLeft + (30)
 					y: ( 180 / 750 ) * capHeight + (4)
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 121 / 115 ) * thickness
 						angle: 180 + 7 + 'deg'
@@ -146,7 +147,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[9].expandedTo[1].x + ( contours[0].nodes[11].expandedTo[0].x - contours[0].nodes[9].expandedTo[1].x ) * 0.5 + (7)
 					y: - overshoot - 10
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 114 / 115 ) * thickness * contrast
 						angle: 180 + 82 + 'deg'
@@ -155,7 +156,7 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[9].expandedTo[1].x + 200 * width + 330 - (26)
 					y: ( 345 / 750 ) * capHeight + (6)
 					dirIn: - 89 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 108 / 115 ) * thickness * contrast
 						angle: - 13 + 'deg'

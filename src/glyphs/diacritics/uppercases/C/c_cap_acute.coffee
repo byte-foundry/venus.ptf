@@ -13,6 +13,7 @@ exports.glyphs['c_cap_acute'] =
 	components:
 		0:
 			base: 'acute'
+			id: 'acute'
 			copy: true
 			parentAnchors:
 				0:

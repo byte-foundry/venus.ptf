@@ -48,7 +48,7 @@ exports.glyphs['t'] =
 					)
 					y: 0
 					typeOut: 'line'
-					type: 'smooth'
+					dirIn: 0
 					tensionIn: 1.6
 					expand:
 						width: ( 107 / 115 ) * thickness * contrast * contrastExtremity
@@ -57,7 +57,7 @@ exports.glyphs['t'] =
 				3:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: 0
-					dirOut: 0 + 'deg'
+					dirIn: 0 + 'deg'
 					expand:
 						width: Math.sin( contours[0].nodes[2].expand.angle ) * ( 107 / 115 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'

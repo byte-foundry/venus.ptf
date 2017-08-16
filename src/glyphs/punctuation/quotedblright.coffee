@@ -19,12 +19,14 @@ exports.glyphs['quotedblright'] =
 	components:
 		0:
 			base: '_quoteright'
+			id: 'quoteright1'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
 					y: capHeight
 		1:
 			base: '_quoteright'
+			id: 'quoteright2'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness + space

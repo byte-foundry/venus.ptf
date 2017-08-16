@@ -13,6 +13,7 @@ exports.glyphs['d_caron'] =
 	components:
 		0:
 			base: 'caronSlovak'
+			id: 'caronSlovak'
 			copy: true
 			parentAnchors:
 				0:

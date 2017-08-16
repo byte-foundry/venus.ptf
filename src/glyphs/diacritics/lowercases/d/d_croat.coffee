@@ -13,6 +13,7 @@ exports.glyphs['d_croat'] =
 	components:
 		0:
 			base: 'hstroke'
+			id: 'hstroke'
 			copy: true
 			parentAnchors:
 				0:

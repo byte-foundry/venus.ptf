@@ -23,7 +23,6 @@ exports.glyphs['percent'] =
 				0:
 					x: spacingLeft + (300 * 0.6) / 2 * width + 20
 					y: 0
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['percent'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 200 * width + 180
 					y: capHeight
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'
@@ -41,15 +39,17 @@ exports.glyphs['percent'] =
 	components:
 		0:
 			base: 'smallzero'
+			id: 'smallzero1'
 			copy: true
 			parentAnchors:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x + ( 20 / 90 ) * thickness
-					y: contours[0].nodes[1].y + overshoot
+					y: contours[0].nodes[1].y + overshoot - 300
 					height: 300
 					revert: true
 		1:
 			base: 'smallzero'
+			id: 'smallzero2'
 			copy: true
 			parentAnchors:
 				0:

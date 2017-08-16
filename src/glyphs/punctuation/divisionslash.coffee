@@ -23,7 +23,6 @@ exports.glyphs['divisionslash'] =
 				0:
 					x: spacingLeft
 					y: 0
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['divisionslash'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 380
 					y: capHeight
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
 						angle: 0 + 'deg'

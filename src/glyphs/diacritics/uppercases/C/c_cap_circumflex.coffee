@@ -13,6 +13,7 @@ exports.glyphs['c_cap_circumflex'] =
 	components:
 		0:
 			base: 'circumflex'
+			id: 'circumflex'
 			copy: true
 			parentAnchors:
 				0:

@@ -31,7 +31,7 @@ exports.glyphs['bracketright'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: - 115
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 75 / 115 )
 						angle: 0 + 'deg'
@@ -51,7 +51,7 @@ exports.glyphs['bracketright'] =
 				1:
 					x: contours[1].nodes[0].x + 130 * width
 					y: contours[1].nodes[0].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
 						angle: - 90 + 'deg'
@@ -71,7 +71,7 @@ exports.glyphs['bracketright'] =
 				1:
 					x: contours[1].nodes[1].x
 					y: contours[2].nodes[0].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
 						angle: - 90 + 'deg'

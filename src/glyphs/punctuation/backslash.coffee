@@ -31,7 +31,7 @@ exports.glyphs['backslash'] =
 				1:
 					x: spacingLeft
 					y: capHeight
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 50 / 115 )
 						angle: 0 + 'deg'

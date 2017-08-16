@@ -100,7 +100,7 @@ exports.glyphs['euro'] =
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * 0.2
 					y: contours[0].nodes[2].y + 30
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 65 / 115 ) * thickness
 						angle: 82 + 'deg'
@@ -120,7 +120,7 @@ exports.glyphs['euro'] =
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * 0.2
 					y: contours[0].nodes[2].y - 30
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 65 / 115 ) * thickness
 						angle: 82 + 'deg'

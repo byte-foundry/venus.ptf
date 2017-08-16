@@ -16,6 +16,10 @@ exports.glyphs['i_alt'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -66,12 +70,14 @@ exports.glyphs['i_alt'] =
 	components:
 		0:
 			base: 'title'
+			id: 'title'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
 					y: xHeight + diacriticHeight
 		1:
 			base: ['serif-vertical', 'none']
+			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]

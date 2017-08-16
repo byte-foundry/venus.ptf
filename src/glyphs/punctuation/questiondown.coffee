@@ -6,8 +6,7 @@ exports.glyphs['questiondown'] =
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg'],
-		['scaleY', -1], ['translateY', - xHeight],
-		['scaleX', -1], ['translateX', - (contours[0].nodes[2].expandedTo[0].x + spacingRight) ]
+		['scaleY', -1], ['translateY', capHeight],
 	)
 	tags: [
 		'all',
@@ -85,7 +84,12 @@ exports.glyphs['questiondown'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[4].x
 					y: 0
+			transforms: Array(
+				['skewX', slant + 'deg'],
+				['scaleY', -1], ['translateY', capHeight],
+			)

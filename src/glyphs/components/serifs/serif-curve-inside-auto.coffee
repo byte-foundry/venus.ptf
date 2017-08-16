@@ -1,4 +1,5 @@
 exports.glyphs['serif-curve-inside-auto'] =
+	componentLabel: 'Serif'
 	anchors:
 		0:
 			serif: Utils.makeCurveInsideSerif(

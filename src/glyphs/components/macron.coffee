@@ -25,7 +25,7 @@ exports.glyphs['macron'] =
 				1:
 					x: anchors[0].x + 140 * width
 					y: anchors[0].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness * ( 80 / 115 )
 						angle: 90 + 'deg'

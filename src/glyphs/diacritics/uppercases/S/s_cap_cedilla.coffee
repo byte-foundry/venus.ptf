@@ -13,8 +13,9 @@ exports.glyphs['s_cap_cedilla'] =
 	components:
 		0:
 			base: 'cedilla'
+			id: 'cedilla'
 			copy: true
 			parentAnchors:
 				0:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
+					x: parentAnchors[1].x
+					y: parentAnchors[1].y

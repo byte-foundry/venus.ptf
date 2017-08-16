@@ -84,6 +84,7 @@ exports.glyphs['question'] =
 	components:
 		0:
 			base: 'dot'
+			id: 'dot'
 			parentAnchors:
 				0:
 					x: contours[0].nodes[4].x

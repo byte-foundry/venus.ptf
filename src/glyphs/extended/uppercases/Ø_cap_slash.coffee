@@ -13,6 +13,7 @@ exports.glyphs['Ø_cap_slash'] =
 	components:
 		0:
 			base: 'stroke'
+			id: 'stroke'
 			copy: true
 			parentAnchors:
 				0:

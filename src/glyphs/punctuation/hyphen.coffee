@@ -23,7 +23,6 @@ exports.glyphs['hyphen'] =
 				0:
 					x: spacingLeft
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness
@@ -32,8 +31,7 @@ exports.glyphs['hyphen'] =
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 65
 					y: ( 262 / 750 ) * capHeight + (1)
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness
 						angle: 90 + 'deg'

@@ -23,6 +23,15 @@ exports.glyphs['a_alt'] =
 		1:
 			x: contours[1].nodes[0].expandedTo[1].x
 			y: contours[1].nodes[0].expandedTo[1].y
+		2:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+			y: xHeight + diacriticHeight
+		3:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - 95 / 2 - minThickness / 2
+			y: xHeight + diacriticHeight
+		4:
+			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2 + 95 / 2 + minThickness / 2
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

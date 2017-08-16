@@ -25,7 +25,7 @@ exports.glyphs['grave'] =
 				1:
 					x: contours[0].nodes[0].x - 75 * width
 					y: anchors[0].y + 150
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness + Math.min( minThickness, ( 35 / 115 ) * thickness )
 						angle: 0 + 'deg'

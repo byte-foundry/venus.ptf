@@ -19,7 +19,6 @@ exports.glyphs['title'] =
 							anchors[0].y,
 							ascenderHeight - 25 # Set a min value to display a legible title in thin weights
 						)
-					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: minThickness # Math.max( thickness, 25 ) # Set a min value to display a legible title in thin weights
@@ -28,8 +27,7 @@ exports.glyphs['title'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y + minThickness # Math.max( thickness, 25 )
-					dirOut: - 90 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: contours[0].nodes[0].expand.width
 						angle: 0 + 'deg'

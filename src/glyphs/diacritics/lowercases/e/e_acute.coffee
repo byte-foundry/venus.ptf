@@ -13,7 +13,7 @@ exports.glyphs['e_acute'] =
 	components:
 		0:
 			base: 'acute'
-			copy: true
+			id: 'acute'
 			parentAnchors:
 				0:
 					x: parentAnchors[0].x

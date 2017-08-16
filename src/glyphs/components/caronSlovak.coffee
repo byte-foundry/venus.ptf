@@ -25,7 +25,7 @@ exports.glyphs['caronSlovak'] =
 				1:
 					x: contours[0].nodes[0].x - 20 * width
 					y: anchors[0].y - 150
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: Math.min( minThickness, ( 85 / 115 ) * thickness )
 						angle: 0 + 'deg'
