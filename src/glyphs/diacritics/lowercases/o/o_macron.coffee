@@ -13,6 +13,7 @@ exports.glyphs['o_macron'] =
 	components:
 		0:
 			base: 'macron'
+			id: 'macron'
 			copy: true
 			parentAnchors:
 				0:

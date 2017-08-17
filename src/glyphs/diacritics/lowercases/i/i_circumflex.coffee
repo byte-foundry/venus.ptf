@@ -14,6 +14,7 @@ exports.glyphs['i_circumflex'] =
 	components:
 		0:
 			base: 'circumflex'
+			id: 'circumflex'
 			parentAnchors:
 				0:
 					x: parentAnchors[0].x

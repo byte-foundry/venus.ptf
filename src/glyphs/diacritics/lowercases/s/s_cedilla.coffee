@@ -13,6 +13,7 @@ exports.glyphs['s_cedilla'] =
 	components:
 		0:
 			base: 'cedilla'
+			id: 'cedilla'
 			copy: true
 			parentAnchors:
 				0:
