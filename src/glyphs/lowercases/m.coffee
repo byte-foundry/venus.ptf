@@ -79,7 +79,7 @@ exports.glyphs['m'] =
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: xHeight - 150 - ( 50 / 115 ) * thickness
-					typeIn: 'line'
+					dirIn: 90 + 'deg'
 					expand:
 						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'

@@ -44,13 +44,34 @@ exports.glyphs['serif-curve-inside-auto'] =
 				2:
 					x: anchors[0].point2.x
 					y: anchors[0].point2.y
-					dirOut: anchors[0].point2.dirOut
+					dirOut:
+						if serifTerminal != 0
+						then anchors[0].point2.dirOut
+						else null
+					tensionOut:
+						if serifTerminal != 0
+						then 1
+						else 0
 					typeIn: 'line'
 				3:
 					x: anchors[0].point3.x
 					y: anchors[0].point3.y
-					dirIn: anchors[0].point3.dirIn
-					dirOut: anchors[0].point3.dirIn
+					dirIn:
+						if serifTerminal != 0
+						then anchors[0].point3.dirIn
+						else null
+					tensionIn:
+						if serifTerminal != 0
+						then 1
+						else 0
+					dirOut:
+						if serifTerminal != 0
+						then anchors[0].point2.dirIn
+						else null
+					tensionOut:
+						if serifTerminal != 0
+						then 1
+						else 0
 					typeOut: anchors[0].point3.typeOut
 				4:
 					x: anchors[0].point4.x

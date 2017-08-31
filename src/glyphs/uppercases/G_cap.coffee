@@ -28,7 +28,6 @@ exports.glyphs['G_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x - 130 - 100 * width
 					y: ( 325 / 750 ) * capHeight * crossbar + (82)
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand:
 						width: ( 110 / 115) * thickness * opticThickness * contrast * contrastExtremity
@@ -48,14 +47,6 @@ exports.glyphs['G_cap'] =
 								y: contours[0].nodes[0].expandedTo[1].y
 							}
 						]
-				# 1:
-				# 	x: contours[0].nodes[2].expandedTo[1].x
-				# 	y: contours[0].nodes[0].expandedTo[1].y
-				# 	typeOut: 'line'
-				# 	expand:
-				# 		width: ( 70 / 115 ) * thickness
-				# 		angle: 40 + 'deg'
-				# 		distr: 0.25
 				2:
 					x: Math.max(
 						contours[0].nodes[4].expandedTo[1].x + 480 + 200 * width - (36),
