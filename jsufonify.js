@@ -95,6 +95,35 @@ function addComponents( glyph ) {
 	});
 }
 
+function linkToRelatedGlyphs(glyph, glyphsByName) {
+	var base = glyphsByName[glyph.base];
+
+	base.relatedGlyphs = base.relatedGlyphs || [];
+	glyph.relatedGlyphs = glyph.relatedGlyphs || [];
+
+	base.relatedGlyphs.forEach(function(name) {
+		glyphsByName[name].relatedGlyphs = glyphsByName[name].relatedGlyphs || [];
+		glyphsByName[name].relatedGlyphs.push(glyph.name);
+	});
+	glyph.relatedGlyphs = glyph.relatedGlyphs.concat(base.name, base.relatedGlyphs);
+
+	base.relatedGlyphs.push(glyph.name);
+}
+
+function relatedGlyphsToUnicode(glyph, glyphsByName) {
+	const glyphs = {};
+	glyph.relatedGlyphs.forEach((name) => {
+		const relGlyph = glyphsByName[name];
+
+		if (!glyphs[relGlyph.unicode]) {
+			glyphs[relGlyph.unicode] = {};
+		}
+
+		glyphs[relGlyph.unicode] = name;
+	});
+	glyph.relatedGlyphs = glyphs;
+}
+
 // plugin level function (dealing with files)
 function jsufonify(/*prefixText*/) {
 
@@ -108,6 +137,7 @@ function jsufonify(/*prefixText*/) {
 		font = sandbox.exports;
 
 		var charMap = {};
+		var altMap = {};
 
 		// WIP: convert ptf object to jsufon
 		_.forEach(font.glyphs, function( glyph, name ) {
@@ -120,6 +150,7 @@ function jsufonify(/*prefixText*/) {
 				glyph.unicode = glyph.unicode.charCodeAt(0);
 			}
 			charMap[glyph.unicode] = glyph;
+			altMap[glyph.name] = glyph;
 
 			// glyph.anchors -> glyph.anchor
 			if ( glyph.anchors ) {
@@ -183,6 +214,22 @@ function jsufonify(/*prefixText*/) {
 			return glyph;
 		});
 
+		_.forEach(font.glyphs, function(glyph) {
+			if(glyph.base === undefined) {
+				return;
+			}
+
+			linkToRelatedGlyphs(glyph, font.glyphs);
+		})
+
+		_.forEach(font.glyphs, function(glyph) {
+			if(glyph.relatedGlyphs === undefined) {
+				return;
+			}
+
+			relatedGlyphsToUnicode(glyph, font.glyphs);
+		})
+
 		// temporary workaround, add diacritics base handling here
 		_.forEach(font.glyphs, function( _glyph ) {
 			// Temporary workaround: deal with diacritics here.
@@ -192,7 +239,7 @@ function jsufonify(/*prefixText*/) {
 
 			// we'll save the diacritics sourcs, replace it with the base glyph
 			// source and then restore/merge the properties we're interested in
-			var glyph = _.clone( charMap[ _glyph.base.charCodeAt(0) ], true );
+			var glyph = _.clone( altMap[ _glyph.base ], true );
 
 			glyph.name = _glyph.name;
 			glyph.unicode = _glyph.unicode;

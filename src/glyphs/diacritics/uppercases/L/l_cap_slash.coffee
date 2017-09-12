@@ -2,7 +2,7 @@ exports.glyphs['l_cap_slash'] =
 	unicode: 'Ł'
 	glyphName: 'Lslash'
 	characterName: 'LATIN CAPITAL LETTER L WITH STROKE'
-	base: 'L'
+	base: 'L_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
