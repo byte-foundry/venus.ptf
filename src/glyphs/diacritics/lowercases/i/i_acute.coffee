@@ -2,7 +2,7 @@ exports.glyphs['i_acute'] =
 	unicode: 'í'
 	glyphName: 'iacute'
 	characterName: 'LATIN SMALL LETTER I WITH ACUTE'
-	base: 'i'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	altImg: 'full-serifs-i.svg'
 	tags: [

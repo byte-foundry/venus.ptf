@@ -2,7 +2,7 @@ exports.glyphs['i_grave'] =
 	unicode: 'ì'
 	glyphName: 'igrave'
 	characterName: 'LATIN SMALL LETTER I WITH GRAVE'
-	base: 'i'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	altImg: 'full-serifs-i.svg'
 	tags: [

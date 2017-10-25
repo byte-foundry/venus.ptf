@@ -14,7 +14,7 @@ gulp.task('clean-dist', function() {
 		.pipe($.rimraf());
 });
 
-gulp.task('build', ['copy'], function() {
+gulp.task('build', function() {
 	return gulp.src('src/**/*.coffee')
 		.pipe($.coffee({bare: true}).on('error', $.util.log))
 		.pipe(operation())

@@ -31,7 +31,6 @@ exports.glyphs['u'] =
 						70
 					) + ( 140 / 115 ) * thickness * contrast * contrastExtremity
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
 					expand:
 						width: ( 30 / 115 ) * thickness * contrast
 						angle: 180 + 'deg'

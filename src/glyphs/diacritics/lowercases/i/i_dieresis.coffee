@@ -2,7 +2,7 @@ exports.glyphs['i_dieresis'] =
 	unicode: 'ï'
 	glyphName: 'idieresis'
 	characterName: 'LATIN SMALL LETTER I WITH DIAERESIS'
-	base: 'i'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	altImg: 'full-serifs-i.svg'
 	tags: [

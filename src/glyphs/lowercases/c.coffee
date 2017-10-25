@@ -22,6 +22,9 @@ exports.glyphs['c'] =
 		0:
 			x: contours[0].nodes[3].x
 			y: xHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
+			y: contours[0].nodes[1].expandedTo[1].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[1].expandedTo[1].y ) * 0.4
 	contours:
 		0:
 			skeleton: true
@@ -45,7 +48,7 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 					y: - overshoot
 					dirOut: - 180 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 95 / 115) * thickness * contrast
 						angle: 180 + 90 + 'deg'
@@ -54,7 +57,7 @@ exports.glyphs['c'] =
 					x: spacingLeft + (31)
 					y: ( 260 / 520 ) * xHeight
 					dirOut: 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.15
 					tensionOut: 1.15
 					expand:
@@ -65,7 +68,7 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width: ( 90 / 115) * thickness * contrast
@@ -81,7 +84,6 @@ exports.glyphs['c'] =
 						anglePenTop + 90 - correctWidthAperture,
 						90
 					) + 'deg'
-					type: 'smooth'
 					expand:
 						width: ( 112 / 115) * thickness * contrast * contrastExtremity
 						angle: anglePenTop + 'deg'

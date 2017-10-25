@@ -25,7 +25,6 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[1].x + 40 + 25 * width - (10)
 					y: 2 + (0)
 					dirOut: - 158 + 'deg'
-					type: 'smooth'
 					expand:
 						width: ( 98 / 115 ) * thickness * contrast
 						angle: 99 + 'deg'
@@ -156,7 +155,6 @@ exports.glyphs['ampersand'] =
 					x: contours[0].nodes[9].expandedTo[1].x + 200 * width + 330 - (26)
 					y: ( 345 / 750 ) * capHeight + (6)
 					dirIn: - 89 + 'deg'
-					typeIn: 'smooth'
 					expand:
 						width: ( 108 / 115 ) * thickness * contrast
 						angle: - 13 + 'deg'

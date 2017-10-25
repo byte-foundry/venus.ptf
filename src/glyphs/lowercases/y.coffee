@@ -65,7 +65,7 @@ exports.glyphs['y'] =
 					)
 					# x: contours[1].nodes[0].expandedTo[0].x
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
-					dirOut: 0 + 'deg'
+					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * contrast
 						angle: 180 + 'deg'

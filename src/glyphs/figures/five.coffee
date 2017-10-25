@@ -95,8 +95,7 @@ exports.glyphs['five'] =
 				4:
 					x: spacingLeft + (35)
 					y: ( 245 / 750 ) * capHeight
-					dirOut: - 90 + 'deg'
-					typeIn: 'smooth'
+					dirIn: - 90 + 'deg'
 					expand:
 						width: ( 140 / 115 ) * thickness * opticThickness # * contrast
 						angle: 0 + 'deg'

@@ -2,7 +2,7 @@ exports.glyphs['a_acute'] =
 	unicode: 'á'
 	glyphName: 'aacute'
 	characterName: 'LATIN SMALL LETTER A WITH ACUTE'
-	base: 'a_alt'
+	base: 'a'
 	advanceWidth: base.advanceWidth
 	altImg: 'double-story-a.svg'
 	tags: [

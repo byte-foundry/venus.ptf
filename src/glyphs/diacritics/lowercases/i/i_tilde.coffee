@@ -2,7 +2,7 @@ exports.glyphs['i_tilde'] =
 	unicode: 'ĩ'
 	glyphName: 'itilde'
 	characterName: 'LATIN SMALL LETTER I WITH TILDE'
-	base: 'i'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	altImg: 'full-serifs-i.svg'
 	tags: [

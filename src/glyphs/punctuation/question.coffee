@@ -24,7 +24,6 @@ exports.glyphs['question'] =
 					x: spacingLeft + (28)
 					y: ( 560 / 750 ) * capHeight - (5)
 					dirOut: 85 + 'deg'
-					type: 'smooth'
 					expand:
 						width: ( 112 / 115 ) * thickness
 						angle: - 10 + 'deg'
@@ -46,7 +45,7 @@ exports.glyphs['question'] =
 					)
 					y: contours[0].nodes[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width: ( 120 / 115 ) * thickness
@@ -64,7 +63,7 @@ exports.glyphs['question'] =
 							(( 35 / 115 ) * thickness) / 750 * capHeight
 						)
 					) + 'deg'
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.2
 					tensionOut: 1.4
 					expand:
@@ -74,8 +73,7 @@ exports.glyphs['question'] =
 				4:
 					x: contours[0].nodes[1].x - ( 8 / 115 ) * thickness
 					y: minThickness + 170 - ( 85 / 115 ) * thickness
-					dirOut: 0 + 'deg'
-					type: 'smooth'
+					dirIn: 90 + 'deg'
 					tensionIn: 1.4
 					expand:
 						width: ( 110 / 115 ) * thickness

@@ -34,8 +34,7 @@ exports.glyphs['_quoteleft'] =
 				0:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
-					dirIn: 0 + 'deg'
-					type: 'smooth'
+					dirOut: 0 + 'deg'
 					tensionOut: 1.2
 					expand:
 						width:  Math.max( 8, ( 60 / 115 ) * thickness )
@@ -45,7 +44,6 @@ exports.glyphs['_quoteleft'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					dirIn: 90 + 'deg'
-					type: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width:  Math.max( 8, ( 75 / 115 ) * thickness )

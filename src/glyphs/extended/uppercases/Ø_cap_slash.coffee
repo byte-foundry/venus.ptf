@@ -19,6 +19,6 @@ exports.glyphs['Ø_cap_slash'] =
 				0:
 					left: parentAnchors[0].left
 					right: parentAnchors[0].right
-			parentParameters:
+			parameters:
 				xHeight: capHeight
 				thickness: thickness * opticThickness * 1.5
