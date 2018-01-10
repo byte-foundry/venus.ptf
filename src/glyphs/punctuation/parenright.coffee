@@ -50,6 +50,6 @@ exports.glyphs['parenright'] =
 						distr: 0
 			transformOrigin: Object({x: (contours[0].nodes[2].expandedTo[1].x + spacingRight) / 2, y: 0})
 			transforms: Array(
-				['translateY', (capHeight + 45) - 115 ],
 				['rotate', 180 + 'deg']
+				['translateY', (capHeight + 45) - 115 ],
 			)

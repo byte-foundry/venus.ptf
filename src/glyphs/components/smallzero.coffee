@@ -53,8 +53,8 @@ exports.glyphs['smallzero'] =
 						width: ( 65 / 115 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-			transformOrigin: Array(
-				anchors[0].x,
-				anchors[0].y
-			)
+			transformOrigin: Object({
+				x: anchors[0].x,
+				y: anchors[0].y
+			})
 			transforms: if anchors[0].revert == true then Array( [ 'rotate', Math.PI ] ) else Array( [ 'rotate', 0 ] )

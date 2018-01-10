@@ -1,6 +1,6 @@
 exports.glyphs['c_alt_dot_accent'] =
 	unicode: 'ċ'
-	glyphName: 'cacute'
+	glyphName: 'cdotaccent'
 	characterName: 'LATIN SMALL LETTER C WITH DOT ABOVE'
 	base: 'c_alt'
 	advanceWidth: base.advanceWidth
