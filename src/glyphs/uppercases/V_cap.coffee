@@ -5,7 +5,7 @@ exports.glyphs['V_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['V_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
@@ -34,7 +34,7 @@ exports.glyphs['V_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: true
@@ -47,7 +47,7 @@ exports.glyphs['V_cap'] =
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
 						# width: 4
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 275 + 200 * width - (36)
@@ -56,7 +56,7 @@ exports.glyphs['V_cap'] =
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness * contrast
 						# width: 4
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

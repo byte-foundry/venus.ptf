@@ -5,7 +5,7 @@ exports.glyphs['minus'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['minus'] =
 					typeOut: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 315
@@ -34,5 +34,5 @@ exports.glyphs['minus'] =
 					typeIn: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5

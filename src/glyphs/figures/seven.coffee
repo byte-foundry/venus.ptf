@@ -5,7 +5,7 @@ exports.glyphs['seven'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -26,7 +26,7 @@ exports.glyphs['seven'] =
 					typeOut: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 250
@@ -34,7 +34,7 @@ exports.glyphs['seven'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -43,7 +43,7 @@ exports.glyphs['seven'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirOut: - Math.min( 160, Math.max( 120, 136 * width )) + 'deg'
+					dirOut: - Math.min( 160,( Math.max( 120, 136 * width )) ) / 180 * Math.PI
 					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
@@ -54,18 +54,18 @@ exports.glyphs['seven'] =
 							),
 							( 180 / 115 ) * thickness * opticThickness * contrast
 						)
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: 110 * width + (37)
 					x: contours[0].nodes[0].x + ( contours[0].nodes[1].x - contours[0].nodes[0].x ) * 0.43
 					y: Math.max(0, serifHeight * serifArc )
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					typeOut: 'line'
 					tensionIn: 1.2
 					expand:
 						width: ( 150 / 115 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:
@@ -80,6 +80,6 @@ exports.glyphs['seven'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
-				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)

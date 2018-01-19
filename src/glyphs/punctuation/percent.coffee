@@ -10,7 +10,7 @@ exports.glyphs['percent'] =
 		'punctuation'
 	]
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -26,7 +26,7 @@ exports.glyphs['percent'] =
 					typeOut: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 200 * width + 180
@@ -34,7 +34,7 @@ exports.glyphs['percent'] =
 					typeIn: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 	components:
 		0:
@@ -46,7 +46,6 @@ exports.glyphs['percent'] =
 					x: contours[0].nodes[0].expandedTo[0].x + ( 20 / 90 ) * thickness
 					y: contours[0].nodes[1].y + overshoot - 300
 					height: 300
-					revert: true
 		1:
 			base: 'smallzero'
 			id: 'smallzero2'

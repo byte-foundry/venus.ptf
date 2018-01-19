@@ -5,7 +5,7 @@ exports.glyphs['M_cap'] =
 	ot:
 		advanceWidth: contours[3].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 85 + (34) + serifWidth / 2
@@ -26,7 +26,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['M_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -54,7 +54,7 @@ exports.glyphs['M_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.4 * contrast
 		2:
 			skeleton: true
@@ -66,7 +66,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: contours[3].nodes[1].expandedTo[0].x
@@ -74,7 +74,7 @@ exports.glyphs['M_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.65
 		3:
 			skeleton: true
@@ -86,7 +86,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: contours[3].nodes[0].x
@@ -94,7 +94,7 @@ exports.glyphs['M_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 	components:
 		0:

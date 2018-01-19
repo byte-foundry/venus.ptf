@@ -5,7 +5,7 @@ exports.glyphs['braceleft'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					# should be:
@@ -34,26 +34,26 @@ exports.glyphs['braceleft'] =
 					# but circular depedencies bro'
 					x: ( contours[0].nodes[2].x + ( thickness * ( 75 / 115 ) ) / 2 ) + 60 * width
 					y: capHeight
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					expand:
 						width: thickness * ( 65 / 115 )
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[5].x + Math.max( 70, 70 * width ) + (19)
 					y: contours[0].nodes[5].expandedTo[0].y + ( (capHeight - thickness * ( 65 / 115 )) - contours[0].nodes[5].expandedTo[0].y ) * ( 1 - (0.17 * width))
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
 						width: thickness * ( 75 / 115 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[5].expandedTo[0].y + ( 60 / 750 ) * capHeight
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
 						width: thickness * ( 76 / 115 )
-						angle: 11 + 'deg'
+						angle:( 11 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[5].x + 10 * width
@@ -62,7 +62,7 @@ exports.glyphs['braceleft'] =
 					dirIn: 0
 					expand:
 						width: thickness * ( 76 / 115 )
-						angle: - 23 + 'deg'
+						angle:( - 23 ) / 180 * Math.PI
 						distr: 0
 				5:
 					x: spacingLeft
@@ -70,7 +70,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 55 / 115 )
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				6:
 					x: contours[0].nodes[5].x
@@ -78,7 +78,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 55 / 115 )
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				7:
 					x: contours[0].nodes[4].x
@@ -87,24 +87,24 @@ exports.glyphs['braceleft'] =
 					typeIn: 'line'
 					expand:
 						width: thickness * ( 76 / 115 )
-						angle: 23 + 'deg'
+						angle:( 23 ) / 180 * Math.PI
 						distr: 0
 				8:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[5].expandedTo[1].y - ( 60 / 750 ) * capHeight
 					typeOut: 'line'
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					expand:
 						width: thickness * ( 76 / 115 )
-						angle: - 11 + 'deg'
+						angle:( - 11 ) / 180 * Math.PI
 						distr: 0.25
 				9:
 					x: contours[0].nodes[8].x
 					y: contours[0].nodes[11].expandedTo[1].y + ( contours[0].nodes[5].expandedTo[1].y - contours[0].nodes[11].expandedTo[1].y ) * ( 0.17 * width )
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
 						width: thickness * ( 75 / 115 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				10:
 					x: contours[0].nodes[1].x
@@ -112,7 +112,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				11:
 					x: contours[0].nodes[0].x
@@ -120,5 +120,5 @@ exports.glyphs['braceleft'] =
 					typeIn: 'line'
 					expand:
 						width: thickness * ( 65 / 115 )
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0

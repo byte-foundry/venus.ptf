@@ -17,7 +17,7 @@ exports.glyphs['_quotesingle'] =
 					typeOut: 'line'
 					expand:
 						width: minThickness - ( 10 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -26,7 +26,7 @@ exports.glyphs['_quotesingle'] =
 					typeIn: 'line'
 					expand:
 						width: minThickness - ( 10 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				2:
 					x: contours[0].nodes[0].x
@@ -34,5 +34,5 @@ exports.glyphs['_quotesingle'] =
 					typeIn: 'line'
 					expand:
 						width: ( 55 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

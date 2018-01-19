@@ -5,7 +5,7 @@ exports.glyphs['z'] =
 	ot:
 		advanceWidth: contours[0].nodes[8].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -30,7 +30,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[3].expandedTo[1].x + ( 15 / 115 ) * thickness
@@ -39,7 +39,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[8].x - 16 + Math.max( 0, serifHeight * serifArc )
@@ -48,7 +48,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x
@@ -57,7 +57,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 137 / 115 ) * thickness
-						angle: - 177 + 'deg'
+						angle:( - 177 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: spacingLeft
@@ -66,7 +66,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness
-						angle: 180 + 5 + 'deg'
+						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 1
 				5:
 					x: spacingLeft
@@ -75,7 +75,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				6:
 					x: spacingLeft
@@ -84,7 +84,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				7:
 					x: contours[0].nodes[4].expandedTo[0].x - ( 10 / 115 ) * thickness
@@ -93,7 +93,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				8:
 					# x: 200 + 40 + 200 * width
@@ -103,14 +103,14 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		1:
 			closed: true
 			skeleton: false
 			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
-				[ 'skewX', 15 * serifRotate + 'deg' ],
+				[ 'skewX',( 15 * serifRotate ) / 180 * Math.PI ],
 			)
 			nodes:
 				0:
@@ -145,7 +145,7 @@ exports.glyphs['z'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
-				[ 'skewX', - 15 * serifRotate + 'deg' ],
+				[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			)
 		1:
 			base: 'serif-horizontal'
@@ -157,7 +157,7 @@ exports.glyphs['z'] =
 					reversed: true
 			transformOrigin: contours[0].nodes[8].expandedTo[1]
 			transforms: Array(
-				[ 'skewX', 10 * serifRotate + 'deg' ],
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 				[ 'scaleY', -1 ],
 				[ 'translateY', 2 * (90 / 115) * thickness]
 			)

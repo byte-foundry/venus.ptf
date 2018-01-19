@@ -20,7 +20,7 @@ exports.glyphs['acute'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 105 / 115 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x + 75 * width
@@ -28,5 +28,5 @@ exports.glyphs['acute'] =
 					typeIn: 'line'
 					expand:
 						width: thickness + Math.min( minThickness, ( 35 / 115 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

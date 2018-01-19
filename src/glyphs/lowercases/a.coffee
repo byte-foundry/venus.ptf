@@ -7,7 +7,7 @@ exports.glyphs['a'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -39,14 +39,14 @@ exports.glyphs['a'] =
 				0:
 					x: spacingLeft + 15 + (26)
 					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
-					# dirOut: - Math.max( - 10, - 60 * aperture + 78 ) + 90 + 'deg'
+					# dirOut: - Math.max( - 10,( - 60 * aperture + 78 ) + 90 ) / 180 * Math.PI
 					dirOut: Math.min(
 						- anglePenTop + 90 + correctWidthAperture,
 						90
-					) + 'deg'
+					) / 180 * Math.PI
 					expand:
 						width: ( 110 / 115 ) * thickness  * contrast * contrastExtremity
-						angle: - anglePenTop + 'deg'
+						angle:( - anglePenTop ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
@@ -57,17 +57,17 @@ exports.glyphs['a'] =
 							( 95 / 115 ) * thickness * contrast,
 							xHeight - contours[1].nodes[4].expandedTo[0].y - 10
 						)
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[3].x
 					y: ( 380 / 520 ) * xHeight - (32) - ( 30 / 115 ) * thickness + 30
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					tensionIn: 1.2
 					typeOut: 'line'
 					expand:
 						width: ( 125 / 115 ) * thickness
-						angle: 180 - 23 + 'deg'
+						angle:( 180 - 23 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					# x: 275 + 200 * width - (29)
@@ -80,20 +80,20 @@ exports.glyphs['a'] =
 								25 * width
 							) / 115 ) * thickness
 					)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.6
 					expand:
 						width: thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].expandedTo[0].x + 45 # + ( 50 + ( Math.min( 25, 25 * width ) / 115 ) * thickness )
 					y: 0
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					tensionIn: 1.6
 					expand:
 						width: ( 85 / 115 ) * thickness
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		1:
 			skeleton: true
@@ -102,35 +102,35 @@ exports.glyphs['a'] =
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x + ( 1 / 115 ) * thickness
 					y: 150 + ( 55 / 115 ) * thickness
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.3
 					expand:
 						width: Math.max(
 							( 35 / 115 ) * thickness * contrast * contrastExtremity,
 							4
 						)
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1
 				1:
 					# x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22 + 5
 					x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / 115 ) * thickness, 65 )
 					y:  - overshoot
 					typeOut: 'smooth'
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					tensionOut: 1.2
 					expand:
 						width: ( 87 / 115 ) * thickness * contrast
-						angle: 66 + 'deg'
+						angle:( 66 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (29)
 					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.25
 					typeIn: 'smooth'
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					# tensionOut: 1.1
 					expand:
 						width: thickness
-						angle: 2 + 'deg'
+						angle:( 2 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[2].x + ( contours[1].nodes[4].x - contours[1].nodes[2].x ) / 2
@@ -142,14 +142,14 @@ exports.glyphs['a'] =
 					typeIn: 'smooth'
 					expand:
 						width: ( 100 / 115 ) * thickness * contrast
-						angle: - 47 + 'deg'
+						angle:( - 47 ) / 180 * Math.PI
 						distr: 0.3
 				4:
 					x: contours[0].nodes[2].expandedTo[1].x
 					y: contours[0].nodes[2].expandedTo[1].y * crossbar
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					tensionIn: 1.3
 					expand:
 						width: ( 125 / 115 ) * thickness / 2 * contrast
-						angle: - 23 + 'deg'
+						angle:( - 23 ) / 180 * Math.PI
 						distr: 0

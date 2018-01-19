@@ -5,7 +5,7 @@ exports.glyphs['X_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 15 + serifWidth
@@ -26,7 +26,7 @@ exports.glyphs['X_cap'] =
 					typeOut: 'line'
 					expand:
 						width: thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} ) )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					# x: contours[1].nodes[1].expandedTo[0].x + 405 + 200 * width - (109)
@@ -35,7 +35,7 @@ exports.glyphs['X_cap'] =
 					typeIn: 'line'
 					expand:
 						width: thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} ) )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -48,7 +48,7 @@ exports.glyphs['X_cap'] =
 					typeOut: 'line'
 					expand:
 						width: thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y} ) ) * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: spacingLeft + (37)
@@ -56,7 +56,7 @@ exports.glyphs['X_cap'] =
 					typeIn: 'line'
 					expand:
 						width: thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y} ) ) * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 	components:
 		0:

@@ -5,7 +5,7 @@ exports.glyphs['k'] =
 	ot:
 		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 70 + (29)
@@ -26,7 +26,7 @@ exports.glyphs['k'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['k'] =
 					typeIn: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['k'] =
 					typeOut: 'line'
 					expand:
 						width: ( 140 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 0.75
 				1:
 					x: Math.max(
@@ -57,7 +57,7 @@ exports.glyphs['k'] =
 					typeIn: 'line'
 					expand:
 						width: ( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		2:
 			skeleton: true
@@ -73,7 +73,7 @@ exports.glyphs['k'] =
 					typeOut: 'line'
 					expand:
 						width: ( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness # TODO: apply this hack on each oblic
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: Utils.onLine({
@@ -149,7 +149,7 @@ exports.glyphs['k'] =
 			transformOrigin: contours[0].nodes[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'skewY', - 15 * spurHeight + 'deg' ],
+				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
 			)
 		3:

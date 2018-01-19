@@ -5,7 +5,7 @@ exports.glyphs['J_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 45 + (36)
@@ -28,56 +28,56 @@ exports.glyphs['J_cap'] =
 				0:
 					x: spacingLeft
 					y: contours[0].nodes[1].y + 60 # 295
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeOut: 'line'
 					expand:
 						width: ( 137 / 115 ) * thickness * opticThickness * contrastExtremity
-						angle: 10 + 'deg'
+						angle:( 10 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: spacingLeft
 					y: 225
 					# y: 150 * aperture * apertureBottom + 75 # 235
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					# dirOut: Math.min(
 					# 	anglePenBottom + 90 + 16 * aperture + correctWidthAperture,
 					# 	90
-					# ) + 'deg'
+					# ) / 180 * Math.PI
 					tensionOut: 1.15
 					typeIn: 'line'
 					expand:
 						width: ( 140 / 115 ) * thickness * opticThickness * contrastExtremity
-						angle: 16 + 'deg'
-						# angle: anglePenBottom + 'deg'
+						angle:( 16 ) / 180 * Math.PI
+						# angle:( anglePenBottom ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					tensionIn: 1.15
 					tensionOut: 1.1
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: contours[0].nodes[4].x
 					y: ( 220 / 750 ) * capHeight
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x + 200 * width + 105 - (34)
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

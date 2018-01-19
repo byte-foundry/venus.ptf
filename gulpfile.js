@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
 	karma = require('karma').server,
 	operation = require('./operationalyzer'),
-	jsufon = require('./jsufonify');
+	jsufon = require('./jsufonify'),
+	bakeOpOrder = require('./bakeOpOrder.js');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*']
@@ -29,6 +30,7 @@ gulp.task('build', function() {
 		.pipe(operation())
 		.pipe($.concat('font.json'))
 		.pipe(jsufon())
+		.pipe(bakeOpOrder())
 		.pipe(gulp.dest('dist/'));
 });
 

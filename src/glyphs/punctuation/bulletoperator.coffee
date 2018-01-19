@@ -5,7 +5,7 @@ exports.glyphs['bulletoperator'] =
 	ot:
 		advanceWidth: spacingLeft + minThickness + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

@@ -5,7 +5,7 @@ exports.glyphs['dagger'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['dagger'] =
 					typeOut: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['dagger'] =
 					typeIn: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['dagger'] =
 					typeIn: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: spacingLeft
@@ -54,5 +54,5 @@ exports.glyphs['dagger'] =
 					typeIn: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0

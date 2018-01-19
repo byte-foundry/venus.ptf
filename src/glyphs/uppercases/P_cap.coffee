@@ -5,7 +5,7 @@ exports.glyphs['P_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 85 + (34) + serifWidth / 2
@@ -26,7 +26,7 @@ exports.glyphs['P_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['P_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -43,10 +43,10 @@ exports.glyphs['P_cap'] =
 				0:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: Math.max(
@@ -54,12 +54,12 @@ exports.glyphs['P_cap'] =
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: capHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeOut: 'smooth'
 					tensionOut: 1.1
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 93 + 'deg'
+						angle:( - 93 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x + 50 + 250 * width + (100)
@@ -68,13 +68,13 @@ exports.glyphs['P_cap'] =
 						contours[0].nodes[0].expandedTo[1 ].x + 0.75 * ( 135 / 115 ) * thickness * opticThickness + 10
 					)
 					y: ( 525 / 750 ) * capHeight
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				3:
 					x: Math.max(
@@ -82,12 +82,12 @@ exports.glyphs['P_cap'] =
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: contours[1].nodes[4].expandedTo[0].y
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 180 - 93 + 'deg'
+						angle:( 180 - 93 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].x
@@ -95,7 +95,7 @@ exports.glyphs['P_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.25
 	components:
 		0:

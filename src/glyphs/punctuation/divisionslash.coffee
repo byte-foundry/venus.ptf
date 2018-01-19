@@ -5,7 +5,7 @@ exports.glyphs['divisionslash'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['divisionslash'] =
 					typeOut: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 380
@@ -34,5 +34,5 @@ exports.glyphs['divisionslash'] =
 					typeIn: 'line'
 					expand:
 						width: ( 40 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

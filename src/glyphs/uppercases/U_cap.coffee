@@ -5,7 +5,7 @@ exports.glyphs['U_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 80 + (32) + serifWidth / 2
@@ -30,38 +30,38 @@ exports.glyphs['U_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 295 / 750 ) * capHeight
 					typeIn: 'line'
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.1
 					expand:
 						width: ( 137 / 115 ) * thickness * opticThickness
-						angle: 10 + 'deg'
+						angle:( 10 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) / 2
 					y:  - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
 						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x + 145 + 200 * width + (66)
 					y: ( 295 / 750 ) * capHeight
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand:
 						width: ( 137 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 180 - 10 + 'deg'
+						angle:( 180 - 10 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].x
@@ -69,7 +69,7 @@ exports.glyphs['U_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

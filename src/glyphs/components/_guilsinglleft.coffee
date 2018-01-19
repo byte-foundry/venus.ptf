@@ -17,7 +17,7 @@ exports.glyphs['_guilsinglleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: anchors[0].x + (0)
@@ -26,7 +26,7 @@ exports.glyphs['_guilsinglleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[0].x
@@ -34,5 +34,5 @@ exports.glyphs['_guilsinglleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 100 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

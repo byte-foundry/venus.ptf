@@ -5,7 +5,7 @@ exports.glyphs['logicalnot'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['logicalnot'] =
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 100 + thickness * contrast
@@ -34,7 +34,7 @@ exports.glyphs['logicalnot'] =
 					typeIn: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['logicalnot'] =
 					typeOut: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -54,5 +54,5 @@ exports.glyphs['logicalnot'] =
 					typeIn: 'line'
 					expand:
 						width: ( 115 / 115 ) * thickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0

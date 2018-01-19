@@ -5,7 +5,7 @@ exports.glyphs['s'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -35,19 +35,19 @@ exports.glyphs['s'] =
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture,
 						90
-					) + 'deg'
+					) / 180 * Math.PI
 					tensionOut: Math.min( correctTensionAperture, aperture * apertureBottom )
 					expand:
 						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
-						angle: anglePenBottom + 'deg'
+						angle:( anglePenBottom ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.52
 					y: - overshoot / 2
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					# x: 275 + 200 * width - (29)
@@ -56,11 +56,11 @@ exports.glyphs['s'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness + 10
 					)
 					y: Math.max( 140, ( 140 / 520 ) * xHeight )
-					dirIn: - 90 + 'deg'
-					dirOut: 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
+					dirOut: Math.PI / 2
 					expand:
 						width: thickness
-						angle: 180 + 5 + 'deg'
+						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[1].x + ( contours[0].nodes[5].x - contours[0].nodes[1].x ) * 0.46
@@ -74,24 +74,24 @@ exports.glyphs['s'] =
 					type: 'smooth'
 					expand:
 						width: ( 106 / 115 ) * thickness # + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
-						angle: 180 + 75 + 'deg'
+						angle:( 180 + 75 ) / 180 * Math.PI
 						distr: 0.5
 				4:
 					x: contours[0].nodes[0].x + (33)
 					y: xHeight - Math.max( 140, ( 140 / 520 ) * xHeight )
-					dirIn: - 90 + 'deg'
-					dirOut: 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
+					dirOut: Math.PI / 2
 					expand:
 						width: ( 110 / 115 ) * thickness
-						angle: 180 + 5 + 'deg'
+						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 0.75
 				5:
 					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[6].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) * 0.5
 					y: xHeight + overshoot / 2
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 85 / 115 ) * thickness * contrast
-						angle: 180 - 90 + 'deg'
+						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				6:
 					# x: 261 + 200 * width - (24)
@@ -103,11 +103,11 @@ exports.glyphs['s'] =
 					dirIn: Math.max(
 						anglePenTop + 90 - correctWidthAperture,
 						90
-					) + 'deg'
+					) / 180 * Math.PI
 					tensionIn: Math.min( correctTensionAperture, aperture * apertureTop )
 					expand:
 						width: ( 103 / 115 ) * thickness * contrast * contrastExtremity
-						angle: anglePenTop + 'deg'
+						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:
 		0:

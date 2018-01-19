@@ -5,7 +5,7 @@ exports.glyphs['x'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 5 + (32) + serifWidth / 2
@@ -30,7 +30,7 @@ exports.glyphs['x'] =
 							thickness / ( Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[0].nodes[0].x, y:contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} ) ) ),
 							thickness + 75
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: Math.max(
@@ -44,7 +44,7 @@ exports.glyphs['x'] =
 							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[0].nodes[0].x, y:contours[0].nodes[0].y},{x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) ),
 							thickness + 75
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -65,7 +65,7 @@ exports.glyphs['x'] =
 							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[1].nodes[0].x, y:contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y:contours[1].nodes[1].y} ) ) * contrast,
 							thickness + 75
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5 * contrast
 				# 0:
 				# 	###########################
@@ -77,7 +77,7 @@ exports.glyphs['x'] =
 				# 	})
 				# 	y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
 				# 	###########################
-				# 	dirOut: 0 + 'deg'
+				# 	dirOut: 0
 				# 	typeOut: 'line'
 				# 	expand:
 				# 		width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
@@ -98,7 +98,7 @@ exports.glyphs['x'] =
 							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[1].nodes[0].x, y:contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y:contours[1].nodes[1].y} ) ) * contrast,
 							thickness + 75
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1 - 0.5 * contrast
 		# 2:
 		# 	skeleton: true
@@ -112,11 +112,11 @@ exports.glyphs['x'] =
 		# 			# 	y: xHeight
 		# 			# })
 		# 			y: xHeight
-		# 			dirOut: 0 + 'deg'
+		# 			dirOut: 0
 		# 			typeOut: 'line'
 		# 			expand:
 		# 				width: ( 125 / 115 ) * thickness * contrast
-		# 				angle: 0 + 'deg'
+		# 				angle: 0
 		# 				distr: 0.5 * contrast
 		# 		1:
 		# 			###########################
@@ -128,7 +128,7 @@ exports.glyphs['x'] =
 		# 				})
 		# 			y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
 		# 			###########################
-		# 			dirOut: 0 + 'deg'
+		# 			dirOut: 0
 		# 			typeOut: 'line'
 		# 			expand:
 		# 				width: ( 104 / 115 ) * thickness * contrast * contrastExtremity

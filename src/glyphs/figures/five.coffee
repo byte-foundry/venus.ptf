@@ -5,7 +5,7 @@ exports.glyphs['five'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 45
@@ -26,7 +26,7 @@ exports.glyphs['five'] =
 					typeOut: 'line'
 					expand:
 						width: ( 133 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 13 + 'deg'
+						angle:( - 13 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[1].nodes[1].expandedTo[0].x - 130 - 85 * contrast # 110
@@ -35,7 +35,7 @@ exports.glyphs['five'] =
 					typeOut: 'line'
 					expand:
 						width: ( ( 122 + 58 * contrast * contrastExtremity ) / 115 ) * thickness * opticThickness
-						angle: - 90 + 46 * contrast * contrastExtremity + 'deg'
+						angle:( - 90 + 46 * contrast * contrastExtremity ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -55,21 +55,21 @@ exports.glyphs['five'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirOut: 48 + 'deg'
+					dirOut:( 48 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness # * contrast * contrastExtremity
-						angle: Utils.lineAngle( {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) + Math.PI # 180 + 95 + 'deg'
+						angle: Utils.lineAngle( {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) + Math.PI
 						distr: 1
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.55
 					# x: contours[1].nodes[2].expandedTo[0].x
 					y: ( 490 / 750 ) * capHeight - (28)
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 113 / 115 ) * thickness * opticThickness
-						angle: 180 + 77 + 'deg'
+						angle:( 180 + 77 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: Math.max(
@@ -77,28 +77,28 @@ exports.glyphs['five'] =
 						contours[1].nodes[4].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
 					)
 					y: ( 235 / 750 ) * capHeight
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * 0.5
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				4:
 					x: spacingLeft + (35)
 					y: ( 245 / 750 ) * capHeight
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					expand:
 						width: ( 140 / 115 ) * thickness * opticThickness # * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 	components:
 		0:

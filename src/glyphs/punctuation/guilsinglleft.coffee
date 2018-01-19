@@ -5,7 +5,7 @@ exports.glyphs['guilsinglleft'] =
 	ot:
 		advanceWidth: spacingLeft + (140 * width) + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

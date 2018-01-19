@@ -5,7 +5,7 @@ exports.glyphs['t'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10
@@ -35,11 +35,11 @@ exports.glyphs['t'] =
 				1:
 					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.45
 					y: 130 +  ( 15 / 115 ) * thickness #* contrast
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.25
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				2:
 					x: Math.min(
@@ -57,10 +57,10 @@ exports.glyphs['t'] =
 				3:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: 0
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					expand:
 						width: Math.sin( contours[0].nodes[2].expand.angle ) * ( 107 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 		1:
 			skeleton: true
@@ -75,7 +75,7 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: spacingLeft
@@ -83,5 +83,5 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 115 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0

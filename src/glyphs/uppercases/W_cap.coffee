@@ -5,7 +5,7 @@ exports.glyphs['W_cap'] =
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10 + (36) + serifWidth
@@ -30,7 +30,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - ( 15 / 115 ) * thickness * opticThickness * contrast
@@ -38,7 +38,7 @@ exports.glyphs['W_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: true
@@ -50,7 +50,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[3].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2
@@ -58,7 +58,7 @@ exports.glyphs['W_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.5
 		2:
 			skeleton: true
@@ -70,7 +70,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[2].nodes[0].expandedTo[0].x + ( contours[3].nodes[1].expandedTo[0].x - contours[2].nodes[0].expandedTo[0].x ) / 2 + ( 10 / 115 ) * thickness * opticThickness * contrast
@@ -78,7 +78,7 @@ exports.glyphs['W_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		3:
 			skeleton: true
@@ -90,7 +90,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 465 + 200 * width - (36)
@@ -98,7 +98,7 @@ exports.glyphs['W_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 145 / 115 ) * thickness * opticThickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

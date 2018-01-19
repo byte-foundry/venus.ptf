@@ -5,7 +5,7 @@ exports.glyphs['nobreakspace'] =
 	ot:
 		advanceWidth: 220 * width
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

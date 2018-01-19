@@ -6,7 +6,7 @@ exports.glyphs['C_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -44,39 +44,39 @@ exports.glyphs['C_cap'] =
 					dirOut: Math.min(
 						- anglePenBottom + 90 + 16 + correctWidthAperture,
 						90
-					) + 'deg'
+					) / 180 * Math.PI
 					expand:
 						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - anglePenBottom + 'deg'
+						angle:( - anglePenBottom ) / 180 * Math.PI
 						distr: 0.75
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * 0.5
 					y: - overshoot
-					dirOut: - 180 + 'deg'
+					dirOut:( - 180 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 110 / 115) * thickness * contrast * opticThickness
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
 					x: spacingLeft + (36)
 					y: ( 375 / 750 ) * capHeight
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					tensionIn: 0.9
 					tensionOut: 0.9
 					expand:
 						width: ( 145 / 115) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 				3:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 110 / 115) * thickness * contrast * opticThickness
-						angle: 180 - 90 + 'deg'
+						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				4:
 					x: contours[0].nodes[0].x
@@ -84,11 +84,11 @@ exports.glyphs['C_cap'] =
 					dirIn: Math.max(
 						anglePenTop + 90 - 10 - correctWidthAperture,
 						90
-					) + 'deg'
+					) / 180 * Math.PI
 					typeOut: 'line'
 					expand:
 						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
-						angle: anglePenTop + 'deg'
+						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:
 		0:

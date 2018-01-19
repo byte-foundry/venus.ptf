@@ -5,7 +5,7 @@ exports.glyphs['arobase'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 55
@@ -23,52 +23,52 @@ exports.glyphs['arobase'] =
 				0:
 					x: contours[0].nodes[2].expandedTo[0].x + 700 + 200 * width
 					y: ( - 242 - 0.25 * ( 75 / 115 ) * thickness ) / 2
-					dirOut: - 145 + 'deg'
+					dirOut:( - 145 ) / 180 * Math.PI
 					expand:
 						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
-						angle: - 55 + 'deg'
+						angle:( - 55 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[0].x ) * 0.55
 					y: - 242
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 75 / 115 ) * thickness * contrast
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: spacingLeft + (53/90) * thickness
 					y: contours[0].nodes[1].y + ( contours[0].nodes[3].y - contours[0].nodes[1].y ) * 0.5
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					expand:
 						width: ( 85 / 115 ) * thickness
-						angle: 180 + 0 + 'deg'
+						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x + ( contours[0].nodes[4].x - contours[0].nodes[2].x ) * 0.5
 					y: xHeight + 260
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 75 / 115 ) * thickness * contrast
-						angle: 180 - 90 + 'deg'
+						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x + 100
 					y: ( 343 / 500 ) * xHeight
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
 						width: ( 85 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				5:
 					x: contours[0].nodes[6].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[6].expandedTo[1].x ) * 0.5
 					y: 0
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 75 / 115 ) * thickness * contrast
-						angle: 180 + 62 + 'deg'
+						angle:( 180 + 62 ) / 180 * Math.PI
 						distr: 0.75
 				6:
 					x: contours[1].nodes[1].x + 100 * width + 50
@@ -80,15 +80,15 @@ exports.glyphs['arobase'] =
 					typeOut: 'line'
 					expand:
 						width: ( 105 / 115 ) * thickness
-						angle: 180 + 0 + 'deg'
+						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.75
 				7:
 					x: contours[0].nodes[6].x + 15 + Math.min( 20, ( 20 / 500 ) * xHeight )
 					y: ( 480 / 500 ) * xHeight
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					expand:
 						width: ( 105 / 115 ) * thickness
-						angle: 180 + 0 + 'deg'
+						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.75
 		1:
 			skeleton: true
@@ -112,7 +112,7 @@ exports.glyphs['arobase'] =
 				1:
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.5
 					y: ( 490 / 500 ) * xHeight
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 100 / 115 ) * thickness * contrast
@@ -126,13 +126,13 @@ exports.glyphs['arobase'] =
 					typeIn: 'smooth'
 					expand:
 						width: ( 115 / 115 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				3:
 					x: contours[1].nodes[2].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[0].x - contours[1].nodes[2].expandedTo[1].x ) * 0.55
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * 0.45
 					y: 20
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						width: ( 100 / 115 ) * thickness * contrast
@@ -144,5 +144,5 @@ exports.glyphs['arobase'] =
 					dirIn: Utils.lineAngle({x: contours[0].nodes[7].x, y: contours[0].nodes[7].y}, {x: contours[0].nodes[6].x, y: contours[0].nodes[6].y} )
 					expand:
 						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1

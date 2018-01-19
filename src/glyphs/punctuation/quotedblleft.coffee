@@ -5,7 +5,7 @@ exports.glyphs['quotedblleft'] =
 	ot:
 		advanceWidth: spacingLeft + minThickness + space + minThickness + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

@@ -34,18 +34,18 @@ exports.glyphs['_quoteleft'] =
 				0:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					tensionOut: 1.2
 					expand:
 						width:  Math.max( 8, ( 60 / 115 ) * thickness )
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					tensionOut: 1.2
 					expand:
 						width:  Math.max( 8, ( 75 / 115 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

@@ -5,7 +5,7 @@ exports.glyphs['ellipsis'] =
 	ot:
 		advanceWidth: spacingLeft + minThickness + 75 + minThickness + 75 + minThickness + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

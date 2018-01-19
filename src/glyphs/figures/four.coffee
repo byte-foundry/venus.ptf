@@ -5,7 +5,7 @@ exports.glyphs['four'] =
 	ot:
 		advanceWidth: contours[1].nodes[5].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 25
@@ -26,7 +26,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: contours[0].nodes[2].x
@@ -35,7 +35,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				2:
 					x: contours[1].nodes[1].x + ( contours[1].nodes[5].x - contours[1].nodes[1].x ) * Math.max( ( 0.75 - 0.15 * width + 0.15 ), 0.6 )
@@ -43,7 +43,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 135 / 115 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		1:
 			skeleton: true
@@ -55,7 +55,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 108 / 115 ) * thickness * opticThickness * contrast
-						angle: - Math.max( 15 * width, 15 ) + 'deg'
+						angle: - Math.max( 15 * width,( 15 ) ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: spacingLeft
@@ -64,7 +64,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 114 / 115 ) * thickness * opticThickness * contrast
-						angle: - Math.max( 7 * width, 7 ) + 'deg'
+						angle: - Math.max( 7 * width,( 7 ) ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -73,7 +73,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -82,7 +82,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 105 / 115 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				4:
 					x: contours[1].nodes[1].expandedTo[1].x
@@ -91,7 +91,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				5:
 					x: 300 + 275 * width
@@ -100,7 +100,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					expand:
 						width: ( 120 / 115 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 	components:
 		0:
