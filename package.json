@@ -33,7 +33,7 @@
     "gulp-util": "~3.0.1",
     "jshint-stylish": "~1.0.0",
     "karma": "^0.13.22",
-    "lodash": "~2.4.1",
+    "lodash": "^4.17.4",
     "merge-stream": "~0.1.5",
     "sandbox": "~0.8.6",
     "through2": "~0.6.1"
