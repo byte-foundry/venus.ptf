@@ -135,10 +135,12 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 	components:
 		0:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'topleft'
+			class: 'Ztop'
 			parentAnchors:
 				0:
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
 					base: contours[0].nodes[0].expandedTo[1]
 					opposite: contours[0].nodes[0].expandedTo[0]
 					reversed: true
@@ -148,10 +150,12 @@ exports.glyphs['z'] =
 				[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			)
 		1:
-			base: 'serif-horizontal'
+			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
+			class: 'Zbottom'
 			parentAnchors:
 				0:
+					noneAnchor: contours[0].nodes[8].expandedTo[0]
 					base: contours[0].nodes[8].expandedTo[0]
 					opposite: contours[0].nodes[8].expandedTo[1]
 					reversed: true

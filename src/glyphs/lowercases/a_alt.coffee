@@ -103,6 +103,7 @@ exports.glyphs['a_alt'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -116,6 +117,7 @@ exports.glyphs['a_alt'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]

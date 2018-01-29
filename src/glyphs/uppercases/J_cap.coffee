@@ -83,6 +83,7 @@ exports.glyphs['J_cap'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[1]
@@ -96,6 +97,7 @@ exports.glyphs['J_cap'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[0]

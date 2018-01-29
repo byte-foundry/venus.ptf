@@ -163,6 +163,7 @@ exports.glyphs['m'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -171,6 +172,7 @@ exports.glyphs['m'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -184,6 +186,7 @@ exports.glyphs['m'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -220,6 +223,7 @@ exports.glyphs['m'] =
 		5:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft3'
+			class: 'lowerRightInsideStump'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[0].expandedTo[0]
@@ -228,6 +232,7 @@ exports.glyphs['m'] =
 		6:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright3'
+			class: 'lowerLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[0].expandedTo[1]

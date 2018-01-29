@@ -113,6 +113,7 @@ exports.glyphs['s'] =
 		0:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'top'
+			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[6].dirIn
@@ -126,6 +127,7 @@ exports.glyphs['s'] =
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottombottom'
+			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[0].dirIn

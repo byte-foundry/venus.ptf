@@ -96,6 +96,7 @@ exports.glyphs['j'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[0]

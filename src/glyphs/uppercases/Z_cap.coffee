@@ -84,6 +84,7 @@ exports.glyphs['Z_cap'] =
 		0:
 			base: ['serif-horizontal', 'none']
 			id: 'topleft'
+			class: 'Ztop'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1]
@@ -99,6 +100,7 @@ exports.glyphs['Z_cap'] =
 		1:
 			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
+			class: 'Zbottom'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]

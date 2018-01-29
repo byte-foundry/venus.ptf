@@ -87,6 +87,7 @@ exports.glyphs['q'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'leftDescender'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -95,6 +96,7 @@ exports.glyphs['q'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'rightDescender'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -108,6 +110,7 @@ exports.glyphs['q'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
