@@ -33,8 +33,8 @@ exports.glyphs['serif-curve-inside-auto'] =
 					x: anchors[0].point0.x
 					y: anchors[0].point0.y
 					dirOut: anchors[0].point0.dirOut
+					typeIn: 'line'
 					typeOut: anchors[0].point0.typeOut
-					typeIn: anchors[0].point0.typeIn
 				1:
 					x: anchors[0].point1.x
 					y: anchors[0].point1.y
@@ -99,6 +99,5 @@ exports.glyphs['serif-curve-inside-auto'] =
 					x: anchors[0].point8.x
 					y: anchors[0].point8.y
 					dirIn: anchors[0].point8.dirIn
-					dirOut: anchors[0].point8.dirIn
-					typeOut: anchors[0].point8.typeOut
+					typeOut: 'line'
 					tensionIn: anchors[0].point8.tensionIn
