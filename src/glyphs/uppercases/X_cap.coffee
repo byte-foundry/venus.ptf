@@ -123,7 +123,7 @@ exports.glyphs['X_cap'] =
 					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
 		5:
 			base: ['serif-oblique-acute', 'none']
-			id: 'bottomleft'
+			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1].point
