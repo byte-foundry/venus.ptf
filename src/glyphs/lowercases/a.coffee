@@ -23,8 +23,8 @@ exports.glyphs['a'] =
 			x: contours[0].nodes[1].x
 			y: xHeight + diacriticHeight
 		1:
-			x: contours[0].nodes[4].expandedTo[0].x
-			y: contours[0].nodes[4].expandedTo[0].y
+			x: contours[0].nodes[4].x
+			y: contours[0].nodes[4].y
 		2:
 			x: contours[0].nodes[1].x - 95 / 2 - minThickness / 2
 			y: xHeight + diacriticHeight
