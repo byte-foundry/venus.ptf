@@ -38,58 +38,43 @@ exports.glyphs['serif-curve-inside-auto'] =
 				1:
 					x: anchors[0].point1.x
 					y: anchors[0].point1.y
+					dirOut: anchors[0].point1.dirOut
 					dirIn: anchors[0].point1.dirIn
-					typeOut: 'line'
-					typeIn: anchors[0].point1.typeIn
+					type: anchors[0].point1.type
+					typeOut: anchors[0].point1.typeOut
 				2:
 					x: anchors[0].point2.x
 					y: anchors[0].point2.y
-					dirOut:
-						if serifTerminal != 0
-						then anchors[0].point2.dirOut
-						else null
-					tensionOut:
-						if serifTerminal != 0
-						then 1
-						else 0
-					typeIn: 'line'
+					dirIn: anchors[0].point2.dirIn
+					dirOut: anchors[0].point2.dirOut
+					type: 'corner'
 				3:
 					x: anchors[0].point3.x
 					y: anchors[0].point3.y
-					dirIn:
-						if serifTerminal != 0
-						then anchors[0].point3.dirIn
-						else null
-					tensionIn:
-						if serifTerminal != 0
-						then 1
-						else 0
-					dirOut:
-						if serifTerminal != 0
-						then anchors[0].point2.dirIn
-						else null
-					tensionOut:
-						if serifTerminal != 0
-						then 1
-						else 0
+					type: 'corner'
+					dirIn: anchors[0].point3.dirIn
+					dirOut: anchors[0].point3.dirIn
 					typeOut: anchors[0].point3.typeOut
 				4:
 					x: anchors[0].point4.x
 					y: anchors[0].point4.y
+					type: 'corner'
 					dirIn: anchors[0].point4.dirIn
 					typeOut: anchors[0].point4.typeOut
 				5:
 					x: anchors[0].point5.x
 					y: anchors[0].point5.y
-					typeIn: anchors[0].point5.typeIn
+					type: 'corner'
+					typeIn: 'line'
 				6:
 					x: anchors[0].point6.x
 					y: anchors[0].point6.y
+					type: 'corner'
 					typeOut: 'line'
-					typeIn: 'line'
 				7:
 					x: anchors[0].point7.x
 					y: anchors[0].point7.y
+					type: 'corner'
 					dirIn: anchors[0].point7.dirIn
 					dirOut: anchors[0].point7.dirOut
 					typeOut: anchors[0].point7.typeOut
@@ -98,6 +83,8 @@ exports.glyphs['serif-curve-inside-auto'] =
 				8:
 					x: anchors[0].point8.x
 					y: anchors[0].point8.y
+					type: 'corner'
 					dirIn: anchors[0].point8.dirIn
+					dirOut: anchors[0].point8.dirIn
 					typeOut: 'line'
 					tensionIn: anchors[0].point8.tensionIn
