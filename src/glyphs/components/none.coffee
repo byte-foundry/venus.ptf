@@ -1,4 +1,5 @@
 exports.glyphs['none'] =
+	global: true
 	glyphName: "none"
 	componentLabel: 'No serif'
 	characterName: "NONE"

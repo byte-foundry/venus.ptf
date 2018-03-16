@@ -1,4 +1,5 @@
 exports.glyphs['line'] =
+	global: true
 	characterName: 'VERTICAL LINE'
 	parameters:
 		thickness: Math.max( 40, Math.min( 120, thickness ))

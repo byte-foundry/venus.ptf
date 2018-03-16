@@ -1,4 +1,5 @@
 exports.glyphs['ogonek'] =
+	global: true
 	glyphName: "ogonek"
 	characterName: "OGONEK"
 	anchors:

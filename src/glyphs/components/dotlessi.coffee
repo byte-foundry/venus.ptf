@@ -1,4 +1,5 @@
 exports.glyphs['dotlessi'] =
+	global: true
 	glyphName: "dotlessi"
 	characterName: "LATIN SMALL LETTER DOTLESS I"
 	unicode: 'ı'
