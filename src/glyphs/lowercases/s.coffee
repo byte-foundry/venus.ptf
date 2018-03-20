@@ -112,7 +112,7 @@ exports.glyphs['s'] =
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
-			id: 'top'
+			id: 'toptop'
 			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
@@ -126,17 +126,49 @@ exports.glyphs['s'] =
 					rotationCenter: contours[0].nodes[6].expandedTo[1]
 		1:
 			base: ['serif-curve-inside-auto', 'none']
+			id: 'topbottom'
+			class: 'topInsideCurve'
+			parentAnchors:
+				0:
+					baseDir: contours[0].nodes[6].dirIn
+					baseWidth: contours[0].nodes[6].expandedTo[0]
+					baseHeight: contours[0].nodes[6].expandedTo[1]
+					noneAnchor: contours[0].nodes[6].expandedTo[0]
+					opposite: contours[0].nodes[6].expandedTo[1]
+					curveEnd: contours[0].nodes[5].expandedTo[0]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[6].expandedTo[1]
+					down: true
+					inverseOrder: true
+		2:
+			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottombottom'
 			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
-					baseDir: contours[0].nodes[0].dirIn
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
-					noneAnchor: contours[0].nodes[0].expandedTo[0]
 					opposite: contours[0].nodes[0].expandedTo[1]
 					curveEnd: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[0].expandedTo[0]
 					down: true
 					left: true
+		3:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'bottomtop'
+			class: 'bottomInsideCurve'
+			parentAnchors:
+				0:
+					baseDir: contours[0].nodes[0].dirOut
+					baseWidth: contours[0].nodes[0].expandedTo[1]
+					baseHeight: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					curveEnd: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[0].expandedTo[0]
+					left: true
+					inverseOrder: true

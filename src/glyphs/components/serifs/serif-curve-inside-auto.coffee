@@ -66,10 +66,12 @@ exports.glyphs['serif-curve-inside-auto'] =
 					y: anchors[0].point5.y
 					type: 'corner'
 					typeIn: 'line'
+					typeOut: 'line'
 				6:
 					x: anchors[0].point6.x
 					y: anchors[0].point6.y
 					type: 'corner'
+					typeIn: 'line'
 					typeOut: 'line'
 				7:
 					x: anchors[0].point7.x

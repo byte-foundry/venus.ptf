@@ -23,7 +23,7 @@ exports.glyphs['j'] =
 				0:
 					x: contours[0].nodes[2].expandedTo[0].x - 85 * width
 					y: ( 75 / 250 ) * descender
-					dirOut:( - 90 ) / 180 * Math.PI
+					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
@@ -41,9 +41,9 @@ exports.glyphs['j'] =
 				2:
 					x: contours[0].nodes[3].x
 					y: 0
-					dirOut:( - 90 ) / 180 * Math.PI
+					dirIn:( - 90 ) / 180 * Math.PI
 					tensionIn: 1.3
-					typeIn: 'line'
+					typeOut: 'line'
 					expand:
 						width: thickness
 						angle: 0
@@ -51,8 +51,7 @@ exports.glyphs['j'] =
 				3:
 					x: spacingLeft + 150 * width - 150
 					y: xHeight - Math.max(0, serifHeight * serifArc )- ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
-					dirOut:( - 90 ) / 180 * Math.PI
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0

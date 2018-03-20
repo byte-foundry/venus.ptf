@@ -93,10 +93,11 @@ exports.glyphs['C_cap'] =
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
-			id: 'top'
+			id: 'toptop'
 			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[4].dirIn
 					baseWidth: contours[0].nodes[4].expandedTo[1]
 					baseHeight: contours[0].nodes[4].expandedTo[1]
 					noneAnchor: contours[0].nodes[4].expandedTo[1]
@@ -104,14 +105,49 @@ exports.glyphs['C_cap'] =
 					curveEnd: contours[0].nodes[3].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[4].expandedTo[1]
-		# 1:
-		# 	base: 'serif-curve-inside-auto'
-		# 	id: 'topbottom'
-		# 	parentAnchors:
-		# 		0:
-		# 			base: contours[0].nodes[4].expandedTo[0]
-		# 			opposite: contours[0].nodes[4].expandedTo[1]
-		# 			curveEnd: contours[0].nodes[3].expandedTo[0]
-		# 			rotationAngle: -15
-		# 			down: true
-		# 			rotationCenter: contours[0].nodes[4].expandedTo[1]
+		1:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'topbottom'
+			class: 'topInsideCurve'
+			parentAnchors:
+				0:
+					baseDir: contours[0].nodes[4].dirIn
+					baseWidth: contours[0].nodes[4].expandedTo[0]
+					baseHeight: contours[0].nodes[4].expandedTo[1]
+					noneAnchor: contours[0].nodes[4].expandedTo[0]
+					opposite: contours[0].nodes[4].expandedTo[1]
+					curveEnd: contours[0].nodes[3].expandedTo[0]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[4].expandedTo[1]
+					down: true
+					inverseOrder: true
+		2:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottombottom'
+			class: 'bottomOutsideCurve'
+			parentAnchors:
+				0:
+					baseDir: contours[0].nodes[0].dirOut
+					baseWidth: contours[0].nodes[0].expandedTo[1]
+					baseHeight: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					curveEnd: contours[0].nodes[1].expandedTo[1]
+					rotationAngle: 15
+					rotationCenter: contours[0].nodes[0].expandedTo[1]
+					down: true
+					inverseOrder: true
+		3:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottomtop'
+			class: 'bottomInsideCurve'
+			parentAnchors:
+				0:
+					baseDir: contours[0].nodes[0].dirOut
+					baseWidth: contours[0].nodes[0].expandedTo[0]
+					baseHeight: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					curveEnd: contours[0].nodes[1].expandedTo[0]
+					rotationAngle: 15
+					rotationCenter: contours[0].nodes[0].expandedTo[1]

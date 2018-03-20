@@ -73,6 +73,7 @@ exports.glyphs['i'] =
 			id: 'title'
 			parentAnchors:
 				0:
+					# base: contours[0].nodes[1].expandedTo[1]
 					x: contours[0].nodes[1].expandedTo[0].x + thickness / 2
 					y: xHeight + diacriticHeight
 		1:
