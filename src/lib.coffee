@@ -12,6 +12,6 @@ exports.lib =
 		correctTensionAperture: 1.2 * ( aperture / aperture ) # dirty workaround
 		contrast: -1 * _contrast
 		serifHeight:
-			if serifWidth < 0.1 && serifHeight < 0.1
+			if serifWidth < 0.15 && serifHeight < 0.15
 			then Math.max(5, serifHeight)
 			else serifHeight

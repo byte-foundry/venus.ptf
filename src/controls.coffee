@@ -254,10 +254,10 @@ exports.controls = [
 	parameters: [
 		name: 'serifWidth'
 		label: 'Serif Width'
-		min: 0.05 #temporary FIX (instead 0)
+		min: 0.1 #temporary FIX (instead 0)
 		max: 200
 		step: 1
-		init: 0.01
+		init: 0.1
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
