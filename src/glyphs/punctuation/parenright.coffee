@@ -5,7 +5,8 @@ exports.glyphs['parenright'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX',( slant ) / 180 * Math.PI]
+		['translateX', - contours[0].nodes[0].expandedTo[0].x - spacingRight],
+		['skewX',( slant ) / 180 * Math.PI],
 	)
 	tags: [
 		'all',

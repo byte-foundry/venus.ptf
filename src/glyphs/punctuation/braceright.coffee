@@ -5,6 +5,8 @@ exports.glyphs['braceright'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(
+		[ 'scaleX', -1 ],
+		[ 'translateX', contours[0].nodes[0].x + spacingRight ],
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
@@ -123,8 +125,8 @@ exports.glyphs['braceright'] =
 						width: thickness * ( 65 / 115 )
 						angle: Math.PI / 2
 						distr: 0
-			transformOrigin: Object({
-				x: contours[0].nodes[5].x + ( contours[0].nodes[0].x - contours[0].nodes[5].x ) / 2,
-				y: 0
-			})
-			transforms: Array( [ 'scaleX', -1 ] )
+			# transformOrigin: Object({
+			# 	x: contours[0].nodes[5].x + ( contours[0].nodes[0].x - contours[0].nodes[5].x ) / 2,
+			# 	y: 0
+			# })
+			# transforms: Array( [ 'scaleX', -1 ] )
