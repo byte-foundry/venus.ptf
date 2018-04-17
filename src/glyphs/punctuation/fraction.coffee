@@ -13,8 +13,8 @@ exports.glyphs['fraction'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + 60
-		spacingRight: 50 * spacing + 60
+		spacingLeft: 50 * spacing + 30
+		spacingRight: 50 * spacing + 12
 	contours:
 		0:
 			skeleton: true
@@ -25,14 +25,14 @@ exports.glyphs['fraction'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness * contrast
 						angle: 0
-						distr: 0
+						distr: 0.5
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 380
-					y: capHeight
+					x: contours[0].nodes[0].x + 365 + 100 * width
+					y: ascenderHeight
 					typeIn: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness
+						width: ( 40 / 115 ) * thickness * contrast
 						angle: 0
-						distr: 0
+						distr: 0.5
