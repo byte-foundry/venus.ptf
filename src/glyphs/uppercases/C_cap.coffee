@@ -106,7 +106,7 @@ exports.glyphs['C_cap'] =
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[4].expandedTo[1]
 		1:
-			base: ['serif-curve-inside-auto', 'none']
+			base: ['none', 'serif-curve-inside-auto']
 			id: 'topbottom'
 			class: 'topInsideCurve'
 			parentAnchors:

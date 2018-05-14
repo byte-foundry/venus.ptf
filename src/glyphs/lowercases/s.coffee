@@ -125,7 +125,7 @@ exports.glyphs['s'] =
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[6].expandedTo[1]
 		1:
-			base: ['serif-curve-inside-auto', 'none']
+			base: ['none', 'serif-curve-inside-auto']
 			id: 'topbottom'
 			class: 'topInsideCurve'
 			parentAnchors:
@@ -157,7 +157,7 @@ exports.glyphs['s'] =
 					down: true
 					left: true
 		3:
-			base: ['serif-curve-inside-auto', 'none']
+			base: ['none', 'serif-curve-inside-auto']
 			id: 'bottomtop'
 			class: 'bottomInsideCurve'
 			parentAnchors:
