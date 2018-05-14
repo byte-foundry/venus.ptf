@@ -39,6 +39,7 @@
     "through2": "~0.6.1"
   },
   "dependencies": {
-    "prototypo-precursor": "^1.0.7"
+    "prototypo-precursor": "^1.0.7",
+    "yargs": "^11.0.0"
   }
 }
