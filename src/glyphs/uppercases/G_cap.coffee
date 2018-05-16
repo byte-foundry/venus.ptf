@@ -122,7 +122,7 @@ exports.glyphs['G_cap'] =
 					rotationAngle: -15
 					rotationCenter: contours[1].nodes[5].expandedTo[1]
 		1:
-			base: ['serif-curve-inside-auto', 'none']
+			base: ['none', 'serif-curve-inside-auto']
 			id: 'topbottom'
 			class: 'topInsideCurve'
 			parentAnchors:

@@ -1,4 +1,4 @@
-// through2 is a thin wrapper around node transform streams
+//e through2 is a thin wrapper around node transform streams
 var through = require('through2'),
 	vm = require('vm'),
 	// gutil = require('gulp-util'),
@@ -162,7 +162,7 @@ function jsufonify(/*prefixText*/free, subset) {
 			font.glyphs = _.pickBy(font.glyphs, glyph => glyph);
 		} else if (subset) {
 			const unicodeSubset = subset.split('').map(item => item.charCodeAt(0));
-			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
+			_.forEach(font.glyphs, (glyph) => {
 				const unicode = glyph.unicode === undefined || typeof glyph.unicode === 'number' ? glyph.unicode : glyph.unicode.charCodeAt(0);
 				if (unicode === undefined || unicodeSubset.indexOf(unicode) !== -1) {
 					_.forEach(glyph.components, (comp) => {
@@ -176,11 +176,20 @@ function jsufonify(/*prefixText*/free, subset) {
 						base.forEach((baseToLookup) => {
 							const unicode = font.glyphs[baseToLookup].unicode;
 							if (unicode) {
-								unicodeSubset.push(unicode);
+								unicodeSubset.push(typeof unicode === 'number' ? unicode : unicode.charCodeAt(0));
 							}
 						});
 					});
+					if (glyph.base) {
+						const unicode = font.glyphs[glyph.base].unicode;
+						if (unicode) {
+							unicodeSubset.push(typeof unicode === 'number' ? unicode : unicode.charCodeAt(0));
+						}
+					}
 				}
+			});
+			font.glyphs = _.mapValues(font.glyphs, (glyph, name) => {
+				const unicode = glyph.unicode === undefined || typeof glyph.unicode === 'number' ? glyph.unicode : glyph.unicode.charCodeAt(0);
 				return unicode === undefined ||  unicodeSubset.indexOf(unicode) !== -1 ?
 					glyph :
 					undefined;
