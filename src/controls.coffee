@@ -1,76 +1,5 @@
 exports.controls = [
 	tab: true
-	label: 'Settings'
-	icon: '...'
-	parameters: [
-		name: 'spacing'
-		label: 'Spacing'
-		min: -1
-		max: 3
-		step: 0.01
-		init: 0
-		minAdvised: 0
-		maxAdvised: 1.1
-		disabled: false
-		advanced: false
-	,
-		name: 'diacriticHeight'
-		label: 'Diacritic Position'
-		min: -5
-		max: 150
-		step: 1
-		init: 80
-		minAdvised: 20
-		maxAdvised: 150
-		disabled: false
-		advanced: false
-	,
-		name: 'opticThickness'
-		label: 'Capital thickness'
-		min: 0.7
-		max: 1.3
-		step: 0.01
-		init: 0.95
-		minAdvised: 0.9
-		maxAdvised: 1.1
-		disabled: false
-		advanced: false
-	,
-		name: 'smallCapDelta'
-		label: 'SC Height'
-		min: 0
-		max: 2.5
-		step: 0.01
-		init: 1
-		minAdvised: 0
-		maxAdvised: 1.5
-		disabled: false
-		advanced: true
-	,
-		name: '_scThickness'
-		label: 'SC Thickness'
-		min: 0.5
-		max: 1.5
-		step: 0.05
-		init: 0.9
-		minAdvised: 0.85
-		maxAdvised: 1
-		disabled: false
-		advanced: true
-	,
-		name: '_scWidth'
-		label: 'SC Width'
-		min: 0.5
-		max: 1.5
-		step: 0.05
-		init: 0.7
-		minAdvised: 0.65
-		maxAdvised: 0.75
-		disabled: false
-		advanced: true
-	]
-,
-	tab: true
 	label: 'Func'
 	icon: '...'
 	parameters: [
@@ -129,6 +58,17 @@ exports.controls = [
 		disabled: false
 		advanced: false
 	,
+		name: 'diacriticHeight'
+		label: 'Diacritic Position'
+		min: -5
+		max: 150
+		step: 1
+		init: 80
+		minAdvised: 20
+		maxAdvised: 150
+		disabled: false
+		advanced: false
+	,
 		name: 'width'
 		label: 'Width'
 		min: 0.4
@@ -149,7 +89,7 @@ exports.controls = [
 		minAdvised: -15
 		maxAdvised: 25
 		disabled: false
-		advanced: true
+		advanced: false
 	,
 		name: 'overshoot'
 		label: 'Overshoot'
@@ -159,6 +99,17 @@ exports.controls = [
 		init: 9
 		minAdvised: 0
 		maxAdvised: 20
+		disabled: false
+		advanced: true
+	,
+		name: 'spacing'
+		label: 'Spacing'
+		min: -1
+		max: 3
+		step: 0.01
+		init: 0
+		minAdvised: 0
+		maxAdvised: 1.1
 		disabled: false
 		advanced: false
 	]
@@ -175,6 +126,50 @@ exports.controls = [
 		init: 115
 		minAdvised: 4
 		maxAdvised: 180
+		disabled: false
+		advanced: true
+	,
+		name: 'opticThickness'
+		label: 'Capital thickness'
+		min: 0.7
+		max: 1.3
+		step: 0.01
+		init: 0.95
+		minAdvised: 0.9
+		maxAdvised: 1.1
+		disabled: false
+		advanced: false
+	,
+		name: 'smallCapDelta'
+		label: 'SC Height'
+		min: 0
+		max: 2.5
+		step: 0.01
+		init: 1
+		minAdvised: 0
+		maxAdvised: 1.5
+		disabled: false
+		advanced: true
+	,
+		name: '_scThickness'
+		label: 'SC Thickness'
+		min: 0.5
+		max: 1.5
+		step: 0.05
+		init: 0.9
+		minAdvised: 0.85
+		maxAdvised: 1
+		disabled: false
+		advanced: true
+	,
+		name: '_scWidth'
+		label: 'SC Width'
+		min: 0.5
+		max: 1.5
+		step: 0.05
+		init: 0.7
+		minAdvised: 0.65
+		maxAdvised: 0.75
 		disabled: false
 		advanced: true
 	,
@@ -263,17 +258,6 @@ exports.controls = [
 		disabled: false
 		advanced: true
 	,
-		name: 'midWidth'
-		label: 'Middle Width'
-		min: 0.5
-		max: 1.5
-		step: 0.01
-		init: 1
-		minAdvised: 0.8
-		maxAdvised: 1.2
-		disabled: false
-		advanced: false
-	,
 		name: 'serifHeight'
 		label: 'Serif Height'
 		min: 0.001
@@ -284,6 +268,17 @@ exports.controls = [
 		maxAdvised: 100
 		disabled: false
 		advanced: true
+	,
+		name: 'midWidth'
+		label: 'Middle Width'
+		min: 0.5
+		max: 1.5
+		step: 0.01
+		init: 1
+		minAdvised: 0.8
+		maxAdvised: 1.2
+		disabled: false
+		advanced: false
 	,
 		name: 'serifMedian'
 		label: 'Serif Median'
