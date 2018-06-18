@@ -349,7 +349,7 @@ exports.controls = [
 		minAdvised: 0
 		maxAdvised: 0.8
 		disabled: false
-		advanced: false
+		advanced: true
 		group: 'Terminals'
 	,
 		name: 'serifTerminalCurve'
@@ -361,7 +361,7 @@ exports.controls = [
 		minAdvised: 0
 		maxAdvised: 2
 		disabled: false
-		advanced: false
+		advanced: true
 		group: 'Terminals'
 	,
 		name: 'serifArc'
