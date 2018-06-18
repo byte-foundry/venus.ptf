@@ -137,7 +137,7 @@ exports.controls = [
 		minAdvised: 4
 		maxAdvised: 180
 		disabled: false
-		advanced: true
+		advanced: false
 		group: 'Style'
 	,
 		name: 'opticThickness'
@@ -277,7 +277,7 @@ exports.controls = [
 		minAdvised: 0.1
 		maxAdvised: 200
 		disabled: false
-		advanced: true
+		advanced: false
 		group: 'Proportions'
 	,
 		name: 'serifHeight'
@@ -289,7 +289,7 @@ exports.controls = [
 		minAdvised: 0.001
 		maxAdvised: 100
 		disabled: false
-		advanced: true
+		advanced: false
 		group: 'Proportions'
 	,
 		name: 'midWidth'
