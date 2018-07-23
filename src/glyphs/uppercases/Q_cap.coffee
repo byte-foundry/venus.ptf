@@ -69,7 +69,6 @@ exports.glyphs['Q_cap'] =
 				1:
 					x: contours[0].nodes[3].x + ( 5 / 115 ) * thickness + (22)
 					y: contours[0].nodes[3].expandedTo[1].y + Math.min( 90, ( 90 / 115 ) * thickness ) + (16)
-					dirOut: 0
 					typeOut: 'line'
 					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness * contrast
@@ -78,8 +77,7 @@ exports.glyphs['Q_cap'] =
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x - (5)
 					y: ( 90 / 250 ) * descender
-					dirOut: 0
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 110 / 115 ) * thickness * opticThickness
 						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y} )

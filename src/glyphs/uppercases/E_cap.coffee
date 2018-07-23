@@ -182,6 +182,6 @@ exports.glyphs['E_cap'] =
 			transformOrigin: contours[3].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
