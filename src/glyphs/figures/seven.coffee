@@ -25,8 +25,8 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
-						angle:( - 90 ) / 180 * Math.PI
+						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
+						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x + 200 * width + 250
@@ -80,6 +80,19 @@ exports.glyphs['seven'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
-				[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
-				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
+			)
+		1:
+			base: ['none', 'serif-horizontal']
+			id: 'toplefttop'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'scaleX', -1 ],
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)

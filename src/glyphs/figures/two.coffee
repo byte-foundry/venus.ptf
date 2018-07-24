@@ -25,13 +25,13 @@ exports.glyphs['two'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: Math.PI / 2
+						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 - contours[0].nodes[1].expand.angle )
+						angle: Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: 0
-					typeIn: 'line'
+					lineIn: 'line'
 					expand:
 						width: ( 130 / 115 ) * thickness * opticThickness
 						angle: Math.PI / 2
@@ -103,6 +103,7 @@ exports.glyphs['two'] =
 		0:
 			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
+			class: 'bottomInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -112,6 +113,18 @@ exports.glyphs['two'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ]
+			)
+		1:
+			base: ['none', 'serif-horizontal']
+			id: 'bottomrightbottom'
+			class: 'bottomOutsideHoriz'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
+			transforms: Array(
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)

@@ -37,8 +37,8 @@ exports.glyphs['Z_cap'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
-						angle:( - 90 ) / 180 * Math.PI
+						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[1].expand.angle )
+						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -57,8 +57,8 @@ exports.glyphs['Z_cap'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
-						angle: Math.PI / 2
+						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast ) / Math.cos( - Math.PI / 2 + contours[1].nodes[1].expand.angle )
+						angle: Math.PI + Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		2:
 			skeleton: true
@@ -83,8 +83,8 @@ exports.glyphs['Z_cap'] =
 	components:
 		0:
 			base: ['serif-horizontal', 'none']
-			id: 'topleft'
-			class: 'Ztop'
+			id: 'topleftbottom'
+			class: 'topInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1]
@@ -94,13 +94,27 @@ exports.glyphs['Z_cap'] =
 			transformOrigin: contours[0].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
-				[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
-				[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
 		1:
+			base: ['none', 'serif-horizontal']
+			id: 'toplefttop'
+			class: 'topOutsideHoriz'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
+			transformOrigin: contours[0].nodes[1].expandedTo[0]
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'scaleX', -1 ],
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
+			)
+		2:
 			base: ['serif-horizontal', 'none']
-			id: 'bottomright'
-			class: 'Zbottom'
+			id: 'bottomrighttop'
+			class: 'bottomInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
@@ -110,6 +124,18 @@ exports.glyphs['Z_cap'] =
 			transformOrigin: contours[1].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ]
+			)
+		3:
+			base: ['none', 'serif-horizontal']
+			id: 'bottomrightbottom'
+			class: 'bottomOutsideHoriz'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0]
+					noneAnchor: contours[1].nodes[1].expandedTo[0]
+					opposite: contours[1].nodes[1].expandedTo[1]
+			transformOrigin: contours[1].nodes[1].expandedTo[0]
+			transforms: Array(
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)

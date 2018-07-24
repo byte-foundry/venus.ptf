@@ -34,8 +34,8 @@ exports.glyphs['five'] =
 					typeIn: 'line'
 					typeOut: 'line'
 					expand:
-						width: ( ( 122 + 58 * contrast * contrastExtremity ) / 115 ) * thickness * opticThickness
-						angle:( - 90 + 46 * contrast * contrastExtremity ) / 180 * Math.PI
+						width: ( contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[2].expandedTo[1].y ) / Math.sin( Math.PI + contours[0].nodes[1].expand.angle )
+						angle: - Math.PI / 2 + ( 45 * contrast ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -45,8 +45,8 @@ exports.glyphs['five'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
-						angle: (- 94 - 15 * serifRotate )  / 180 * Math.PI
+						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[1].nodes[1].expand.angle )
+						angle: ( - 94 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -103,7 +103,23 @@ exports.glyphs['five'] =
 	components:
 		0:
 			base: ['serif-horizontal', 'none']
-			id: 'toprightbottom'
+			id: 'toprighttop'
+			class: 'topOutsideHoriz'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[2].expandedTo[0]
+					noneAnchor: contours[0].nodes[2].expandedTo[0]
+					opposite: contours[0].nodes[2].expandedTo[1]
+					reversed: true
+			transformOrigin: contours[0].nodes[2].expandedTo[0]
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'skewX',( 4 + 10 * serifRotate ) / 180 * Math.PI ]
+			)
+		1:
+			base: ['none', 'serif-horizontal', ]
+			id: 'topright'
+			class: 'topInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[2].expandedTo[1]
@@ -111,18 +127,5 @@ exports.glyphs['five'] =
 					opposite: contours[0].nodes[2].expandedTo[0]
 			transformOrigin: contours[0].nodes[2].expandedTo[1]
 			transforms: Array(
-				[ 'skewX', Math.PI / 2 - contours[0].nodes[2].expand.angle ]
+				[ 'skewX',( 4 + 10 * serifRotate ) / 180 * Math.PI ],
 			)
-		# 1:
-		# 	base: 'serif-horizontal'
-		# 	id: 'toprighttop'
-		# 	parentAnchors:
-		# 		0:
-		# 			base: contours[0].nodes[2].expandedTo[0]
-		# 			opposite: contours[0].nodes[2].expandedTo[1]
-		# 			reversed: true
-		# 	transformOrigin: contours[0].nodes[2].expandedTo[0]
-		# 	transforms: Array(
-		# 		[ 'scaleY', -1 ],
-		# 		[ 'skewX', Math.PI / 2 + contours[0].nodes[2].expand.angle ]
-		# 	)

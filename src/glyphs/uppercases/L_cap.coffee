@@ -59,22 +59,20 @@ exports.glyphs['L_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].expandedTo[1].x - (1)
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirOut: 0
-					# typeOut: 'line'
+					typeOut: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 110 / 115 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 125 + 200 * width - Math.max( 0, serifHeight * serifArc ) - ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness / 2 ) )
 					y: 0
-					dirOut: 0
-					typeOut: 'line'
+					lineIn: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
-						angle: Math.PI / 2
+						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast ) / Math.cos( Math.PI / 2 - contours[1].nodes[1].expand.angle )
+						angle: Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 	components:
 		0:
@@ -103,7 +101,7 @@ exports.glyphs['L_cap'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
-			class: 'upperLeftInsideStump'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1]
@@ -117,6 +115,7 @@ exports.glyphs['L_cap'] =
 		3:
 			base: ['serif-horizontal', 'none']
 			id: 'bottomright'
+			class: 'bottomInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
@@ -126,6 +125,18 @@ exports.glyphs['L_cap'] =
 			transformOrigin: contours[1].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ]
+			)
+		4:
+			base: ['none', 'serif-horizontal']
+			id: 'bottomrightbottom'
+			class: 'bottomOutsideHoriz'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0]
+					noneAnchor: contours[1].nodes[1].expandedTo[0]
+					opposite: contours[1].nodes[1].expandedTo[1]
+			transformOrigin: contours[1].nodes[1].expandedTo[0]
+			transforms: Array(
+				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
