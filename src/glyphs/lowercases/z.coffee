@@ -135,6 +135,8 @@ exports.glyphs['z'] =
 				[ 'scaleX', -1 ],
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		2:
 			base: ['serif-horizontal', 'none']
 			id: 'bottomrighttop'
@@ -163,3 +165,5 @@ exports.glyphs['z'] =
 			transforms: Array(
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3

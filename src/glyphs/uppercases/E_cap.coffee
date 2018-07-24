@@ -146,6 +146,8 @@ exports.glyphs['E_cap'] =
 				[ 'scaleY', -1 ],
 				[ 'skewX',( -10 * serifRotate ) / 180 * Math.PI ]
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		3:
 			base: ['serif-horizontal', 'none']
 			id: 'topright'
@@ -211,3 +213,5 @@ exports.glyphs['E_cap'] =
 			transforms: Array(
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3

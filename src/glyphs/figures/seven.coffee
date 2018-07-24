@@ -96,3 +96,5 @@ exports.glyphs['seven'] =
 				[ 'scaleX', -1 ],
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3

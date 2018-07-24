@@ -133,6 +133,8 @@ exports.glyphs['F_cap'] =
 				[ 'scaleY', -1 ],
 				[ 'skewX',( -10 * serifRotate ) / 180 * Math.PI ]
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		4:
 			base: ['serif-horizontal', 'none']
 			id: 'topright'

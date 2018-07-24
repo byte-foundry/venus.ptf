@@ -119,6 +119,8 @@ exports.glyphs['T_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		4:
 			base: ['none', 'serif-horizontal', ]
 			id: 'toprighttop'
@@ -134,6 +136,8 @@ exports.glyphs['T_cap'] =
 				[ 'scaleY', -1 ],
 				[ 'skewX',( -10 * serifRotate ) / 180 * Math.PI ]
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		5:
 			base: ['serif-horizontal', 'none']
 			id: 'topright'

@@ -116,6 +116,8 @@ exports.glyphs['five'] =
 				[ 'scaleY', -1 ],
 				[ 'skewX',( 4 + 10 * serifRotate ) / 180 * Math.PI ]
 			)
+			parameters:
+				serifWidth: serifWidth / 3
 		1:
 			base: ['none', 'serif-horizontal', ]
 			id: 'topright'

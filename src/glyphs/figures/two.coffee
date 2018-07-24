@@ -128,3 +128,5 @@ exports.glyphs['two'] =
 			transforms: Array(
 				[ 'skewX',( 10 * serifRotate ) / 180 * Math.PI ],
 			)
+			parameters:
+				serifWidth: serifWidth / 3
