@@ -8,7 +8,7 @@ exports.glyphs['p'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth
 		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['p'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: ( 155 / 250 ) * descender + Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -86,30 +86,30 @@ exports.glyphs['p'] =
 						width: ( 102 / 115 ) * thickness * contrast
 						angle:( 112 ) / 180 * Math.PI
 						distr: 0
-		2:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: xHeight
-					typeOut: 'line'
-				1:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-				2:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-				3:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
-				4:
-					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-					y: xHeight
-					typeOut: 'line'
+		# 2:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: xHeight
+		# 			typeOut: 'line'
+		# 		1:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 		2:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 		3:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 		4:
+		# 			x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+		# 			y: xHeight
+		# 			typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
