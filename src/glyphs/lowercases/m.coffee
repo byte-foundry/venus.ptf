@@ -130,35 +130,35 @@ exports.glyphs['m'] =
 						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0
-		3:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: xHeight
-					typeOut: 'line'
-					typeIn: 'line'
-				1:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				2:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				3:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
-					typeIn: 'line'
-				4:
-					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-					y: xHeight
-					typeOut: 'line'
-					typeIn: 'line'
+		# 3:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: xHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		1:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		2:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		3:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		4:
+		# 			x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+		# 			y: xHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']

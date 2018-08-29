@@ -122,7 +122,7 @@ exports.glyphs['g'] =
 						distr: 1
 	components:
 		0:
-			base: ['serif-vertical', 'none', 'none', 'none', 'none']
+			base: ['serif-vertical', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
