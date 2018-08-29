@@ -87,64 +87,64 @@ exports.glyphs['d'] =
 						width: thickness
 						angle: 0
 						distr: 0
-		2:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[1].nodes[1].expandedTo[1].x
-					y: ascenderHeight
-					typeOut: 'line'
-					typeIn: 'line'
-				1:
-					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				2:
-					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].expandedTo[0].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				3:
-					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].expandedTo[0].y
-					typeOut: 'line'
-					typeIn: 'line'
-				4:
-					x: ( contours[1].nodes[1].expandedTo[0].x + contours[1].nodes[1].expandedTo[1].x ) / 2
-					y: ascenderHeight
-					typeOut: 'line'
-					typeIn: 'line'
-		3:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: 0
-					typeOut: 'line'
-					typeIn: 'line'
-				1:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].expandedTo[0].y + 10
-					typeOut: 'line'
-					typeIn: 'line'
-				2:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].expandedTo[1].y + 10
-					typeOut: 'line'
-					typeIn: 'line'
-				3:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].expandedTo[1].y
-					typeOut: 'line'
-					typeIn: 'line'
-				4:
-					x: ( contours[1].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x ) / 2
-					y: 0
-					typeOut: 'line'
-					typeIn: 'line'
+		# 2:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[1].nodes[1].expandedTo[1].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		1:
+		# 			x: contours[1].nodes[1].expandedTo[1].x
+		# 			y: contours[1].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		2:
+		# 			x: contours[1].nodes[1].expandedTo[0].x
+		# 			y: contours[1].nodes[1].expandedTo[0].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		3:
+		# 			x: contours[1].nodes[1].expandedTo[0].x
+		# 			y: contours[1].nodes[1].expandedTo[0].y
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		4:
+		# 			x: ( contours[1].nodes[1].expandedTo[0].x + contours[1].nodes[1].expandedTo[1].x ) / 2
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 3:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[1].nodes[0].expandedTo[0].x
+		# 			y: 0
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		1:
+		# 			x: contours[1].nodes[0].expandedTo[0].x
+		# 			y: contours[1].nodes[0].expandedTo[0].y + 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		2:
+		# 			x: contours[1].nodes[0].expandedTo[1].x
+		# 			y: contours[1].nodes[0].expandedTo[1].y + 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		3:
+		# 			x: contours[1].nodes[0].expandedTo[1].x
+		# 			y: contours[1].nodes[0].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		4:
+		# 			x: ( contours[1].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x ) / 2
+		# 			y: 0
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
 	components:
 		0:
 			base: ['serif-vertical','none']

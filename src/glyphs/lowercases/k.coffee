@@ -86,35 +86,35 @@ exports.glyphs['k'] =
 						width: ( 127 / 115 ) * thickness + (width - 1) * ( 4 / 115 ) * thickness
 						angle: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y} )
 						distr: 0.75
-		3:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: ascenderHeight
-					typeOut: 'line'
-					typeIn: 'line'
-				1:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				2:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-					typeIn: 'line'
-				3:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
-					typeIn: 'line'
-				4:
-					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-					y: ascenderHeight
-					typeOut: 'line'
-					typeIn: 'line'
+		# 3:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		1:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		2:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		3:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
+		# 		4:
+		# 			x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
+		# 			y: ascenderHeight
+		# 			typeOut: 'line'
+		# 			typeIn: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
