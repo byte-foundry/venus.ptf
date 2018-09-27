@@ -1,4 +1,4 @@
-exports.glyphs['t'] =
+exports.glyphs['t_alt'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
@@ -26,43 +26,21 @@ exports.glyphs['t'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[0].x
+					x: contours[0].nodes[1].x
 					y: xHeight + ( 135 / 520 ) * xHeight
 					typeOut: 'line'
-					expand:
-						width: thickness / Math.cos( contours[0].nodes[0].expand.angle )
-						angle: 40 / 180 * Math.PI
-						distr: 0
-				1:
-					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.45
-					y: 130 +  ( 15 / 115 ) * thickness #* contrast
-					dirOut:( - 90 ) / 180 * Math.PI
-					tensionOut: 1.25
 					expand:
 						width: thickness
 						angle: 0
 						distr: 0.5
-				2:
-					x: Math.min(
-						contours[0].nodes[1].expandedTo[0].x + ( contours[1].nodes[0].x - contours[0].nodes[1].expandedTo[0].x ) * 0.5,
-						contours[0].nodes[1].expandedTo[0].x + 130 +  ( 15 / 115 ) * thickness
-					)
+				1:
+					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.5
 					y: 0
-					typeOut: 'line'
-					dirIn: 0
-					tensionIn: 1.6
+					typeIn: 'line'
 					expand:
-						width: ( 107 / 115 ) * thickness * contrast * contrastExtremity
-						angle: 62 / 180 * Math.PI
-						distr: 0
-				3:
-					x: contours[1].nodes[0].expandedTo[0].x
-					y: 0
-					dirIn: 0
-					expand:
-						width: Math.sin( contours[0].nodes[2].expand.angle ) * ( 107 / 115 ) * thickness * contrast * contrastExtremity
-						angle: Math.PI / 2
-						distr: 0
+						width: thickness
+						angle: 0
+						distr: 0.5
 		1:
 			skeleton: true
 			closed: false

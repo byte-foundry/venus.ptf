@@ -1,4 +1,4 @@
-exports.glyphs['t'] =
+exports.glyphs['t_alt2'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
@@ -31,12 +31,12 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: thickness / Math.cos( contours[0].nodes[0].expand.angle )
-						angle: 40 / 180 * Math.PI
+						angle: 0
 						distr: 0
 				1:
 					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.45
 					y: 130 +  ( 15 / 115 ) * thickness #* contrast
-					dirOut:( - 90 ) / 180 * Math.PI
+					typeIn: 'line'
 					tensionOut: 1.25
 					expand:
 						width: thickness
