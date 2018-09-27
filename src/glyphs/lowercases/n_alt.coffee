@@ -72,10 +72,7 @@ exports.glyphs['n_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: Math.min(
-						contours[2].nodes[1].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[1].x ),
-						contours[1].nodes[1].expandedTo[0].x + 75
-					)
+					x: contours[1].nodes[0].expandedTo[0].x
 					y: xHeight
 					typeOut: 'line'
 					expand:

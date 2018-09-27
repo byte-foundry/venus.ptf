@@ -72,14 +72,11 @@ exports.glyphs['h_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: Math.min(
-						contours[2].nodes[1].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[1].x ),
-						contours[1].nodes[1].expandedTo[0].x + 75
-					)
+					x: contours[1].nodes[0].expandedTo[0].x
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 109 / 115 ) * thickness * contrast
+						width: ( 95 / 115 ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -87,7 +84,7 @@ exports.glyphs['h_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 109 / 115 ) * thickness * contrast
+						width: ( 95 / 115 ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		# 2:
