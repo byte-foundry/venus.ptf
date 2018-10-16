@@ -38,7 +38,7 @@ exports.glyphs['C_cap'] =
 					# x: spacingLeft + 480 + 200 * width - (61)
 					x: Math.max(
 						contours[0].nodes[2].expandedTo[1].x + 200 * width + 480 - (61),
-						contours[0].nodes[2].expandedTo[0].x + 0.25 * ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity + 10
+						contours[0].nodes[2].expandedTo[0].x + 0.25 * ( 129 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity + 10
 					)
 					y: Math.min( contours[0].nodes[2].y - ( 50 / 750 ) * capHeight, 150 * aperture * apertureBottom + 85 ) - (62) # 235
 					dirOut: Math.min(
@@ -46,7 +46,7 @@ exports.glyphs['C_cap'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 129 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - anglePenBottom ) / 180 * Math.PI
 						distr: 0.75
 				1:
@@ -55,7 +55,7 @@ exports.glyphs['C_cap'] =
 					dirOut:( - 180 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 110 / 115) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness) * thickness * contrast * opticThickness
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
@@ -66,7 +66,7 @@ exports.glyphs['C_cap'] =
 					tensionIn: 0.9
 					tensionOut: 0.9
 					expand:
-						width: ( 145 / 115) * thickness * opticThickness
+						width: ( 145 / defaultThickness) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.75
 				3:
@@ -75,7 +75,7 @@ exports.glyphs['C_cap'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 110 / 115) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness) * thickness * contrast * opticThickness
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				4:
@@ -87,7 +87,7 @@ exports.glyphs['C_cap'] =
 					) / 180 * Math.PI
 					typeOut: 'line'
 					expand:
-						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 129 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:

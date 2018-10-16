@@ -25,7 +25,7 @@ exports.glyphs['percent'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness * contrast
+						width: ( 40 / defaultThickness ) * thickness * contrast
 						angle: 0
 						distr: 0.5
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['percent'] =
 					y: ascenderHeight
 					typeIn: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness * contrast
+						width: ( 40 / defaultThickness ) * thickness * contrast
 						angle: 0
 						distr: 0.5
 		1:
@@ -46,7 +46,7 @@ exports.glyphs['percent'] =
 					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: ( 0 / 180 ) * Math.PI
 						distr: 0.25
 				1:
@@ -55,19 +55,19 @@ exports.glyphs['percent'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast
+						width: ( 60 / defaultThickness ) * thickness * contrast
 						angle: ( - 90 / 180 ) * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[1].nodes[1].x + 60 + 50 * width - (2),
-						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 60 / 115 ) * thickness + 10
+						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 60 / defaultThickness ) * thickness + 10
 					)
 					y: contours[1].nodes[0].y
 					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: ( - 180 / 180 ) * Math.PI
 						distr: 0.25
 				3:
@@ -76,7 +76,7 @@ exports.glyphs['percent'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast
+						width: ( 60 / defaultThickness ) * thickness * contrast
 						angle: ( 90 / 180 ) * Math.PI
 						distr: 0
 		2:
@@ -89,7 +89,7 @@ exports.glyphs['percent'] =
 					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: ( 0 / 180 ) * Math.PI
 						distr: 0.25
 				1:
@@ -98,19 +98,19 @@ exports.glyphs['percent'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast
+						width: ( 60 / defaultThickness ) * thickness * contrast
 						angle: ( - 90 / 180 ) * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[0].x + 140 + 100 * width - (2),
-						contours[2].nodes[0].expandedTo[1].x + 0.75 * ( 60 / 115 ) * thickness + 10
+						contours[2].nodes[0].expandedTo[1].x + 0.75 * ( 60 / defaultThickness ) * thickness + 10
 					)
 					y: contours[2].nodes[0].y
 					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: ( - 180 / 180 ) * Math.PI
 						distr: 0.25
 				3:
@@ -119,6 +119,6 @@ exports.glyphs['percent'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast
+						width: ( 60 / defaultThickness ) * thickness * contrast
 						angle: ( 90 / 180 ) * Math.PI
 						distr: 0

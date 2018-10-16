@@ -31,7 +31,7 @@ exports.glyphs['S_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29)
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.min( contours[0].nodes[3].y - ( 60 / 750 ) * capHeight, 140 * aperture * apertureBottom + 20 ) + (20) # 160
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture - (10),
@@ -40,7 +40,7 @@ exports.glyphs['S_cap'] =
 					typeIn: 'smooth'
 					tensionOut: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureBottom )
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 140 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( anglePenBottom ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -50,7 +50,7 @@ exports.glyphs['S_cap'] =
 					typeIn: 'smooth'
 					tensionOut: 1.1
 					expand:
-						width: ( 118 / 115 ) * thickness * opticThickness * contrast
+						width: ( 118 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				2:
@@ -60,7 +60,7 @@ exports.glyphs['S_cap'] =
 					typeIn: 'smooth'
 					tensionOut: 1.1
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle:( 180 + 2 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -74,7 +74,7 @@ exports.glyphs['S_cap'] =
 					tensionOut: 1.1
 					typeIn: 'smooth'
 					expand:
-						width: ( 141 / 115 ) * thickness * opticThickness
+						width: ( 141 / defaultThickness ) * thickness * opticThickness
 						angle:( 180 + 75 ) / 180 * Math.PI
 						distr: 0.5
 				4:
@@ -84,7 +84,7 @@ exports.glyphs['S_cap'] =
 					typeIn: 'smooth'
 					tensionIn: 1.1
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / defaultThickness ) * thickness * opticThickness
 						angle:( 180 + 6 ) / 180 * Math.PI
 						distr: 0.75
 				5:
@@ -93,7 +93,7 @@ exports.glyphs['S_cap'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness * contrast
+						width: ( 120 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				6:
@@ -105,7 +105,7 @@ exports.glyphs['S_cap'] =
 					) / 180 * Math.PI
 					tensionIn: Math.min( 1.1 * correctTensionAperture, 1.1 * aperture * apertureTop )
 					expand:
-						width: ( 129 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 129 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:

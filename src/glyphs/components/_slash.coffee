@@ -18,7 +18,7 @@ exports.glyphs['_slash'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand:
-						width: ( 85 / 115 ) * thickness * contrast
+						width: ( 85 / defaultThickness ) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0.5
 				1:
@@ -26,6 +26,6 @@ exports.glyphs['_slash'] =
 					y: anchors[1].y
 					typeIn: 'line'
 					expand:
-						width: ( 85 / 115 ) * thickness * contrast
+						width: ( 85 / defaultThickness ) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0.5

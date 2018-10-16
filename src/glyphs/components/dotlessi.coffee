@@ -104,3 +104,17 @@ exports.glyphs['dotlessi'] =
 				[ 'scaleY', -1 ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
 			)
+		3:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightOutsideStump'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

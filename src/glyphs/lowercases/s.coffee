@@ -38,7 +38,7 @@ exports.glyphs['s'] =
 					) / 180 * Math.PI
 					tensionOut: Math.min( correctTensionAperture, aperture * apertureBottom )
 					expand:
-						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 112 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( anglePenBottom ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -46,7 +46,7 @@ exports.glyphs['s'] =
 					y: - overshoot / 2
 					dirOut: 0
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / defaultThickness ) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				2:
@@ -73,7 +73,7 @@ exports.glyphs['s'] =
 					tensionOut: 1.1
 					type: 'smooth'
 					expand:
-						width: ( 106 / 115 ) * thickness # + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
+						width: ( 106 / defaultThickness ) * thickness # + ( 20 / 520 ) * xHeight - 20 # dirty hack to fit xHeight optical deformation
 						angle:( 180 + 75 ) / 180 * Math.PI
 						distr: 0.5
 				4:
@@ -82,7 +82,7 @@ exports.glyphs['s'] =
 					dirIn:( - 90 ) / 180 * Math.PI
 					dirOut: Math.PI / 2
 					expand:
-						width: ( 110 / 115 ) * thickness
+						width: ( 110 / defaultThickness ) * thickness
 						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 0.75
 				5:
@@ -90,14 +90,14 @@ exports.glyphs['s'] =
 					y: xHeight + overshoot / 2
 					dirOut: 0
 					expand:
-						width: ( 85 / 115 ) * thickness * contrast
+						width: ( 85 / defaultThickness ) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				6:
 					# x: 261 + 200 * width - (24)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 230 - (24),
-						contours[0].nodes[4].expandedTo[0].x + Math.cos( anglePenTop / 180 * Math.PI ) * 0.75 * ( 103 / 115 ) * thickness * contrast * contrastExtremity + 10
+						contours[0].nodes[4].expandedTo[0].x + Math.cos( anglePenTop / 180 * Math.PI ) * 0.75 * ( 103 / defaultThickness ) * thickness * contrast * contrastExtremity + 10
 					)
 					y: Math.max( contours[0].nodes[3].y + ( 40 / 520 ) * xHeight, xHeight - 152 * aperture * apertureTop ) + (9)
 					dirIn: Math.max(
@@ -106,7 +106,7 @@ exports.glyphs['s'] =
 					) / 180 * Math.PI
 					tensionIn: Math.min( correctTensionAperture, aperture * apertureTop )
 					expand:
-						width: ( 103 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 103 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:

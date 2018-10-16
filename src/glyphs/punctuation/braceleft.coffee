@@ -25,26 +25,26 @@ exports.glyphs['braceleft'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					# should be:
 					# x: contours[0].nodes[2].expandedTo[1].x + 60 * width
 					# but circular depedencies bro'
-					x: ( contours[0].nodes[2].x + ( thickness * ( 75 / 115 ) ) / 2 ) + 60 * width
+					x: ( contours[0].nodes[2].x + ( thickness * ( 75 / defaultThickness ) ) / 2 ) + 60 * width
 					y: capHeight
 					dirOut: Math.PI
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[5].x + Math.max( 70, 70 * width ) + (19)
-					y: contours[0].nodes[5].expandedTo[0].y + ( (capHeight - thickness * ( 65 / 115 )) - contours[0].nodes[5].expandedTo[0].y ) * ( 1 - (0.17 * width))
+					y: contours[0].nodes[5].expandedTo[0].y + ( (capHeight - thickness * ( 65 / defaultThickness )) - contours[0].nodes[5].expandedTo[0].y ) * ( 1 - (0.17 * width))
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 75 / 115 )
+						width: thickness * ( 75 / defaultThickness )
 						angle: 0
 						distr: 0.25
 				3:
@@ -52,7 +52,7 @@ exports.glyphs['braceleft'] =
 					y: contours[0].nodes[5].expandedTo[0].y + ( 60 / 750 ) * capHeight
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 76 / 115 )
+						width: thickness * ( 76 / defaultThickness )
 						angle:( 11 ) / 180 * Math.PI
 						distr: 0.25
 				4:
@@ -61,7 +61,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					dirIn: 0
 					expand:
-						width: thickness * ( 76 / 115 )
+						width: thickness * ( 76 / defaultThickness )
 						angle:( - 23 ) / 180 * Math.PI
 						distr: 0
 				5:
@@ -69,7 +69,7 @@ exports.glyphs['braceleft'] =
 					y: contours[0].nodes[11].expandedTo[1].y + ( contours[0].nodes[0].expandedTo[1].y - contours[0].nodes[11].expandedTo[1].y ) / 2
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 55 / 115 )
+						width: thickness * ( 55 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				6:
@@ -77,7 +77,7 @@ exports.glyphs['braceleft'] =
 					y: contours[0].nodes[5].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 55 / 115 )
+						width: thickness * ( 55 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0.5
 				7:
@@ -86,7 +86,7 @@ exports.glyphs['braceleft'] =
 					dirOut: 0
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 76 / 115 )
+						width: thickness * ( 76 / defaultThickness )
 						angle:( 23 ) / 180 * Math.PI
 						distr: 0
 				8:
@@ -95,7 +95,7 @@ exports.glyphs['braceleft'] =
 					typeOut: 'line'
 					dirIn: Math.PI / 2
 					expand:
-						width: thickness * ( 76 / 115 )
+						width: thickness * ( 76 / defaultThickness )
 						angle:( - 11 ) / 180 * Math.PI
 						distr: 0.25
 				9:
@@ -103,7 +103,7 @@ exports.glyphs['braceleft'] =
 					y: contours[0].nodes[11].expandedTo[1].y + ( contours[0].nodes[5].expandedTo[1].y - contours[0].nodes[11].expandedTo[1].y ) * ( 0.17 * width )
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 75 / 115 )
+						width: thickness * ( 75 / defaultThickness )
 						angle: 0
 						distr: 0.25
 				10:
@@ -111,7 +111,7 @@ exports.glyphs['braceleft'] =
 					y: ( 115 / 250 ) * descender
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0
 				11:
@@ -119,6 +119,6 @@ exports.glyphs['braceleft'] =
 					y: contours[0].nodes[10].y
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0

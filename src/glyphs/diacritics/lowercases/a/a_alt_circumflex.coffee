@@ -4,7 +4,7 @@ exports.glyphs['a_alt_circumflex'] =
 	characterName: 'LATIN SMALL LETTER A WITH CIRCUMFLEX'
 	base: 'a_alt'
 	advanceWidth: base.advanceWidth
-	altImg: 'single-story-a.svg'
+	altImg: 'alt-grotesk-single-story-a.svg'
 	tags: [
 		'all',
 		'latin',

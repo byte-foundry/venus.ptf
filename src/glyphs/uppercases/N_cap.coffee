@@ -29,7 +29,7 @@ exports.glyphs['N_cap'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						width: ( 135 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: 0
 						distr: 0.25
 				0:
@@ -37,7 +37,7 @@ exports.glyphs['N_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 135 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0
 						distr: 0.25
 		1:
@@ -49,16 +49,16 @@ exports.glyphs['N_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 150 / 115 ) * thickness * opticThickness + ( 20 * width - 20 )
+						width: ( 150 / defaultThickness ) * thickness * opticThickness + ( 20 * width - 20 )
 						angle: 0
 						distr: 0
 				1:
-					x: contours[2].nodes[0].expandedTo[1].x - ( 5 / 115 ) * thickness
+					x: contours[2].nodes[0].expandedTo[1].x - ( 5 / defaultThickness ) * thickness
 					x: contours[0].nodes[0].expandedTo[1].x + 180 + 265 * width - (34) * contrast
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 150 / 115 ) * thickness * opticThickness + ( 20 * width - 20 )
+						width: ( 150 / defaultThickness ) * thickness * opticThickness + ( 20 * width - 20 )
 						angle: 0
 						distr: 1
 		2:
@@ -70,15 +70,15 @@ exports.glyphs['N_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						width: ( 135 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: 0
 						distr: 0.75
 				1:
-					x: contours[1].nodes[1].expandedTo[1].x + ( 5 / 115 ) * thickness
+					x: contours[1].nodes[1].expandedTo[1].x + ( 5 / defaultThickness ) * thickness
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 135 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0
 						distr: 0.75
 	components:

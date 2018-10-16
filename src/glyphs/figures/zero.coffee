@@ -27,7 +27,7 @@ exports.glyphs['zero'] =
 					tensionOut: 1.05
 					tensionIn: 1.1
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -38,14 +38,14 @@ exports.glyphs['zero'] =
 					tensionIn: 1.05
 					tensionOut: 1.05
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: 400 + 245 * width - (35)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 390 - (30),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 140 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 140 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
@@ -53,7 +53,7 @@ exports.glyphs['zero'] =
 					tensionIn: 1.05
 					tensionOut: 1.1
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness
+						width: ( 140 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -64,6 +64,6 @@ exports.glyphs['zero'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0

@@ -21,11 +21,11 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (32/115) * thickness
+					x: spacingLeft + (32/defaultThickness) * thickness
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						# width: ( 140 / 115 ) * thickness
+						# width: ( 140 / defaultThickness ) * thickness
 						width: Math.min(
 							thickness / ( Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[0].nodes[0].x, y:contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} ) ) ),
 							thickness + 75
@@ -34,8 +34,8 @@ exports.glyphs['x'] =
 						distr: 0.25
 				1:
 					x: Math.max(
-						(contours[0].nodes[0].x - 0.25 * (( 140 / 115 ) * thickness)) + 200 * width + 160 + (35),
-						(contours[0].nodes[0].x + 0.75 * (( 140 / 115 ) * thickness)) + thickness + 10
+						(contours[0].nodes[0].x - 0.25 * (( 140 / defaultThickness ) * thickness)) + 200 * width + 160 + (35),
+						(contours[0].nodes[0].x + 0.75 * (( 140 / defaultThickness ) * thickness)) + thickness + 10
 					)
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
@@ -60,7 +60,7 @@ exports.glyphs['x'] =
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						# width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / defaultThickness ) * thickness * contrast
 						width: Math.min(
 							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[1].nodes[0].x, y:contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y:contours[1].nodes[1].y} ) ) * contrast,
 							thickness + 75
@@ -73,14 +73,14 @@ exports.glyphs['x'] =
 				# 	###########################
 				# 	x: Utils.onLine({
 				# 		on: [ contours[0].nodes[0].expandedTo[0], contours[0].nodes[1].expandedTo[0] ]
-				# 		y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
+				# 		y: ( (260 - ( 50 / defaultThickness ) * thickness) / 520 ) * xHeight
 				# 	})
-				# 	y: ( (260 - ( 50 / 115 ) * thickness) / 520 ) * xHeight
+				# 	y: ( (260 - ( 50 / defaultThickness ) * thickness) / 520 ) * xHeight
 				# 	###########################
 				# 	dirOut: 0
 				# 	typeOut: 'line'
 				# 	expand:
-				# 		width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
+				# 		width: ( 104 / defaultThickness ) * thickness * contrast * contrastExtremity
 				# 		angle: Utils.lineAngle( contours[0].nodes[0], contours[0].nodes[1] ) #- Math.PI / 6 + Math.PI / 4
 				# 		distr: 0.5
 				1:
@@ -93,7 +93,7 @@ exports.glyphs['x'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						# width: ( 125 / 115 ) * thickness * contrast
+						# width: ( 125 / defaultThickness ) * thickness * contrast
 						width: Math.min(
 							thickness / Math.cos( (Math.PI / 2) + Utils.lineAngle( {x: contours[1].nodes[0].x, y:contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y:contours[1].nodes[1].y} ) ) * contrast,
 							thickness + 75
@@ -115,7 +115,7 @@ exports.glyphs['x'] =
 		# 			dirOut: 0
 		# 			typeOut: 'line'
 		# 			expand:
-		# 				width: ( 125 / 115 ) * thickness * contrast
+		# 				width: ( 125 / defaultThickness ) * thickness * contrast
 		# 				angle: 0
 		# 				distr: 0.5 * contrast
 		# 		1:
@@ -124,14 +124,14 @@ exports.glyphs['x'] =
 		# 			###########################
 		# 			x: Utils.onLine({
 		# 				on: [ contours[0].nodes[0].expandedTo[1], contours[0].nodes[1].expandedTo[1] ]
-		# 				y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
+		# 				y: ( (260 + ( 50 / defaultThickness ) * thickness) / 520 ) * xHeight
 		# 				})
-		# 			y: ( (260 + ( 50 / 115 ) * thickness) / 520 ) * xHeight
+		# 			y: ( (260 + ( 50 / defaultThickness ) * thickness) / 520 ) * xHeight
 		# 			###########################
 		# 			dirOut: 0
 		# 			typeOut: 'line'
 		# 			expand:
-		# 				width: ( 104 / 115 ) * thickness * contrast * contrastExtremity
+		# 				width: ( 104 / defaultThickness ) * thickness * contrast * contrastExtremity
 		# 				angle: Utils.lineAngle( contours[0].nodes[0], contours[0].nodes[1] ) #- Math.PI / 6 + Math.PI / 4
 		# 				distr: 0.5
 	components:

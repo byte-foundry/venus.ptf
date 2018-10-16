@@ -3,13 +3,14 @@ exports.glyphs['r'] =
 	unicode: 'r'
 	glyphName: 'r'
 	characterName: 'LATIN SMALL LETTER R'
+	altImg: 'alt-grotesk-default-r.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth / 2
 		spacingRight: 50 * spacing + 20
 	tags: [
 		'all',
@@ -26,7 +27,7 @@ exports.glyphs['r'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -58,7 +59,7 @@ exports.glyphs['r'] =
 						distr: 0
 				1:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x + 155 * width,
+						contours[0].nodes[0].expandedTo[1].x + 2 * minSpace,
 						140 + 200 * width
 					)
 					y: xHeight
@@ -66,41 +67,17 @@ exports.glyphs['r'] =
 					type: 'smooth'
 					tensionOut: 1.2
 					expand:
-						width: ( 125 / 115 ) * thickness * contrast
+						width: ( 125 / defaultThickness ) * thickness * contrast
 						angle: ( 180 - 95 ) / 180 * Math.PI
 						distr: 1
 				2:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: xHeight - 240 - ( 50 / 115 ) * thickness
+					y: xHeight - 240 - ( 50 / defaultThickness ) * thickness
 					dirOut: Math.PI / 2
 					expand:
 						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0
-		# 2:
-		# 	skeleton: false
-		# 	closed: true
-		# 	nodes:
-		# 		0:
-		# 			x: contours[0].nodes[1].expandedTo[1].x
-		# 			y: xHeight
-		# 			typeOut: 'line'
-		# 		1:
-		# 			x: contours[0].nodes[1].expandedTo[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
-		# 			typeOut: 'line'
-		# 		2:
-		# 			x: contours[0].nodes[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
-		# 			typeOut: 'line'
-		# 		3:
-		# 			x: contours[0].nodes[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y
-		# 			typeOut: 'line'
-		# 		4:
-		# 			x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-		# 			y: xHeight
-		# 			typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']

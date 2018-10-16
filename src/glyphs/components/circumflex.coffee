@@ -19,13 +19,13 @@ exports.glyphs['circumflex'] =
 					x: anchors[0].x
 					y: Math.max(
 						anchors[0].y + 30,
-						contours[0].nodes[3].y - ( 90 / 115 ) * thickness
+						contours[0].nodes[3].y - ( 90 / defaultThickness ) * thickness
 					)
 					typeOut: 'line'
 				1:
 					x: Math.min(
 						anchors[0].x - 10,
-						contours[0].nodes[2].x + ( 105 / 115 ) * thickness
+						contours[0].nodes[2].x + ( 105 / defaultThickness ) * thickness
 					)
 					y: anchors[0].y
 					typeIn: 'line'
@@ -36,12 +36,12 @@ exports.glyphs['circumflex'] =
 					typeIn: 'line'
 					typeOut: 'line'
 				3:
-					x: anchors[0].x - Math.min( 70, ( 58 / 115 ) * thickness )
+					x: anchors[0].x - Math.min( 70, ( 58 / defaultThickness ) * thickness )
 					y: anchors[0].y + 150
 					typeIn: 'line'
 					typeOut: 'line'
 				4:
-					x: anchors[0].x + Math.min( 70, ( 58 / 115 ) * thickness )
+					x: anchors[0].x + Math.min( 70, ( 58 / defaultThickness ) * thickness )
 					y: contours[0].nodes[3].y
 					typeIn: 'line'
 					typeOut: 'line'
@@ -53,7 +53,7 @@ exports.glyphs['circumflex'] =
 				6:
 					x: Math.max(
 						anchors[0].x + 10,
-						contours[0].nodes[5].x - ( 105 / 115 ) * thickness
+						contours[0].nodes[5].x - ( 105 / defaultThickness ) * thickness
 					)
 					y: anchors[0].y
 					typeIn: 'line'

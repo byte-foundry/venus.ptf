@@ -4,7 +4,7 @@ exports.glyphs['c_acute'] =
 	characterName: 'LATIN SMALL LETTER C WITH ACUTE'
 	base: 'c'
 	advanceWidth: base.advanceWidth
-	altImg: 'serif-less-c.svg'
+	altImg: 'alt-grotesk-serif-less-c.svg'
 	tags: [
 		'all',
 		'latin',

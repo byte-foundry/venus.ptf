@@ -311,7 +311,7 @@ exports.controls = [
 		step: 0.01
 		init: 1
 		minAdvised: 0.10
-		maxAdvised: 0.20
+		maxAdvised: 1
 		disabled: false
 		advanced: false
 		group: 'Endings'

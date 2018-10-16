@@ -4,7 +4,7 @@ exports.glyphs['c_dot_accent'] =
 	characterName: 'LATIN SMALL LETTER C WITH DOT ABOVE'
 	base: 'c'
 	advanceWidth: base.advanceWidth
-	altImg: 'ball-c.svg'
+	altImg: 'alt-grotesk-ball-c.svg'
 	tags: [
 		'all',
 		'latin',

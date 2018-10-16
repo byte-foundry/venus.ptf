@@ -32,7 +32,7 @@ exports.glyphs['O_cap'] =
 					dirOut: Math.PI / 2
 					tensionOut: 0.95
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -43,20 +43,20 @@ exports.glyphs['O_cap'] =
 					tensionIn: 0.95
 					tensionOut: 0.95
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 540 + 200 * width - (72),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					tensionIn: 0.95
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -65,6 +65,6 @@ exports.glyphs['O_cap'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0

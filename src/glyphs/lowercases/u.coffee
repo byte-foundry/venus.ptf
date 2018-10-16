@@ -2,13 +2,14 @@ exports.glyphs['u'] =
 	unicode: 'u'
 	glyphName: 'u'
 	characterName: 'LATIN SMALL LETTER U'
+	altImg: 'alt-grotesk-default-u.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 65 + serifWidth / 2
 		spacingRight: 50 * spacing + 70 + serifWidth / 2
 	tags: [
 		'all',
@@ -29,10 +30,10 @@ exports.glyphs['u'] =
 					y: Math.max(
 						70 + ( 1 - thickness * contrast * contrastExtremity / 60 ) * 80,
 						70
-					) + ( 140 / 115 ) * thickness * contrast * contrastExtremity
+					) + ( 140 / defaultThickness ) * thickness * contrast * contrastExtremity
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: ( 30 / 115 ) * thickness * contrast
+						width: ( 30 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 1
 				1:
@@ -42,12 +43,12 @@ exports.glyphs['u'] =
 					typeIn: 'smooth'
 					tensionOut: 1.3
 					expand:
-						width: ( 110 / 115 ) * thickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * contrast
 						angle:( 71 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[3].x
-					y: 150 + ( 50 / 115 ) * thickness
+					y: 150 + ( 50 / defaultThickness ) * thickness
 					dirIn:( -90 ) / 180 * Math.PI
 					tensionIn: 1.1
 					typeOut: 'line'
@@ -56,7 +57,7 @@ exports.glyphs['u'] =
 						angle: 0
 						distr: 0.25
 				3:
-					x: spacingLeft
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: xHeight - Math.max(0, serifHeight * serifArc )
 					expand:
 						width: thickness
@@ -160,3 +161,31 @@ exports.glyphs['u'] =
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ]
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
 			)
+		# 3:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright'
+		# 	class: 'upperRightInsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[0].expandedTo[1]
+		# 			noneAnchor: contours[0].nodes[0].expandedTo[1]
+		# 			opposite: contours[0].nodes[0].expandedTo[0]
+		# 	transformOrigin: contours[0].nodes[0].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)
+		# 4:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright2'
+		# 	class: 'upperRightOutsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[1].nodes[1].expandedTo[1]
+		# 			noneAnchor: contours[1].nodes[1].expandedTo[1]
+		# 			opposite: contours[1].nodes[1].expandedTo[0]
+		# 	transformOrigin: contours[1].nodes[1].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)

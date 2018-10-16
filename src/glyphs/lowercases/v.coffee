@@ -25,15 +25,15 @@ exports.glyphs['v'] =
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness
+						width: ( 130 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - ( 15 / 115 ) * thickness * contrast
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - ( 15 / defaultThickness ) * thickness * contrast
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 		1:
@@ -41,23 +41,23 @@ exports.glyphs['v'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / 115 ) * thickness * contrast * contrastExtremity
+					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / defaultThickness ) * thickness * contrast * contrastExtremity
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 100 / defaultThickness ) * thickness * contrast * contrastExtremity
 						# width: 4
 						angle: Math.PI
 						distr: 0
 				1:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 270 - (32),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 130 / 115 ) * thickness * contrast + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 130 / defaultThickness ) * thickness * contrast + 10
 					)
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * contrast
+						width: ( 130 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 0.25
 	components:
