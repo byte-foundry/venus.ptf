@@ -2,6 +2,7 @@ exports.glyphs['m_alt'] =
 	unicode: 'm'
 	glyphName: 'm'
 	characterName: 'LATIN SMALL LETTER M'
+	altImg: 'squared-m.svg'
 	ot:
 		advanceWidth: contours[2].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(

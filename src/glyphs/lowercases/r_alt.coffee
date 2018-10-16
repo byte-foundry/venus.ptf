@@ -3,6 +3,7 @@ exports.glyphs['r_alt'] =
 	unicode: 'r'
 	glyphName: 'r'
 	characterName: 'LATIN SMALL LETTER R'
+	altImg: 'squared-r.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

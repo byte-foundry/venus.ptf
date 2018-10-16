@@ -2,6 +2,7 @@ exports.glyphs['f_alt'] =
 	unicode: 'f'
 	glyphName: 'f'
 	characterName: 'LATIN SMALL LETTER F'
+	altImg: 'squared-f.svg'
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
