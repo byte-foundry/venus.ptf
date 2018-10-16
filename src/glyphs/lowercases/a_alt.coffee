@@ -2,7 +2,7 @@ exports.glyphs['a_alt'] =
 	unicode: 'a'
 	glyphName: 'a'
 	characterName: 'LATIN SMALL LETTER A'
-	altImg: 'single-story-a.svg'
+	altImg: 'alt-grotesk-single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

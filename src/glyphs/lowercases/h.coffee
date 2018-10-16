@@ -2,7 +2,7 @@ exports.glyphs['h'] =
 	unicode: 'h'
 	glyphName: 'h'
 	characterName: 'LATIN SMALL LETTER H'
-	altImg: 'default-h.svg'
+	altImg: 'alt-grotesk-default-h.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

@@ -1,7 +1,7 @@
 # TODO: thickness…
 exports.glyphs['a'] =
 	unicode: 'a'
-	altImg: 'double-story-a.svg'
+	altImg: 'alt-grotesk-double-story-a.svg'
 	glyphName: 'a'
 	characterName: 'LATIN SMALL LETTER A'
 	ot:

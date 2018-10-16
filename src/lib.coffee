@@ -7,7 +7,7 @@ exports.lib =
 		contrast: _contrast * -1
 		contrastExtremity: _contrastExtremity * -1
 		ascenderHeight: xHeight + ascender
-		minThickness: Math.max( 60, ( 125 / defaultThickness ) * thickness )
+		minThickness: Math.max( 60, ( 125 / 115 ) * thickness )
 		correctWidthAperture: Math.max(0, 180 - 180 * width)
 		correctTensionAperture: 1.2 * ( aperture / aperture ) # dirty workaround
 		contrast: -1 * _contrast

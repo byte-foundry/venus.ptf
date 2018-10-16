@@ -2,7 +2,7 @@ exports.glyphs['t_alt2'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
-	altImg: 'horizontal-t.svg'
+	altImg: 'alt-grotesk-horizontal-t.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

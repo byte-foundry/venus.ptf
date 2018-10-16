@@ -2,7 +2,7 @@ exports.glyphs['n_alt'] =
 	unicode: 'n'
 	glyphName: 'n'
 	characterName: 'LATIN SMALL LETTER N'
-	altImg: 'squared-n.svg'
+	altImg: 'alt-grotesk-squared-n.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

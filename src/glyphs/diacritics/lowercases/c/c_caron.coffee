@@ -3,7 +3,7 @@ exports.glyphs['c_caron'] =
 	glyphName: 'ccaron'
 	characterName: 'LATIN SMALL LETTER C WITH CARON'
 	base: 'c'
-	altImg: 'serif-less-c.svg'
+	altImg: 'alt-grotesk-serif-less-c.svg'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

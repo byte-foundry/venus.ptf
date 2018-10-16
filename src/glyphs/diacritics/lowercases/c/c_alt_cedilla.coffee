@@ -4,7 +4,7 @@ exports.glyphs['c_alt_cedilla'] =
 	characterName: 'LATIN SMALL LETTER C WITH CEDILLA'
 	base: 'c_alt'
 	advanceWidth: base.advanceWidth
-	altImg: 'ball-c.svg'
+	altImg: 'alt-grotesk-ball-c.svg'
 	tags: [
 		'all',
 		'latin',

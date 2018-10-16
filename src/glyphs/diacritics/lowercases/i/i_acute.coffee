@@ -4,7 +4,7 @@ exports.glyphs['i_acute'] =
 	characterName: 'LATIN SMALL LETTER I WITH ACUTE'
 	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
-	altImg: 'full-serifs-i.svg'
+	altImg: 'alt-grotesk-full-serifs-i.svg'
 	tags: [
 		'all',
 		'latin',

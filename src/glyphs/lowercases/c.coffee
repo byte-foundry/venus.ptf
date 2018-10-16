@@ -2,7 +2,7 @@ exports.glyphs['c'] =
 	unicode: 'c'
 	glyphName: 'c'
 	characterName: 'LATIN SMALL LETTER C'
-	altImg: 'serif-less-c.svg'
+	altImg: 'alt-grotesk-serif-less-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(

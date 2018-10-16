@@ -4,7 +4,7 @@ exports.glyphs['a_ring'] =
 	characterName: 'LATIN SMALL LETTER A WITH RING ABOVE'
 	base: 'a'
 	advanceWidth: base.advanceWidth
-	altImg: 'double-story-a.svg'
+	altImg: 'alt-grotesk-double-story-a.svg'
 	tags: [
 		'all',
 		'latin',
