@@ -29,11 +29,11 @@ exports.glyphs['y'] =
 					x: contours[1].nodes[0].expandedTo[0].x + 35
 					y: Math.min(
 						( 200 / 250 ) * descender,
-						contours[0].nodes[2].expandedTo[1].y - ( 100 / 115 ) * thickness - 15
+						contours[0].nodes[2].expandedTo[1].y - ( 100 / defaultThickness ) * thickness - 15
 					)
 					typeOut: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 100 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 				1:
@@ -42,32 +42,32 @@ exports.glyphs['y'] =
 					dirOut: 0
 					tensionOut: 1.3
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 100 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 				2:
 					# x: 275 - (21)
 					# x: contours[0].nodes[0].x + 200 * width + 30 - (21)
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5 + ( 7 / 90 ) * thickness
-					y: ( ( 85 / 115 ) * thickness / 250 ) * descender + (12)
+					y: ( ( 85 / defaultThickness ) * thickness / 250 ) * descender + (12)
 					dirIn: Utils.lineAngle( {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y} )
 					tensionIn: 1.3
 					typeOut: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 100 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( 180 - 26 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					# x: 480 - (33)
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 200 * width + 270 - (33),
-						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 130 / 115 ) * thickness * contrast + 10
+						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 130 / defaultThickness ) * thickness * contrast + 10
 					)
 					# x: contours[1].nodes[0].expandedTo[0].x
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * contrast
+						width: ( 130 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 0.25
 		1:
@@ -79,15 +79,15 @@ exports.glyphs['y'] =
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness
+						width: ( 130 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				1:
-					x: contours[0].nodes[2].expandedTo[1].x + ( 15 / 115 ) * thickness
-					y: contours[0].nodes[2].expandedTo[1].y - ( 10 / 115 ) * thickness
+					x: contours[0].nodes[2].expandedTo[1].x + ( 15 / defaultThickness ) * thickness
+					y: contours[0].nodes[2].expandedTo[1].y - ( 10 / defaultThickness ) * thickness
 					typeIn: 'line'
 					expand:
-						width: ( 180 / 115 ) * thickness
+						width: ( 180 / defaultThickness ) * thickness
 						angle: Utils.lineAngle( {x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y} ) + Math.PI
 						distr: 0
 	components:

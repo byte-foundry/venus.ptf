@@ -26,7 +26,7 @@ exports.glyphs['numbersign'] =
 					y: 230
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle:( 82 ) / 180 * Math.PI
 						distr: 0.5
 				1:
@@ -34,7 +34,7 @@ exports.glyphs['numbersign'] =
 					y: 230
 					typeIn: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle:( 82 ) / 180 * Math.PI
 						distr: 0.5
 		1:
@@ -46,17 +46,17 @@ exports.glyphs['numbersign'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle:( 82 ) / 180 * Math.PI
 						distr: 0.5
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x +
 						Math.tan( 0.139626 ) *
-						( xHeight + ( Math.cos( 0.139626 ) * ( ( 95 / 115 ) * thickness ) ) / 2 - contours[0].nodes[0].expandedTo[0].y )
+						( xHeight + ( Math.cos( 0.139626 ) * ( ( 95 / defaultThickness ) * thickness ) ) / 2 - contours[0].nodes[0].expandedTo[0].y )
 					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle:( 82 ) / 180 * Math.PI
 						distr: 0.5
 		2:
@@ -68,7 +68,7 @@ exports.glyphs['numbersign'] =
 					y: xHeight + contours[0].nodes[0].y
 					typeOut: 'line'
 					expand:
-						width: Math.min( ( 110 / 115 ) * thickness * contrast * contrastExtremity , minThickness )
+						width: Math.min( ( 110 / defaultThickness ) * thickness * contrast * contrastExtremity , minThickness )
 						angle: 0
 						distr: 0.5
 				1:
@@ -76,7 +76,7 @@ exports.glyphs['numbersign'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: Math.min( ( 110 / 115 ) * thickness * contrast * contrastExtremity , minThickness )
+						width: Math.min( ( 110 / defaultThickness ) * thickness * contrast * contrastExtremity , minThickness )
 						angle: 0
 						distr: 0.5
 		3:
@@ -88,7 +88,7 @@ exports.glyphs['numbersign'] =
 					y: xHeight + contours[0].nodes[0].y
 					typeOut: 'line'
 					expand:
-						width: Math.min( ( 110 / 115 ) * thickness * contrast * contrastExtremity , minThickness )
+						width: Math.min( ( 110 / defaultThickness ) * thickness * contrast * contrastExtremity , minThickness )
 						angle: 0
 						distr: 0.5
 				1:
@@ -96,6 +96,6 @@ exports.glyphs['numbersign'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: Math.min( ( 110 / 115 ) * thickness * contrast * contrastExtremity , minThickness )
+						width: Math.min( ( 110 / defaultThickness ) * thickness * contrast * contrastExtremity , minThickness )
 						angle: 0
 						distr: 0.5

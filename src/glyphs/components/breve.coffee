@@ -17,10 +17,10 @@ exports.glyphs['breve'] =
 			nodes:
 				0:
 					x: anchors[0].x - 130 * width
-					y: anchors[0].y + 100 + ( 35 / 115 ) * thickness
+					y: anchors[0].y + 100 + ( 35 / defaultThickness ) * thickness
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 85 / 115 )
+						width: thickness * ( 85 / defaultThickness )
 						angle: 0
 						distr: 0.25
 				1:
@@ -29,7 +29,7 @@ exports.glyphs['breve'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: thickness * ( 80 / 115 )
+						width: thickness * ( 80 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0
 				2:
@@ -37,6 +37,6 @@ exports.glyphs['breve'] =
 					y: contours[0].nodes[0].y
 					dirIn:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 85 / 115 )
+						width: thickness * ( 85 / defaultThickness )
 						angle: Math.PI
 						distr: 1

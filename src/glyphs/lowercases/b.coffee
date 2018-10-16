@@ -8,7 +8,7 @@ exports.glyphs['b'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29)
+		spacingLeft: 50 * spacing + 70
 		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['b'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -48,7 +48,7 @@ exports.glyphs['b'] =
 					tensionOut: 1.15
 					tensionIn: 1.15
 					expand:
-						width: ( 49 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 49 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: 0
 						distr: 1
 				1:
@@ -57,19 +57,19 @@ exports.glyphs['b'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: ( 102 / 115 ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( - 112 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 280 + 200 * width - (32),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / defaultThickness ) * thickness + 10
 					)
 					y: contours[1].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / defaultThickness ) * thickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -78,7 +78,7 @@ exports.glyphs['b'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
+						width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
 						angle:( 112 ) / 180 * Math.PI
 						distr: 0
 		# 2:
@@ -135,4 +135,18 @@ exports.glyphs['b'] =
 				[ 'scaleY', -1 ],
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightInsideStump'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
 			)

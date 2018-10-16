@@ -17,7 +17,7 @@ exports.glyphs['l'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / defaultThickness ) / 2
 			y: ascenderHeight + overshoot
 		1:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
@@ -113,4 +113,18 @@ exports.glyphs['l'] =
 				[ 'skewY',( 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'scaleY', -1 ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) ) ]
+			)
+		3:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightOutsideStump'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
 			)

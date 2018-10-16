@@ -25,7 +25,7 @@ exports.glyphs['M_cap'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness * contrast
+						width: ( 130 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: 0
 						distr: 0.25
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['M_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 130 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0
 						distr: 0.25
 		1:
@@ -45,7 +45,7 @@ exports.glyphs['M_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness
+						width: ( 120 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -53,7 +53,7 @@ exports.glyphs['M_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.4 * contrast
 		2:
@@ -65,7 +65,7 @@ exports.glyphs['M_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness * contrast
+						width: ( 120 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: 0
 						distr: 1
 				1:
@@ -73,7 +73,7 @@ exports.glyphs['M_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 125 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 0
 						distr: 0.65
 		3:
@@ -85,7 +85,7 @@ exports.glyphs['M_cap'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
+						width: ( 130 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 				1:
@@ -93,7 +93,7 @@ exports.glyphs['M_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
+						width: ( 130 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 	components:

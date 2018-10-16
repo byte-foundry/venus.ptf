@@ -20,7 +20,7 @@ exports.glyphs['grave'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 105 / 115 )
+						width: thickness * ( 105 / defaultThickness )
 						angle: 0
 						distr: 0.5
 				1:
@@ -28,6 +28,6 @@ exports.glyphs['grave'] =
 					y: anchors[0].y + 150
 					typeIn: 'line'
 					expand:
-						width: thickness + Math.min( minThickness, ( 35 / 115 ) * thickness )
+						width: thickness + Math.min( minThickness, ( 35 / defaultThickness ) * thickness )
 						angle: 0
 						distr: 0.5

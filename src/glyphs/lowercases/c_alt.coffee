@@ -2,7 +2,7 @@ exports.glyphs['c_alt'] =
 	unicode: 'c'
 	glyphName: 'c'
 	characterName: 'LATIN SMALL LETTER C'
-	altImg: 'ball-c.svg'
+	altImg: 'alt-grotesk-ball-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -41,7 +41,7 @@ exports.glyphs['c_alt'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 115 / 115) * thickness * contrast * contrastExtremity
+						width: ( 115 / defaultThickness) * thickness * contrast * contrastExtremity
 						angle:( - anglePenBottom ) / 180 * Math.PI
 						distr: 0.75
 				1:
@@ -50,7 +50,7 @@ exports.glyphs['c_alt'] =
 					dirOut:( - 180 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 95 / 115) * thickness * contrast
+						width: ( 95 / defaultThickness) * thickness * contrast
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
@@ -61,7 +61,7 @@ exports.glyphs['c_alt'] =
 					tensionIn: 1.15
 					tensionOut: 1.15
 					expand:
-						width: ( 125 / 115) * thickness
+						width: ( 125 / defaultThickness) * thickness
 						angle: Math.PI
 						distr: 0.75
 				3:
@@ -71,7 +71,7 @@ exports.glyphs['c_alt'] =
 					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
-						width: ( 90 / 115) * thickness * contrast
+						width: ( 90 / defaultThickness) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				4:
@@ -80,7 +80,7 @@ exports.glyphs['c_alt'] =
 					dirIn:( 95 + 10 * contrast * contrastExtremity ) / 180 * Math.PI
 					typeOut: 'smooth'
 					expand:
-						width: ( 112 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 112 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( 26 ) / 180 * Math.PI
 						distr: 0.75 # * contrastExtremity
 				5:
@@ -89,7 +89,7 @@ exports.glyphs['c_alt'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: (( 112 / 115 ) * thickness) / 2 * contrastExtremity
+						width: (( 112 / defaultThickness ) * thickness) / 2 * contrastExtremity
 						angle:( 180 + 105 ) / 180 * Math.PI
 						distr: 0
 				6:
@@ -98,7 +98,7 @@ exports.glyphs['c_alt'] =
 					dirIn:( - 90  ) / 180 * Math.PI
 					typeOut: 'smooth'
 					expand:
-						width: (( 112 / 115 ) * thickness) / 2 * serifBall * contrastExtremity
+						width: (( 112 / defaultThickness ) * thickness) / 2 * serifBall * contrastExtremity
 						angle: Math.PI
 						distr: 0
 				7:
@@ -108,7 +108,7 @@ exports.glyphs['c_alt'] =
 					typeOut: 'smooth'
 					expand:
 						width: Math.min(
-							(( 112 / 115 ) * thickness) * serifBall * contrastExtremity,
+							(( 112 / defaultThickness ) * thickness) * serifBall * contrastExtremity,
 							contours[0].nodes[3].expandedTo[0].y - contours[0].nodes[4].expandedTo[0].y
 						)
 						angle: Math.PI / 2

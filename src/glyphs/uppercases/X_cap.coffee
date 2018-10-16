@@ -30,7 +30,7 @@ exports.glyphs['X_cap'] =
 						distr: 0.25
 				1:
 					# x: contours[1].nodes[1].expandedTo[0].x + 405 + 200 * width - (109)
-					x: contours[1].nodes[1].x - 0.25 * (( 155 / 115 ) * thickness * opticThickness * contrast) + 405 + 200 * width - (109)
+					x: contours[1].nodes[1].x - 0.25 * (( 155 / defaultThickness ) * thickness * opticThickness * contrast) + 405 + 200 * width - (109)
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
@@ -43,7 +43,7 @@ exports.glyphs['X_cap'] =
 			nodes:
 				0:
 					# x: contours[0].nodes[1].expandedTo[1].x
-					x: contours[0].nodes[1].x + 0.75 * (( 155 / 115 ) * thickness * opticThickness)
+					x: contours[0].nodes[1].x + 0.75 * (( 155 / defaultThickness ) * thickness * opticThickness)
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -122,7 +122,7 @@ exports.glyphs['X_cap'] =
 					obliqueEndPoint: contours[1].nodes[0].expandedTo[0]
 		5:
 			base: ['serif-oblique-acute', 'none']
-			id: 'bottomleft'
+			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]

@@ -25,7 +25,7 @@ exports.glyphs['P_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['P_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -45,7 +45,7 @@ exports.glyphs['P_cap'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -58,14 +58,14 @@ exports.glyphs['P_cap'] =
 					typeOut: 'smooth'
 					tensionOut: 1.1
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 93 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x + 50 + 250 * width + (100)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 370 - (100),
-						contours[0].nodes[0].expandedTo[1 ].x + 0.75 * ( 135 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1 ].x + 0.75 * ( 135 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: ( 525 / 750 ) * capHeight
 					dirOut:( - 90 ) / 180 * Math.PI
@@ -73,7 +73,7 @@ exports.glyphs['P_cap'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -86,7 +86,7 @@ exports.glyphs['P_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( 180 - 93 ) / 180 * Math.PI
 						distr: 0
 				4:
@@ -94,7 +94,7 @@ exports.glyphs['P_cap'] =
 					y: ( 300 / 750 ) * capHeight * crossbar + (26)
 					typeIn: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0.25
 	components:

@@ -22,7 +22,7 @@ exports.glyphs['ogonek'] =
 					dirOut:( 210 ) / 180 * Math.PI
 					tensionOut: 0.5
 					expand:
-						width: thickness * ( 40 / 115 ) * contrast * contrastExtremity
+						width: thickness * ( 40 / defaultThickness ) * contrast * contrastExtremity
 						angle: anchors[0].angle
 						distr: 0
 				1:
@@ -31,7 +31,7 @@ exports.glyphs['ogonek'] =
 					dirIn: Math.PI / 2
 					typeOut: 'smooth'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( 180 + 10 ) / 180 * Math.PI
 						distr: 0.25
 				2:

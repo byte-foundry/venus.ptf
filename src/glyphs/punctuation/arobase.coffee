@@ -22,10 +22,10 @@ exports.glyphs['arobase'] =
 			nodes:
 				0:
 					x: contours[0].nodes[2].expandedTo[0].x + 700 + 200 * width
-					y: ( - 242 - 0.25 * ( 75 / 115 ) * thickness ) / 2
+					y: ( - 242 - 0.25 * ( 75 / defaultThickness ) * thickness ) / 2
 					dirOut:( - 145 ) / 180 * Math.PI
 					expand:
-						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 70 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 55 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -34,7 +34,7 @@ exports.glyphs['arobase'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 75 / 115 ) * thickness * contrast
+						width: ( 75 / defaultThickness ) * thickness * contrast
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 0.25
 				2:
@@ -42,7 +42,7 @@ exports.glyphs['arobase'] =
 					y: contours[0].nodes[1].y + ( contours[0].nodes[3].y - contours[0].nodes[1].y ) * 0.5
 					dirOut: Math.PI / 2
 					expand:
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / defaultThickness ) * thickness
 						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -50,7 +50,7 @@ exports.glyphs['arobase'] =
 					y: xHeight + 260
 					dirOut: 0
 					expand:
-						width: ( 75 / 115 ) * thickness * contrast
+						width: ( 75 / defaultThickness ) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 0.25
 				4:
@@ -58,7 +58,7 @@ exports.glyphs['arobase'] =
 					y: ( 343 / 500 ) * xHeight
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75
 				5:
@@ -67,7 +67,7 @@ exports.glyphs['arobase'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 75 / 115 ) * thickness * contrast
+						width: ( 75 / defaultThickness ) * thickness * contrast
 						angle:( 180 + 62 ) / 180 * Math.PI
 						distr: 0.75
 				6:
@@ -79,7 +79,7 @@ exports.glyphs['arobase'] =
 					dirIn: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
 					typeOut: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness
+						width: ( 105 / defaultThickness ) * thickness
 						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.75
 				7:
@@ -87,7 +87,7 @@ exports.glyphs['arobase'] =
 					y: ( 480 / 500 ) * xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness
+						width: ( 105 / defaultThickness ) * thickness
 						angle:( 180 + 0 ) / 180 * Math.PI
 						distr: 0.75
 		1:
@@ -103,7 +103,7 @@ exports.glyphs['arobase'] =
 					dirOut: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
 					# tensionOut: 1.2
 					expand:
-						width: ( 45 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 45 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} ) + Math.PI / 2
 						distr: 1
 				1:
@@ -112,7 +112,7 @@ exports.glyphs['arobase'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / defaultThickness ) * thickness * contrast
 						angle: Math.PI + Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
 						distr: 0
 				2:
@@ -122,7 +122,7 @@ exports.glyphs['arobase'] =
 					dirOut: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
 					type: 'smooth'
 					expand:
-						width: ( 115 / 115 ) * thickness
+						width: ( 115 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75
 				3:
@@ -132,7 +132,7 @@ exports.glyphs['arobase'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / defaultThickness ) * thickness * contrast
 						angle: Utils.lineAngle({x: contours[0].nodes[6].x, y: contours[0].nodes[6].y}, {x: contours[0].nodes[7].x, y: contours[0].nodes[7].y} )
 						distr: 0.25
 				4:
@@ -140,6 +140,6 @@ exports.glyphs['arobase'] =
 					y: contours[0].nodes[6].expandedTo[1].y
 					dirIn: Utils.lineAngle({x: contours[0].nodes[7].x, y: contours[0].nodes[7].y}, {x: contours[0].nodes[6].x, y: contours[0].nodes[6].y} )
 					expand:
-						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 50 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 1

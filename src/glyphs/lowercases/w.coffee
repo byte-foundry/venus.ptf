@@ -25,15 +25,15 @@ exports.glyphs['w'] =
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 122 / 115 ) * thickness
+						width: ( 122 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - ( 10 / 115 ) * thickness * contrast
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - ( 10 / defaultThickness ) * thickness * contrast
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 		1:
@@ -41,11 +41,11 @@ exports.glyphs['w'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / 115 ) * thickness * contrast * contrastExtremity
+					x: contours[0].nodes[1].expandedTo[1].x + ( 25 / defaultThickness ) * thickness * contrast * contrastExtremity
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0
 				1:
@@ -53,7 +53,7 @@ exports.glyphs['w'] =
 					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 0.5
 		2:
@@ -66,15 +66,15 @@ exports.glyphs['w'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0
 				1:
-					x: contours[2].nodes[0].expandedTo[0].x + ( contours[3].nodes[1].expandedTo[0].x - contours[2].nodes[0].expandedTo[0].x ) / 2 - ( 15 / 115 ) * thickness * contrast
+					x: contours[2].nodes[0].expandedTo[0].x + ( contours[3].nodes[1].expandedTo[0].x - contours[2].nodes[0].expandedTo[0].x ) / 2 - ( 15 / defaultThickness ) * thickness * contrast
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness
+						width: ( 90 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 		3:
@@ -82,11 +82,11 @@ exports.glyphs['w'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[2].nodes[1].expandedTo[1].x + ( 25 / 115 ) * thickness * contrast * contrastExtremity
+					x: contours[2].nodes[1].expandedTo[1].x + ( 25 / defaultThickness ) * thickness * contrast * contrastExtremity
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0
 				1:
@@ -94,7 +94,7 @@ exports.glyphs['w'] =
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 122 / 115 ) * thickness * contrast
+						width: ( 122 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 0.25
 	components:

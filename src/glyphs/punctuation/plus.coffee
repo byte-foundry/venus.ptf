@@ -25,7 +25,7 @@ exports.glyphs['plus'] =
 					y: ( 295 / 520 ) * xHeight - (35)
 					typeOut: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['plus'] =
 					y: contours[0].nodes[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 		1:
@@ -45,7 +45,7 @@ exports.glyphs['plus'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -53,6 +53,6 @@ exports.glyphs['plus'] =
 					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5

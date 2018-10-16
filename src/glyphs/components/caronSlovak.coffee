@@ -20,7 +20,7 @@ exports.glyphs['caronSlovak'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 125 / 115 )
+						width: thickness * ( 125 / defaultThickness )
 						angle: 0
 						distr: 0.5
 				1:
@@ -28,6 +28,6 @@ exports.glyphs['caronSlovak'] =
 					y: anchors[0].y - 150
 					typeIn: 'line'
 					expand:
-						width: Math.min( minThickness, ( 85 / 115 ) * thickness )
+						width: Math.min( minThickness, ( 85 / defaultThickness ) * thickness )
 						angle: 0
 						distr: 0.5

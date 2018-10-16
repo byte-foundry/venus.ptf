@@ -16,7 +16,7 @@ exports.glyphs['stroke'] =
 					y: 0 - overshoot
 					typeOut: 'line'
 					expand:
-						width: ( 50 / 115 ) * thickness
+						width: ( 50 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0
 				1:
@@ -24,6 +24,6 @@ exports.glyphs['stroke'] =
 					y: xHeight + overshoot
 					typeIn: 'line'
 					expand:
-						width: ( 50 / 115 ) * thickness
+						width: ( 50 / defaultThickness ) * thickness
 						angle: 0
 						distr: 1

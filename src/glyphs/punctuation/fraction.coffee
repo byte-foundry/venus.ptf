@@ -25,7 +25,7 @@ exports.glyphs['fraction'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness * contrast
+						width: ( 40 / defaultThickness ) * thickness * contrast
 						angle: 0
 						distr: 0.5
 				1:
@@ -33,6 +33,6 @@ exports.glyphs['fraction'] =
 					y: ascenderHeight
 					typeIn: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness * contrast
+						width: ( 40 / defaultThickness ) * thickness * contrast
 						angle: 0
 						distr: 0.5

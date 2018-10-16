@@ -32,7 +32,7 @@ exports.glyphs['T_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
+						width: ( ( 110 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
 						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
@@ -42,7 +42,7 @@ exports.glyphs['T_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[1].expand.angle )
+						width: ( ( 110 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[1].expand.angle )
 						angle: ( - 90 ) / 180 * Math.PI + (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		1:
@@ -55,7 +55,7 @@ exports.glyphs['T_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -64,7 +64,7 @@ exports.glyphs['T_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 	components:

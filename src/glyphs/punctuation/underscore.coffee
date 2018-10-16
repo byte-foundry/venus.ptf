@@ -26,7 +26,7 @@ exports.glyphs['underscore'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.5
 				1:
@@ -35,6 +35,6 @@ exports.glyphs['underscore'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness
+						width: ( 70 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.5

@@ -29,7 +29,7 @@ exports.glyphs['Z_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -37,7 +37,7 @@ exports.glyphs['Z_cap'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[1].expand.angle )
+						width: ( ( 110 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[1].expand.angle )
 						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		1:
@@ -49,7 +49,7 @@ exports.glyphs['Z_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				1:
@@ -57,7 +57,7 @@ exports.glyphs['Z_cap'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( ( 110 / 115 ) * thickness * opticThickness * contrast ) / Math.cos( - Math.PI / 2 + contours[1].nodes[1].expand.angle )
+						width: ( ( 110 / defaultThickness ) * thickness * opticThickness * contrast ) / Math.cos( - Math.PI / 2 + contours[1].nodes[1].expand.angle )
 						angle: Math.PI + Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		2:
@@ -69,7 +69,7 @@ exports.glyphs['Z_cap'] =
 					y: contours[0].nodes[0].expandedTo[1].y
 					typeOut: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness + ( 24 / 115 ) * thickness * opticThickness * width
+						width: ( 125 / defaultThickness ) * thickness * opticThickness + ( 24 / defaultThickness ) * thickness * opticThickness * width
 						angle: Utils.lineAngle({x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}, {x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y} )
 						distr: 1
 				1:
@@ -77,7 +77,7 @@ exports.glyphs['Z_cap'] =
 					y: contours[1].nodes[0].expandedTo[1].y
 					typeIn: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness + ( 24 / 115 ) * thickness * opticThickness * width
+						width: ( 125 / defaultThickness ) * thickness * opticThickness + ( 24 / defaultThickness ) * thickness * opticThickness * width
 						angle: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y} )
 						distr: 0
 	components:
