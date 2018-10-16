@@ -8,7 +8,7 @@ exports.glyphs['þ'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29)
+		spacingLeft: 50 * spacing + 70
 		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['þ'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: descender + Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'

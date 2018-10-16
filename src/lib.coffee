@@ -11,6 +11,8 @@ exports.lib =
 		correctWidthAperture: Math.max(0, 180 - 180 * width)
 		correctTensionAperture: 1.2 * ( aperture / aperture ) # dirty workaround
 		contrast: -1 * _contrast
+		minSpace: thickness / 2
+		defaultThickness: 115 * ( aperture / aperture ) # dirty workaround #TODO
 		serifHeight:
 			if serifWidth < 0.15 && serifHeight < 0.15
 			then Math.max(5, serifHeight)

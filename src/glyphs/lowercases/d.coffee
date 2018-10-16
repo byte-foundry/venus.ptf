@@ -178,3 +178,17 @@ exports.glyphs['d'] =
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
 			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightOutsideStump'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1]
+					noneAnchor: contours[1].nodes[1].expandedTo[1]
+					opposite: contours[1].nodes[1].expandedTo[0]
+			transformOrigin: contours[1].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

@@ -2,14 +2,14 @@ exports.glyphs['t_alt'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
-	altImg: 'single-story-a.svg'
+	altImg: 'cross-t.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 10
+		spacingLeft: 50 * spacing + 30
 		spacingRight: 50 * spacing + 30
 	tags: [
 		'all',

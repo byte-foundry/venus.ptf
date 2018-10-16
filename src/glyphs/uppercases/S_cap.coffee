@@ -31,7 +31,7 @@ exports.glyphs['S_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29)
+					x: spacingLeft + (29/115) * thickness
 					y: Math.min( contours[0].nodes[3].y - ( 60 / 750 ) * capHeight, 140 * aperture * apertureBottom + 20 ) + (20) # 160
 					dirOut: Math.max(
 						anglePenBottom + 90 - correctWidthAperture - (10),

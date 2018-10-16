@@ -8,7 +8,7 @@ exports.glyphs['m'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 65 + serifWidth / 2
 		spacingRight: 50 * spacing + 65 + serifWidth / 2
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['m'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -52,9 +52,9 @@ exports.glyphs['m'] =
 						distr: 0.5
 				1:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (64)
+						contours[0].nodes[0].expandedTo[0].x + ( 170 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (64), # thickness is related to width
+						contours[0].nodes[0].expandedTo[1].x + ( thickness * contours[1].nodes[1].expand.distr ) + minSpace # we set a minimum space between the stems
+					)
 					y: xHeight - 205
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
@@ -98,9 +98,9 @@ exports.glyphs['m'] =
 						distr: 0.75
 				1:
 					x: Math.max(
-						contours[1].nodes[0].expandedTo[1].x + 95 + 200 * width,
-						contours[1].nodes[0].expandedTo[1].x + ( contours[1].nodes[0].x - contours[0].nodes[0].expandedTo[1].x )
-					) - (29)
+						contours[1].nodes[1].expandedTo[0].x + ( 170 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (29), # thickness is related to width
+						contours[1].nodes[1].expandedTo[1].x + ( thickness * contours[2].nodes[1].expand.distr ) + minSpace # we set a minimum space between the stems
+					)
 					y: xHeight - 205
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'

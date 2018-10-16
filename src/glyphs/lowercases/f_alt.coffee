@@ -9,7 +9,7 @@ exports.glyphs['f_alt'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
-		spacingRight: 50 * spacing + 70
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -21,7 +21,7 @@ exports.glyphs['f_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[2].nodes[0].x + 80 * width + (29)
+					x: contours[2].nodes[0].x + 80 * width + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -43,7 +43,7 @@ exports.glyphs['f_alt'] =
 			nodes:
 				0:
 					# x: 245
-					x: contours[0].nodes[0].expandedTo[0].x
+					x: contours[0].nodes[0].x
 					y: ascenderHeight
 					dirIn: 0
 					tensionIn: 1.2
@@ -53,7 +53,10 @@ exports.glyphs['f_alt'] =
 						angle: ( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 110 * width - Math.max( 0, serifHeight * serifArc ) + serifHeight + serifCurve
+					x: Math.max(
+						contours[0].nodes[0].expandedTo[1].x + 110 * width - Math.max( 0, serifHeight * serifArc ) + serifHeight + serifCurve,
+						contours[0].nodes[0].expandedTo[1].x + 2 * minSpace
+					)
 					y: ascenderHeight
 					typeIn: 'line'
 					expand:

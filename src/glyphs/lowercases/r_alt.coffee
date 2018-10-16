@@ -9,7 +9,7 @@ exports.glyphs['r_alt'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth / 2
 		spacingRight: 50 * spacing + 20
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['r_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -48,7 +48,10 @@ exports.glyphs['r_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + 169
+					x: contours[0].nodes[1].expandedTo[1].x + Math.max(
+						169 * width,
+						2 * minSpace
+					)
 					y: xHeight
 					typeOut: 'line'
 					expand:
@@ -56,37 +59,13 @@ exports.glyphs['r_alt'] =
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
-					x: spacingLeft
+					x: contours[0].nodes[1].x
 					y: xHeight
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 115 ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
-		# 2:
-		# 	skeleton: false
-		# 	closed: true
-		# 	nodes:
-		# 		0:
-		# 			x: contours[0].nodes[1].expandedTo[1].x
-		# 			y: xHeight
-		# 			typeOut: 'line'
-		# 		1:
-		# 			x: contours[0].nodes[1].expandedTo[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
-		# 			typeOut: 'line'
-		# 		2:
-		# 			x: contours[0].nodes[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
-		# 			typeOut: 'line'
-		# 		3:
-		# 			x: contours[0].nodes[1].x
-		# 			y: contours[0].nodes[1].expandedTo[1].y
-		# 			typeOut: 'line'
-		# 		4:
-		# 			x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-		# 			y: xHeight
-		# 			typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
@@ -128,10 +107,11 @@ exports.glyphs['r_alt'] =
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
 			)
-		# 3:
-		# 	base: 'serif-horizontal'
-		# 	id: 'topright'
-		# 	parentAnchors:
-		# 		0:
-		# 			base: contours[1].nodes[0].expandedTo[0]
-		# 			opposite: contours[1].nodes[0].expandedTo[1]
+		3:
+			base: ['none', 'serif-horizontal']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]

@@ -37,7 +37,7 @@ exports.glyphs['a'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 15 + (26)
+					x: spacingLeft + 15 + (26/115) * thickness
 					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
 					# dirOut: - Math.max( - 10,( - 60 * aperture + 78 ) + 90 ) / 180 * Math.PI
 					dirOut: Math.min(
@@ -123,7 +123,7 @@ exports.glyphs['a'] =
 						angle:( 66 ) / 180 * Math.PI
 						distr: 0
 				2:
-					x: spacingLeft + (29)
+					x: spacingLeft + (29/115) * thickness
 					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.25
 					typeIn: 'smooth'
 					dirOut: Math.PI / 2

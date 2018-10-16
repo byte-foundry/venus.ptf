@@ -8,7 +8,7 @@ exports.glyphs['u'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 65 + serifWidth / 2
 		spacingRight: 50 * spacing + 70 + serifWidth / 2
 	tags: [
 		'all',
@@ -56,7 +56,7 @@ exports.glyphs['u'] =
 						angle: 0
 						distr: 0.25
 				3:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: xHeight - Math.max(0, serifHeight * serifArc )
 					expand:
 						width: thickness
@@ -160,3 +160,31 @@ exports.glyphs['u'] =
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ]
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
 			)
+		# 3:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright'
+		# 	class: 'upperRightInsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[0].expandedTo[1]
+		# 			noneAnchor: contours[0].nodes[0].expandedTo[1]
+		# 			opposite: contours[0].nodes[0].expandedTo[0]
+		# 	transformOrigin: contours[0].nodes[0].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)
+		# 4:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright2'
+		# 	class: 'upperRightOutsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[1].nodes[1].expandedTo[1]
+		# 			noneAnchor: contours[1].nodes[1].expandedTo[1]
+		# 			opposite: contours[1].nodes[1].expandedTo[0]
+		# 	transformOrigin: contours[1].nodes[1].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)

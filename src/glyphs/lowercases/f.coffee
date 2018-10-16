@@ -9,7 +9,7 @@ exports.glyphs['f'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
-		spacingRight: 50 * spacing + 70
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -21,7 +21,7 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x + 80 * width + (29)
+					x: contours[1].nodes[0].x + 80 * width + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:

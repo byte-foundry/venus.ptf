@@ -8,7 +8,7 @@ exports.glyphs['b'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29)
+		spacingLeft: 50 * spacing + 70
 		spacingRight: 50 * spacing + 50
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['b'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -135,4 +135,18 @@ exports.glyphs['b'] =
 				[ 'scaleY', -1 ],
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ],
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0.25 ) ) ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightInsideStump'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
 			)

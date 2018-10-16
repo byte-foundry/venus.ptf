@@ -8,7 +8,7 @@ exports.glyphs['m_alt'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 65 + serifWidth / 2
 		spacingRight: 50 * spacing + 65 + serifWidth / 2
 	tags: [
 		'all',
@@ -21,7 +21,7 @@ exports.glyphs['m_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -44,20 +44,18 @@ exports.glyphs['m_alt'] =
 			nodes:
 				0:
 					x: Math.max(
-						contours[0].nodes[1].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+						contours[0].nodes[0].expandedTo[0].x + ( 170 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (64), # thickness is related to width
+						contours[0].nodes[0].expandedTo[1].x + ( thickness * contours[1].nodes[0].expand.distr ) + minSpace # we set a minimum space between the stems
+					)
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[2].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: Math.max(0, serifHeight * serifArc)
 					typeOut: 'line'
 					expand:
 						width: thickness
 						angle: 0
-						distr: 0.75
+						distr: 0.5
 				1:
-					x: Math.max(
-						contours[0].nodes[1].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+					x: contours[1].nodes[0].x
 					y: xHeight
 					dirOut: Math.PI / 2
 					typeIn: 'line'
@@ -65,16 +63,16 @@ exports.glyphs['m_alt'] =
 					expand:
 						width: thickness
 						angle: 0
-						distr: 0.75
+						distr: 0.5
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
 					x: Math.max(
-						contours[1].nodes[1].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+						contours[0].nodes[0].expandedTo[0].x + ( 380 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (85), # thickness is related to width
+						contours[0].nodes[0].expandedTo[1].x + thickness + ( thickness * ( contours[2].nodes[0].expand.distr ) ) + 2 * minSpace # we set a minimum space between the stems
+					)
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -82,10 +80,7 @@ exports.glyphs['m_alt'] =
 						angle: 0
 						distr: 0.75
 				1:
-					x: Math.max(
-						contours[1].nodes[1].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+					x: contours[2].nodes[0].x
 					y: xHeight
 					dirOut: Math.PI / 2
 					typeIn: 'line'
@@ -99,7 +94,7 @@ exports.glyphs['m_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].x
 					y: xHeight
 					typeOut: 'line'
 					expand:
@@ -107,7 +102,7 @@ exports.glyphs['m_alt'] =
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
-					x: contours[2].nodes[0].expandedTo[0].x
+					x: contours[2].nodes[0].x
 					y: xHeight
 					typeOut: 'line'
 					expand:

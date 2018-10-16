@@ -8,8 +8,8 @@ exports.glyphs['u_alt'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65 + (29) + serifWidth / 2
-		spacingRight: 50 * spacing + 70 + serifWidth / 2
+		spacingLeft: 50 * spacing + 65 + serifWidth / 2
+		spacingRight: 50 * spacing + 65 + serifWidth / 2
 	tags: [
 		'all',
 		'latin',
@@ -25,7 +25,7 @@ exports.glyphs['u_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/115) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -56,9 +56,9 @@ exports.glyphs['u_alt'] =
 						distr: 0.75
 				1:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+						contours[0].nodes[0].expandedTo[0].x + ( 175 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (29), # thickness is related to width
+						contours[0].nodes[0].expandedTo[1].x + ( thickness * contours[1].nodes[1].expand.distr ) + minSpace # we set a minimum space between the stems
+					)
 					y: xHeight
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
@@ -72,7 +72,7 @@ exports.glyphs['u_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].expandedTo[0].x
+					x: contours[1].nodes[0].x
 					y: 0
 					typeOut: 'line'
 					expand:
@@ -80,12 +80,12 @@ exports.glyphs['u_alt'] =
 						angle:( 90 ) / 180 * Math.PI
 						distr: 0
 				1:
-					x: spacingLeft
+					x: contours[0].nodes[0].x
 					y: 0
 					typeOut: 'line'
 					expand:
 						width: ( 94 / 115 ) * thickness * contrast
-						angle:( 90 ) / 180 * Math.PI
+						angle: ( 90 ) / 180 * Math.PI
 						distr: 0
 	components:
 		0:
@@ -106,7 +106,7 @@ exports.glyphs['u_alt'] =
 			)
 		1:
 			base: ['serif-vertical', 'none']
-			id: 'topright'
+			id: 'topleft2'
 			class: 'upperRightInsideStump'
 			parentAnchors:
 				0:
@@ -136,3 +136,31 @@ exports.glyphs['u_alt'] =
 				[ 'skewY',( - 15 * spurHeight ) / 180 * Math.PI ]
 				[ 'translateY', - ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness * 0 ) ) ]
 			)
+		# 3:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright'
+		# 	class: 'upperRightInsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[0].nodes[1].expandedTo[1]
+		# 			noneAnchor: contours[0].nodes[1].expandedTo[1]
+		# 			opposite: contours[0].nodes[1].expandedTo[0]
+		# 	transformOrigin: contours[0].nodes[1].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)
+		# 4:
+		# 	base: ['none', 'serif-vertical']
+		# 	id: 'topright2'
+		# 	class: 'upperRightOutsideStump'
+		# 	parentAnchors:
+		# 		0:
+		# 			base: contours[1].nodes[1].expandedTo[1]
+		# 			noneAnchor: contours[1].nodes[1].expandedTo[1]
+		# 			opposite: contours[1].nodes[1].expandedTo[0]
+		# 	transformOrigin: contours[1].nodes[1].expandedTo[1]
+		# 	transforms: Array(
+		# 		[ 'scaleX', -1 ],
+		# 		[ 'scaleY', -1 ]
+		# 	)
