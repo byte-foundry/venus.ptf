@@ -16,7 +16,7 @@ exports.glyphs['_quotesingle'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: minThickness - ( 10 / 115 ) * thickness
+						width: minThickness - ( 10 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -25,7 +25,7 @@ exports.glyphs['_quotesingle'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: minThickness - ( 10 / 115 ) * thickness
+						width: minThickness - ( 10 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				2:
@@ -33,6 +33,6 @@ exports.glyphs['_quotesingle'] =
 					y: contours[0].nodes[1].y - minThickness + (15)
 					typeIn: 'line'
 					expand:
-						width: ( 55 / 115 ) * thickness
+						width: ( 55 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5

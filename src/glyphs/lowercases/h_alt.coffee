@@ -26,7 +26,7 @@ exports.glyphs['h_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -77,7 +77,7 @@ exports.glyphs['h_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness * contrast
+						width: ( 95 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -85,7 +85,7 @@ exports.glyphs['h_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness * contrast
+						width: ( 95 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 	components:

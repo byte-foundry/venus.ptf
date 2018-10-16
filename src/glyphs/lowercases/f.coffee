@@ -22,7 +22,7 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x + 80 * width + (29/115) * thickness
+					x: contours[1].nodes[0].x + 80 * width + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -46,7 +46,7 @@ exports.glyphs['f'] =
 					tensionIn: 1.2
 					typeOut: 'line'
 					expand:
-						width: ( 99 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 99 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 72 ) / 180 * Math.PI
 						distr: 0
 				3:
@@ -54,7 +54,7 @@ exports.glyphs['f'] =
 					y: ascenderHeight
 					typeIn: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 95 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		1:
@@ -66,7 +66,7 @@ exports.glyphs['f'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -74,7 +74,7 @@ exports.glyphs['f'] =
 					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 	components:

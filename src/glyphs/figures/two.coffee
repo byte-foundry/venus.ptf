@@ -25,7 +25,7 @@ exports.glyphs['two'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 - contours[0].nodes[1].expand.angle )
+						width: ( ( 130 / defaultThickness ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 - contours[0].nodes[1].expand.angle )
 						angle: Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['two'] =
 					y: 0
 					lineIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
+						width: ( 130 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI / 2
 						distr: 0
 		1:
@@ -47,18 +47,18 @@ exports.glyphs['two'] =
 					typeIn: 'smooth'
 					tensionOut: 1.4
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness * contrast
+						width: ( 145 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: 0
 						distr: 0.25
 				1:
 					# x: 235 + (0)
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.55
 					y: ( 310 / 750 ) * capHeight - (6)
-					dirOut: Utils.lineAngle({x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}, {x: contours[1].nodes[2].expandedTo[1].x, y: contours[1].nodes[2].expandedTo[1].y} ) - Math.PI / Math.max( 5, ( 80 / 115 ) * thickness * contrast )
+					dirOut: Utils.lineAngle({x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}, {x: contours[1].nodes[2].expandedTo[1].x, y: contours[1].nodes[2].expandedTo[1].y} ) - Math.PI / Math.max( 5, ( 80 / defaultThickness ) * thickness * contrast )
 					typeIn: 'smooth'
 					tensionIn: 1.2
 					expand:
-						width: ( (115 + (47 * width)) / 115 ) * thickness * opticThickness * contrast
+						width: ( (115 + (47 * width)) / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 9 ) / 180 * Math.PI
 						distr: 0.25
 				2:
@@ -68,7 +68,7 @@ exports.glyphs['two'] =
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle:( - 4 + 35 - 35 * contrast ) / 180 * Math.PI
 						distr: 0.75
 				3:
@@ -77,7 +77,7 @@ exports.glyphs['two'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness
+						width: ( 110 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI / 2
 						angle: Math.max( 50,( 50 + ( 40 * contrast ) ) ) / 180 * Math.PI
 						distr: 1
@@ -87,7 +87,7 @@ exports.glyphs['two'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness * contrast
+						width: ( 130 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI
 						distr: 0.75
 				5:
@@ -96,7 +96,7 @@ exports.glyphs['two'] =
 					y: ( 385 / 750 ) * capHeight + (15)
 					dirIn:( 128 ) / 180 * Math.PI
 					expand:
-						width: ( 134 / 115 ) * thickness * opticThickness * contrast
+						width: ( 134 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( 180 + 27 ) / 180 * Math.PI
 						distr: 0.75
 	components:

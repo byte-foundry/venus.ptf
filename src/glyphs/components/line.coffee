@@ -20,7 +20,7 @@ exports.glyphs['line'] =
 					y: anchors[0].y + 75
 					typeOut: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -28,6 +28,6 @@ exports.glyphs['line'] =
 					y: - 75
 					typeIn: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5

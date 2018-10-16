@@ -37,15 +37,15 @@ exports.glyphs['_quoteright'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.2
 					expand:
-						width:  Math.max( 8, ( 75 / 115 ) * thickness )
+						width:  Math.max( 8, ( 75 / defaultThickness ) * thickness )
 						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[2].y - 60 - ( 60 / 115 ) * thickness
+					y: contours[0].nodes[2].y - 60 - ( 60 / defaultThickness ) * thickness
 					dirIn: 0
 					tensionIn: 1.2
 					expand:
-						width:  Math.max( 8, ( 60 / 115 ) * thickness )
+						width:  Math.max( 8, ( 60 / defaultThickness ) * thickness )
 						angle: Math.PI / 2
 						distr: 0

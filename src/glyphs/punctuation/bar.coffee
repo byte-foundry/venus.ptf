@@ -21,11 +21,11 @@ exports.glyphs['bar'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + ( 75 / 115 ) * thickness / 2
+					x: spacingLeft + ( 75 / defaultThickness ) * thickness / 2
 					y: ascenderHeight + 50
 					typeOut: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -33,6 +33,6 @@ exports.glyphs['bar'] =
 					y: ( 200 / 250 ) * descender - 50
 					typeIn: 'line'
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5

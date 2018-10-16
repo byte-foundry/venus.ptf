@@ -25,7 +25,7 @@ exports.glyphs['four'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 1
 				1:
@@ -34,7 +34,7 @@ exports.glyphs['four'] =
 					typeIn: 'line'
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 				2:
@@ -42,7 +42,7 @@ exports.glyphs['four'] =
 					y: Math.max(0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 		1:
@@ -54,7 +54,7 @@ exports.glyphs['four'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 108 / 115 ) * thickness * opticThickness * contrast
+						width: ( 108 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: - Math.max( 15 * width,( 15 ) ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -63,7 +63,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 114 / 115 ) * thickness * opticThickness * contrast
+						width: ( 114 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: - Math.max( 7 * width,( 7 ) ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -72,7 +72,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
@@ -81,16 +81,16 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 1
 				4:
 					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].expandedTo[0].y + ( 15 / 115 ) * thickness * contrast
+					y: contours[1].nodes[1].expandedTo[0].y + ( 15 / defaultThickness ) * thickness * contrast
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness * contrast
+						width: ( 120 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 1
 				5:
@@ -99,7 +99,7 @@ exports.glyphs['four'] =
 					y: contours[1].nodes[4].y
 					typeIn: 'line'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness * contrast
+						width: ( 120 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 1
 	components:

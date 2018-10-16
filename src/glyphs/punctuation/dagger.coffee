@@ -25,7 +25,7 @@ exports.glyphs['dagger'] =
 					y: ascenderHeight
 					typeOut: 'line'
 					expand:
-						width: ( 115 / 115 ) * thickness
+						width: ( 115 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['dagger'] =
 					y: ( 50 / 250 ) * descender
 					typeIn: 'line'
 					expand:
-						width: ( 115 / 115 ) * thickness
+						width: ( 115 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 		1:
@@ -45,7 +45,7 @@ exports.glyphs['dagger'] =
 					y: contours[1].nodes[1].y
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -53,6 +53,6 @@ exports.glyphs['dagger'] =
 					y: contours[0].nodes[0].expandedTo[0].y - ( contours[0].nodes[0].expandedTo[0].x - contours[1].nodes[1].x )
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0

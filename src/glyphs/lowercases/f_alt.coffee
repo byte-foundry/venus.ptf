@@ -22,7 +22,7 @@ exports.glyphs['f_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[2].nodes[0].x + 80 * width + (29/115) * thickness
+					x: contours[2].nodes[0].x + 80 * width + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -50,7 +50,7 @@ exports.glyphs['f_alt'] =
 					tensionIn: 1.2
 					typeOut: 'line'
 					expand:
-						width: ( 94 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 94 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: ( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -61,7 +61,7 @@ exports.glyphs['f_alt'] =
 					y: ascenderHeight
 					typeIn: 'line'
 					expand:
-						width: ( 94 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 94 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		2:
@@ -73,7 +73,7 @@ exports.glyphs['f_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -81,7 +81,7 @@ exports.glyphs['f_alt'] =
 					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 	components:

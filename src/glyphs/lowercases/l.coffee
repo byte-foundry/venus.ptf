@@ -17,7 +17,7 @@ exports.glyphs['l'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / defaultThickness ) / 2
 			y: ascenderHeight + overshoot
 		1:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5

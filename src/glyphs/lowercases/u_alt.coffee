@@ -26,7 +26,7 @@ exports.glyphs['u_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -77,7 +77,7 @@ exports.glyphs['u_alt'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 94 / 115 ) * thickness * contrast
+						width: ( 94 / defaultThickness ) * thickness * contrast
 						angle:( 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -85,7 +85,7 @@ exports.glyphs['u_alt'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 94 / 115 ) * thickness * contrast
+						width: ( 94 / defaultThickness ) * thickness * contrast
 						angle: ( 90 ) / 180 * Math.PI
 						distr: 0
 	components:

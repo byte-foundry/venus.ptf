@@ -27,7 +27,7 @@ exports.glyphs['parenright'] =
 					dirOut:( - 140 ) / 180 * Math.PI
 					tensionOut: 1.1
 					expand:
-						width: ( 60 / 115 ) * thickness
+						width: ( 60 / defaultThickness ) * thickness
 						angle:( - 48 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -37,7 +37,7 @@ exports.glyphs['parenright'] =
 					tensionOut: 1.1
 					tensionIn: 1.1
 					expand:
-						width: ( 75 / 115 ) * thickness
+						width: ( 75 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				2:
@@ -46,7 +46,7 @@ exports.glyphs['parenright'] =
 					dirIn:( 140 ) / 180 * Math.PI
 					tensionIn: 1.1
 					expand:
-						width: ( 60 / 115 ) * thickness
+						width: ( 60 / defaultThickness ) * thickness
 						angle:( 48 ) / 180 * Math.PI
 						distr: 0
 			transformOrigin: Object({x: (contours[0].nodes[2].expandedTo[1].x + spacingRight) / 2, y: 0})

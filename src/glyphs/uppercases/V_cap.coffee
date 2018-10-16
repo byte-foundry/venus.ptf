@@ -25,7 +25,7 @@ exports.glyphs['V_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['V_cap'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 		1:
@@ -41,11 +41,11 @@ exports.glyphs['V_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + ( 5 / 115 ) * thickness * opticThickness * contrast
+					x: contours[0].nodes[1].expandedTo[1].x + ( 5 / defaultThickness ) * thickness * opticThickness * contrast
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 125 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						# width: 4
 						angle: Math.PI
 						distr: 0
@@ -54,7 +54,7 @@ exports.glyphs['V_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness * contrast
+						width: ( 145 / defaultThickness ) * thickness * opticThickness * contrast
 						# width: 4
 						angle: Math.PI
 						distr: 0.25

@@ -18,7 +18,7 @@ exports.glyphs['t_alt'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / defaultThickness ) / 2
 			y: ascenderHeight + overshoot
 	contours:
 		0:
@@ -53,7 +53,7 @@ exports.glyphs['t_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -61,6 +61,6 @@ exports.glyphs['t_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0

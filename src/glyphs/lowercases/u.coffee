@@ -30,10 +30,10 @@ exports.glyphs['u'] =
 					y: Math.max(
 						70 + ( 1 - thickness * contrast * contrastExtremity / 60 ) * 80,
 						70
-					) + ( 140 / 115 ) * thickness * contrast * contrastExtremity
+					) + ( 140 / defaultThickness ) * thickness * contrast * contrastExtremity
 					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
-						width: ( 30 / 115 ) * thickness * contrast
+						width: ( 30 / defaultThickness ) * thickness * contrast
 						angle: Math.PI
 						distr: 1
 				1:
@@ -43,12 +43,12 @@ exports.glyphs['u'] =
 					typeIn: 'smooth'
 					tensionOut: 1.3
 					expand:
-						width: ( 110 / 115 ) * thickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * contrast
 						angle:( 71 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[3].x
-					y: 150 + ( 50 / 115 ) * thickness
+					y: 150 + ( 50 / defaultThickness ) * thickness
 					dirIn:( -90 ) / 180 * Math.PI
 					tensionIn: 1.1
 					typeOut: 'line'
@@ -57,7 +57,7 @@ exports.glyphs['u'] =
 						angle: 0
 						distr: 0.25
 				3:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: xHeight - Math.max(0, serifHeight * serifArc )
 					expand:
 						width: thickness

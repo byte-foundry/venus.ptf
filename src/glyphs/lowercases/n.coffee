@@ -26,7 +26,7 @@ exports.glyphs['n'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -78,12 +78,12 @@ exports.glyphs['n'] =
 					typeIn: 'smooth'
 					# tensionOut: 1 * breakPath
 					expand:
-						width: ( 113 / 115 ) * thickness * contrast
+						width: ( 113 / defaultThickness ) * thickness * contrast
 						angle:( 180 - 113 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: xHeight - 150 - ( 50 / 115 ) * thickness
+					y: xHeight - 150 - ( 50 / defaultThickness ) * thickness
 					dirIn: Math.PI / 2
 					expand:
 						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity

@@ -25,7 +25,7 @@ exports.glyphs['K_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['K_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -41,11 +41,11 @@ exports.glyphs['K_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x - ( 108 / 115 ) * thickness * 0.25
+					x: contours[0].nodes[0].expandedTo[1].x - ( 108 / defaultThickness ) * thickness * 0.25
 					y: ( 270 / 750 ) * capHeight + (5)
 					typeOut: 'line'
 					expand:
-						width: ( 8 / 115 ) * thickness * opticThickness * contrast * contrastExtremity * Math.sqrt( width ) + thickness * contrast * contrastExtremity * opticThickness
+						width: ( 8 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity * Math.sqrt( width ) + thickness * contrast * contrastExtremity * opticThickness
 						angle:( 180 + 166 ) / 180 * Math.PI
 						distr: 0.75
 				1:
@@ -54,7 +54,7 @@ exports.glyphs['K_cap'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 50 / 115 ) * thickness * opticThickness * contrast * Math.sqrt( width ) + thickness * contrast * opticThickness
+						width: ( 50 / defaultThickness ) * thickness * opticThickness * contrast * Math.sqrt( width ) + thickness * contrast * opticThickness
 						angle: 0
 						distr: 0.75
 		2:
@@ -66,7 +66,7 @@ exports.glyphs['K_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 45 / 115 ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
+						width: ( 45 / defaultThickness ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
 						angle: 0
 						distr: 0.75
 				1:
@@ -77,7 +77,7 @@ exports.glyphs['K_cap'] =
 					y: ( 490 / 750 ) * capHeight - (32)
 					typeIn: 'line'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: Utils.lineAngle({x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y}, {x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y} ) + Math.PI
 						distr: 0.75
 	components:

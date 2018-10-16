@@ -21,7 +21,7 @@ exports.glyphs['p'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: ( 155 / 250 ) * descender + Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -50,8 +50,8 @@ exports.glyphs['p'] =
 					tensionOut: 1.15
 					tensionIn: 1.15
 					expand:
-						# width: ( 49 / 2 / 115 ) * thickness + ( 49 / 2 / 115 ) * thickness * contrast
-						width: ( 49 / 115 ) * thickness * contrast * contrastExtremity
+						# width: ( 49 / 2 / defaultThickness ) * thickness + ( 49 / 2 / defaultThickness ) * thickness * contrast
+						width: ( 49 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: 0
 						distr: 1
 				1:
@@ -60,20 +60,20 @@ exports.glyphs['p'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( - 112 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 280 + 200 * width - (32),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / defaultThickness ) * thickness + 10
 					)
 					y: contours[1].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / defaultThickness ) * thickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -82,8 +82,8 @@ exports.glyphs['p'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( 112 ) / 180 * Math.PI
 						distr: 0
 		# 2:

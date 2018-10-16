@@ -21,7 +21,7 @@ exports.glyphs['k'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
@@ -41,22 +41,22 @@ exports.glyphs['k'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x - ( 108 / 115 ) * thickness * 0.25
+					x: contours[0].nodes[0].expandedTo[1].x - ( 108 / defaultThickness ) * thickness * 0.25
 					y: ( 195 / 520 ) * xHeight + (5)
 					typeOut: 'line'
 					expand:
-						width: ( 140 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 140 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 0.75
 				1:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[1].x - 15 - (35),
-						contours[0].nodes[0].expandedTo[1].x + 50 + 0.75 * (( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness)
+						contours[0].nodes[0].expandedTo[1].x + 50 + 0.75 * (( 140 / defaultThickness ) * thickness * contrast + (width - 1) * ( 60 / defaultThickness ) * thickness)
 					)
 					y: xHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 140 / 115 ) * thickness * contrast + (width - 1) * ( 60 / 115 ) * thickness
+						width: ( 140 / defaultThickness ) * thickness * contrast + (width - 1) * ( 60 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75
 		2:
@@ -67,12 +67,12 @@ exports.glyphs['k'] =
 					# x: 177 + 200 * width + (98)
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 200 * width + 107 + (98),
-						contours[0].nodes[1].expandedTo[1].x + 0.75 * (( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness) + 10
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * (( 138 / defaultThickness ) * thickness + (width - 1) * ( 20 / defaultThickness ) * thickness) + 10
 					)
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 138 / 115 ) * thickness + (width - 1) * ( 20 / 115 ) * thickness # TODO: apply this hack on each oblic
+						width: ( 138 / defaultThickness ) * thickness + (width - 1) * ( 20 / defaultThickness ) * thickness # TODO: apply this hack on each oblic
 						angle: 0
 						distr: 0.75
 				1:
@@ -83,7 +83,7 @@ exports.glyphs['k'] =
 					y: ( 325 / 520 ) * xHeight + (5)
 					typeIn: 'line'
 					expand:
-						width: ( 127 / 115 ) * thickness + (width - 1) * ( 4 / 115 ) * thickness
+						width: ( 127 / defaultThickness ) * thickness + (width - 1) * ( 4 / defaultThickness ) * thickness
 						angle: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y} )
 						distr: 0.75
 		# 3:

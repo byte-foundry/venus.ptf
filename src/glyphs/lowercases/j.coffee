@@ -25,7 +25,7 @@ exports.glyphs['j'] =
 					y: ( 75 / 250 ) * descender
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 95 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -35,7 +35,7 @@ exports.glyphs['j'] =
 					typeIn: 'smooth'
 					tensionOut: 1.3
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 100 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 72 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -88,7 +88,7 @@ exports.glyphs['j'] =
 				0:
 					x: contours[0].nodes[3].expandedTo[0].x + thickness / 2
 					# y: Math.max(
-					# 	ascenderHeight - ( 125 / 115 ) * thickness,
+					# 	ascenderHeight - ( 125 / defaultThickness ) * thickness,
 					# 	xHeight + 50
 					# )
 					y: xHeight + diacriticHeight

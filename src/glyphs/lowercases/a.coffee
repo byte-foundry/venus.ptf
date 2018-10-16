@@ -37,7 +37,7 @@ exports.glyphs['a'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 15 + (26/115) * thickness
+					x: spacingLeft + 15 + (26/defaultThickness) * thickness
 					y: Math.max( contours[0].nodes[2].expandedTo[0].y - ( 30 / 520 ) * xHeight, xHeight - 130 * aperture * apertureTop ) - (8)
 					# dirOut: - Math.max( - 10,( - 60 * aperture + 78 ) + 90 ) / 180 * Math.PI
 					dirOut: Math.min(
@@ -45,7 +45,7 @@ exports.glyphs['a'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 110 / 115 ) * thickness  * contrast * contrastExtremity
+						width: ( 110 / defaultThickness ) * thickness  * contrast * contrastExtremity
 						angle:( - anglePenTop ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -54,19 +54,19 @@ exports.glyphs['a'] =
 					type: 'smooth'
 					expand:
 						width: Math.min(
-							( 95 / 115 ) * thickness * contrast,
+							( 95 / defaultThickness ) * thickness * contrast,
 							xHeight - contours[1].nodes[4].expandedTo[0].y - 10
 						)
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[3].x
-					y: ( 380 / 520 ) * xHeight - (32) - ( 30 / 115 ) * thickness + 30
+					y: ( 380 / 520 ) * xHeight - (32) - ( 30 / defaultThickness ) * thickness + 30
 					dirIn: Math.PI / 2
 					tensionIn: 1.2
 					typeOut: 'line'
 					expand:
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / defaultThickness ) * thickness
 						angle:( 180 - 23 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -74,11 +74,11 @@ exports.glyphs['a'] =
 					x: (contours[1].nodes[2].x - 0.25 * thickness) + 200 * width + 235 - (29)
 					y: Math.max(
 						45,
-						( 85 / 115 ) * thickness +
+						( 85 / defaultThickness ) * thickness +
 							( Math.min(
 								25,
 								25 * width
-							) / 115 ) * thickness
+							) / defaultThickness ) * thickness
 					)
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.6
@@ -87,12 +87,12 @@ exports.glyphs['a'] =
 						angle: Math.PI
 						distr: 0.25
 				4:
-					x: contours[0].nodes[3].expandedTo[0].x + 45 # + ( 50 + ( Math.min( 25, 25 * width ) / 115 ) * thickness )
+					x: contours[0].nodes[3].expandedTo[0].x + 45 # + ( 50 + ( Math.min( 25, 25 * width ) / defaultThickness ) * thickness )
 					y: 0
 					dirIn: Math.PI
 					tensionIn: 1.6
 					expand:
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / defaultThickness ) * thickness
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		1:
@@ -100,30 +100,30 @@ exports.glyphs['a'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[2].expandedTo[1].x + ( 1 / 115 ) * thickness
-					y: 150 + ( 55 / 115 ) * thickness
+					x: contours[0].nodes[2].expandedTo[1].x + ( 1 / defaultThickness ) * thickness
+					y: 150 + ( 55 / defaultThickness ) * thickness
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.3
 					expand:
 						width: Math.max(
-							( 35 / 115 ) * thickness * contrast * contrastExtremity,
+							( 35 / defaultThickness ) * thickness * contrast * contrastExtremity,
 							4
 						)
 						angle: Math.PI
 						distr: 1
 				1:
 					# x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.22 + 5
-					x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / 115 ) * thickness, 65 )
+					x: contours[0].nodes[1].expandedTo[1].x - Math.min(( 65 / defaultThickness ) * thickness, 65 )
 					y:  - overshoot
 					typeOut: 'smooth'
 					dirIn: 0
 					tensionOut: 1.2
 					expand:
-						width: ( 87 / 115 ) * thickness * contrast
+						width: ( 87 / defaultThickness ) * thickness * contrast
 						angle:( 66 ) / 180 * Math.PI
 						distr: 0
 				2:
-					x: spacingLeft + (29/115) * thickness
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: contours[1].nodes[1].expandedTo[1].y + ( contours[1].nodes[4].expandedTo[1].y - contours[1].nodes[1].expandedTo[1].y ) * 0.25
 					typeIn: 'smooth'
 					dirOut: Math.PI / 2
@@ -141,7 +141,7 @@ exports.glyphs['a'] =
 					)
 					typeIn: 'smooth'
 					expand:
-						width: ( 100 / 115 ) * thickness * contrast
+						width: ( 100 / defaultThickness ) * thickness * contrast
 						angle:( - 47 ) / 180 * Math.PI
 						distr: 0.3
 				4:
@@ -150,6 +150,6 @@ exports.glyphs['a'] =
 					dirIn: Math.PI / 2
 					tensionIn: 1.3
 					expand:
-						width: ( 125 / 115 ) * thickness / 2 * contrast
+						width: ( 125 / defaultThickness ) * thickness / 2 * contrast
 						angle:( - 23 ) / 180 * Math.PI
 						distr: 0

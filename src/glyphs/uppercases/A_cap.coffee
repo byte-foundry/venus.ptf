@@ -35,46 +35,46 @@ exports.glyphs['A_cap'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 30 / 115 ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
+						width: ( 30 / defaultThickness ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
 					x:
 						contours[0].nodes[0].expandedTo[1].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 -
-						( 142 / 115 ) * thickness / 2
+						( 142 / defaultThickness ) * thickness / 2
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					dirOut: 0
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 22 / 115 ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
+						width: ( 22 / defaultThickness ) * thickness * contrast * opticThickness * Math.sqrt( width ) + thickness * contrast * opticThickness
 						angle: 0
 						distr: 0.5
 				2:
 					x:
 						contours[0].nodes[1].expandedTo[0].x +
-						( 137 / 115 ) * thickness / 2 +
-						( 4 / 115 ) * thickness
+						( 137 / defaultThickness ) * thickness / 2 +
+						( 4 / defaultThickness ) * thickness
 					y: contours[0].nodes[1].y
 					dirOut: 0
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 26 / 115 ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
+						width: ( 26 / defaultThickness ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
 						angle: Math.PI
 						distr: 0.5
 				3:
 					# x: contours[0].nodes[0].expandedTo[0].x + 505 + 200 * width + (58)
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 505 - (34),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: Math.max( 0, serifHeight * serifArc )
 					dirOut: 0
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 30 / 115 ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
+						width: ( 30 / defaultThickness ) * thickness * opticThickness * Math.sqrt( width ) + thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 		1:
@@ -92,7 +92,7 @@ exports.glyphs['A_cap'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness ) * thickness * contrast * opticThickness
 						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y} )
 						# angle: Math.PI / 2
 						distr: 1
@@ -107,7 +107,7 @@ exports.glyphs['A_cap'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness ) * thickness * contrast * opticThickness
 						angle: Utils.lineAngle({x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y}, {x: contours[0].nodes[1].expandedTo[1].x, y: contours[0].nodes[1].expandedTo[1].y} )
 						# angle: Math.PI / 2
 						distr: 1

@@ -17,7 +17,7 @@ exports.glyphs['d'] =
 	]
 	anchors:
 		0:
-			x: contours[1].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			x: contours[1].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / defaultThickness ) / 2
 			y: ascenderHeight + overshoot
 		1:
 			x: contours[0].nodes[1].expandedTo[0].x
@@ -32,7 +32,7 @@ exports.glyphs['d'] =
 					y: ( 260 / 520 ) * xHeight
 					dirOut: Math.PI / 2
 					expand:
-						width: ( 125 / 115) * thickness
+						width: ( 125 / defaultThickness) * thickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -41,20 +41,20 @@ exports.glyphs['d'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( - 68 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 215 + 200 * width - (12),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 50 / 115 ) * thickness * contrast * contrastExtremity + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 50 / defaultThickness ) * thickness * contrast * contrastExtremity + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 50 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -63,8 +63,8 @@ exports.glyphs['d'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( 68 ) / 180 * Math.PI
 						distr: 0
 		1:

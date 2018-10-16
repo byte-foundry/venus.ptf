@@ -26,7 +26,7 @@ exports.glyphs['Þ_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -35,7 +35,7 @@ exports.glyphs['Þ_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -45,13 +45,13 @@ exports.glyphs['Þ_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: Math.min(
-						capHeight - ( 150 / 750 ) * capHeight - 0.25 * (( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity),
+						capHeight - ( 150 / 750 ) * capHeight - 0.25 * (( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity),
 						capHeight - serifHeight - 20
 					)
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -63,7 +63,7 @@ exports.glyphs['Þ_cap'] =
 					dirOut: 0
 					tensionOut: 1.1
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 93 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -74,7 +74,7 @@ exports.glyphs['Þ_cap'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -87,19 +87,19 @@ exports.glyphs['Þ_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( 180 - 93 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: Math.max(
-						( 150 / 750 ) * capHeight + 0.25 * (( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity),
+						( 150 / 750 ) * capHeight + 0.25 * (( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity),
 						serifHeight - 20
 					)
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0.25
 	components:

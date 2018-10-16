@@ -27,7 +27,7 @@ exports.glyphs['eight'] =
 					typeIn: 'smooth'
 					tensionOut: 1.15
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle:( 4 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -37,20 +37,20 @@ exports.glyphs['eight'] =
 					typeIn: 'smooth'
 					tensionOut: 1.15
 					expand:
-						width: ( 80 / 115 ) * thickness * opticThickness * contrast
+						width: ( 80 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 320 - (37),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.15
 					typeIn: 'smooth'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle:( 175 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -60,7 +60,7 @@ exports.glyphs['eight'] =
 					tensionOut: 1.15
 					typeIn: 'smooth'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 		1:
@@ -74,7 +74,7 @@ exports.glyphs['eight'] =
 					tensionOut: 1.1
 					typeIn: 'smooth'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / defaultThickness ) * thickness * opticThickness
 						angle:( - 5 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -84,20 +84,20 @@ exports.glyphs['eight'] =
 					typeIn: 'smooth'
 					tensionOut: 1.1
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 200 * width + 260 - (31),
-						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness * opticThickness + 10
+						contours[1].nodes[0].expandedTo[1].x + 0.75 * ( 125 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: contours[1].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.15
 					typeIn: 'smooth'
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness
+						width: ( 125 / defaultThickness ) * thickness * opticThickness
 						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -107,6 +107,6 @@ exports.glyphs['eight'] =
 					tensionOut: 1.15
 					typeIn: 'smooth'
 					expand:
-						width: ( 80 / 115 ) * thickness * opticThickness * contrast
+						width: ( 80 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0.5

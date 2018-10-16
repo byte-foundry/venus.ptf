@@ -26,7 +26,7 @@ exports.glyphs['ampersand'] =
 					y: 2 + (0)
 					dirOut:( - 158 ) / 180 * Math.PI
 					expand:
-						width: ( 98 / 115 ) * thickness * contrast
+						width: ( 98 / defaultThickness ) * thickness * contrast
 						angle:( 99 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -36,7 +36,7 @@ exports.glyphs['ampersand'] =
 					typeIn: 'smooth'
 					tensionOut: 1.5
 					expand:
-						width: ( 105 / 115 ) * thickness * contrast
+						width: ( 105 / defaultThickness ) * thickness * contrast
 						angle:( 85 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -46,7 +46,7 @@ exports.glyphs['ampersand'] =
 					dirOut: Utils.lineAngle( {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y}, {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y} )
 					typeIn: 'smooth'
 					expand:
-						width: ( 130 / 115 ) * thickness
+						width: ( 130 / defaultThickness ) * thickness
 						angle:( 9 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -57,7 +57,7 @@ exports.glyphs['ampersand'] =
 					dirOut: Utils.lineAngle( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y} )
 					typeIn: 'smooth'
 					expand:
-						width: ( 112 / 115 ) * thickness
+						width: ( 112 / defaultThickness ) * thickness
 						angle:( 35 ) / 180 * Math.PI
 						distr: 0.25
 				4:
@@ -67,7 +67,7 @@ exports.glyphs['ampersand'] =
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 108 / 115 ) * thickness
+						width: ( 108 / defaultThickness ) * thickness
 						angle:( 5 ) / 180 * Math.PI
 						distr: 0.25
 				5:
@@ -76,7 +76,7 @@ exports.glyphs['ampersand'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: ( 95 / 115 ) * thickness * contrast
+						width: ( 95 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				6:
@@ -86,7 +86,7 @@ exports.glyphs['ampersand'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 99 / 115 ) * thickness
+						width: ( 99 / defaultThickness ) * thickness
 						angle:( - 177 ) / 180 * Math.PI
 						distr: 0.25
 				7:
@@ -101,7 +101,7 @@ exports.glyphs['ampersand'] =
 						Utils.log( (Utils.lineAngle( {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y} ) - ( 10 / 180 * Math.PI )) * width )
 						return contours[0].nodes[7].expand.angle + Math.PI / 2
 					expand:
-						width: ( 83 / 115 ) * thickness * contrast
+						width: ( 83 / defaultThickness ) * thickness * contrast
 						angle: Math.min(
 							Math.max(
 								- Math.PI / 2,
@@ -120,7 +120,7 @@ exports.glyphs['ampersand'] =
 					dirOut: contours[0].nodes[7].expand.angle + Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 83 / 115 ) * thickness * contrast
+						width: ( 83 / defaultThickness ) * thickness * contrast
 						angle: Math.min(
 							Math.max(
 								- Math.PI / 2,
@@ -135,7 +135,7 @@ exports.glyphs['ampersand'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 121 / 115 ) * thickness
+						width: ( 121 / defaultThickness ) * thickness
 						angle:( 180 + 7 ) / 180 * Math.PI
 						distr: 0.75
 				10:
@@ -148,7 +148,7 @@ exports.glyphs['ampersand'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: ( 114 / 115 ) * thickness * contrast
+						width: ( 114 / defaultThickness ) * thickness * contrast
 						angle:( 180 + 82 ) / 180 * Math.PI
 						distr: 1
 				11:
@@ -156,6 +156,6 @@ exports.glyphs['ampersand'] =
 					y: ( 345 / 750 ) * capHeight + (6)
 					dirIn:( - 89 ) / 180 * Math.PI
 					expand:
-						width: ( 108 / 115 ) * thickness * contrast
+						width: ( 108 / defaultThickness ) * thickness * contrast
 						angle:( - 13 ) / 180 * Math.PI
 						distr: 0.75

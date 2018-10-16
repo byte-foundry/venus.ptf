@@ -32,7 +32,7 @@ exports.glyphs['o'] =
 					dirOut: Math.PI / 2
 					tensionOut: 1.15
 					expand:
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -42,20 +42,20 @@ exports.glyphs['o'] =
 					type: 'smooth'
 					tensionOut: 1.15
 					expand:
-						width: ( 85 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 85 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 290 + 200 * width - (31),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / 115 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 125 / defaultThickness ) * thickness + 10
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.15
 					type: 'smooth'
 					expand:
-						width: ( 125 / 115 ) * thickness
+						width: ( 125 / defaultThickness ) * thickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -65,6 +65,6 @@ exports.glyphs['o'] =
 					tensionOut: 1.15
 					type: 'smooth'
 					expand:
-						width: ( 85 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 85 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0

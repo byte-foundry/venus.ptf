@@ -25,7 +25,7 @@ exports.glyphs['bracketright'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 75 / 115 )
+						width: thickness * ( 75 / defaultThickness )
 						angle: 0
 						distr: 0
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['bracketright'] =
 					y: - 115
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 75 / 115 )
+						width: thickness * ( 75 / defaultThickness )
 						angle: 0
 						distr: 0
 		1:
@@ -45,7 +45,7 @@ exports.glyphs['bracketright'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -53,7 +53,7 @@ exports.glyphs['bracketright'] =
 					y: contours[1].nodes[0].y
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		2:
@@ -65,7 +65,7 @@ exports.glyphs['bracketright'] =
 					y: contours[0].nodes[1].expandedTo[0].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 1
 				1:
@@ -73,6 +73,6 @@ exports.glyphs['bracketright'] =
 					y: contours[2].nodes[0].y
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 65 / 115 )
+						width: thickness * ( 65 / defaultThickness )
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 1

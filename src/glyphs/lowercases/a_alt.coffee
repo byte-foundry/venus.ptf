@@ -43,7 +43,7 @@ exports.glyphs['a_alt'] =
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 125 / 115) * thickness
+						width: ( 125 / defaultThickness) * thickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -52,8 +52,8 @@ exports.glyphs['a_alt'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						# width: ( 102 * (1/5) / 115 ) * thickness + ( 102 * (4/5) / 115 ) * thickness * contrast
-						width: ( 102 / 115 ) * thickness * contrast
+						# width: ( 102 * (1/5) / defaultThickness ) * thickness + ( 102 * (4/5) / defaultThickness ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( - 68 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -62,7 +62,7 @@ exports.glyphs['a_alt'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 50 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 50 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 1
 				3:
@@ -71,7 +71,7 @@ exports.glyphs['a_alt'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 102 / 115 ) * thickness * contrast
+						width: ( 102 / defaultThickness ) * thickness * contrast
 						angle:( 68 ) / 180 * Math.PI
 						distr: 0
 		1:

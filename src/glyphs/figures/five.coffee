@@ -25,7 +25,7 @@ exports.glyphs['five'] =
 					y: ( 350 / 750 ) * capHeight - (7)
 					typeOut: 'line'
 					expand:
-						width: ( 133 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 133 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 13 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -45,7 +45,7 @@ exports.glyphs['five'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[1].nodes[1].expand.angle )
+						width: ( ( 130 / defaultThickness ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[1].nodes[1].expand.angle )
 						angle: ( - 94 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 		1:
@@ -58,7 +58,7 @@ exports.glyphs['five'] =
 					dirOut:( 48 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness # * contrast * contrastExtremity
+						width: ( 110 / defaultThickness ) * thickness * opticThickness # * contrast * contrastExtremity
 						angle: Utils.lineAngle( {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) + Math.PI
 						distr: 1
 				1:
@@ -68,19 +68,19 @@ exports.glyphs['five'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 113 / 115 ) * thickness * opticThickness
+						width: ( 113 / defaultThickness ) * thickness * opticThickness
 						angle:( 180 + 77 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: Math.max(
 						contours[1].nodes[4].expandedTo[0].x + 200 * width + 310 - (36),
-						contours[1].nodes[4].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+						contours[1].nodes[4].expandedTo[1].x + 0.75 * ( 145 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: ( 235 / 750 ) * capHeight
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -89,7 +89,7 @@ exports.glyphs['five'] =
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: ( 120 / 115 ) * thickness * opticThickness * contrast
+						width: ( 120 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				4:
@@ -97,7 +97,7 @@ exports.glyphs['five'] =
 					y: ( 245 / 750 ) * capHeight
 					dirIn:( - 90 ) / 180 * Math.PI
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness # * contrast
+						width: ( 140 / defaultThickness ) * thickness * opticThickness # * contrast
 						angle: 0
 						distr: 0.25
 	components:

@@ -25,7 +25,7 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( ( 130 / 115 ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
+						width: ( ( 130 / defaultThickness ) * thickness * opticThickness ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
 						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
@@ -33,7 +33,7 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( 130 / 115 ) * thickness * opticThickness
+						width: ( 130 / defaultThickness ) * thickness * opticThickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		1:
@@ -49,10 +49,10 @@ exports.glyphs['seven'] =
 					expand:
 						width: Math.min(
 							Math.max(
-								( 115 / 115 ) * thickness * opticThickness * contrast * width,
-								( 110 / 115 ) * thickness * opticThickness * contrast
+								( 115 / defaultThickness ) * thickness * opticThickness * contrast * width,
+								( 110 / defaultThickness ) * thickness * opticThickness * contrast
 							),
-							( 180 / 115 ) * thickness * opticThickness * contrast
+							( 180 / defaultThickness ) * thickness * opticThickness * contrast
 						)
 						angle: Math.PI
 						distr: 0
@@ -64,7 +64,7 @@ exports.glyphs['seven'] =
 					typeOut: 'line'
 					tensionIn: 1.2
 					expand:
-						width: ( 150 / 115 ) * thickness * opticThickness
+						width: ( 150 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 	components:
