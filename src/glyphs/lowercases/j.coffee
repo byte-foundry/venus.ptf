@@ -2,13 +2,14 @@ exports.glyphs['j'] =
 	unicode: 'j'
 	glyphName: 'j'
 	characterName: 'LATIN SMALL LETTER J'
+	altImg: 'alt-grotesk-default-j.svg'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (57) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth / 2
 		spacingRight: 50 * spacing + 70
 	tags: [
 		'all',
@@ -21,7 +22,7 @@ exports.glyphs['j'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[2].expandedTo[0].x - 85 * width
+					x: contours[0].nodes[2].expandedTo[0].x - 85 * width + (57/defaultThickness) * thickness
 					y: ( 75 / 250 ) * descender
 					typeOut: 'line'
 					expand:
