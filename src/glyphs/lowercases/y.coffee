@@ -3,6 +3,7 @@ exports.glyphs['y'] =
 	unicode: 'y'
 	glyphName: 'y'
 	characterName: 'LATIN SMALL LETTER Y'
+	altImg: 'alt-grotesk-default-y.svg'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
