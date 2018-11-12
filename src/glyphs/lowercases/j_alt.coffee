@@ -22,7 +22,7 @@ exports.glyphs['j_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[1].expandedTo[0].x - 85 * width + (57/defaultThickness) * thickness
+					x: contours[1].nodes[1].expandedTo[0].x - 85 * width
 					y: ( 75 / 250 ) * descender
 					typeOut: 'line'
 					expand:
@@ -50,7 +50,7 @@ exports.glyphs['j_alt'] =
 						angle: 0
 						distr: 1
 				1:
-					x: spacingLeft + 150 * width - 150
+					x: spacingLeft + 150 * width - 150 + (57/defaultThickness) * thickness
 					y: xHeight - Math.max(0, serifHeight * serifArc )- ( Math.tan( (15 * spurHeight) / 180 * Math.PI ) * ( thickness / 2 ) )
 					typeIn: 'line'
 					expand:
