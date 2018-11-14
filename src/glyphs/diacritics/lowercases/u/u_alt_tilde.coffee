@@ -15,7 +15,6 @@ exports.glyphs['u_alt_tilde'] =
 		0:
 			base: 'tilde'
 			id: 'tilde'
-			copy: true
 			parentAnchors:
 				0:
 					x: parentAnchors[0].x

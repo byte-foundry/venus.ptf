@@ -18,7 +18,7 @@ exports.glyphs['u_alt'] =
 	]
 	anchors:
 		0:
-			x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[0].expandedTo[0].x ) / 2
+			x: (contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x) / 2
 			y: xHeight + diacriticHeight
 	contours:
 		0:
