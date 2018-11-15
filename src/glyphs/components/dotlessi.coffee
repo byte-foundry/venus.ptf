@@ -40,30 +40,30 @@ exports.glyphs['dotlessi'] =
 						width: thickness
 						angle: 0
 						distr: 0.5
-		1:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: xHeight
-					typeOut: 'line'
-				1:
-					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-				2:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 10
-					typeOut: 'line'
-				3:
-					x: contours[0].nodes[1].x
-					y: contours[0].nodes[1].expandedTo[1].y
-					typeOut: 'line'
-				4:
-					x: contours[0].nodes[1].x
-					y: xHeight
-					typeOut: 'line'
+		# 1:
+		# 	skeleton: false
+		# 	closed: true
+		# 	nodes:
+		# 		0:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: xHeight
+		# 			typeOut: 'line'
+		# 		1:
+		# 			x: contours[0].nodes[1].expandedTo[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 		2:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y - 10
+		# 			typeOut: 'line'
+		# 		3:
+		# 			x: contours[0].nodes[1].x
+		# 			y: contours[0].nodes[1].expandedTo[1].y
+		# 			typeOut: 'line'
+		# 		4:
+		# 			x: contours[0].nodes[1].x
+		# 			y: xHeight
+		# 			typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
