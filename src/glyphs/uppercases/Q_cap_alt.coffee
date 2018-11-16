@@ -1,4 +1,4 @@
-exports.glyphs['Q_cap_alt'] =
+exports.glyphs['Q_alt'] =
 	unicode: 'Q'
 	glyphName: 'Q'
 	characterName: 'LATIN CAPITAL LETTER Q'
@@ -68,18 +68,38 @@ exports.glyphs['Q_cap_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[2].expandedTo[1].x - (5)
-					y: ( 90 / 250 ) * descender
+					x: contours[0].nodes[3].x
+					y: contours[0].nodes[3].expandedTo[0].y + ( 30 / defaultThickness ) * thickness
 					typeOut: 'line'
 					expand:
-						width: ( 110 / defaultThickness ) * thickness * opticThickness
-						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y} )
-						distr: 0
+						width: ( 136 / defaultThickness ) * thickness
+						angle: 0
+						distr: 0.5
 				1:
-					x: contours[0].nodes[3].x + ( 5 / defaultThickness ) * thickness + (22)
-					y: contours[0].nodes[3].expandedTo[1].y + Math.min( 90, ( 90 / defaultThickness ) * thickness ) + (16)
+					x: contours[1].nodes[0].x
+					y: ( 155 / 250 ) * descender
 					typeIn: 'line'
 					expand:
-						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
-						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y} )
-						distr: 0.25
+						width: ( 136 / defaultThickness ) * thickness
+						angle: 0
+						distr: 0.5
+		2:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: contours[1].nodes[1].expandedTo[0].x
+					y: contours[1].nodes[1].expandedTo[0].y
+					typeOut: 'line'
+					expand:
+						width: ( 120 / defaultThickness ) * thickness
+						angle: Math.PI / 2
+						distr: 0.5
+				1:
+					x: contours[2].nodes[0].x + 100 + ( 46 / defaultThickness ) * thickness + 200 * width
+					y: contours[2].nodes[0].y
+					typeOut: 'line'
+					expand:
+						width: ( 120 / defaultThickness ) * thickness
+						angle: Math.PI / 2
+						distr: 0.5
