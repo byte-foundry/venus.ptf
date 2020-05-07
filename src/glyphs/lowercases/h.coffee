@@ -2,13 +2,14 @@ exports.glyphs['h'] =
 	unicode: 'h'
 	glyphName: 'h'
 	characterName: 'LATIN SMALL LETTER H'
+	altImg: 'alt-grotesk-default-h.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + (29) + serifWidth / 2
+		spacingLeft: 50 * spacing + 70 + serifWidth / 2
 		spacingRight: 50 * spacing + 70 + serifWidth / 2
 	tags: [
 		'all',
@@ -21,7 +22,7 @@ exports.glyphs['h'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
+					x: spacingLeft + (29/defaultThickness) * thickness
 					y: Math.max(0, serifHeight * serifArc )
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
@@ -52,9 +53,9 @@ exports.glyphs['h'] =
 						distr: 0.75
 				1:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width,
-						285 + 200 * width
-					) - (29)
+						contours[0].nodes[0].expandedTo[0].x + ( 175 + ( 40 / defaultThickness ) * thickness ) + 200 * width - (29), # thickness is related to width
+						contours[0].nodes[0].expandedTo[1].x + ( thickness * contours[1].nodes[1].expand.distr ) + minSpace # we set a minimum space between the stems
+					)
 					y: xHeight - 205
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
@@ -73,12 +74,12 @@ exports.glyphs['h'] =
 					typeIn: 'smooth'
 					# tensionOut: 1 * breakPath
 					expand:
-						width: ( 113 / 115 ) * thickness * contrast
+						width: ( 113 / defaultThickness ) * thickness * contrast
 						angle:( 180 - 113 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
-					y: xHeight - 150 - ( 50 / 115 ) * thickness
+					y: xHeight - 150 - ( 50 / defaultThickness ) * thickness
 					dirIn: Math.PI / 2
 					expand:
 						width: ( 30 / 90 ) * thickness * contrast * contrastExtremity
@@ -170,4 +171,18 @@ exports.glyphs['h'] =
 			transformOrigin: contours[1].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
+			)
+		5:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperRightInsideStump'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
 			)

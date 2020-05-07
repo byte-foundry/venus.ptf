@@ -4,7 +4,7 @@ exports.glyphs['i_grave'] =
 	characterName: 'LATIN SMALL LETTER I WITH GRAVE'
 	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
-	altImg: 'full-serifs-i.svg'
+	altImg: 'alt-grotesk-full-serifs-i.svg'
 	tags: [
 		'all',
 		'latin',

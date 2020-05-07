@@ -20,7 +20,7 @@ exports.glyphs['macron'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 80 / 115 )
+						width: thickness * ( 80 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0
 				1:
@@ -28,6 +28,6 @@ exports.glyphs['macron'] =
 					y: anchors[0].y
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 80 / 115 )
+						width: thickness * ( 80 / defaultThickness )
 						angle: Math.PI / 2
 						distr: 0

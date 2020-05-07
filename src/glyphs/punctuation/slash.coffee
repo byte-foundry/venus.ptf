@@ -25,7 +25,7 @@ exports.glyphs['slash'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 50 / 115 ) * thickness
+						width: ( 50 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0
 				1:
@@ -33,6 +33,6 @@ exports.glyphs['slash'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( 50 / 115 ) * thickness
+						width: ( 50 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0

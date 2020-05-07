@@ -20,20 +20,20 @@ exports.glyphs['tilde'] =
 					y: anchors[0].y
 					dirOut: Math.PI / 2
 					expand:
-						width: thickness * ( 85 / 115 )
+						width: thickness * ( 85 / defaultThickness )
 						angle: Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( anchors[0].x - contours[0].nodes[0].expandedTo[0].x ) *
 						Math.min(
 							0.5,
-							( 13 / ( (80/115) * thickness ) )
+							( 13 / ( (80/defaultThickness) * thickness ) )
 						)
 					y: contours[1].nodes[1].y + overshoot
 					dirIn: Math.PI
 					type: 'smooth'
 					expand:
-						width: thickness * ( 90 / 115 )
+						width: thickness * ( 90 / defaultThickness )
 						angle:( 180 - 85 ) / 180 * Math.PI
 						distr: 1
 		1:
@@ -44,21 +44,21 @@ exports.glyphs['tilde'] =
 					x: contours[1].nodes[1].expandedTo[1].x - ( contours[1].nodes[1].expandedTo[1].x - anchors[0].x ) *
 						Math.min(
 							0.5,
-							( 13 / ( (80/115) * thickness ) )
+							( 13 / ( (80/defaultThickness) * thickness ) )
 						)
 					y: anchors[0].y - overshoot
 					dirOut: 0
 					typeIn: 'smooth'
 					expand:
-						width: thickness * ( 90 / 115 )
+						width: thickness * ( 90 / defaultThickness )
 						angle:( 95 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: anchors[0].x + 80 * width
-					y: Math.min( anchors[0].y + 150 , anchors[0].y + 50 + ( 100 / 115 ) * thickness )
+					y: Math.min( anchors[0].y + 150 , anchors[0].y + 50 + ( 100 / defaultThickness ) * thickness )
 					dirIn:( - 90 ) / 180 * Math.PI
 					expand:
-						width: thickness * ( 85 / 115 )
+						width: thickness * ( 85 / defaultThickness )
 						angle: Math.PI
 						distr: 1
 		2:
@@ -69,20 +69,20 @@ exports.glyphs['tilde'] =
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0
-					# tensionOut: Math.min( 1, Math.max( 1.2, (1.4/115) * thickness ))
-					tensionOut: Math.max( 1.1, (1.4/115) * thickness )
+					# tensionOut: Math.min( 1, Math.max( 1.2, (1.4/defaultThickness) * thickness ))
+					tensionOut: Math.max( 1.1, (1.4/defaultThickness) * thickness )
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
 					typeIn: 'line'
 					typeOut: 'line'
-					tensionIn: Math.max( 0.9, (0.4/115) * thickness )
+					tensionIn: Math.max( 0.9, (0.4/defaultThickness) * thickness )
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
-					# tensionOut: Math.min( 1, Math.max( 1.2, (1.4/115) * thickness ))
-					tensionOut: Math.max( 1.1, (1.4/115) * thickness )
+					# tensionOut: Math.min( 1, Math.max( 1.2, (1.4/defaultThickness) * thickness ))
+					tensionOut: Math.max( 1.1, (1.4/defaultThickness) * thickness )
 				3:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
-					tensionIn: Math.max( 0.9, (0.4/115) * thickness )
+					tensionIn: Math.max( 0.9, (0.4/defaultThickness) * thickness )

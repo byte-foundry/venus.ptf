@@ -4,7 +4,7 @@ exports.glyphs['a_ogonek'] =
 	characterName: 'LATIN SMALL LETTER A WITH OGONEK'
 	base: 'a'
 	advanceWidth: base.advanceWidth
-	altImg: 'double-story-a.svg'
+	altImg: 'alt-grotesk-double-story-a.svg'
 	tags: [
 		'all',
 		'latin',

@@ -33,7 +33,7 @@ exports.glyphs['D_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -42,7 +42,7 @@ exports.glyphs['D_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -54,7 +54,7 @@ exports.glyphs['D_cap'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -67,13 +67,13 @@ exports.glyphs['D_cap'] =
 					dirOut: 0
 					tensionOut: 1.1
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( - 87 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 200 * width + 425 - (36),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / 115 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 145 / defaultThickness ) * thickness * opticThickness + 10
 					)
 					y: ( 375 / 750 ) * capHeight
 					dirOut:( - 90 ) / 180 * Math.PI
@@ -81,7 +81,7 @@ exports.glyphs['D_cap'] =
 					tensionIn: 1.1
 					tensionOut: 1.13
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness
+						width: ( 145 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				3:
@@ -94,7 +94,7 @@ exports.glyphs['D_cap'] =
 					type: 'smooth'
 					tensionIn: 1.13
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( 95 ) / 180 * Math.PI
 						distr: 0
 				4:
@@ -102,7 +102,7 @@ exports.glyphs['D_cap'] =
 					y: contours[0].nodes[0].expandedTo[1].y
 					dirIn: 0
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness * contrast
+						width: ( 105 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 	components:

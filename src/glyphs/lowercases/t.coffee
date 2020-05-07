@@ -2,6 +2,7 @@ exports.glyphs['t'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
+	altImg: 'alt-grotesk-default-t.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -17,7 +18,7 @@ exports.glyphs['t'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / 115 ) / 2
+			x: contours[0].nodes[0].expandedTo[1].x + 50 + thickness * ( 125 / defaultThickness ) / 2
 			y: ascenderHeight + overshoot
 	contours:
 		0:
@@ -34,7 +35,7 @@ exports.glyphs['t'] =
 						distr: 0
 				1:
 					x: spacingLeft + ( (contours[1].nodes[1].x + 200 * width + 105) - spacingLeft ) * 0.45
-					y: 130 +  ( 15 / 115 ) * thickness #* contrast
+					y: 130 +  ( 15 / defaultThickness ) * thickness #* contrast
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.25
 					expand:
@@ -44,14 +45,14 @@ exports.glyphs['t'] =
 				2:
 					x: Math.min(
 						contours[0].nodes[1].expandedTo[0].x + ( contours[1].nodes[0].x - contours[0].nodes[1].expandedTo[0].x ) * 0.5,
-						contours[0].nodes[1].expandedTo[0].x + 130 +  ( 15 / 115 ) * thickness
+						contours[0].nodes[1].expandedTo[0].x + 130 +  ( 15 / defaultThickness ) * thickness
 					)
 					y: 0
 					typeOut: 'line'
 					dirIn: 0
 					tensionIn: 1.6
 					expand:
-						width: ( 107 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 107 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: 62 / 180 * Math.PI
 						distr: 0
 				3:
@@ -59,7 +60,7 @@ exports.glyphs['t'] =
 					y: 0
 					dirIn: 0
 					expand:
-						width: Math.sin( contours[0].nodes[2].expand.angle ) * ( 107 / 115 ) * thickness * contrast * contrastExtremity
+						width: Math.sin( contours[0].nodes[2].expand.angle ) * ( 107 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 		1:
@@ -74,7 +75,7 @@ exports.glyphs['t'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
@@ -82,6 +83,6 @@ exports.glyphs['t'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast
+						width: ( 90 / defaultThickness ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0

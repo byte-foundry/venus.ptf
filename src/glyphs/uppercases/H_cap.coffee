@@ -30,7 +30,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -39,7 +39,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -52,7 +52,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				1:
@@ -61,7 +61,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 110 / 115 ) * thickness * opticThickness * contrast
+						width: ( 110 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 		2:
@@ -74,7 +74,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 				1:
@@ -83,7 +83,7 @@ exports.glyphs['H_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.75
 	components:

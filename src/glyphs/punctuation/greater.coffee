@@ -25,7 +25,7 @@ exports.glyphs['greater'] =
 					y: ( 470 / 520 ) * xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -34,7 +34,7 @@ exports.glyphs['greater'] =
 					typeIn: 'line'
 					typeOut: 'line'
 					expand:
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / defaultThickness ) * thickness
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				2:
@@ -43,7 +43,7 @@ exports.glyphs['greater'] =
 					typeIn: 'line'
 					typeOut: 'line'
 					expand:
-						width: ( 85 / 115 ) * thickness
+						width: ( 85 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.5
 				3:
@@ -51,6 +51,6 @@ exports.glyphs['greater'] =
 					y: ( 50 / 520 ) * xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.25

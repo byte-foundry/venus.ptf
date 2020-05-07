@@ -31,7 +31,7 @@ exports.glyphs['J_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 137 / 115 ) * thickness * opticThickness * contrastExtremity
+						width: ( 137 / defaultThickness ) * thickness * opticThickness * contrastExtremity
 						angle:( 10 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -46,7 +46,7 @@ exports.glyphs['J_cap'] =
 					tensionOut: 1.15
 					typeIn: 'line'
 					expand:
-						width: ( 140 / 115 ) * thickness * opticThickness * contrastExtremity
+						width: ( 140 / defaultThickness ) * thickness * opticThickness * contrastExtremity
 						angle:( 16 ) / 180 * Math.PI
 						# angle:( anglePenBottom ) / 180 * Math.PI
 						distr: 0.25
@@ -58,7 +58,7 @@ exports.glyphs['J_cap'] =
 					tensionIn: 1.15
 					tensionOut: 1.1
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast
+						width: ( 125 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				3:
@@ -67,7 +67,7 @@ exports.glyphs['J_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 				4:
@@ -76,7 +76,7 @@ exports.glyphs['J_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: Math.PI
 						distr: 0.25
 	components:

@@ -21,7 +21,7 @@ exports.glyphs['e'] =
 			x: contours[0].nodes[3].x
 			y: xHeight + diacriticHeight
 		1:
-			ogonek: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[1].expandedTo[1].handleOut, contours[0].nodes[0].expandedTo[1], contours[0].nodes[0].expandedTo[1].handleIn, 100 * width + 75 - ( 75 / 115 ) * thickness * contrast, false, 10 )
+			ogonek: Utils.pointOnCurve( contours[0].nodes[1].expandedTo[1], contours[0].nodes[1].expandedTo[1].handleOut, contours[0].nodes[0].expandedTo[1], contours[0].nodes[0].expandedTo[1].handleIn, 100 * width + 75 - ( 75 / defaultThickness ) * thickness * contrast, false, 10 )
 		2:
 			x: anchors[1].ogonek.x
 			y: anchors[1].ogonek.y
@@ -43,7 +43,7 @@ exports.glyphs['e'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 115 / 115) * thickness * contrast * contrastExtremity
+						width: ( 115 / defaultThickness) * thickness * contrast * contrastExtremity
 						angle:( - anglePenBottom ) / 180 * Math.PI
 						distr: 0.75
 				1:
@@ -52,7 +52,7 @@ exports.glyphs['e'] =
 					dirOut:( - 180 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 95 / 115) * thickness * contrast
+						width: ( 95 / defaultThickness) * thickness * contrast
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
@@ -63,7 +63,7 @@ exports.glyphs['e'] =
 					tensionIn: 1.15
 					tensionOut: 1.15
 					expand:
-						width: ( 125 / 115) * thickness
+						width: ( 125 / defaultThickness) * thickness
 						angle: Math.PI
 						distr: 0.75
 				3:
@@ -73,11 +73,11 @@ exports.glyphs['e'] =
 					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
-						width: ( 90 / 115) * thickness * contrast
+						width: ( 90 / defaultThickness) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				4:
-					x: contours[0].nodes[0].expandedTo[1].x - ( 70 / 115 ) * thickness
+					x: contours[0].nodes[0].expandedTo[1].x - ( 70 / defaultThickness ) * thickness
 					y: ( 250 / 520 ) * xHeight * crossbar
 					dirIn: Math.PI / 2
 					typeOut: 'line'
@@ -90,7 +90,7 @@ exports.glyphs['e'] =
 					y: contours[0].nodes[4].expandedTo[0].y
 					typeOut: 'line'
 					expand:
-						width: ( 80 / 115 ) * thickness * contrast
+						width: ( 80 / defaultThickness ) * thickness * contrast
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				6:

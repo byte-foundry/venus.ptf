@@ -29,16 +29,16 @@ exports.glyphs['z'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( ( 90 / 115 ) * thickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
+						width: ( ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity ) / Math.cos( Math.PI / 2 + contours[0].nodes[0].expand.angle )
 						angle: ( - 90 ) / 180 * Math.PI - (10 * serifRotate) / 180 * Math.PI
 						distr: 0
 				1:
-					x: contours[0].nodes[3].expandedTo[1].x + ( 15 / 115 ) * thickness
+					x: contours[0].nodes[3].expandedTo[1].x + ( 15 / defaultThickness ) * thickness
 					y: xHeight
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -47,7 +47,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 70 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
@@ -56,7 +56,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 137 / 115 ) * thickness
+						width: ( 137 / defaultThickness ) * thickness
 						angle:( - 177 ) / 180 * Math.PI
 						distr: 0
 				4:
@@ -65,7 +65,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness
+						width: ( 135 / defaultThickness ) * thickness
 						angle:( 180 + 5 ) / 180 * Math.PI
 						distr: 1
 				5:
@@ -74,7 +74,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 70 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 				6:
@@ -83,16 +83,16 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 70 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 70 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				7:
-					x: contours[0].nodes[4].expandedTo[0].x - ( 10 / 115 ) * thickness
+					x: contours[0].nodes[4].expandedTo[0].x - ( 10 / defaultThickness ) * thickness
 					y: 0
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 90 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				8:
@@ -101,7 +101,7 @@ exports.glyphs['z'] =
 					y: 0
 					typeIn: 'line'
 					expand:
-						width: ( ( 90 / 115 ) * thickness * contrast ) / Math.cos( Math.PI / 2 + contours[0].nodes[8].expand.angle )
+						width: ( ( 90 / defaultThickness ) * thickness * contrast ) / Math.cos( Math.PI / 2 + contours[0].nodes[8].expand.angle )
 						angle: Math.PI + Math.PI / 2 - (10 * serifRotate) / 180 * Math.PI
 						distr: 1
 	components:

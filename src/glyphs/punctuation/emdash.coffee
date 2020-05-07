@@ -25,7 +25,7 @@ exports.glyphs['emdash'] =
 					y: ( 262 / 750 ) * capHeight + (1)
 					typeOut: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.5
 				1:
@@ -33,6 +33,6 @@ exports.glyphs['emdash'] =
 					y: ( 262 / 750 ) * capHeight + (1)
 					typeIn: 'line'
 					expand:
-						width: ( 95 / 115 ) * thickness
+						width: ( 95 / defaultThickness ) * thickness
 						angle: Math.PI / 2
 						distr: 0.5

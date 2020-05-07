@@ -22,7 +22,7 @@ exports.glyphs['smallzero'] =
 					tensionOut: 1.1
 					type: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 60 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 				1:
@@ -31,7 +31,7 @@ exports.glyphs['smallzero'] =
 					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.25
 				2:
@@ -42,7 +42,7 @@ exports.glyphs['smallzero'] =
 					tensionOut: 1.1
 					typeIn: 'smooth'
 					expand:
-						width: ( 60 / 115 ) * thickness * contrast * contrastExtremity
+						width: ( 60 / defaultThickness ) * thickness * contrast * contrastExtremity
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
@@ -51,7 +51,7 @@ exports.glyphs['smallzero'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 65 / 115 ) * thickness
+						width: ( 65 / defaultThickness ) * thickness
 						angle: Math.PI
 						distr: 0.25
 			transformOrigin: Object({

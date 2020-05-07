@@ -30,7 +30,7 @@ exports.glyphs['G_cap'] =
 					y: ( 408 / 750 ) * capHeight * crossbar
 					typeOut: 'line'
 					expand:
-						width: ( 110 / 115) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 110 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - Math.PI / 2
 						distr: 0.5
 				1:
@@ -38,7 +38,7 @@ exports.glyphs['G_cap'] =
 					y: contours[0].nodes[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 110 / 115) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 110 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - Math.PI / 2
 						distr: 0.5
 		1:
@@ -51,19 +51,19 @@ exports.glyphs['G_cap'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( ( 115 / 115 ) * thickness * opticThickness * contrast ) / ( Math.cos( ( 180 + 153 ) / 180 * Math.PI ) )
+						width: ( ( 115 / defaultThickness ) * thickness * opticThickness * contrast ) / ( Math.cos( ( 180 + 153 ) / 180 * Math.PI ) )
 						angle: 0
 						distr: 0
 				1:
 					x: Math.max(
 						contours[1].nodes[3].expandedTo[1].x + 480 + 200 * width - (36),
-						contours[1].nodes[3].expandedTo[0].x + 0.25 * ( 145 / 115) * thickness * opticThickness * contrast + 10
+						contours[1].nodes[3].expandedTo[0].x + 0.25 * ( 145 / defaultThickness) * thickness * opticThickness * contrast + 10
 					)
 					y: ( 90 / 750 ) * capHeight + (16)
 					dirOut: ( - 140 ) / 180 * Math.PI
 					typeIn: 'line'
 					expand:
-						width: ( 145 / 115 ) * thickness * opticThickness * contrast
+						width: ( 145 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: ( 180 + 153 ) / 180 * Math.PI
 						distr: 0.75
 				2:
@@ -73,7 +73,7 @@ exports.glyphs['G_cap'] =
 					type: 'smooth'
 					tensionIn: 1.1
 					expand:
-						width: ( 110 / 115) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness) * thickness * contrast * opticThickness
 						angle: ( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				3:
@@ -82,7 +82,7 @@ exports.glyphs['G_cap'] =
 					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 145 / 115) * thickness * opticThickness
+						width: ( 145 / defaultThickness) * thickness * opticThickness
 						angle: Math.PI
 						# TODO: distr is inverted boy...
 						distr: 0.75
@@ -92,18 +92,18 @@ exports.glyphs['G_cap'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 110 / 115) * thickness * contrast * opticThickness
+						width: ( 110 / defaultThickness) * thickness * contrast * opticThickness
 						angle: ( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				5:
-					x: contours[1].nodes[1].expandedTo[1].x - ( 11 / 115 ) * thickness - (21)
+					x: contours[1].nodes[1].expandedTo[1].x - ( 11 / defaultThickness ) * thickness - (21)
 					y: Math.max( contours[1].nodes[0].expandedTo[1].y + ( 10 / 750 ) * capHeight, capHeight - 170 * aperture * apertureTop - 65 ) + (62)
 					dirIn: Math.max(
 						anglePenTop + 90 - 10 - correctWidthAperture,
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 129 / 115) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 129 / defaultThickness) * thickness * opticThickness * contrast * contrastExtremity
 						angle: ( anglePenTop ) / 180 * Math.PI
 						distr: 0.75
 	components:

@@ -23,11 +23,11 @@ exports.glyphs['exclamdown'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + ( 135 / 115 ) * thickness / 2
+					x: spacingLeft + ( 135 / defaultThickness ) * thickness / 2
 					y: capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness
+						width: ( 135 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -35,15 +35,15 @@ exports.glyphs['exclamdown'] =
 					y: ( 440 / 750 ) * capHeight
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness
+						width: ( 135 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 				2:
 					x: contours[0].nodes[0].x
-					y: minThickness + 170 - ( 85 / 115 ) * thickness
+					y: minThickness + 170 - ( 85 / defaultThickness ) * thickness
 					typeIn: 'line'
 					expand:
-						width: ( 35 / 115 ) * thickness
+						width: ( 35 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.5
 	components:

@@ -4,7 +4,7 @@ exports.glyphs['a_macron'] =
 	characterName: 'LATIN SMALL LETTER A WITH MACRON'
 	base: 'a'
 	advanceWidth: base.advanceWidth
-	altImg: 'double-story-a.svg'
+	altImg: 'alt-grotesk-double-story-a.svg'
 	tags: [
 		'all',
 		'latin',

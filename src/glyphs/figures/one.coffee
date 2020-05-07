@@ -26,17 +26,17 @@ exports.glyphs['one'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[1].nodes[1].expandedTo[1].y - ( 8 / 115 ) * thickness
+					y: contours[1].nodes[1].expandedTo[1].y - ( 8 / defaultThickness ) * thickness
 					dirOut: 0
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				2:
@@ -45,7 +45,7 @@ exports.glyphs['one'] =
 					dirOut: 0
 					typeIn: 'line'
 					expand:
-						width: ( 105 / 115 ) * thickness * opticThickness
+						width: ( 105 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 1
 		1:
@@ -58,7 +58,7 @@ exports.glyphs['one'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 165 / 115 ) * thickness * opticThickness * contrast
+						width: ( 165 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.25
 				1:
@@ -66,7 +66,7 @@ exports.glyphs['one'] =
 					y: contours[0].nodes[2].expandedTo[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 170 / 115 ) * thickness * opticThickness * contrast
+						width: ( 170 / defaultThickness ) * thickness * opticThickness * contrast
 						angle:( - 93 ) / 180 * Math.PI
 						distr: 0
 	components:

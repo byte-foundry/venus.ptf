@@ -4,7 +4,7 @@ exports.glyphs['a_acute'] =
 	characterName: 'LATIN SMALL LETTER A WITH ACUTE'
 	base: 'a'
 	advanceWidth: base.advanceWidth
-	altImg: 'double-story-a.svg'
+	altImg: 'alt-grotesk-double-story-a.svg'
 	tags: [
 		'all',
 		'latin',

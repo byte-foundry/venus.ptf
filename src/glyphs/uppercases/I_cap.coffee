@@ -8,7 +8,7 @@ exports.glyphs['I_cap'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 85 + (67/115) * thickness + serifWidth / 2
+		spacingLeft: 50 * spacing + 85 + (67/defaultThickness) * thickness + serifWidth / 2
 		spacingRight: 50 * spacing + 85 + serifWidth / 2
 	tags: [
 		'all',
@@ -30,7 +30,7 @@ exports.glyphs['I_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 				1:
@@ -39,7 +39,7 @@ exports.glyphs['I_cap'] =
 					dirOut: 0
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.5
 	components:

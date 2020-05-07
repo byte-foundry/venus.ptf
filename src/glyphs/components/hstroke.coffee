@@ -23,7 +23,7 @@ exports.glyphs['hstroke'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 80 / 115 ) * contrast
+						width: thickness * ( 80 / defaultThickness ) * contrast
 						angle: Math.PI / 2
 						distr: 0.5
 				1:
@@ -31,6 +31,6 @@ exports.glyphs['hstroke'] =
 					y: anchors[0].y
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 80 / 115 ) * contrast
+						width: thickness * ( 80 / defaultThickness ) * contrast
 						angle: Math.PI / 2
 						distr: 0.5

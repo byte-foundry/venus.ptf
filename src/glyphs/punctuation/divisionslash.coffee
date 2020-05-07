@@ -25,7 +25,7 @@ exports.glyphs['divisionslash'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness
+						width: ( 40 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0
 				1:
@@ -33,6 +33,6 @@ exports.glyphs['divisionslash'] =
 					y: capHeight
 					typeIn: 'line'
 					expand:
-						width: ( 40 / 115 ) * thickness
+						width: ( 40 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0

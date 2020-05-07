@@ -29,7 +29,7 @@ exports.glyphs['U_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness
+						width: ( 135 / defaultThickness ) * thickness * opticThickness
 						angle: 0
 						distr: 0.25
 				1:
@@ -39,7 +39,7 @@ exports.glyphs['U_cap'] =
 					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: 1.1
 					expand:
-						width: ( 137 / 115 ) * thickness * opticThickness
+						width: ( 137 / defaultThickness ) * thickness * opticThickness
 						angle:( 10 ) / 180 * Math.PI
 						distr: 0.25
 				2:
@@ -50,7 +50,7 @@ exports.glyphs['U_cap'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
-						width: ( 125 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 125 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI / 2
 						distr: 0
 				3:
@@ -60,7 +60,7 @@ exports.glyphs['U_cap'] =
 					typeOut: 'line'
 					tensionIn: 1.1
 					expand:
-						width: ( 137 / 115 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 137 / defaultThickness ) * thickness * opticThickness * contrast * contrastExtremity
 						angle:( 180 - 10 ) / 180 * Math.PI
 						distr: 0.25
 				4:
@@ -68,7 +68,7 @@ exports.glyphs['U_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 135 / 115 ) * thickness * opticThickness * contrast
+						width: ( 135 / defaultThickness ) * thickness * opticThickness * contrast
 						angle: Math.PI
 						distr: 0.25
 	components:

@@ -16,7 +16,7 @@ exports.glyphs['_guilsinglright'] =
 					y: ( 470 / 520 ) * xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75
 				1:
@@ -25,7 +25,7 @@ exports.glyphs['_guilsinglright'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75
 				2:
@@ -33,6 +33,6 @@ exports.glyphs['_guilsinglright'] =
 					y: ( 50 / 520 ) * xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 100 / 115 ) * thickness
+						width: ( 100 / defaultThickness ) * thickness
 						angle: 0
 						distr: 0.75

@@ -2,7 +2,7 @@ exports.glyphs['c'] =
 	unicode: 'c'
 	glyphName: 'c'
 	characterName: 'LATIN SMALL LETTER C'
-	altImg: 'serif-less-c.svg'
+	altImg: 'alt-grotesk-serif-less-c.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -41,7 +41,7 @@ exports.glyphs['c'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 115 / 115) * thickness * contrast * contrastExtremity
+						width: ( 115 / defaultThickness) * thickness * contrast * contrastExtremity
 						angle:( - anglePenBottom ) / 180 * Math.PI
 						distr: 0.75
 				1:
@@ -50,7 +50,7 @@ exports.glyphs['c'] =
 					dirOut:( - 180 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 95 / 115) * thickness * contrast
+						width: ( 95 / defaultThickness) * thickness * contrast
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
@@ -61,7 +61,7 @@ exports.glyphs['c'] =
 					tensionIn: 1.15
 					tensionOut: 1.15
 					expand:
-						width: ( 125 / 115) * thickness
+						width: ( 125 / defaultThickness) * thickness
 						angle: Math.PI
 						distr: 0.75
 				3:
@@ -71,7 +71,7 @@ exports.glyphs['c'] =
 					typeIn: 'smooth'
 					tensionOut: 1.2
 					expand:
-						width: ( 90 / 115) * thickness * contrast
+						width: ( 90 / defaultThickness) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 				4:
@@ -85,7 +85,7 @@ exports.glyphs['c'] =
 						90
 					) / 180 * Math.PI
 					expand:
-						width: ( 112 / 115) * thickness * contrast * contrastExtremity
+						width: ( 112 / defaultThickness) * thickness * contrast * contrastExtremity
 						angle:( anglePenTop ) / 180 * Math.PI
 						distr: 0.75 # * contrastExtremity
 	components:

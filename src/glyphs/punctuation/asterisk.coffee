@@ -18,11 +18,11 @@ exports.glyphs['asterisk'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 120 + (thickness * ( 96 / 115 )) / 2
+					x: spacingLeft + 120 + (thickness * ( 96 / defaultThickness )) / 2
 					y: capHeight + overshoot
 					typeOut: 'line'
 					expand:
-						width: thickness * ( 96 / 115 )
+						width: thickness * ( 96 / defaultThickness )
 						angle: 0
 						distr: 0.5
 				1:
@@ -30,7 +30,7 @@ exports.glyphs['asterisk'] =
 					y: contours[0].nodes[0].y - 160
 					typeIn: 'line'
 					expand:
-						width: thickness * ( 54 / 115 ) * contrast
+						width: thickness * ( 54 / defaultThickness ) * contrast
 						angle: 0
 						distr: 0.5
 		1:
